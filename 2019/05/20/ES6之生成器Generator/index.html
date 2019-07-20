@@ -1,0 +1,391 @@
+<!DOCTYPE html>
+<!--[if lte IE 8 ]>
+<html class="ie" xmlns="http://www.w3.org/1999/xhtml" xml:lang="en-US" lang="en-US">
+<![endif]-->
+<!--[if (gte IE 9)|!(IE)]><!-->
+<!--
+***************  *      *     *
+      8          *    *       *
+      8          *  *         *
+      8          **           *
+      8          *  *         *
+      8          *    *       *
+      8          *      *     *
+      8          *        *   ***********    -----Theme By Kieran(http://go.kieran.top)
+-->
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="zh-CN" lang="zh-CN">
+<!--<![endif]-->
+
+<head>
+  <title>ES6之生成器Generator | daipi173的个人博客</title>
+  <!-- Meta data -->
+    <meta http-equiv="Content-Type" content="text/html" charset="UTF-8" >
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="generator" content="daipi173的个人博客">
+    <meta name="author" content="daipi173">
+    <meta name="description" content="" />
+    <meta name="keywords" content="" />
+
+    <!-- Favicon, (keep icon in root folder) -->
+    <link rel="Shortcut Icon" href="/img/favicon.ico" type="image/ico">
+
+    <link rel="alternate" href="/atom.xml" title="daipi173的个人博客" type="application/atom+xml">
+    <link rel="stylesheet" href="/css/all.css" media="screen" type="text/css">
+    
+    <link rel="stylesheet" href="/highlightjs/vs.css" type="text/css">
+    
+
+    <!--[if IE 8]>
+    <link rel="stylesheet" type="text/css" href="/css/ie8.css" />
+    <![endif]-->
+
+    <!-- jQuery | Load our jQuery, with an alternative source fallback to a local version if request is unavailable -->
+    <script src="/js/jquery-1.11.1.min.js"></script>
+    <script>window.jQuery || document.write('<script src="js/jquery-1.11.1.min.js"><\/script>')</script>
+
+    <!-- Load these in the <head> for quicker IE8+ load times -->
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+    <script src="/js/html5shiv.min.js"></script>
+    <script src="/js/respond.min.js"></script>
+    <![endif]-->
+
+  
+  
+  
+
+  <style>.col-md-8.col-md-offset-2.opening-statement img{display:none;}</style>
+</head>
+
+<!--
+<body class="post-template">
+-->
+<body id="index" class="lightnav animsition">
+
+      <!-- ============================ Off-canvas navigation =========================== -->
+
+    <div class="sb-slidebar sb-right sb-style-overlay sb-momentum-scrolling">
+        <div class="sb-close" aria-label="Close Menu" aria-hidden="true">
+            <img src="/img/close.png" alt="Close"/>
+        </div>
+        <!-- Lists in Slidebars -->
+        <ul class="sb-menu">
+            <li><a href="/" class="animsition-link" title="Home">Home</a></li>
+            <li><a href="/archives" class="animsition-link" title="archive">archives</a></li>
+            <!-- Dropdown Menu -->
+			 
+            <li>
+                <a class="sb-toggle-submenu">Works<span class="sb-caret"></span></a>
+                <ul class="sb-submenu">
+                    
+                        <li><a href="/" target="_BLANK" class="animsition-link">AAA</a></li>
+                    
+                        <li><a href="/atom.xml" target="_BLANK" class="animsition-link">BBB</a></li>
+                    
+                </ul>
+            </li>
+            
+            
+        	<li>
+        		<a class="sb-toggle-submenu">Categories<span class="sb-caret"></span></a>
+            	<ul class="sb-submenu">
+				  	
+				    <li><a href="/categories/ES6/" class="animsition-link">ES6<small>(4)</small></a></li>
+				    
+				    <li><a href="/categories/JavaScript/ES6/" class="animsition-link">ES6<small>(2)</small></a></li>
+				    
+				    <li><a href="/categories/HTML/" class="animsition-link">HTML<small>(11)</small></a></li>
+				    
+				    <li><a href="/categories/JavaScript/" class="animsition-link">JavaScript<small>(19)</small></a></li>
+				    
+				    <li><a href="/categories/ES6/JavaScript/" class="animsition-link">JavaScript<small>(4)</small></a></li>
+				    
+				    <li><a href="/categories/vue/" class="animsition-link">vue<small>(1)</small></a></li>
+				    
+				    <li><a href="/categories/webpack/" class="animsition-link">webpack<small>(2)</small></a></li>
+				    
+				</ul>
+        	</li>
+			
+            
+            <li>
+                <a class="sb-toggle-submenu">Links<span class="sb-caret"></span></a>
+                <ul class="sb-submenu">
+                    
+                    <li><a href="http://go.kieran.top/" class="animsition-link">Kieran</a></li>
+                    
+                    <li><a href="http://domain.com/" class="animsition-link">Name</a></li>
+                    
+                </ul>
+            </li>
+            
+        </ul>
+        <!-- Lists in Slidebars -->
+        <ul class="sb-menu secondary">
+            
+            <li><a href="/about.html" class="animsition-link" title="about">About</a></li>
+            <li><a href="/atom.xml" class="animsition-link" title="rss">RSS</a></li>
+        </ul>
+    </div>
+    
+    <!-- ============================ END Off-canvas navigation =========================== -->
+
+    <!-- ============================ #sb-site Main Page Wrapper =========================== -->
+
+    <div id="sb-site">
+        <!-- #sb-site - All page content should be contained within this id, except the off-canvas navigation itself -->
+
+        <!-- ============================ Header & Logo bar =========================== -->
+
+        <div id="navigation" class="navbar navbar-fixed-top">
+            <div class="navbar-inner">
+                <div class="container">
+                    <!-- Nav logo -->
+                    <div class="logo">
+                        <a href="/" title="Logo" class="animsition-link">
+                         <img src="/img/logo.png" alt="Logo" width="35px;"/> 
+                        </a>
+                    </div>
+                    <!-- // Nav logo -->
+                    <!-- Info-bar -->
+                    <nav>
+                        <ul class="nav">
+                            <li><a href="/" class="animsition-link">daipi173的个人博客</a></li>
+                            <li class="nolink"><span>Always </span>Creative.</li>
+                            
+                            <li><a href="https://github.com/" title="Github" target="_blank"><i class="icon-github"></i></a></li>
+                            
+                            
+                            <li><a href="https://twitter.com/" title="Twitter" target="_blank"><i class="icon-twitter"></i></a></li>
+                            
+                            
+                            <li><a href="https://www.facebook.com/" title="Facebook" target="_blank"><i class="icon-facebook"></i></a></li>
+                            
+                            
+                            <li><a href="https://google.com/" title="Google-Plus" target="_blank"><i class="icon-google-plus"></i></a></li>
+                            
+                            
+                            <li><a href="http://weibo.com/" title="Sina-Weibo" target="_blank"><i class="icon-sina-weibo"></i></a></li>
+                            
+                            <li class="nolink"><span>Welcome!</span></li>
+                        </ul>
+                    </nav>
+                    <!--// Info-bar -->
+                </div>
+                <!-- // .container -->
+                <div class="learnmore sb-toggle-right">More</div>
+                <button type="button" class="navbar-toggle menu-icon sb-toggle-right" title="More">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar before"></span>
+                <span class="icon-bar main"></span>
+                <span class="icon-bar after"></span>
+                </button>
+            </div>
+            <!-- // .navbar-inner -->
+        </div>
+
+        <!-- ============================ Header & Logo bar =========================== -->
+
+
+      
+<section id="intro">
+    <div class="container">
+        <div class="row col-md-offset-2">
+            <div class="col-md-8">
+    			<span class="post-meta">
+      <time datetime="2019-05-20T13:29:00.000Z" itemprop="datePublished">
+          2019-05-20
+      </time>
+    
+    
+    | 
+    <a href='/tags/ES6/'>ES6</a>,
+    
+    <a href='/tags/JavaScript/'>JavaScript</a>,
+    
+    <a href='/tags/Generator/'>Generator</a>
+    
+    
+</span>
+                <h1>ES6之生成器Generator</h1>
+            </div>
+        </div>
+        <div class="col-md-8 col-md-offset-2">
+      		<h1 id="1-什么是生成器Generator"><a href="#1-什么是生成器Generator" class="headerlink" title="1. 什么是生成器Generator"></a>1. 什么是生成器Generator</h1><p><strong>生成器Generator在异步流程中，它可以控制我们的一个异步流程。</strong><br>我们先看看生成器的一个基础语法：<br><code>function * fn(){} 注意：*放在开头或者中间或者结尾都是可以的。</code><br>生成器与普通函数不同的第一点就是：普通函数使用 function 声明，而生成器函数使用 function* 声明。<br>接下来我们再来看几行代码：</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> * <span class="title">fn</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">	<span class="keyword">yield</span> <span class="string">"xiaoming"</span>;  <span class="comment">// 在这里yield相当于一个开关，到哪里去暂停。yield语句仅仅是在Generator里面好使，如果你写在普通函数或者其他语句中，它就会报错。</span></span><br><span class="line">	<span class="keyword">yield</span> <span class="string">"xiaoli"</span>;</span><br><span class="line">	<span class="keyword">yield</span> <span class="string">"xiaohong"</span>;</span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">const</span> people = fn();  <span class="comment">// 当fn函数执行完后，会返回一个迭代器iterator。所以此时将fn()返回的值用一个变量people接收。</span></span><br><span class="line">people.next(); <span class="comment">// &#123;value: "xiaoming", done: false&#125;</span></span><br><span class="line">people.next(); <span class="comment">// &#123;value: "xiaoli", done: false&#125;</span></span><br><span class="line">people.next(); <span class="comment">// &#123;value: "xiaohong", done: false&#125;</span></span><br><span class="line">people.next(); <span class="comment">// &#123;value: undefined, done: true&#125;</span></span><br></pre></td></tr></table></figure>
+
+<p>生成器与普通函数不同的第二点就是：在生成器函数内部，有一种类似 return 的语法：关键字 yield。二者的区别是，普通函数只可以 return 一次，而生成器函数可以 yield 多次（当然也可以只 yield 一次）。next()相当于开按钮，yield相当于关按钮。<br><strong>普通函数，如果没有return语句就会从头到尾执行。</strong></p>
+<p>普通函数和生成器函数之间<strong>最大的区别</strong>，普通函数不能自暂停，生成器函数可以。</p>
+<h1 id="2-生成器Generator的应用例子"><a href="#2-生成器Generator的应用例子" class="headerlink" title="2. 生成器Generator的应用例子"></a>2. 生成器Generator的应用例子</h1><p>例1：</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> * <span class="title">fn</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">	<span class="built_in">console</span>.log(<span class="string">"A"</span>);</span><br><span class="line">	<span class="keyword">yield</span> <span class="string">"xiaoming"</span>;</span><br><span class="line">	<span class="built_in">console</span>.log(<span class="string">"B"</span>);</span><br><span class="line">	<span class="keyword">yield</span> <span class="string">"xiaoli"</span>;</span><br><span class="line">	<span class="built_in">console</span>.log(<span class="string">"C"</span>);</span><br><span class="line">	<span class="keyword">yield</span> <span class="string">"xiaohong"</span>;</span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">const</span> people = fn();</span><br><span class="line">people.next();   <span class="comment">// A  &#123;value: "xiaoming", done: false&#125;</span></span><br><span class="line">people.next();   <span class="comment">// B  &#123;value: "xiaoli", done: false&#125;</span></span><br><span class="line">people.next();   <span class="comment">// C  &#123;value: "xiaohong", done: false&#125;</span></span><br><span class="line">people.next();   <span class="comment">// &#123;value: undefined, done: true&#125;</span></span><br></pre></td></tr></table></figure>
+
+<p>例2：<br>在做例2之前，我们需要先注意一点：<strong>如果没有在next()方法里面传入参数的话，我们整体的yield语句就是一个undefined。如果你想把yield语句的值更改的话，就通过next()方法传入参数。</strong></p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> * <span class="title">fn</span>(<span class="params">x</span>)</span>&#123;</span><br><span class="line">	<span class="keyword">var</span> y = <span class="keyword">yield</span>(x+<span class="number">2</span>);</span><br><span class="line">	<span class="keyword">var</span> z = <span class="keyword">yield</span>(y/<span class="number">3</span>);</span><br><span class="line">	<span class="keyword">return</span> (x+y+z);</span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">const</span> it = fn(<span class="number">4</span>);</span><br><span class="line"><span class="built_in">console</span>.log(it.next());   <span class="comment">// &#123;value: 6, done: false&#125;</span></span><br><span class="line"><span class="built_in">console</span>.log(it.next());   <span class="comment">// &#123;value: NaN, done: false&#125;</span></span><br><span class="line"><span class="built_in">console</span>.log(it.next());   <span class="comment">// &#123;value: NaN, done: true&#125;</span></span><br></pre></td></tr></table></figure>
+
+<ol>
+<li>当执行第一个next()方法的时候，碰到的是一个赋值语句，把右边的值给左边，但是右边的值碰到了yield语句就暂停了。所以就把yield后面的值(x+2)给value，就是6；</li>
+<li>当执行第2个next()方法的时候，现在可以完成赋值语句了，我们应该把y赋值成yield(x+2)整个的语句，它整个语句的值是一个undefined。然后再执行z的赋值语句，但是遇到第二个yield语句就暂停了，value就输出”undefined/3”=NaN；</li>
+<li>当执行第三个next()方法的时候，由于yield(y/3)中整个的语句没有传值进来，那么它的整个语句的值是一个undefined，即z就为一个undefined，所以x+y+z=4+undefined+undefined=NaN，所以value的值为NaN。由于一个return语句，表示当前已经执行完了，所以done为true。</li>
+</ol>
+<p>例3：<br>我们接下来再做一个例子，是在next()方法中传入一个值。</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> * <span class="title">fn</span>(<span class="params">x</span>)</span>&#123;</span><br><span class="line">	<span class="keyword">var</span> y = <span class="keyword">yield</span>(x+<span class="number">2</span>);</span><br><span class="line">	<span class="keyword">var</span> z = <span class="keyword">yield</span>(y/<span class="number">3</span>);</span><br><span class="line">	<span class="keyword">return</span> (x+y+z);</span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">const</span> it = fn(<span class="number">4</span>);</span><br><span class="line"><span class="built_in">console</span>.log(it.next());    <span class="comment">// &#123;value: 6, done: false&#125;</span></span><br><span class="line"><span class="built_in">console</span>.log(it.next(<span class="number">6</span>));   <span class="comment">// &#123;value: 2, done: false&#125;</span></span><br><span class="line"><span class="built_in">console</span>.log(it.next());    <span class="comment">// &#123;value: NaN, done: true&#125;</span></span><br></pre></td></tr></table></figure>
+
+<ol>
+<li>当执行第2个next()方法的时候，执行的是y的赋值语句，整体yield(x+2)语句等于next(6)传入过来的参数6，那么y=6。接着执行z的赋值语句，但是碰到了右边的yield语句又暂停了，所以value的值为y/3 = 6/3 = 2。</li>
+<li>当执行第3个next()方法的时候，执行z的赋值语句，由于next()方法中没有传值，所以z的值为undefined。所以x+y+z=4+6+undefined = NaN。</li>
+</ol>
+<p>如果想要z有值的话，就在第三个next()方法中传入一个值，如it.next(10)，那么第三next()方法执行完后打印出来为:x+y+z=4+6+10=20即{value: 20,done: true}</p>
+<h1 id="3-erator函数执行返回generator对象，只是说它的用法和iterator一样"><a href="#3-erator函数执行返回generator对象，只是说它的用法和iterator一样" class="headerlink" title="3. erator函数执行返回generator对象，只是说它的用法和iterator一样"></a>3. erator函数执行返回generator对象，只是说它的用法和iterator一样</h1><p>for of循环：<br><strong>generator函数执行返回generator对象，只是说它的用法和iterator一样</strong>，iterator可以通过”for of”直接循环出来，不用我们手动.next()执行。</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> arr = [<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>];</span><br><span class="line"><span class="function"><span class="keyword">function</span> * <span class="title">fn</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">	<span class="built_in">console</span>.log(<span class="string">"A"</span>);</span><br><span class="line">	<span class="keyword">yield</span> <span class="string">"xiaoming"</span>;</span><br><span class="line">	<span class="built_in">console</span>.log(<span class="string">"B"</span>);</span><br><span class="line">	<span class="keyword">yield</span> <span class="string">"xiaoli"</span>;</span><br><span class="line">	<span class="built_in">console</span>.log(<span class="string">"C"</span>);</span><br><span class="line">	<span class="keyword">yield</span> <span class="string">"xiaohong"</span>;</span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">const</span> people = fn();  <span class="comment">// 是一个iterator</span></span><br><span class="line"><span class="keyword">for</span>(<span class="keyword">var</span> person <span class="keyword">of</span> people)&#123;</span><br><span class="line">	<span class="built_in">console</span>.log(person);</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">// 控制台会打印出如下所示内容：</span></span><br><span class="line"><span class="comment">// A</span></span><br><span class="line"><span class="comment">// xiaoming</span></span><br><span class="line"><span class="comment">// B</span></span><br><span class="line"><span class="comment">// xiaoli</span></span><br><span class="line"><span class="comment">// C</span></span><br><span class="line"><span class="comment">// xiaohong</span></span><br></pre></td></tr></table></figure>
+
+<h1 id="4-给普通对象写一个自己的Symbol-iterator"><a href="#4-给普通对象写一个自己的Symbol-iterator" class="headerlink" title="4. 给普通对象写一个自己的Symbol.iterator"></a>4. 给普通对象写一个自己的Symbol.iterator</h1><p>由于普通的对象是没有Symbol.iterator的，如果我们用for of去循环是不好使的。因此我们可以自己写一个Symbol.iterator，然后去循环for of。</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> obj = &#123;<span class="attr">a</span>: <span class="number">1</span>&#125;;</span><br><span class="line">obj[<span class="built_in">Symbol</span>.iterator] = <span class="function"><span class="keyword">function</span> * (<span class="params"></span>)</span>&#123;   <span class="comment">// 注意：Generator函数一执行完就会返回一个迭代器</span></span><br><span class="line">	<span class="keyword">yield</span> <span class="number">1</span>;</span><br><span class="line">	<span class="keyword">yield</span> <span class="number">2</span>;</span><br><span class="line">	<span class="keyword">return</span> <span class="number">3</span>;  <span class="comment">// 如果想让控制台把3也打印出来的话，只需要把return改为yield</span></span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">for</span>(<span class="keyword">var</span> prop <span class="keyword">of</span> obj)&#123;   <span class="comment">// 它会自动去找obj上面的Symbol.iterator，然后给它执行，执行完之后就是一个iterator</span></span><br><span class="line">	<span class="built_in">console</span>.log(prop);</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">// 控制台打印出如下内容：</span></span><br><span class="line"><span class="comment">// 1</span></span><br><span class="line"><span class="comment">// 2</span></span><br></pre></td></tr></table></figure>
+            <div class="clearfix"></div>
+            <hr class="nogutter">
+        </div>
+        <nav class="m-pagination col-md-8 col-md-offset-2 col-sm-24" role="pagination">
+    
+    <a class="pull-left" href="/2019/05/23/H5之Worker多线程/" style="float: left;">
+        ← H5之Worker多线程
+    </a>
+    
+    
+    <a class="pull-right" href="/2019/05/17/ES6之Iterator迭代器/">
+        ES6之Iterator迭代器 →
+    </a>
+    
+</nav>
+
+        <div class="col-md-8 col-md-offset-2 col-sm-24"><script type="text/javascript">
+  /**
+   * 搜狐畅言
+   */
+
+  /*
+  document.write('<div id="SOHUCS" sid="' + window.location.pathname.slice(1) + '" ></div>');
+
+  window.onload = function () {
+    (function () {
+      var appid = 'cytXXXX';
+      var conf = 'prod_xxxxxxxxxxxxxxxxx';
+      var width = window.innerWidth || document.documentElement.clientWidth;
+      var loadJs = function (d, a, id) {
+        var c = document.getElementsByTagName("head")[0] || document.head || document.documentElement;
+        var b = document.createElement("script");
+        b.setAttribute("type", "text/javascript");
+        b.setAttribute("charset", "UTF-8");
+        b.setAttribute("src", d);
+        if (id) {
+          b.setAttribute("id", id);
+        }
+        if (typeof a === "function") {
+          if (window.attachEvent) {
+            b.onreadystatechange = function () {
+              var e = b.readyState;
+              if (e === "loaded" || e === "complete") {
+                b.onreadystatechange = null;
+                a()
+              }
+            }
+          } else {
+            b.onload = a
+          }
+        }
+        c.appendChild(b)
+      };
+
+      loadJs("https://changyan.sohu.com/upload/changyan.js", function () {
+        window.changyan.api.config({
+          appid: appid,
+          conf: conf
+        })
+      });
+    })();
+  }
+  */
+
+</script>
+</div>
+    </div>
+</section>
+
+
+      
+<!-- ============================ Footer =========================== -->
+
+<footer>
+    <div class="container">
+            <div class="copy">
+                <p>
+                    &copy; 2014<script>new Date().getFullYear()>2010&&document.write("-"+new Date().getFullYear());</script>, Content By daipi173. All Rights Reserved.
+                </p>
+                <p>Theme By <a href="//go.kieran.top" style="color: #767D84">Kieran</a></p>
+            </div>
+            <div class="social">
+                <ul>
+                    
+                    <li><a href="https://github.com/" title="Github" target="_blank"><i class="icon-github"></i></a>&nbsp;</li>
+                    
+                    
+                    <li><a href="https://twitter.com/" title="Twitter" target="_blank"><i class="icon-twitter"></i></a>&nbsp;</li>
+                    
+                    
+                    <li><a href="https://www.facebook.com/" title="Facebook" target="_blank"><i class="icon-facebook"></i></a>&nbsp;</li>
+                    
+                    
+                    <li><a href="https://google.com/" title="Google-Plus" target="_blank"><i class="icon-google-plus"></i></a>&nbsp;</li>
+                    
+                    
+                    <li><a href="http://weibo.com/" title="Sina-Weibo" target="_blank"><i class="icon-sina-weibo"></i></a>&nbsp;</li>
+                    
+                </ul>
+            </div>
+            <div class="clearfix"> </div>
+        </div>
+</footer>
+
+<!-- ============================ END Footer =========================== -->
+      <!-- Load our scripts -->
+<!-- Resizable 'on-demand' full-height hero -->
+<script type="text/javascript">
+    var resizeHero = function () {
+        var hero = $(".cover,.heightblock"),
+            window1 = $(window);
+        hero.css({
+            "height": window1.height()
+        });
+    };
+
+    resizeHero();
+
+    $(window).resize(function () {
+        resizeHero();
+    });
+</script>
+<script src="/js/plugins.min.js"></script><!-- Bootstrap core and concatenated plugins always load here -->
+<script src="/js/scripts.js"></script><!-- Theme scripts -->
+
+
+<link rel="stylesheet" href="/fancybox/jquery.fancybox.css" media="screen" type="text/css">
+<script src="/fancybox/jquery.fancybox.pack.js"></script>
+<script type="text/javascript">
+$('#intro').find('img').each(function(){
+  var alt = this.alt;
+
+  if (alt){
+    $(this).after('<span class="caption" style="display:none">' + alt + '</span>');
+  }
+
+  $(this).wrap('<a href="' + this.src + '" title="' + alt + '" class="fancybox" rel="gallery" />');
+});
+(function($){
+  $('.fancybox').fancybox();
+})(jQuery);
+</script>
+
+
+
+      
+</body>
+</html>

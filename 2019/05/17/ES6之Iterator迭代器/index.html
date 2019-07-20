@@ -1,0 +1,407 @@
+<!DOCTYPE html>
+<!--[if lte IE 8 ]>
+<html class="ie" xmlns="http://www.w3.org/1999/xhtml" xml:lang="en-US" lang="en-US">
+<![endif]-->
+<!--[if (gte IE 9)|!(IE)]><!-->
+<!--
+***************  *      *     *
+      8          *    *       *
+      8          *  *         *
+      8          **           *
+      8          *  *         *
+      8          *    *       *
+      8          *      *     *
+      8          *        *   ***********    -----Theme By Kieran(http://go.kieran.top)
+-->
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="zh-CN" lang="zh-CN">
+<!--<![endif]-->
+
+<head>
+  <title>ES6之Iterator迭代器 | daipi173的个人博客</title>
+  <!-- Meta data -->
+    <meta http-equiv="Content-Type" content="text/html" charset="UTF-8" >
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="generator" content="daipi173的个人博客">
+    <meta name="author" content="daipi173">
+    <meta name="description" content="" />
+    <meta name="keywords" content="" />
+
+    <!-- Favicon, (keep icon in root folder) -->
+    <link rel="Shortcut Icon" href="/img/favicon.ico" type="image/ico">
+
+    <link rel="alternate" href="/atom.xml" title="daipi173的个人博客" type="application/atom+xml">
+    <link rel="stylesheet" href="/css/all.css" media="screen" type="text/css">
+    
+    <link rel="stylesheet" href="/highlightjs/vs.css" type="text/css">
+    
+
+    <!--[if IE 8]>
+    <link rel="stylesheet" type="text/css" href="/css/ie8.css" />
+    <![endif]-->
+
+    <!-- jQuery | Load our jQuery, with an alternative source fallback to a local version if request is unavailable -->
+    <script src="/js/jquery-1.11.1.min.js"></script>
+    <script>window.jQuery || document.write('<script src="js/jquery-1.11.1.min.js"><\/script>')</script>
+
+    <!-- Load these in the <head> for quicker IE8+ load times -->
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+    <script src="/js/html5shiv.min.js"></script>
+    <script src="/js/respond.min.js"></script>
+    <![endif]-->
+
+  
+  
+  
+
+  <style>.col-md-8.col-md-offset-2.opening-statement img{display:none;}</style>
+</head>
+
+<!--
+<body class="post-template">
+-->
+<body id="index" class="lightnav animsition">
+
+      <!-- ============================ Off-canvas navigation =========================== -->
+
+    <div class="sb-slidebar sb-right sb-style-overlay sb-momentum-scrolling">
+        <div class="sb-close" aria-label="Close Menu" aria-hidden="true">
+            <img src="/img/close.png" alt="Close"/>
+        </div>
+        <!-- Lists in Slidebars -->
+        <ul class="sb-menu">
+            <li><a href="/" class="animsition-link" title="Home">Home</a></li>
+            <li><a href="/archives" class="animsition-link" title="archive">archives</a></li>
+            <!-- Dropdown Menu -->
+			 
+            <li>
+                <a class="sb-toggle-submenu">Works<span class="sb-caret"></span></a>
+                <ul class="sb-submenu">
+                    
+                        <li><a href="/" target="_BLANK" class="animsition-link">AAA</a></li>
+                    
+                        <li><a href="/atom.xml" target="_BLANK" class="animsition-link">BBB</a></li>
+                    
+                </ul>
+            </li>
+            
+            
+        	<li>
+        		<a class="sb-toggle-submenu">Categories<span class="sb-caret"></span></a>
+            	<ul class="sb-submenu">
+				  	
+				    <li><a href="/categories/ES6/" class="animsition-link">ES6<small>(4)</small></a></li>
+				    
+				    <li><a href="/categories/JavaScript/ES6/" class="animsition-link">ES6<small>(2)</small></a></li>
+				    
+				    <li><a href="/categories/HTML/" class="animsition-link">HTML<small>(11)</small></a></li>
+				    
+				    <li><a href="/categories/JavaScript/" class="animsition-link">JavaScript<small>(19)</small></a></li>
+				    
+				    <li><a href="/categories/ES6/JavaScript/" class="animsition-link">JavaScript<small>(4)</small></a></li>
+				    
+				    <li><a href="/categories/vue/" class="animsition-link">vue<small>(1)</small></a></li>
+				    
+				    <li><a href="/categories/webpack/" class="animsition-link">webpack<small>(2)</small></a></li>
+				    
+				</ul>
+        	</li>
+			
+            
+            <li>
+                <a class="sb-toggle-submenu">Links<span class="sb-caret"></span></a>
+                <ul class="sb-submenu">
+                    
+                    <li><a href="http://go.kieran.top/" class="animsition-link">Kieran</a></li>
+                    
+                    <li><a href="http://domain.com/" class="animsition-link">Name</a></li>
+                    
+                </ul>
+            </li>
+            
+        </ul>
+        <!-- Lists in Slidebars -->
+        <ul class="sb-menu secondary">
+            
+            <li><a href="/about.html" class="animsition-link" title="about">About</a></li>
+            <li><a href="/atom.xml" class="animsition-link" title="rss">RSS</a></li>
+        </ul>
+    </div>
+    
+    <!-- ============================ END Off-canvas navigation =========================== -->
+
+    <!-- ============================ #sb-site Main Page Wrapper =========================== -->
+
+    <div id="sb-site">
+        <!-- #sb-site - All page content should be contained within this id, except the off-canvas navigation itself -->
+
+        <!-- ============================ Header & Logo bar =========================== -->
+
+        <div id="navigation" class="navbar navbar-fixed-top">
+            <div class="navbar-inner">
+                <div class="container">
+                    <!-- Nav logo -->
+                    <div class="logo">
+                        <a href="/" title="Logo" class="animsition-link">
+                         <img src="/img/logo.png" alt="Logo" width="35px;"/> 
+                        </a>
+                    </div>
+                    <!-- // Nav logo -->
+                    <!-- Info-bar -->
+                    <nav>
+                        <ul class="nav">
+                            <li><a href="/" class="animsition-link">daipi173的个人博客</a></li>
+                            <li class="nolink"><span>Always </span>Creative.</li>
+                            
+                            <li><a href="https://github.com/" title="Github" target="_blank"><i class="icon-github"></i></a></li>
+                            
+                            
+                            <li><a href="https://twitter.com/" title="Twitter" target="_blank"><i class="icon-twitter"></i></a></li>
+                            
+                            
+                            <li><a href="https://www.facebook.com/" title="Facebook" target="_blank"><i class="icon-facebook"></i></a></li>
+                            
+                            
+                            <li><a href="https://google.com/" title="Google-Plus" target="_blank"><i class="icon-google-plus"></i></a></li>
+                            
+                            
+                            <li><a href="http://weibo.com/" title="Sina-Weibo" target="_blank"><i class="icon-sina-weibo"></i></a></li>
+                            
+                            <li class="nolink"><span>Welcome!</span></li>
+                        </ul>
+                    </nav>
+                    <!--// Info-bar -->
+                </div>
+                <!-- // .container -->
+                <div class="learnmore sb-toggle-right">More</div>
+                <button type="button" class="navbar-toggle menu-icon sb-toggle-right" title="More">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar before"></span>
+                <span class="icon-bar main"></span>
+                <span class="icon-bar after"></span>
+                </button>
+            </div>
+            <!-- // .navbar-inner -->
+        </div>
+
+        <!-- ============================ Header & Logo bar =========================== -->
+
+
+      
+<section id="intro">
+    <div class="container">
+        <div class="row col-md-offset-2">
+            <div class="col-md-8">
+    			<span class="post-meta">
+      <time datetime="2019-05-17T09:24:00.000Z" itemprop="datePublished">
+          2019-05-17
+      </time>
+    
+    
+    | 
+    <a href='/tags/ES6/'>ES6</a>,
+    
+    <a href='/tags/JavaScript/'>JavaScript</a>,
+    
+    <a href='/tags/Iterator/'>Iterator</a>
+    
+    
+</span>
+                <h1>ES6之Iterator迭代器</h1>
+            </div>
+        </div>
+        <div class="col-md-8 col-md-offset-2">
+      		<h1 id="1-什么是迭代器"><a href="#1-什么是迭代器" class="headerlink" title="1. 什么是迭代器"></a>1. 什么是迭代器</h1><p>迭代器是<strong>统一的接口</strong>，它是一个<strong>对象</strong>，对象里面有next方法，每次调用这个方法就会输出数据结构的成员。第一次输出第一个成员，第二次输出第二个成员，以此类推。输出成员的形式为：<strong>{value:值,done:true/false}</strong>。注意：done中的true表明当前循环完成了，false表明当前循环没有完成。</p>
+<h1 id="2-为什么要使用迭代器"><a href="#2-为什么要使用迭代器" class="headerlink" title="2. 为什么要使用迭代器"></a>2. 为什么要使用迭代器</h1><ol>
+<li>在没有使用迭代器之前，我们可以使用for循环来打印数组中的元素。</li>
+</ol>
+<p><strong>缺点：a.理解方面比较差；b.for中i的这个变量不好管理。</strong></p>
+<ol start="2">
+<li>在没有使用迭代器之前，我们可以使用forEach方法来打印数组中的元素。</li>
+</ol>
+<p><strong>缺点：不能跳出循环，在forEach中使用break或者continue会报错。因为forEach是从头循环到尾，中间是不能有中断的。</strong></p>
+<ol start="3">
+<li>在没有使用迭代器之前，我们可以使用for in来打印数组中的元素。</li>
+</ol>
+<p><strong>缺点：a.理解方面比较差；b.会循环出来不是我们数组中的索引的属性。</strong><br>什么是不是我们数组中的索引的属性，下面来举一个例子说明一下：</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">let</span> names = [<span class="string">"xiaoming"</span>,<span class="string">"xiaohong"</span>,<span class="string">"xiaoli"</span>];</span><br><span class="line">names.age = <span class="number">18</span>;</span><br><span class="line"><span class="keyword">for</span>(<span class="keyword">var</span> name <span class="keyword">in</span> names)&#123;</span><br><span class="line">	<span class="built_in">console</span>.log(names[name]);</span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">// 控制台打印出来的内容如下：</span></span><br><span class="line"><span class="comment">// xiaoming</span></span><br><span class="line"><span class="comment">// xiaohong</span></span><br><span class="line"><span class="comment">// xiaoli</span></span><br><span class="line"><span class="comment">// 18</span></span><br></pre></td></tr></table></figure>
+
+<p>此时你会发现你本意只是想把names数组中的那三个值打印出来，但是却发现你添加的age中的值18被打印出来了，与我们预期所期望的不符合。</p>
+<h1 id="3-自己写一个迭代器"><a href="#3-自己写一个迭代器" class="headerlink" title="3. 自己写一个迭代器"></a>3. 自己写一个迭代器</h1><p>根据迭代器的特性，自己手写了一个迭代器的例子，代码如下所示：</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">let</span> names = [<span class="string">"xiaoming"</span>,<span class="string">"xiaohong"</span>,<span class="string">"xiaoli"</span>];</span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">createIterator</span>(<span class="params">arr</span>)</span>&#123;</span><br><span class="line">	<span class="keyword">var</span> index = <span class="number">0</span>;</span><br><span class="line">	<span class="keyword">return</span>&#123;</span><br><span class="line">		next()&#123;</span><br><span class="line">			<span class="keyword">return</span> index &lt; arr.length ? &#123;<span class="attr">value</span>: arr[index++],<span class="attr">done</span>: <span class="literal">false</span>&#125; : &#123;<span class="attr">value</span>: <span class="literal">undefined</span>,<span class="attr">done</span>: <span class="literal">true</span>&#125;;</span><br><span class="line">		&#125;</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">let</span> iterator = createIterator(names);</span><br><span class="line">iterator.next();    <span class="comment">// &#123;value: "xiaoming", done: false&#125;</span></span><br><span class="line">iterator.next();    <span class="comment">// &#123;value: "xiaohong", done: false&#125;</span></span><br><span class="line">iterator.next();    <span class="comment">// &#123;value: "xiaoli", done: false&#125;</span></span><br><span class="line">iterator.next();    <span class="comment">// &#123;value: undefined, done: true&#125;</span></span><br><span class="line"></span><br><span class="line"><span class="comment">// 注意：为什么调用第三次next()方法的时候，done打印出来还是为false，其原因是因为</span></span><br><span class="line"><span class="comment">// 当它循环完"xiaoli"完之后，不知道后面还有没有内容，因此done的值为false，直到</span></span><br><span class="line"><span class="comment">// 再一次调用next()方法的时候（即第四次调用next()方法)，done的值才为true</span></span><br></pre></td></tr></table></figure>
+
+<h1 id="4-默认迭代器"><a href="#4-默认迭代器" class="headerlink" title="4. 默认迭代器"></a>4. 默认迭代器</h1><h2 id="4-1-数组迭代器（内置方法）"><a href="#4-1-数组迭代器（内置方法）" class="headerlink" title="4.1 数组迭代器（内置方法）"></a>4.1 数组迭代器（内置方法）</h2><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">let</span> names = [<span class="string">"xiaoming"</span>,<span class="string">"xiaohong"</span>,<span class="string">"xiaoli"</span>];</span><br><span class="line"><span class="built_in">console</span>.log(names[<span class="built_in">Symbol</span>.iterator]);   <span class="comment">// ƒ values() &#123; [native code] &#125;   注意： 它是一个原</span></span><br><span class="line"><span class="comment">// 生的函数，这个函数存储在数组的一个属性上面</span></span><br><span class="line"><span class="built_in">console</span>.log(names[<span class="built_in">Symbol</span>.iterator]());   <span class="comment">// Array Iterator &#123;&#125;   当names[Symbol.iterator] //这个原生的函数一执行,它就会生成迭代器</span></span><br></pre></td></tr></table></figure>
+
+<h2 id="4-2-类数组迭代器-内置方法"><a href="#4-2-类数组迭代器-内置方法" class="headerlink" title="4.2 类数组迭代器(内置方法)"></a>4.2 类数组迭代器(内置方法)</h2><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">let</span> argsIt;</span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">fn</span>(<span class="params">a,b,c</span>)</span>&#123;</span><br><span class="line">	argsIt = <span class="built_in">arguments</span>[<span class="built_in">Symbol</span>.iterator]();</span><br><span class="line">&#125;</span><br><span class="line">fn(<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>);</span><br><span class="line"><span class="built_in">console</span>.log(argsIt);   <span class="comment">// Array Iterator &#123;&#125;</span></span><br></pre></td></tr></table></figure>
+
+<h2 id="4-3-字符串迭代器（内置方法）"><a href="#4-3-字符串迭代器（内置方法）" class="headerlink" title="4.3 字符串迭代器（内置方法）"></a>4.3 字符串迭代器（内置方法）</h2><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">let</span> str = <span class="string">"daipi173"</span>;</span><br><span class="line"><span class="built_in">console</span>.log(str[<span class="built_in">Symbol</span>.iterator]());   <span class="comment">// StringIterator &#123;&#125;</span></span><br></pre></td></tr></table></figure>
+
+<h2 id="4-4-对象是没有内置的迭代器的，但是我们可以给它创建一个自己的迭代器"><a href="#4-4-对象是没有内置的迭代器的，但是我们可以给它创建一个自己的迭代器" class="headerlink" title="4.4 对象是没有内置的迭代器的，但是我们可以给它创建一个自己的迭代器"></a>4.4 对象是没有内置的迭代器的，但是我们可以给它创建一个自己的迭代器</h2><p>首先我们先看一看对象有没有内置的迭代器，代码如下所示：</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">let</span> obj = &#123;&#125;;</span><br><span class="line"><span class="built_in">console</span>.log(obj[<span class="built_in">Symbol</span>.iterator]);    <span class="comment">// undefined</span></span><br></pre></td></tr></table></figure>
+
+<p>此时你会发现打印出来的是undefined，再一次的证实了对象是没有内置的迭代器的，但是我们可以给它创建一个自己的迭代器，代码如下所示：</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 方法一：</span></span><br><span class="line"><span class="keyword">let</span> obj = &#123;</span><br><span class="line">            a: <span class="number">1</span>,</span><br><span class="line">            b: <span class="string">"b"</span>,</span><br><span class="line">            [<span class="built_in">Symbol</span>.iterator]() &#123;  <span class="comment">// 注意：Symbol.iterator是不可枚举的，所以后面的keys.length的长度为2而不是3</span></span><br><span class="line">                <span class="keyword">let</span> index = <span class="number">0</span>;</span><br><span class="line">                <span class="keyword">return</span> &#123;</span><br><span class="line">                    next: <span class="function"><span class="params">()</span>=&gt;</span>&#123;</span><br><span class="line">                        <span class="keyword">let</span> keys = <span class="built_in">Object</span>.keys(<span class="keyword">this</span>);</span><br><span class="line">                        <span class="keyword">return</span> index &lt; keys.length ? &#123;<span class="attr">value</span>: <span class="keyword">this</span>[keys[index++]],<span class="attr">done</span>: <span class="literal">false</span>&#125;</span><br><span class="line">                        : &#123;<span class="attr">value</span>: <span class="literal">undefined</span>,<span class="attr">done</span>: <span class="literal">true</span>&#125;;</span><br><span class="line">                    &#125;</span><br><span class="line">                &#125;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;;</span><br><span class="line">        <span class="keyword">let</span> o = obj[<span class="built_in">Symbol</span>.iterator]();</span><br><span class="line">        <span class="built_in">console</span>.log(o.next());    <span class="comment">// &#123;value: 1, done: false&#125;</span></span><br><span class="line">        <span class="built_in">console</span>.log(o.next());    <span class="comment">// &#123;value: "b", done: false&#125;</span></span><br><span class="line">        <span class="built_in">console</span>.log(o.next());    <span class="comment">// &#123;value: undefined, done: true&#125;</span></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="comment">// 方法二：</span></span><br><span class="line">    <span class="keyword">let</span> obj = &#123;</span><br><span class="line">        a:<span class="number">1</span>,</span><br><span class="line">        b:<span class="string">"b"</span>,</span><br><span class="line">        c:<span class="string">"d"</span></span><br><span class="line">    &#125;;</span><br><span class="line">    obj[<span class="built_in">Symbol</span>.iterator] = <span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">        <span class="keyword">let</span> index = <span class="number">0</span>;</span><br><span class="line">        <span class="keyword">return</span> &#123;</span><br><span class="line">            next: <span class="function"><span class="params">()</span>=&gt;</span>&#123;</span><br><span class="line">                <span class="keyword">let</span> keys = <span class="built_in">Object</span>.keys(<span class="keyword">this</span>);  <span class="comment">// keys = ["a", "b", "c"]</span></span><br><span class="line">                <span class="keyword">return</span> index &lt; keys.length ? &#123;<span class="attr">value</span>: <span class="keyword">this</span>[keys[index++]],<span class="attr">done</span>: <span class="literal">false</span>&#125;</span><br><span class="line">                : &#123;<span class="attr">value</span>: <span class="literal">undefined</span>,<span class="attr">done</span>: <span class="literal">true</span>&#125;;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;;</span><br><span class="line">    <span class="keyword">let</span> o = obj[<span class="built_in">Symbol</span>.iterator]();</span><br><span class="line">    <span class="built_in">console</span>.log(o.next());   <span class="comment">// &#123;value: 1, done: false&#125;</span></span><br><span class="line">    <span class="built_in">console</span>.log(o.next());   <span class="comment">// &#123;value: "b", done: false&#125;</span></span><br><span class="line">    <span class="built_in">console</span>.log(o.next());   <span class="comment">// &#123;value: "d", done: false&#125;</span></span><br><span class="line">    <span class="built_in">console</span>.log(o.next());   <span class="comment">// &#123;value: undefined, done: true&#125;</span></span><br></pre></td></tr></table></figure>
+
+<h1 id="5-迭代器使用场景"><a href="#5-迭代器使用场景" class="headerlink" title="5. 迭代器使用场景"></a>5. 迭代器使用场景</h1><h2 id="5-1-for-of循环"><a href="#5-1-for-of循环" class="headerlink" title="5.1 for of循环"></a>5.1 for of循环</h2><p><strong>for(let a of b){}<br>for of的应用场景更加的广泛了，只要b是一个迭代器，它就是可以用一个for of来进行一个循环。</strong></p>
+<p>for of是可以使用break的，它的底层是调用next()方法，语义化更强。for of会<strong>自动调用迭代器中的next()方法</strong>。如：</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">let</span> names = [<span class="string">"xiaoming"</span>,<span class="string">"xiaohong"</span>,<span class="string">"xiaoli"</span>];</span><br><span class="line"><span class="keyword">for</span>(<span class="keyword">var</span> name <span class="keyword">of</span> names)&#123;</span><br><span class="line">	<span class="built_in">console</span>.log(<span class="number">111</span>);</span><br><span class="line">	<span class="keyword">if</span>(name === <span class="string">"xiaohong"</span>)&#123;</span><br><span class="line">		<span class="keyword">break</span>;</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">// 控制台打印出的内容如下：</span></span><br><span class="line"><span class="comment">// 打印出2个111</span></span><br></pre></td></tr></table></figure>
+
+<h2 id="5-2-数组新增方法"><a href="#5-2-数组新增方法" class="headerlink" title="5.2 数组新增方法"></a>5.2 数组新增方法</h2><p>a. keys()  索引<br>b. values()   值<br>c. entries()  把索引和值都打印出来</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">let</span> names = [<span class="string">"xiaoming"</span>,<span class="string">"xiaohong"</span>,<span class="string">"xiaoli"</span>];</span><br><span class="line"><span class="built_in">console</span>.log(names.keys());   <span class="comment">//  Array Iterator &#123;&#125;</span></span><br></pre></td></tr></table></figure>
+
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">let</span> names = [<span class="string">"xiaoming"</span>,<span class="string">"xiaohong"</span>,<span class="string">"xiaoli"</span>];</span><br><span class="line"><span class="built_in">console</span>.log(names.values());   <span class="comment">// Array Iterator &#123;&#125;</span></span><br></pre></td></tr></table></figure>
+
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">let</span> names = [<span class="string">"xiaoming"</span>,<span class="string">"xiaohong"</span>,<span class="string">"xiaoli"</span>];</span><br><span class="line"><span class="built_in">console</span>.log(names.entries());    <span class="comment">// Array Iterator &#123;&#125;</span></span><br></pre></td></tr></table></figure>
+
+<h2 id="5-3-解构赋值"><a href="#5-3-解构赋值" class="headerlink" title="5.3 解构赋值"></a>5.3 解构赋值</h2><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">let</span> names = [<span class="string">"xiaoming"</span>,<span class="string">"xiaohong"</span>,<span class="string">"xiaoli"</span>];</span><br><span class="line"><span class="keyword">for</span>(<span class="keyword">let</span> [index,name] <span class="keyword">of</span> names.entries())&#123;</span><br><span class="line">	<span class="built_in">console</span>.log(name);</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">// 控制台打印出来的内容如下：</span></span><br><span class="line"><span class="comment">// xiaoming</span></span><br><span class="line"><span class="comment">// xiaohong</span></span><br><span class="line"><span class="comment">// xiaoli</span></span><br></pre></td></tr></table></figure>
+
+<h2 id="5-4-…运算符（一般来说都是扩展运算符）"><a href="#5-4-…运算符（一般来说都是扩展运算符）" class="headerlink" title="5.4 …运算符（一般来说都是扩展运算符）"></a>5.4 …运算符（一般来说都是扩展运算符）</h2><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">let</span> names1 = [<span class="string">"xiaoming"</span>,<span class="string">"xiaohong"</span>,<span class="string">"xiaoli"</span>];</span><br><span class="line"><span class="keyword">let</span> names2 = [<span class="string">"xiaodai"</span>,...names1];</span><br><span class="line"><span class="built_in">console</span>.log(names2);    <span class="comment">// ["xiaodai", "xiaoming", "xiaohong", "xiaoli"]</span></span><br></pre></td></tr></table></figure>
+            <div class="clearfix"></div>
+            <hr class="nogutter">
+        </div>
+        <nav class="m-pagination col-md-8 col-md-offset-2 col-sm-24" role="pagination">
+    
+    <a class="pull-left" href="/2019/05/20/ES6之生成器Generator/" style="float: left;">
+        ← ES6之生成器Generator
+    </a>
+    
+    
+    <a class="pull-right" href="/2019/05/14/对象转基本类型/">
+        对象转基本类型 →
+    </a>
+    
+</nav>
+
+        <div class="col-md-8 col-md-offset-2 col-sm-24"><script type="text/javascript">
+  /**
+   * 搜狐畅言
+   */
+
+  /*
+  document.write('<div id="SOHUCS" sid="' + window.location.pathname.slice(1) + '" ></div>');
+
+  window.onload = function () {
+    (function () {
+      var appid = 'cytXXXX';
+      var conf = 'prod_xxxxxxxxxxxxxxxxx';
+      var width = window.innerWidth || document.documentElement.clientWidth;
+      var loadJs = function (d, a, id) {
+        var c = document.getElementsByTagName("head")[0] || document.head || document.documentElement;
+        var b = document.createElement("script");
+        b.setAttribute("type", "text/javascript");
+        b.setAttribute("charset", "UTF-8");
+        b.setAttribute("src", d);
+        if (id) {
+          b.setAttribute("id", id);
+        }
+        if (typeof a === "function") {
+          if (window.attachEvent) {
+            b.onreadystatechange = function () {
+              var e = b.readyState;
+              if (e === "loaded" || e === "complete") {
+                b.onreadystatechange = null;
+                a()
+              }
+            }
+          } else {
+            b.onload = a
+          }
+        }
+        c.appendChild(b)
+      };
+
+      loadJs("https://changyan.sohu.com/upload/changyan.js", function () {
+        window.changyan.api.config({
+          appid: appid,
+          conf: conf
+        })
+      });
+    })();
+  }
+  */
+
+</script>
+</div>
+    </div>
+</section>
+
+
+      
+<!-- ============================ Footer =========================== -->
+
+<footer>
+    <div class="container">
+            <div class="copy">
+                <p>
+                    &copy; 2014<script>new Date().getFullYear()>2010&&document.write("-"+new Date().getFullYear());</script>, Content By daipi173. All Rights Reserved.
+                </p>
+                <p>Theme By <a href="//go.kieran.top" style="color: #767D84">Kieran</a></p>
+            </div>
+            <div class="social">
+                <ul>
+                    
+                    <li><a href="https://github.com/" title="Github" target="_blank"><i class="icon-github"></i></a>&nbsp;</li>
+                    
+                    
+                    <li><a href="https://twitter.com/" title="Twitter" target="_blank"><i class="icon-twitter"></i></a>&nbsp;</li>
+                    
+                    
+                    <li><a href="https://www.facebook.com/" title="Facebook" target="_blank"><i class="icon-facebook"></i></a>&nbsp;</li>
+                    
+                    
+                    <li><a href="https://google.com/" title="Google-Plus" target="_blank"><i class="icon-google-plus"></i></a>&nbsp;</li>
+                    
+                    
+                    <li><a href="http://weibo.com/" title="Sina-Weibo" target="_blank"><i class="icon-sina-weibo"></i></a>&nbsp;</li>
+                    
+                </ul>
+            </div>
+            <div class="clearfix"> </div>
+        </div>
+</footer>
+
+<!-- ============================ END Footer =========================== -->
+      <!-- Load our scripts -->
+<!-- Resizable 'on-demand' full-height hero -->
+<script type="text/javascript">
+    var resizeHero = function () {
+        var hero = $(".cover,.heightblock"),
+            window1 = $(window);
+        hero.css({
+            "height": window1.height()
+        });
+    };
+
+    resizeHero();
+
+    $(window).resize(function () {
+        resizeHero();
+    });
+</script>
+<script src="/js/plugins.min.js"></script><!-- Bootstrap core and concatenated plugins always load here -->
+<script src="/js/scripts.js"></script><!-- Theme scripts -->
+
+
+<link rel="stylesheet" href="/fancybox/jquery.fancybox.css" media="screen" type="text/css">
+<script src="/fancybox/jquery.fancybox.pack.js"></script>
+<script type="text/javascript">
+$('#intro').find('img').each(function(){
+  var alt = this.alt;
+
+  if (alt){
+    $(this).after('<span class="caption" style="display:none">' + alt + '</span>');
+  }
+
+  $(this).wrap('<a href="' + this.src + '" title="' + alt + '" class="fancybox" rel="gallery" />');
+});
+(function($){
+  $('.fancybox').fancybox();
+})(jQuery);
+</script>
+
+
+
+      
+</body>
+</html>

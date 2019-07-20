@@ -1,0 +1,395 @@
+<!DOCTYPE html>
+<!--[if lte IE 8 ]>
+<html class="ie" xmlns="http://www.w3.org/1999/xhtml" xml:lang="en-US" lang="en-US">
+<![endif]-->
+<!--[if (gte IE 9)|!(IE)]><!-->
+<!--
+***************  *      *     *
+      8          *    *       *
+      8          *  *         *
+      8          **           *
+      8          *  *         *
+      8          *    *       *
+      8          *      *     *
+      8          *        *   ***********    -----Theme By Kieran(http://go.kieran.top)
+-->
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="zh-CN" lang="zh-CN">
+<!--<![endif]-->
+
+<head>
+  <title>网络之Cookie | daipi173的个人博客</title>
+  <!-- Meta data -->
+    <meta http-equiv="Content-Type" content="text/html" charset="UTF-8" >
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="generator" content="daipi173的个人博客">
+    <meta name="author" content="daipi173">
+    <meta name="description" content="" />
+    <meta name="keywords" content="" />
+
+    <!-- Favicon, (keep icon in root folder) -->
+    <link rel="Shortcut Icon" href="/img/favicon.ico" type="image/ico">
+
+    <link rel="alternate" href="/atom.xml" title="daipi173的个人博客" type="application/atom+xml">
+    <link rel="stylesheet" href="/css/all.css" media="screen" type="text/css">
+    
+    <link rel="stylesheet" href="/highlightjs/vs.css" type="text/css">
+    
+
+    <!--[if IE 8]>
+    <link rel="stylesheet" type="text/css" href="/css/ie8.css" />
+    <![endif]-->
+
+    <!-- jQuery | Load our jQuery, with an alternative source fallback to a local version if request is unavailable -->
+    <script src="/js/jquery-1.11.1.min.js"></script>
+    <script>window.jQuery || document.write('<script src="js/jquery-1.11.1.min.js"><\/script>')</script>
+
+    <!-- Load these in the <head> for quicker IE8+ load times -->
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+    <script src="/js/html5shiv.min.js"></script>
+    <script src="/js/respond.min.js"></script>
+    <![endif]-->
+
+  
+  
+  
+
+  <style>.col-md-8.col-md-offset-2.opening-statement img{display:none;}</style>
+</head>
+
+<!--
+<body class="post-template">
+-->
+<body id="index" class="lightnav animsition">
+
+      <!-- ============================ Off-canvas navigation =========================== -->
+
+    <div class="sb-slidebar sb-right sb-style-overlay sb-momentum-scrolling">
+        <div class="sb-close" aria-label="Close Menu" aria-hidden="true">
+            <img src="/img/close.png" alt="Close"/>
+        </div>
+        <!-- Lists in Slidebars -->
+        <ul class="sb-menu">
+            <li><a href="/" class="animsition-link" title="Home">Home</a></li>
+            <li><a href="/archives" class="animsition-link" title="archive">archives</a></li>
+            <!-- Dropdown Menu -->
+			 
+            <li>
+                <a class="sb-toggle-submenu">Works<span class="sb-caret"></span></a>
+                <ul class="sb-submenu">
+                    
+                        <li><a href="/" target="_BLANK" class="animsition-link">AAA</a></li>
+                    
+                        <li><a href="/atom.xml" target="_BLANK" class="animsition-link">BBB</a></li>
+                    
+                </ul>
+            </li>
+            
+            
+        	<li>
+        		<a class="sb-toggle-submenu">Categories<span class="sb-caret"></span></a>
+            	<ul class="sb-submenu">
+				  	
+				    <li><a href="/categories/ES6/" class="animsition-link">ES6<small>(4)</small></a></li>
+				    
+				    <li><a href="/categories/JavaScript/ES6/" class="animsition-link">ES6<small>(2)</small></a></li>
+				    
+				    <li><a href="/categories/HTML/" class="animsition-link">HTML<small>(11)</small></a></li>
+				    
+				    <li><a href="/categories/JavaScript/" class="animsition-link">JavaScript<small>(19)</small></a></li>
+				    
+				    <li><a href="/categories/ES6/JavaScript/" class="animsition-link">JavaScript<small>(4)</small></a></li>
+				    
+				    <li><a href="/categories/vue/" class="animsition-link">vue<small>(1)</small></a></li>
+				    
+				    <li><a href="/categories/webpack/" class="animsition-link">webpack<small>(2)</small></a></li>
+				    
+				</ul>
+        	</li>
+			
+            
+            <li>
+                <a class="sb-toggle-submenu">Links<span class="sb-caret"></span></a>
+                <ul class="sb-submenu">
+                    
+                    <li><a href="http://go.kieran.top/" class="animsition-link">Kieran</a></li>
+                    
+                    <li><a href="http://domain.com/" class="animsition-link">Name</a></li>
+                    
+                </ul>
+            </li>
+            
+        </ul>
+        <!-- Lists in Slidebars -->
+        <ul class="sb-menu secondary">
+            
+            <li><a href="/about.html" class="animsition-link" title="about">About</a></li>
+            <li><a href="/atom.xml" class="animsition-link" title="rss">RSS</a></li>
+        </ul>
+    </div>
+    
+    <!-- ============================ END Off-canvas navigation =========================== -->
+
+    <!-- ============================ #sb-site Main Page Wrapper =========================== -->
+
+    <div id="sb-site">
+        <!-- #sb-site - All page content should be contained within this id, except the off-canvas navigation itself -->
+
+        <!-- ============================ Header & Logo bar =========================== -->
+
+        <div id="navigation" class="navbar navbar-fixed-top">
+            <div class="navbar-inner">
+                <div class="container">
+                    <!-- Nav logo -->
+                    <div class="logo">
+                        <a href="/" title="Logo" class="animsition-link">
+                         <img src="/img/logo.png" alt="Logo" width="35px;"/> 
+                        </a>
+                    </div>
+                    <!-- // Nav logo -->
+                    <!-- Info-bar -->
+                    <nav>
+                        <ul class="nav">
+                            <li><a href="/" class="animsition-link">daipi173的个人博客</a></li>
+                            <li class="nolink"><span>Always </span>Creative.</li>
+                            
+                            <li><a href="https://github.com/" title="Github" target="_blank"><i class="icon-github"></i></a></li>
+                            
+                            
+                            <li><a href="https://twitter.com/" title="Twitter" target="_blank"><i class="icon-twitter"></i></a></li>
+                            
+                            
+                            <li><a href="https://www.facebook.com/" title="Facebook" target="_blank"><i class="icon-facebook"></i></a></li>
+                            
+                            
+                            <li><a href="https://google.com/" title="Google-Plus" target="_blank"><i class="icon-google-plus"></i></a></li>
+                            
+                            
+                            <li><a href="http://weibo.com/" title="Sina-Weibo" target="_blank"><i class="icon-sina-weibo"></i></a></li>
+                            
+                            <li class="nolink"><span>Welcome!</span></li>
+                        </ul>
+                    </nav>
+                    <!--// Info-bar -->
+                </div>
+                <!-- // .container -->
+                <div class="learnmore sb-toggle-right">More</div>
+                <button type="button" class="navbar-toggle menu-icon sb-toggle-right" title="More">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar before"></span>
+                <span class="icon-bar main"></span>
+                <span class="icon-bar after"></span>
+                </button>
+            </div>
+            <!-- // .navbar-inner -->
+        </div>
+
+        <!-- ============================ Header & Logo bar =========================== -->
+
+
+      
+<section id="intro">
+    <div class="container">
+        <div class="row col-md-offset-2">
+            <div class="col-md-8">
+    			<span class="post-meta">
+      <time datetime="2019-04-29T06:45:00.000Z" itemprop="datePublished">
+          2019-04-29
+      </time>
+    
+    
+    | 
+    <a href='/tags/HTML/'>HTML</a>,
+    
+    <a href='/tags/网络/'>网络</a>,
+    
+    <a href='/tags/Cookie/'>Cookie</a>
+    
+    
+</span>
+                <h1>网络之Cookie</h1>
+            </div>
+        </div>
+        <div class="col-md-8 col-md-offset-2">
+      		<h1 id="1-个性化服务"><a href="#1-个性化服务" class="headerlink" title="1. 个性化服务"></a>1. 个性化服务</h1><p>HTTP是<strong>无状态</strong>的请求/响应连接，导致连接断开后，再次连接服务器无法识别用户。<br>什么是无状态？<br>你先向服务器发送请求，建立TCP连接将请求发送过去，然后给我响应，TCP连接断开。在这一过程中没有做任何的保存，没有留下任何的痕迹。当你再一次访问的时候，需要重新的建立TCP连接，发送请求等操作。</p>
+<h1 id="2-使用一些技术来帮助服务器去识别用户"><a href="#2-使用一些技术来帮助服务器去识别用户" class="headerlink" title="2. 使用一些技术来帮助服务器去识别用户"></a>2. 使用一些技术来帮助服务器去识别用户</h1><p>方法一、跟踪客户端IP地址，但是很多地方的客户端都是动态的生成IP，因此服务器无法区分是不是同一个人。</p>
+<p>方法二、借助http首部放置用户身份信息。如referer、e-mail。referer的用法是：大概可以知道是从哪一个相关的网站来的，然后可以推荐相关的信息。用e-mail不好之处是知道了用户的邮箱地址，然后可以给用户散发垃圾邮件。</p>
+<p>方法三、胖URL（就是在URL后面添加许多许多的参数，导致URL会变得很长），在URL中嵌入识别信息（即通过URL中的参数信息识别是哪一个用户）。它的不好之处是比较丑陋，无法共享URL（因为每一个用户都会生成不同的URL），非持久（因为是放到URL连接中的，浏览器关闭之后，访问过的数据无法存储下来）等。</p>
+<p>方法四、cookie（普遍采用它），在客户端存储用户标识信息。识别用户、持久化最好的方式。</p>
+<h1 id="3-Cookie原理（面试的时候很重要）"><a href="#3-Cookie原理（面试的时候很重要）" class="headerlink" title="3. Cookie原理（面试的时候很重要）"></a>3. Cookie原理（面试的时候很重要）</h1><ol>
+<li>首次访问Web站点时，Web服务器对用户一无所知。Web服务器希望这个用户再次回来还能识别它。所以想给这个用户一个标识（相当于给它贴了一个标签：set-cookie:user_id=daipi173的响应首部）。</li>
+<li>服务器返回响应的时候会带有响应首部set-cookie字段。浏览器会自动的把响应的cookie储存在浏览器数据库中（就是本地的文本文件，存储了一些cookie字段）。</li>
+<li>当用户再次访问<strong>同一站点</strong>时，浏览器会把存储的cookie一起带上发送出去，这样服务器在拿到请求的同时也拿到这个cookie字段，知道以前你来过，然后会找与这个标签相对应的数据返回。<h1 id="4-Cookie分类"><a href="#4-Cookie分类" class="headerlink" title="4. Cookie分类"></a>4. Cookie分类</h1></li>
+</ol>
+<p>1.会话cookie（临时cookie），不设置过期时间，则表示这个cookie生命周期为浏览器会话期间，只要关闭浏览器窗口，cookie就消失了。（用户退出浏览器时，会话cookie就<strong>被删除</strong>了，它是没有缓存时间的。）注意：会话cookie一般不保存在硬盘上而是保存在<strong>内存</strong>里。</p>
+<p>2.持久cookie，存储在硬盘上，浏览器退出计算机重启时<strong>仍然存在</strong>。可以维护用户周期性访问的站点，它是有缓存时间的。<br>注意：设置了过期时间，浏览器就会把cookie保存到硬盘上，关闭后再次打开浏览器，这些cookie依然有效直到超过设定的过期时间。</p>
+<p>存储在硬盘上的cookie可以在不同的浏览器进程间共享，比如两个IE窗口。而对于保存在内存的cookie，不同的浏览器有不同的处理方式。</p>
+<h1 id="5-认识Cookie属性"><a href="#5-认识Cookie属性" class="headerlink" title="5. 认识Cookie属性"></a>5. 认识Cookie属性</h1><p><a href="https://s2.ax1x.com/2019/04/25/EekwKU.png" title="Cookie属性" target="_blank" rel="noopener"><img src="https://s2.ax1x.com/2019/04/25/EekwKU.png" alt="Cookie属性" title="Cookie属性"></a><br>1.Name：是Cookie的名称；<br>2.Value：是Cookie的值；<br>3.Domain：是可以访问该Cookie的域名（相同的域名或者父域下的所有子域都是可以访问的，如domain设置为baidu.com，那么baidu.com下的网页以及baidu.com下的子网页都可以访问到的）；<br>4.Path：可以访问此Cookie的页面路径(如path是/abc，那么表示只有/abc路径下的页面可以读取此Cookie)；<br>5.Expires/Max-Age：是用来设置时间的（之前的版本叫Expires，后来的版本叫Max-Age）不同浏览器表示的形式有可能是不一样的；<br>注意：只要时间是比当前时间靠前的cookie就是一个临时cookie。<br>6.Size：是Cookie的大小（注意：一般Cookie都是做标识的，因此它一般都比较小）<br>7.HTTP：Cookie的httponly属性。若此属性为true，则只有在http<strong>请求头中</strong>会带有此cookie的信息，而<strong>不能</strong>通过document.cookie来访问此cookie；<br>8.Secure：设置是否只能通过https来传递此条cookie。</p>
+<h1 id="6-Cookie存储大小"><a href="#6-Cookie存储大小" class="headerlink" title="6. Cookie存储大小"></a>6. Cookie存储大小</h1><p>由于cookie主要是用来标识的，因此不会太大，因此每一个浏览器设置的cookie大小大概是4K字节左右。</p>
+<h1 id="7-客户端操作Cookie"><a href="#7-客户端操作Cookie" class="headerlink" title="7. 客户端操作Cookie"></a>7. 客户端操作Cookie</h1><p>cookie的增、删、改、查<br>例如：</p>
+<ol>
+<li><p>增：</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">document</span>.cookie = <span class="string">"user=12345"</span>;</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>删：<br>方法一：可以人为的手动删除，我是拿的Chrome浏览器为例进行的手动删除，如下图所示：<br><a href="https://s2.ax1x.com/2019/04/26/Em8q3T.png" title="手动删除cookie" target="_blank" rel="noopener"><img src="https://s2.ax1x.com/2019/04/26/Em8q3T.png" alt="手动删除cookie" title="手动删除cookie"></a><br>方法二：将时间设置为当前时间的前一个时刻，就可以把设置的cookie删除</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> oDate = <span class="keyword">new</span> <span class="built_in">Date</span>();</span><br><span class="line">oDate.setDate(oDate.getDate()<span class="number">-1</span>);   <span class="comment">//只需要把时间设置在当前时间的前面，就可以把设置的cookie删除</span></span><br><span class="line"><span class="built_in">document</span>.cookie = <span class="string">"user=12345;expires="</span>+oDate;</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>改：</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 假设cookie上面已经存在了一个“user=12345”的值，先来我们来对它进行一个修改</span></span><br><span class="line"><span class="built_in">document</span>.cookie = <span class="string">"user=1111"</span>;</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>查：</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">document</span>.cookie;</span><br></pre></td></tr></table></figure>
+
+</li>
+</ol>
+<p>有兴趣的小伙伴还可以自己手动封装一个cookie的增删改查的函数，然后将自己写好的函数进行一个验证，看看是不是与上面修改的内容是一致的。</p>
+
+            <div class="clearfix"></div>
+            <hr class="nogutter">
+        </div>
+        <nav class="m-pagination col-md-8 col-md-offset-2 col-sm-24" role="pagination">
+    
+    <a class="pull-left" href="/2019/05/02/网络之WebSocket双向通信/" style="float: left;">
+        ← 网络之WebSocket双向通信
+    </a>
+    
+    
+    <a class="pull-right" href="/2019/04/25/原型链的终点为什么不是Object-prototype，而是null/">
+        原型链的终点为什么不是Object.prototype，而是null →
+    </a>
+    
+</nav>
+
+        <div class="col-md-8 col-md-offset-2 col-sm-24"><script type="text/javascript">
+  /**
+   * 搜狐畅言
+   */
+
+  /*
+  document.write('<div id="SOHUCS" sid="' + window.location.pathname.slice(1) + '" ></div>');
+
+  window.onload = function () {
+    (function () {
+      var appid = 'cytXXXX';
+      var conf = 'prod_xxxxxxxxxxxxxxxxx';
+      var width = window.innerWidth || document.documentElement.clientWidth;
+      var loadJs = function (d, a, id) {
+        var c = document.getElementsByTagName("head")[0] || document.head || document.documentElement;
+        var b = document.createElement("script");
+        b.setAttribute("type", "text/javascript");
+        b.setAttribute("charset", "UTF-8");
+        b.setAttribute("src", d);
+        if (id) {
+          b.setAttribute("id", id);
+        }
+        if (typeof a === "function") {
+          if (window.attachEvent) {
+            b.onreadystatechange = function () {
+              var e = b.readyState;
+              if (e === "loaded" || e === "complete") {
+                b.onreadystatechange = null;
+                a()
+              }
+            }
+          } else {
+            b.onload = a
+          }
+        }
+        c.appendChild(b)
+      };
+
+      loadJs("https://changyan.sohu.com/upload/changyan.js", function () {
+        window.changyan.api.config({
+          appid: appid,
+          conf: conf
+        })
+      });
+    })();
+  }
+  */
+
+</script>
+</div>
+    </div>
+</section>
+
+
+      
+<!-- ============================ Footer =========================== -->
+
+<footer>
+    <div class="container">
+            <div class="copy">
+                <p>
+                    &copy; 2014<script>new Date().getFullYear()>2010&&document.write("-"+new Date().getFullYear());</script>, Content By daipi173. All Rights Reserved.
+                </p>
+                <p>Theme By <a href="//go.kieran.top" style="color: #767D84">Kieran</a></p>
+            </div>
+            <div class="social">
+                <ul>
+                    
+                    <li><a href="https://github.com/" title="Github" target="_blank"><i class="icon-github"></i></a>&nbsp;</li>
+                    
+                    
+                    <li><a href="https://twitter.com/" title="Twitter" target="_blank"><i class="icon-twitter"></i></a>&nbsp;</li>
+                    
+                    
+                    <li><a href="https://www.facebook.com/" title="Facebook" target="_blank"><i class="icon-facebook"></i></a>&nbsp;</li>
+                    
+                    
+                    <li><a href="https://google.com/" title="Google-Plus" target="_blank"><i class="icon-google-plus"></i></a>&nbsp;</li>
+                    
+                    
+                    <li><a href="http://weibo.com/" title="Sina-Weibo" target="_blank"><i class="icon-sina-weibo"></i></a>&nbsp;</li>
+                    
+                </ul>
+            </div>
+            <div class="clearfix"> </div>
+        </div>
+</footer>
+
+<!-- ============================ END Footer =========================== -->
+      <!-- Load our scripts -->
+<!-- Resizable 'on-demand' full-height hero -->
+<script type="text/javascript">
+    var resizeHero = function () {
+        var hero = $(".cover,.heightblock"),
+            window1 = $(window);
+        hero.css({
+            "height": window1.height()
+        });
+    };
+
+    resizeHero();
+
+    $(window).resize(function () {
+        resizeHero();
+    });
+</script>
+<script src="/js/plugins.min.js"></script><!-- Bootstrap core and concatenated plugins always load here -->
+<script src="/js/scripts.js"></script><!-- Theme scripts -->
+
+
+<link rel="stylesheet" href="/fancybox/jquery.fancybox.css" media="screen" type="text/css">
+<script src="/fancybox/jquery.fancybox.pack.js"></script>
+<script type="text/javascript">
+$('#intro').find('img').each(function(){
+  var alt = this.alt;
+
+  if (alt){
+    $(this).after('<span class="caption" style="display:none">' + alt + '</span>');
+  }
+
+  $(this).wrap('<a href="' + this.src + '" title="' + alt + '" class="fancybox" rel="gallery" />');
+});
+(function($){
+  $('.fancybox').fancybox();
+})(jQuery);
+</script>
+
+
+
+      
+</body>
+</html>

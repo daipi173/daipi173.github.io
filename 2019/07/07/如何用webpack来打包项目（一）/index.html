@@ -1,0 +1,393 @@
+<!DOCTYPE html>
+<!--[if lte IE 8 ]>
+<html class="ie" xmlns="http://www.w3.org/1999/xhtml" xml:lang="en-US" lang="en-US">
+<![endif]-->
+<!--[if (gte IE 9)|!(IE)]><!-->
+<!--
+***************  *      *     *
+      8          *    *       *
+      8          *  *         *
+      8          **           *
+      8          *  *         *
+      8          *    *       *
+      8          *      *     *
+      8          *        *   ***********    -----Theme By Kieran(http://go.kieran.top)
+-->
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="zh-CN" lang="zh-CN">
+<!--<![endif]-->
+
+<head>
+  <title>如何用webpack来打包项目（一） | daipi173的个人博客</title>
+  <!-- Meta data -->
+    <meta http-equiv="Content-Type" content="text/html" charset="UTF-8" >
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="generator" content="daipi173的个人博客">
+    <meta name="author" content="daipi173">
+    <meta name="description" content="" />
+    <meta name="keywords" content="" />
+
+    <!-- Favicon, (keep icon in root folder) -->
+    <link rel="Shortcut Icon" href="/img/favicon.ico" type="image/ico">
+
+    <link rel="alternate" href="/atom.xml" title="daipi173的个人博客" type="application/atom+xml">
+    <link rel="stylesheet" href="/css/all.css" media="screen" type="text/css">
+    
+    <link rel="stylesheet" href="/highlightjs/vs.css" type="text/css">
+    
+
+    <!--[if IE 8]>
+    <link rel="stylesheet" type="text/css" href="/css/ie8.css" />
+    <![endif]-->
+
+    <!-- jQuery | Load our jQuery, with an alternative source fallback to a local version if request is unavailable -->
+    <script src="/js/jquery-1.11.1.min.js"></script>
+    <script>window.jQuery || document.write('<script src="js/jquery-1.11.1.min.js"><\/script>')</script>
+
+    <!-- Load these in the <head> for quicker IE8+ load times -->
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+    <script src="/js/html5shiv.min.js"></script>
+    <script src="/js/respond.min.js"></script>
+    <![endif]-->
+
+  
+  
+  
+
+  <style>.col-md-8.col-md-offset-2.opening-statement img{display:none;}</style>
+</head>
+
+<!--
+<body class="post-template">
+-->
+<body id="index" class="lightnav animsition">
+
+      <!-- ============================ Off-canvas navigation =========================== -->
+
+    <div class="sb-slidebar sb-right sb-style-overlay sb-momentum-scrolling">
+        <div class="sb-close" aria-label="Close Menu" aria-hidden="true">
+            <img src="/img/close.png" alt="Close"/>
+        </div>
+        <!-- Lists in Slidebars -->
+        <ul class="sb-menu">
+            <li><a href="/" class="animsition-link" title="Home">Home</a></li>
+            <li><a href="/archives" class="animsition-link" title="archive">archives</a></li>
+            <!-- Dropdown Menu -->
+			 
+            <li>
+                <a class="sb-toggle-submenu">Works<span class="sb-caret"></span></a>
+                <ul class="sb-submenu">
+                    
+                        <li><a href="/" target="_BLANK" class="animsition-link">AAA</a></li>
+                    
+                        <li><a href="/atom.xml" target="_BLANK" class="animsition-link">BBB</a></li>
+                    
+                </ul>
+            </li>
+            
+            
+        	<li>
+        		<a class="sb-toggle-submenu">Categories<span class="sb-caret"></span></a>
+            	<ul class="sb-submenu">
+				  	
+				    <li><a href="/categories/ES6/" class="animsition-link">ES6<small>(4)</small></a></li>
+				    
+				    <li><a href="/categories/JavaScript/ES6/" class="animsition-link">ES6<small>(2)</small></a></li>
+				    
+				    <li><a href="/categories/HTML/" class="animsition-link">HTML<small>(11)</small></a></li>
+				    
+				    <li><a href="/categories/JavaScript/" class="animsition-link">JavaScript<small>(19)</small></a></li>
+				    
+				    <li><a href="/categories/ES6/JavaScript/" class="animsition-link">JavaScript<small>(4)</small></a></li>
+				    
+				    <li><a href="/categories/vue/" class="animsition-link">vue<small>(1)</small></a></li>
+				    
+				    <li><a href="/categories/webpack/" class="animsition-link">webpack<small>(2)</small></a></li>
+				    
+				</ul>
+        	</li>
+			
+            
+            <li>
+                <a class="sb-toggle-submenu">Links<span class="sb-caret"></span></a>
+                <ul class="sb-submenu">
+                    
+                    <li><a href="http://go.kieran.top/" class="animsition-link">Kieran</a></li>
+                    
+                    <li><a href="http://domain.com/" class="animsition-link">Name</a></li>
+                    
+                </ul>
+            </li>
+            
+        </ul>
+        <!-- Lists in Slidebars -->
+        <ul class="sb-menu secondary">
+            
+            <li><a href="/about.html" class="animsition-link" title="about">About</a></li>
+            <li><a href="/atom.xml" class="animsition-link" title="rss">RSS</a></li>
+        </ul>
+    </div>
+    
+    <!-- ============================ END Off-canvas navigation =========================== -->
+
+    <!-- ============================ #sb-site Main Page Wrapper =========================== -->
+
+    <div id="sb-site">
+        <!-- #sb-site - All page content should be contained within this id, except the off-canvas navigation itself -->
+
+        <!-- ============================ Header & Logo bar =========================== -->
+
+        <div id="navigation" class="navbar navbar-fixed-top">
+            <div class="navbar-inner">
+                <div class="container">
+                    <!-- Nav logo -->
+                    <div class="logo">
+                        <a href="/" title="Logo" class="animsition-link">
+                         <img src="/img/logo.png" alt="Logo" width="35px;"/> 
+                        </a>
+                    </div>
+                    <!-- // Nav logo -->
+                    <!-- Info-bar -->
+                    <nav>
+                        <ul class="nav">
+                            <li><a href="/" class="animsition-link">daipi173的个人博客</a></li>
+                            <li class="nolink"><span>Always </span>Creative.</li>
+                            
+                            <li><a href="https://github.com/" title="Github" target="_blank"><i class="icon-github"></i></a></li>
+                            
+                            
+                            <li><a href="https://twitter.com/" title="Twitter" target="_blank"><i class="icon-twitter"></i></a></li>
+                            
+                            
+                            <li><a href="https://www.facebook.com/" title="Facebook" target="_blank"><i class="icon-facebook"></i></a></li>
+                            
+                            
+                            <li><a href="https://google.com/" title="Google-Plus" target="_blank"><i class="icon-google-plus"></i></a></li>
+                            
+                            
+                            <li><a href="http://weibo.com/" title="Sina-Weibo" target="_blank"><i class="icon-sina-weibo"></i></a></li>
+                            
+                            <li class="nolink"><span>Welcome!</span></li>
+                        </ul>
+                    </nav>
+                    <!--// Info-bar -->
+                </div>
+                <!-- // .container -->
+                <div class="learnmore sb-toggle-right">More</div>
+                <button type="button" class="navbar-toggle menu-icon sb-toggle-right" title="More">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar before"></span>
+                <span class="icon-bar main"></span>
+                <span class="icon-bar after"></span>
+                </button>
+            </div>
+            <!-- // .navbar-inner -->
+        </div>
+
+        <!-- ============================ Header & Logo bar =========================== -->
+
+
+      
+<section id="intro">
+    <div class="container">
+        <div class="row col-md-offset-2">
+            <div class="col-md-8">
+    			<span class="post-meta">
+      <time datetime="2019-07-07T03:17:00.000Z" itemprop="datePublished">
+          2019-07-07
+      </time>
+    
+    
+    | 
+    <a href='/tags/webpack/'>webpack</a>
+    
+    
+</span>
+                <h1>如何用webpack来打包项目（一）</h1>
+            </div>
+        </div>
+        <div class="col-md-8 col-md-offset-2">
+      		<h1 id="1-什么是webpack"><a href="#1-什么是webpack" class="headerlink" title="1. 什么是webpack"></a>1. 什么是webpack</h1><p>webpack就是一个<strong>打包工具</strong>，它所做的事情就是：分析你的项目结构，找到JavaScript模块以及其它的一些浏览器不能直接运行的拓展语言（Scss，TypeScript等），并将其转换和打包为合适的格式供浏览器使用。</p>
+<h1 id="2-我们为什么要使用webpack"><a href="#2-我们为什么要使用webpack" class="headerlink" title="2. 我们为什么要使用webpack"></a>2. 我们为什么要使用webpack</h1><p>现如今许多网页可以看做是功能丰富的应用，它们拥有着<strong>复杂</strong>的JavaScript代码和一大堆<strong>依赖包</strong>。<br>因此我们就想到了：</p>
+<ol>
+<li><strong>模块化</strong>，模块化的功能就是让我们把<strong>复杂</strong>的程序细化为<strong>小</strong>的文件。</li>
+<li>TypeScript语言</li>
+<li>scss、less等css预处理器<br>……</li>
+</ol>
+<p>由于上述的改进大大的<strong>提高</strong>了我们的开发效率，但是利用它们开发的文件往往需要进行<strong>额外的处理</strong>才能让浏览器识别,而手动处理又是<strong>非常繁琐</strong>的，这就为webpack工具的出现提供了需求。</p>
+<h1 id="3-正式开始使用webpack来打包一个项目"><a href="#3-正式开始使用webpack来打包一个项目" class="headerlink" title="3. 正式开始使用webpack来打包一个项目"></a>3. 正式开始使用webpack来打包一个项目</h1><p>在<strong>终端</strong>中进行操作，在这里我介绍一下在vscode中如何打开终端，快捷键：ctrl加上数字1左边那个按键（~）即可打开终端。</p>
+<ol>
+<li><p>由于webpack本质上是node.js来写的，因此我们需要先安装<strong>node环境</strong>，安装完之后可以用：”node -v”和”npm -v”进行一个查看，如果出现对应的版本号则证明你安装成功了。由于下载node.js很简单，在这里我就不再演示了，给大家附一个地址可以照着它进行一个安装:<a href="http://www.runoob.com/nodejs/nodejs-install-setup.html" target="_blank" rel="noopener">http://www.runoob.com/nodejs/nodejs-install-setup.html</a></p>
+</li>
+<li><p>在这里给大家再介绍一下什么是npm，一句话简单的给大家说一下：npm是包管理工具（就相当于项目），然后你可以通过npm命令来下载你想要的包，下载的命令是:npm install 包名<br>在这里还需要<strong>注意</strong>的一点是：npm是外国服务器，所以下载很慢，有时会用npm下载会报错，大家可以尝试用yarn或者cnpm淘宝镜像来下载。给大家一篇写的不错的文章来介绍yarn以及下载过程，链接如下所示：<a href="https://neveryu.github.io/2018/07/20/yarn/" target="_blank" rel="noopener">https://neveryu.github.io/2018/07/20/yarn/</a></p>
+</li>
+<li><p>在下载webpack之前，我们需要做的一个就是生成一个项目说明书（package.json文件），方便后期我们进行一个维护，执行命令：npm init。输入这个命令后，终端会问你一系列诸如项目名称，项目描述，作者等信息，不过不用担心，如果你不准备在npm中发布你的模块，这些问题的答案都不重要，回车默认即可。</p>
+</li>
+<li><p>下载webpack，执行命令：npm install webpack –save-dev</p>
+</li>
+<li><p>下载webpack命令行工具（它的作用就是减少我们的成本），执行命令：npm<br>install webpack-cli –save-dev<br>（在这里给大家介绍一下”–save-dev”是你<strong>开发</strong>时候依赖的东西，”–save”是你发布之后还依赖的东西）</p>
+</li>
+<li><p>此时webpack安装到了node_modules文件夹下面，当我们点开node_modules文件夹时，会发现它下面有许多的文件，其原因是因为<strong>依赖</strong>的原因。</p>
+</li>
+<li><p>由于webpack-cli在.bin目录下，因此你需要进入到:./node_modules/.bin/webpack -v来查看它的一个版本<br>如果你执行./node_modules/.bin/webpack命令，运行后它会报错，错误信息提示你缺少src文件，其原因是因为它会默认去src文件下面找index.js文件。因此解决办法就是在当前文件下面添加src文件，以及在src文件里面添加index.js文件，然后再运行就不会报错了，并且还会在当前文件下面生成一个dist文件，dist文件下面会有一个main.js文件<strong>（虽然index.js文件里面我们暂时还没有写代码，但是打包的文件main.js下面有一部分的代码，其原因是因为它会做一定的处理。）</strong><br>下面就给大家看看文件之间的一个层级关系，避免大家添加src文件和index.js文件出错，如下图所示：<br><a href="https://s2.ax1x.com/2019/07/06/Z0AZrQ.png" title="文件之间的层级关系" target="_blank" rel="noopener"><img src="https://s2.ax1x.com/2019/07/06/Z0AZrQ.png" alt="文件之间的层级关系" title="文件之间的层级关系"></a></p>
+</li>
+<li><p>由于./node_modules/.bin/webpack这样写太费劲了，并且在cmd下面这样写会报错，因为cmd不支持这样的写法。因此我们有更好的解决办法，那就是在package.json说明书里面的”scripts”脚本中进行一个修改，如下图所示：<br>[![执行”scripts”脚本里面的内容](<a href="https://s2.ax1x.com/2019/07/06/Z0EGfP.png" target="_blank" rel="noopener">https://s2.ax1x.com/2019/07/06/Z0EGfP.png</a> “执行”scripts”脚本里面的内容”)](<a href="https://s2.ax1x.com/2019/07/06/Z0EGfP.png" target="_blank" rel="noopener">https://s2.ax1x.com/2019/07/06/Z0EGfP.png</a> “执行”scripts”脚本里面的内容”)<br>然后再执行命令：npm run webpack</p>
+</li>
+<li><p>此时当你运行完后，你会看到终端给你一个警告提示，它会告诉你没有”mode”这个选项，mode表示当前的模式。主要有2个模式，<strong>一个是development开发模式（代码没有进行一个压缩），一个是production生产模式（代码进行一个压缩）</strong>。默认的是production生产模式。其实除了开发和生产模式之外，还有一个none模式，表示什么都不做。我们可以在”scripts”脚本中写入下图所示的内容：<br><a href="https://s2.ax1x.com/2019/07/06/Z0VMcT.png" title="生产模式和开发模式" target="_blank" rel="noopener"><img src="https://s2.ax1x.com/2019/07/06/Z0VMcT.png" alt="生产模式和开发模式" title="生产模式和开发模式"></a><br>执行命令:npm run dev是一个开发模式的，此时你去看dist文件夹下面的main.js文件中的代码是没有压缩的；当你执行命令:npm run prod是一个生产模式的，此时你去看dist文件夹下面的main.js文件中的代码是压缩的。你可以亲自试一试、看一看是不是和我写的是一样的。</p>
+</li>
+<li><p>由于每一次修改了文件，都得重新给它打包一次，所以很麻烦，因此有一个watch监听模式。此时我们可以在”scripts”脚本中修改内容为如下图所示：<br><a href="https://s2.ax1x.com/2019/07/07/ZBFjaR.png" title="在prod生产模式中添加了一个watch监听模式" target="_blank" rel="noopener"><img src="https://s2.ax1x.com/2019/07/07/ZBFjaR.png" alt="在prod生产模式中添加了一个watch监听模式" title="在prod生产模式中添加了一个watch监听模式"></a><br>执行命令：npm run prod时，当你在src文件下面的index.js文件中修改内容时，打包出来的dist文件下的main.js文件的内容会进行一个自动更新，这样就省去了我们每一次都要重新给它打包的次数。</p>
+</li>
+<li><p>最后再给大家讲解一下什么是tree shaking，它的作用就是把当前死代码给去掉了，打包的时候它会自动的去分析哪些用到还是没有被用到。如果大家对tree shaking感兴趣的话，可以去官网的指南下面找找tree shaking。下面我就直接附上tree shaking的链接了：<a href="https://www.webpackjs.com/guides/tree-shaking/" target="_blank" rel="noopener">https://www.webpackjs.com/guides/tree-shaking/</a></p>
+</li>
+</ol>
+<p>今天分享的是webpack最为基础的一部分，在下一次的分析中我会给大家分享webpack更加深入的一部分。</p>
+
+            <div class="clearfix"></div>
+            <hr class="nogutter">
+        </div>
+        <nav class="m-pagination col-md-8 col-md-offset-2 col-sm-24" role="pagination">
+    
+    <a class="pull-left" href="/2019/07/10/如何用webpack来打包项目（二）/" style="float: left;">
+        ← 如何用webpack来打包项目（二）
+    </a>
+    
+    
+    <a class="pull-right" href="/2019/07/04/jQuery之Ajax/">
+        jQuery之Ajax →
+    </a>
+    
+</nav>
+
+        <div class="col-md-8 col-md-offset-2 col-sm-24"><script type="text/javascript">
+  /**
+   * 搜狐畅言
+   */
+
+  /*
+  document.write('<div id="SOHUCS" sid="' + window.location.pathname.slice(1) + '" ></div>');
+
+  window.onload = function () {
+    (function () {
+      var appid = 'cytXXXX';
+      var conf = 'prod_xxxxxxxxxxxxxxxxx';
+      var width = window.innerWidth || document.documentElement.clientWidth;
+      var loadJs = function (d, a, id) {
+        var c = document.getElementsByTagName("head")[0] || document.head || document.documentElement;
+        var b = document.createElement("script");
+        b.setAttribute("type", "text/javascript");
+        b.setAttribute("charset", "UTF-8");
+        b.setAttribute("src", d);
+        if (id) {
+          b.setAttribute("id", id);
+        }
+        if (typeof a === "function") {
+          if (window.attachEvent) {
+            b.onreadystatechange = function () {
+              var e = b.readyState;
+              if (e === "loaded" || e === "complete") {
+                b.onreadystatechange = null;
+                a()
+              }
+            }
+          } else {
+            b.onload = a
+          }
+        }
+        c.appendChild(b)
+      };
+
+      loadJs("https://changyan.sohu.com/upload/changyan.js", function () {
+        window.changyan.api.config({
+          appid: appid,
+          conf: conf
+        })
+      });
+    })();
+  }
+  */
+
+</script>
+</div>
+    </div>
+</section>
+
+
+      
+<!-- ============================ Footer =========================== -->
+
+<footer>
+    <div class="container">
+            <div class="copy">
+                <p>
+                    &copy; 2014<script>new Date().getFullYear()>2010&&document.write("-"+new Date().getFullYear());</script>, Content By daipi173. All Rights Reserved.
+                </p>
+                <p>Theme By <a href="//go.kieran.top" style="color: #767D84">Kieran</a></p>
+            </div>
+            <div class="social">
+                <ul>
+                    
+                    <li><a href="https://github.com/" title="Github" target="_blank"><i class="icon-github"></i></a>&nbsp;</li>
+                    
+                    
+                    <li><a href="https://twitter.com/" title="Twitter" target="_blank"><i class="icon-twitter"></i></a>&nbsp;</li>
+                    
+                    
+                    <li><a href="https://www.facebook.com/" title="Facebook" target="_blank"><i class="icon-facebook"></i></a>&nbsp;</li>
+                    
+                    
+                    <li><a href="https://google.com/" title="Google-Plus" target="_blank"><i class="icon-google-plus"></i></a>&nbsp;</li>
+                    
+                    
+                    <li><a href="http://weibo.com/" title="Sina-Weibo" target="_blank"><i class="icon-sina-weibo"></i></a>&nbsp;</li>
+                    
+                </ul>
+            </div>
+            <div class="clearfix"> </div>
+        </div>
+</footer>
+
+<!-- ============================ END Footer =========================== -->
+      <!-- Load our scripts -->
+<!-- Resizable 'on-demand' full-height hero -->
+<script type="text/javascript">
+    var resizeHero = function () {
+        var hero = $(".cover,.heightblock"),
+            window1 = $(window);
+        hero.css({
+            "height": window1.height()
+        });
+    };
+
+    resizeHero();
+
+    $(window).resize(function () {
+        resizeHero();
+    });
+</script>
+<script src="/js/plugins.min.js"></script><!-- Bootstrap core and concatenated plugins always load here -->
+<script src="/js/scripts.js"></script><!-- Theme scripts -->
+
+
+<link rel="stylesheet" href="/fancybox/jquery.fancybox.css" media="screen" type="text/css">
+<script src="/fancybox/jquery.fancybox.pack.js"></script>
+<script type="text/javascript">
+$('#intro').find('img').each(function(){
+  var alt = this.alt;
+
+  if (alt){
+    $(this).after('<span class="caption" style="display:none">' + alt + '</span>');
+  }
+
+  $(this).wrap('<a href="' + this.src + '" title="' + alt + '" class="fancybox" rel="gallery" />');
+});
+(function($){
+  $('.fancybox').fancybox();
+})(jQuery);
+</script>
+
+
+
+      
+</body>
+</html>

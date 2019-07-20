@@ -1,0 +1,429 @@
+<!DOCTYPE html>
+<!--[if lte IE 8 ]>
+<html class="ie" xmlns="http://www.w3.org/1999/xhtml" xml:lang="en-US" lang="en-US">
+<![endif]-->
+<!--[if (gte IE 9)|!(IE)]><!-->
+<!--
+***************  *      *     *
+      8          *    *       *
+      8          *  *         *
+      8          **           *
+      8          *  *         *
+      8          *    *       *
+      8          *      *     *
+      8          *        *   ***********    -----Theme By Kieran(http://go.kieran.top)
+-->
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="zh-CN" lang="zh-CN">
+<!--<![endif]-->
+
+<head>
+  <title>import和require的区别 | daipi173的个人博客</title>
+  <!-- Meta data -->
+    <meta http-equiv="Content-Type" content="text/html" charset="UTF-8" >
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="generator" content="daipi173的个人博客">
+    <meta name="author" content="daipi173">
+    <meta name="description" content="" />
+    <meta name="keywords" content="" />
+
+    <!-- Favicon, (keep icon in root folder) -->
+    <link rel="Shortcut Icon" href="/img/favicon.ico" type="image/ico">
+
+    <link rel="alternate" href="/atom.xml" title="daipi173的个人博客" type="application/atom+xml">
+    <link rel="stylesheet" href="/css/all.css" media="screen" type="text/css">
+    
+    <link rel="stylesheet" href="/highlightjs/vs.css" type="text/css">
+    
+
+    <!--[if IE 8]>
+    <link rel="stylesheet" type="text/css" href="/css/ie8.css" />
+    <![endif]-->
+
+    <!-- jQuery | Load our jQuery, with an alternative source fallback to a local version if request is unavailable -->
+    <script src="/js/jquery-1.11.1.min.js"></script>
+    <script>window.jQuery || document.write('<script src="js/jquery-1.11.1.min.js"><\/script>')</script>
+
+    <!-- Load these in the <head> for quicker IE8+ load times -->
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+    <script src="/js/html5shiv.min.js"></script>
+    <script src="/js/respond.min.js"></script>
+    <![endif]-->
+
+  
+  
+  
+
+  <style>.col-md-8.col-md-offset-2.opening-statement img{display:none;}</style>
+</head>
+
+<!--
+<body class="post-template">
+-->
+<body id="index" class="lightnav animsition">
+
+      <!-- ============================ Off-canvas navigation =========================== -->
+
+    <div class="sb-slidebar sb-right sb-style-overlay sb-momentum-scrolling">
+        <div class="sb-close" aria-label="Close Menu" aria-hidden="true">
+            <img src="/img/close.png" alt="Close"/>
+        </div>
+        <!-- Lists in Slidebars -->
+        <ul class="sb-menu">
+            <li><a href="/" class="animsition-link" title="Home">Home</a></li>
+            <li><a href="/archives" class="animsition-link" title="archive">archives</a></li>
+            <!-- Dropdown Menu -->
+			 
+            <li>
+                <a class="sb-toggle-submenu">Works<span class="sb-caret"></span></a>
+                <ul class="sb-submenu">
+                    
+                        <li><a href="/" target="_BLANK" class="animsition-link">AAA</a></li>
+                    
+                        <li><a href="/atom.xml" target="_BLANK" class="animsition-link">BBB</a></li>
+                    
+                </ul>
+            </li>
+            
+            
+        	<li>
+        		<a class="sb-toggle-submenu">Categories<span class="sb-caret"></span></a>
+            	<ul class="sb-submenu">
+				  	
+				    <li><a href="/categories/ES6/" class="animsition-link">ES6<small>(4)</small></a></li>
+				    
+				    <li><a href="/categories/JavaScript/ES6/" class="animsition-link">ES6<small>(2)</small></a></li>
+				    
+				    <li><a href="/categories/HTML/" class="animsition-link">HTML<small>(11)</small></a></li>
+				    
+				    <li><a href="/categories/JavaScript/" class="animsition-link">JavaScript<small>(19)</small></a></li>
+				    
+				    <li><a href="/categories/ES6/JavaScript/" class="animsition-link">JavaScript<small>(4)</small></a></li>
+				    
+				    <li><a href="/categories/vue/" class="animsition-link">vue<small>(1)</small></a></li>
+				    
+				    <li><a href="/categories/webpack/" class="animsition-link">webpack<small>(2)</small></a></li>
+				    
+				</ul>
+        	</li>
+			
+            
+            <li>
+                <a class="sb-toggle-submenu">Links<span class="sb-caret"></span></a>
+                <ul class="sb-submenu">
+                    
+                    <li><a href="http://go.kieran.top/" class="animsition-link">Kieran</a></li>
+                    
+                    <li><a href="http://domain.com/" class="animsition-link">Name</a></li>
+                    
+                </ul>
+            </li>
+            
+        </ul>
+        <!-- Lists in Slidebars -->
+        <ul class="sb-menu secondary">
+            
+            <li><a href="/about.html" class="animsition-link" title="about">About</a></li>
+            <li><a href="/atom.xml" class="animsition-link" title="rss">RSS</a></li>
+        </ul>
+    </div>
+    
+    <!-- ============================ END Off-canvas navigation =========================== -->
+
+    <!-- ============================ #sb-site Main Page Wrapper =========================== -->
+
+    <div id="sb-site">
+        <!-- #sb-site - All page content should be contained within this id, except the off-canvas navigation itself -->
+
+        <!-- ============================ Header & Logo bar =========================== -->
+
+        <div id="navigation" class="navbar navbar-fixed-top">
+            <div class="navbar-inner">
+                <div class="container">
+                    <!-- Nav logo -->
+                    <div class="logo">
+                        <a href="/" title="Logo" class="animsition-link">
+                         <img src="/img/logo.png" alt="Logo" width="35px;"/> 
+                        </a>
+                    </div>
+                    <!-- // Nav logo -->
+                    <!-- Info-bar -->
+                    <nav>
+                        <ul class="nav">
+                            <li><a href="/" class="animsition-link">daipi173的个人博客</a></li>
+                            <li class="nolink"><span>Always </span>Creative.</li>
+                            
+                            <li><a href="https://github.com/" title="Github" target="_blank"><i class="icon-github"></i></a></li>
+                            
+                            
+                            <li><a href="https://twitter.com/" title="Twitter" target="_blank"><i class="icon-twitter"></i></a></li>
+                            
+                            
+                            <li><a href="https://www.facebook.com/" title="Facebook" target="_blank"><i class="icon-facebook"></i></a></li>
+                            
+                            
+                            <li><a href="https://google.com/" title="Google-Plus" target="_blank"><i class="icon-google-plus"></i></a></li>
+                            
+                            
+                            <li><a href="http://weibo.com/" title="Sina-Weibo" target="_blank"><i class="icon-sina-weibo"></i></a></li>
+                            
+                            <li class="nolink"><span>Welcome!</span></li>
+                        </ul>
+                    </nav>
+                    <!--// Info-bar -->
+                </div>
+                <!-- // .container -->
+                <div class="learnmore sb-toggle-right">More</div>
+                <button type="button" class="navbar-toggle menu-icon sb-toggle-right" title="More">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar before"></span>
+                <span class="icon-bar main"></span>
+                <span class="icon-bar after"></span>
+                </button>
+            </div>
+            <!-- // .navbar-inner -->
+        </div>
+
+        <!-- ============================ Header & Logo bar =========================== -->
+
+
+      
+<section id="intro">
+    <div class="container">
+        <div class="row col-md-offset-2">
+            <div class="col-md-8">
+    			<span class="post-meta">
+      <time datetime="2019-06-20T01:03:00.000Z" itemprop="datePublished">
+          2019-06-20
+      </time>
+    
+    
+    | 
+    <a href='/tags/ES6/'>ES6</a>,
+    
+    <a href='/tags/JavaScript/'>JavaScript</a>,
+    
+    <a href='/tags/import/'>import</a>,
+    
+    <a href='/tags/require/'>require</a>
+    
+    
+</span>
+                <h1>import和require的区别</h1>
+            </div>
+        </div>
+        <div class="col-md-8 col-md-offset-2">
+      		<p>require 和 import，<strong>都是为了JS模块化使用</strong>。不知道有没有小伙伴和我一样，最开始有点分不清楚import和require的区别，今天就给大家梳理一下他们之间的区别。由于有时候多人协同开发时，会出现一个项目中同时使用了import和require引入的情况。<strong>在正常的情况下，一个项目中最好使对引入方式做一个规范。</strong></p>
+<h1 id="1-遵循规范的区别"><a href="#1-遵循规范的区别" class="headerlink" title="1. 遵循规范的区别"></a>1. 遵循规范的区别</h1><ol>
+<li>import/export是<strong>ES6</strong>新规范</li>
+<li>require/exports是<strong>CommonJS</strong>的一部分</li>
+</ol>
+<p>ES6标准发布后，module成为标准，标准的使用是以export指令<strong>导出</strong>接口，以import<strong>引入</strong>模块；但是在node模块中，我们采用的是CommonJS规范，使用require<strong>引入</strong>模块，使用module.exports<strong>导出</strong>接口。</p>
+<h1 id="2-出现时间的区别"><a href="#2-出现时间的区别" class="headerlink" title="2. 出现时间的区别"></a>2. 出现时间的区别</h1><p>require/exports 出生在野生规范当中，什么叫做野生规范？即这些规范是 JavaScript 社区中的开发者自己草拟的规则，得到了大家的承认或者广泛的应用。比如 CommonJS、AMD、CMD 等等。import/export 则是名门正派。</p>
+<p>CommonJS 作为 Node.js 的规范，一直沿用至今。（就是因为CommonJS填补了JS没有模块的功能空缺，它的目标是让JS不止在浏览器中运行，可以在各个地方都能运行。）由于CommonJS 和 ES6 之间的差异，所以Node.js 无法直接兼容 ES6。因此我们在现阶段掌握require/exports是必要的。</p>
+<p>ES6在语言规格的层面上，实现了模块功能，而且实现得相当简单，完全可以取代现有的CommonJS和AMD规范，成为浏览器和服务器通用的模块解决方案。</p>
+<h1 id="3-require"><a href="#3-require" class="headerlink" title="3. require"></a>3. require</h1><p>require是Commonjs的规范，node应用是由模块组成的，遵从Commonjs的规范即exports是模块公开的接口,require用于从外部获取一个模块接口，举一个例子：<br>x.js与y.js是同级文件。<br>在x.js文件中写入代码：</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">demo</span>(<span class="params">args</span>) </span>&#123;</span><br><span class="line">  <span class="comment">// content...</span></span><br><span class="line">  <span class="built_in">console</span>.log(args);</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="built_in">module</span>.exports = &#123; demo &#125;;</span><br></pre></td></tr></table></figure>
+
+<p>y.js文件中写入代码：</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">let</span> &#123; demo &#125; = <span class="built_in">require</span>(<span class="string">"./x.js"</span>);</span><br><span class="line">demo(<span class="string">"I am x_demo!!!"</span>);</span><br></pre></td></tr></table></figure>
+
+<p>通过在终端运行：node y.js可以运行出:I am x_demo!!!</p>
+<p>require的使用：在导出的文件中定义module.exports，导出的对象类型不予限定（可为任意类型）。在导入的文件中使用require()引入即可使用。本质上，是将要导出的对象，赋值给module这个对象的exports属性，在其他文件中通过require这个方法来访问exports这个属性。</p>
+<h1 id="4-import"><a href="#4-import" class="headerlink" title="4. import"></a>4. import</h1><p>import是ES6为JS模块化提出的新的语法，import（导入）要与export（导出）结合使用，举一个例子。<br>index.html文件与x.js与y.js是同级文件。<br>在index.html文件中写入代码:</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">&lt;!DOCTYPE html&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">html</span> <span class="attr">lang</span>=<span class="string">"zh"</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">head</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">meta</span> <span class="attr">charset</span>=<span class="string">"UTF-8"</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">title</span>&gt;</span>Document<span class="tag">&lt;/<span class="name">title</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">head</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">body</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">script</span> <span class="attr">type</span>=<span class="string">"module"</span> <span class="attr">src</span>=<span class="string">"./y.js"</span>&gt;</span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">body</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">html</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+<p>在x.js文件中写入代码：</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">export</span> <span class="function"><span class="keyword">function</span> <span class="title">demo</span>(<span class="params">args</span>) </span>&#123;</span><br><span class="line">  <span class="comment">// content...</span></span><br><span class="line">  <span class="built_in">console</span>.log(args);</span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">export</span> <span class="keyword">default</span> <span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>&#123;<span class="built_in">console</span>.log(<span class="string">"I am default!!!"</span>)&#125;;  <span class="comment">// 默认导出模块，一个文件中只能定义一个</span></span><br><span class="line"><span class="keyword">export</span> <span class="keyword">const</span> age = <span class="string">"22"</span>;</span><br><span class="line"><span class="keyword">export</span> <span class="keyword">const</span> name = <span class="string">"daipi173"</span>;</span><br></pre></td></tr></table></figure>
+
+<p>y.js文件中写入代码：</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> def, &#123; demo, age, name &#125; <span class="keyword">from</span> <span class="string">'./x.js'</span>;  <span class="comment">// def代表引入的export default的内容</span></span><br><span class="line">demo(<span class="string">`My name is <span class="subst">$&#123;name&#125;</span>,and I am <span class="subst">$&#123;age&#125;</span> years`</span>);</span><br><span class="line">def();</span><br><span class="line"><span class="comment">// 控制台打印内容：</span></span><br><span class="line"><span class="comment">// My name is daipi173,and I am 22 years</span></span><br><span class="line"><span class="comment">// I am default!!!</span></span><br></pre></td></tr></table></figure>
+
+<p>注意：如果不放在服务器下面会有一个报错信息，如下图所示：<br><a href="https://s2.ax1x.com/2019/06/18/VLWhDA.png" title="不放在服务器下的报错信息" target="_blank" rel="noopener"><img src="https://s2.ax1x.com/2019/06/18/VLWhDA.png" alt="不放在服务器下的报错信息" title="不放在服务器下的报错信息"></a><br>此时的解决办法就是将它放在服务器下面就可以解决相应的问题。我们可以下一个服务器，Windows系统的可以下一个wamp，Mac系统的可以下一个mamp。</p>
+<h1 id="5-as关键字"><a href="#5-as关键字" class="headerlink" title="5. as关键字"></a>5. as关键字</h1><p>as简单的说就是<strong>取一个别名</strong>。export中可以用，import中也可以用。下面我们看一个例子。<br>a.js文件与b.js文件与c.js文件是同级文件：<br>a.js文件代码如下：</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> a = <span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>&#123;&#125;;</span><br><span class="line"><span class="keyword">export</span> &#123;a <span class="keyword">as</span> fun&#125;;</span><br></pre></td></tr></table></figure>
+
+<p>b.js文件代码如下：</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> &#123;fun <span class="keyword">as</span> a&#125; <span class="keyword">from</span> <span class="string">'./a'</span>;</span><br><span class="line">a();</span><br></pre></td></tr></table></figure>
+
+<p>上面这段代码，export的时候，对外提供的接口是fun，它是a.js内部a这个函数的别名，但是在模块外面，不认识a，只认识fun。<br>import中的as就很简单，就是你在使用模块里面的方法的时候，给这个方法取一个别名，好在当前的文件里面使用。之所以是这样，是因为有的时候不同的两个模块可能通过相同的接口，比如有一个c.js也通过了fun这个接口。<br>c.js文件代码如下：</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">export</span> <span class="function"><span class="keyword">function</span> <span class="title">fun</span>(<span class="params"></span>) </span>&#123;&#125;;</span><br></pre></td></tr></table></figure>
+
+<p>如果在b.js中同时使用a和c这两个模块，就必须想办法解决接口重名的问题，as就解决了。</p>
+<h1 id="6-default关键字"><a href="#6-default关键字" class="headerlink" title="6. default关键字"></a>6. default关键字</h1><p>在export的时候，可能会用到default，说简单一些它其实是别名的语法糖。<br>在x.js文件中写入代码：</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">export</span> <span class="keyword">default</span> <span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>&#123;&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">// 等价于</span></span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">test</span>(<span class="params"></span>) </span>&#123;&#125;;</span><br><span class="line"><span class="keyword">export</span> &#123;test <span class="keyword">as</span> <span class="keyword">default</span>&#125;;</span><br></pre></td></tr></table></figure>
+
+<p>在import的时候，可以这样使用:</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> a <span class="keyword">from</span> <span class="string">'./x'</span>;</span><br><span class="line"><span class="comment">// 等价于或者说就是下面这种写法的简写，是同一个意思</span></span><br><span class="line"><span class="keyword">import</span> &#123;<span class="keyword">default</span> <span class="keyword">as</span> a&#125; <span class="keyword">from</span> <span class="string">'./x'</span>;</span><br></pre></td></tr></table></figure>
+
+<p><strong>注意：这个语法糖的好处就是import的时候，可以省去花括号{}。简单的说，如果import的时候，你发现某个变量没有花括号括起来（没有*号），那么你在脑海中应该把它还原成有花括号的as语法。就如上面代码所示。</strong></p>
+<h1 id="7-符号"><a href="#7-符号" class="headerlink" title="7. *符号"></a>7. *符号</h1><p><em>就是代表所有，只用在import中。<br>*</em>注意：<em>符号尽可能少用，它实际上是使用所有export的接口，但是很有可能你的当前模块并不会用到所有接口，可能仅仅是一个，所以最好的建议是使用花括号，用一个加一个。*</em></p>
+<h1 id="8-形式的区别"><a href="#8-形式的区别" class="headerlink" title="8. 形式的区别"></a>8. 形式的区别</h1><ol>
+<li><p>ES6中import/export的写法比较多，下面我们来举一些例子看看：</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 导入写法</span></span><br><span class="line"><span class="keyword">import</span> dai <span class="keyword">from</span> <span class="string">"dai"</span>;</span><br><span class="line"><span class="keyword">import</span> &#123;<span class="keyword">default</span> <span class="keyword">as</span> dai&#125; <span class="keyword">from</span> <span class="string">"dai"</span>;</span><br><span class="line"><span class="keyword">import</span> * <span class="keyword">as</span> dai <span class="keyword">from</span> <span class="string">"dai"</span>;</span><br><span class="line"><span class="comment">// 导出写法</span></span><br><span class="line"><span class="keyword">export</span> <span class="keyword">default</span> dai;</span><br><span class="line"><span class="keyword">export</span> <span class="keyword">const</span> dai;</span><br><span class="line"><span class="keyword">export</span> * <span class="keyword">from</span> <span class="string">"dai"</span>;</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>CommonJS中require/exports的用法只有下面几种写法：</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> dai = <span class="built_in">require</span>(<span class="string">"dai"</span>);</span><br><span class="line">exports.dai = dai;</span><br><span class="line"><span class="built_in">module</span>.exports = dai;</span><br></pre></td></tr></table></figure>
+
+</li>
+</ol>
+<h1 id="9-Commonjs模块与ES6模块的区别"><a href="#9-Commonjs模块与ES6模块的区别" class="headerlink" title="9. Commonjs模块与ES6模块的区别"></a>9. Commonjs模块与ES6模块的区别</h1><ol>
+<li>commonjs输出的是一个值的<strong>拷贝</strong>，而es6输出的是值的<strong>引用</strong>；</li>
+<li>commonjs是<strong>运行时</strong>加载，es6是<strong>编译时</strong>输出接口。</li>
+</ol>
+<h1 id="10-require和import的使用场合"><a href="#10-require和import的使用场合" class="headerlink" title="10. require和import的使用场合"></a>10. require和import的使用场合</h1><p><strong>require的使用场合：</strong><br>require的使用非常简单，它相当于module.exports的传送门，module.exports后面的内容是什么，require的结果就是什么，对象、数字、字符串、函数……再把require的结果赋值给某个变量，相当于把require和module.exports进行平行空间的位置重叠。</p>
+<p>require理论上可以运用在代码的任何地方，甚至不需要赋值给某个变量之后再使用，而且你在使用时，<strong>完全可以忽略模块化</strong>这个概念来使用require，仅仅把它当做一个<strong>node内置的全局函数</strong>，它的参数甚至<strong>可以是表达式</strong>：。举一个例子，代码如下所示：</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">require</span>(<span class="string">'./a'</span>)(); <span class="comment">// a模块是一个函数，立即执行a模块函数</span></span><br><span class="line"><span class="keyword">var</span> data = <span class="built_in">require</span>(<span class="string">'./a'</span>).data; <span class="comment">// a模块导出的是一个对象</span></span><br><span class="line"><span class="keyword">var</span> a = <span class="built_in">require</span>(<span class="string">'./a'</span>)[<span class="number">0</span>]; <span class="comment">// a模块导出的是一个数组</span></span><br><span class="line"><span class="built_in">require</span>(process.cwd() + <span class="string">'/a'</span>); <span class="comment">// 可以作为表达式</span></span><br></pre></td></tr></table></figure>
+
+<p><strong>import使用场合：</strong><br>import是编译时的，它必须放在文件开头，而且使用格式也是确定的，它不会将整个模块<strong>运行后</strong>赋值给某个变量，而是只选择import的接口进行编译，这样在<strong>性能上比require好很多。</strong></p>
+<p>如果还有不懂或者想要深入学习的同学，可以去网上搜索相关的内容进行一个补充。</p>
+
+            <div class="clearfix"></div>
+            <hr class="nogutter">
+        </div>
+        <nav class="m-pagination col-md-8 col-md-offset-2 col-sm-24" role="pagination">
+    
+    <a class="pull-left" href="/2019/06/22/JS之用一次for循环来合并排序/" style="float: left;">
+        ← JS之用一次for循环来合并排序
+    </a>
+    
+    
+    <a class="pull-right" href="/2019/06/16/ES6之class类的补充/">
+        ES6之class类的补充 →
+    </a>
+    
+</nav>
+
+        <div class="col-md-8 col-md-offset-2 col-sm-24"><script type="text/javascript">
+  /**
+   * 搜狐畅言
+   */
+
+  /*
+  document.write('<div id="SOHUCS" sid="' + window.location.pathname.slice(1) + '" ></div>');
+
+  window.onload = function () {
+    (function () {
+      var appid = 'cytXXXX';
+      var conf = 'prod_xxxxxxxxxxxxxxxxx';
+      var width = window.innerWidth || document.documentElement.clientWidth;
+      var loadJs = function (d, a, id) {
+        var c = document.getElementsByTagName("head")[0] || document.head || document.documentElement;
+        var b = document.createElement("script");
+        b.setAttribute("type", "text/javascript");
+        b.setAttribute("charset", "UTF-8");
+        b.setAttribute("src", d);
+        if (id) {
+          b.setAttribute("id", id);
+        }
+        if (typeof a === "function") {
+          if (window.attachEvent) {
+            b.onreadystatechange = function () {
+              var e = b.readyState;
+              if (e === "loaded" || e === "complete") {
+                b.onreadystatechange = null;
+                a()
+              }
+            }
+          } else {
+            b.onload = a
+          }
+        }
+        c.appendChild(b)
+      };
+
+      loadJs("https://changyan.sohu.com/upload/changyan.js", function () {
+        window.changyan.api.config({
+          appid: appid,
+          conf: conf
+        })
+      });
+    })();
+  }
+  */
+
+</script>
+</div>
+    </div>
+</section>
+
+
+      
+<!-- ============================ Footer =========================== -->
+
+<footer>
+    <div class="container">
+            <div class="copy">
+                <p>
+                    &copy; 2014<script>new Date().getFullYear()>2010&&document.write("-"+new Date().getFullYear());</script>, Content By daipi173. All Rights Reserved.
+                </p>
+                <p>Theme By <a href="//go.kieran.top" style="color: #767D84">Kieran</a></p>
+            </div>
+            <div class="social">
+                <ul>
+                    
+                    <li><a href="https://github.com/" title="Github" target="_blank"><i class="icon-github"></i></a>&nbsp;</li>
+                    
+                    
+                    <li><a href="https://twitter.com/" title="Twitter" target="_blank"><i class="icon-twitter"></i></a>&nbsp;</li>
+                    
+                    
+                    <li><a href="https://www.facebook.com/" title="Facebook" target="_blank"><i class="icon-facebook"></i></a>&nbsp;</li>
+                    
+                    
+                    <li><a href="https://google.com/" title="Google-Plus" target="_blank"><i class="icon-google-plus"></i></a>&nbsp;</li>
+                    
+                    
+                    <li><a href="http://weibo.com/" title="Sina-Weibo" target="_blank"><i class="icon-sina-weibo"></i></a>&nbsp;</li>
+                    
+                </ul>
+            </div>
+            <div class="clearfix"> </div>
+        </div>
+</footer>
+
+<!-- ============================ END Footer =========================== -->
+      <!-- Load our scripts -->
+<!-- Resizable 'on-demand' full-height hero -->
+<script type="text/javascript">
+    var resizeHero = function () {
+        var hero = $(".cover,.heightblock"),
+            window1 = $(window);
+        hero.css({
+            "height": window1.height()
+        });
+    };
+
+    resizeHero();
+
+    $(window).resize(function () {
+        resizeHero();
+    });
+</script>
+<script src="/js/plugins.min.js"></script><!-- Bootstrap core and concatenated plugins always load here -->
+<script src="/js/scripts.js"></script><!-- Theme scripts -->
+
+
+<link rel="stylesheet" href="/fancybox/jquery.fancybox.css" media="screen" type="text/css">
+<script src="/fancybox/jquery.fancybox.pack.js"></script>
+<script type="text/javascript">
+$('#intro').find('img').each(function(){
+  var alt = this.alt;
+
+  if (alt){
+    $(this).after('<span class="caption" style="display:none">' + alt + '</span>');
+  }
+
+  $(this).wrap('<a href="' + this.src + '" title="' + alt + '" class="fancybox" rel="gallery" />');
+});
+(function($){
+  $('.fancybox').fancybox();
+})(jQuery);
+</script>
+
+
+
+      
+</body>
+</html>
