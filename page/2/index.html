@@ -91,13 +91,17 @@
         		<a class="sb-toggle-submenu">Categories<span class="sb-caret"></span></a>
             	<ul class="sb-submenu">
 				  	
+				    <li><a href="/categories/HTML/CSS/" class="animsition-link">CSS<small>(1)</small></a></li>
+				    
 				    <li><a href="/categories/ES6/" class="animsition-link">ES6<small>(4)</small></a></li>
 				    
 				    <li><a href="/categories/JavaScript/ES6/" class="animsition-link">ES6<small>(2)</small></a></li>
 				    
-				    <li><a href="/categories/HTML/" class="animsition-link">HTML<small>(11)</small></a></li>
+				    <li><a href="/categories/Git/" class="animsition-link">Git<small>(1)</small></a></li>
 				    
-				    <li><a href="/categories/JavaScript/" class="animsition-link">JavaScript<small>(19)</small></a></li>
+				    <li><a href="/categories/HTML/" class="animsition-link">HTML<small>(13)</small></a></li>
+				    
+				    <li><a href="/categories/JavaScript/" class="animsition-link">JavaScript<small>(22)</small></a></li>
 				    
 				    <li><a href="/categories/ES6/JavaScript/" class="animsition-link">JavaScript<small>(4)</small></a></li>
 				    
@@ -222,6 +226,252 @@
 
 <section id="intro">
     <div class="container">
+        
+        <div class="row">
+            <div class="col-md-8 col-md-offset-2 opening-statement">
+                <div class="col-md-4">
+                    <h3><a href="/2019/07/04/jQuery之Ajax/">jQuery之Ajax</a></h3>
+                    <span>
+                        <span class="post-meta">
+      <time datetime="2019-07-04T13:42:00.000Z" itemprop="datePublished">
+          2019-07-04
+      </time>
+    
+    
+    | 
+    <a href='/tags/JavaScript/'>JavaScript</a>,
+    
+    <a href='/tags/jQuery/'>jQuery</a>,
+    
+    <a href='/tags/Ajax/'>Ajax</a>
+    
+    
+</span>
+                    </span>
+                </div>
+                <div class="col-md-8">
+                    <p>
+                      
+                        我们需要注意的一点是：jQuery是函数式的写法。
+下面我们来看一个关于Ajax的例子（注意：需要放到服务器下面进行一个运行）：
+GET方法进行一个请求：index.html文件和getNews.php文件在同一个路径下，getNews.php文件中的内容为：
+1234567891011121314151617&lt;?phpheader('content-type:text/html;charset="utf-8"');error_r
+                      
+                    </p>
+                    
+                    <p class="pull-right readMore">
+                        <a href="/2019/07/04/jQuery之Ajax/">Read More...</a>
+                    </p>
+                    
+                </div>
+                <div class="clearfix"></div>
+                <hr class="nogutter">
+            </div>
+        </div>
+        
+        <div class="row">
+            <div class="col-md-8 col-md-offset-2 opening-statement">
+                <div class="col-md-4">
+                    <h3><a href="/2019/07/01/函数节流（throttle）/">函数节流（throttle）</a></h3>
+                    <span>
+                        <span class="post-meta">
+      <time datetime="2019-07-01T14:32:00.000Z" itemprop="datePublished">
+          2019-07-01
+      </time>
+    
+    
+    | 
+    <a href='/tags/JavaScript/'>JavaScript</a>,
+    
+    <a href='/tags/函数节流/'>函数节流</a>
+    
+    
+</span>
+                    </span>
+                </div>
+                <div class="col-md-8">
+                    <p>
+                      
+                        1. 什么是函数节流（throttle）函数节流（throttle）概念：规定一个单位时间，在这个单位时间内，只能有一次触发事件的回调函数执行，如果在同一个单位时间内某事件被触发多次，只有一次能生效。
+2. 生活中的例子当 1 秒内连续播放 24 张以上的图片时，在人眼的视觉中就会形成一个连贯的动画，所以在电影的播放中大概是以每秒 24 张的速度播放的，为什么不是 100 张或更多呢？其原因是因为 24 张就可以满足人类视觉需求的时候，
+                      
+                    </p>
+                    
+                    <p class="pull-right readMore">
+                        <a href="/2019/07/01/函数节流（throttle）/">Read More...</a>
+                    </p>
+                    
+                </div>
+                <div class="clearfix"></div>
+                <hr class="nogutter">
+            </div>
+        </div>
+        
+        <div class="row">
+            <div class="col-md-8 col-md-offset-2 opening-statement">
+                <div class="col-md-4">
+                    <h3><a href="/2019/06/28/函数防抖（debounce）/">函数防抖（debounce）</a></h3>
+                    <span>
+                        <span class="post-meta">
+      <time datetime="2019-06-28T11:43:00.000Z" itemprop="datePublished">
+          2019-06-28
+      </time>
+    
+    
+    | 
+    <a href='/tags/JavaScript/'>JavaScript</a>,
+    
+    <a href='/tags/函数防抖/'>函数防抖</a>
+    
+    
+</span>
+                    </span>
+                </div>
+                <div class="col-md-8">
+                    <p>
+                      
+                        1. 什么是函数防抖（debounce）在事件被触发n秒后再执行回调，如果在这n秒内又被触发，则重新计时。
+2. 生活中的例子如果有人进电梯（触发事件），那电梯将在5秒钟后关闭（执行事件监听器），这时如果又有人进电梯了（在5秒内再次触发该事件），我们又得等5秒再关闭（重新计时）。
+3. 函数防抖的应用场景
+给按钮加函数防抖防止表单多次提交。
+对于输入框连续输入进行AJAX验证时，用函数防抖能有效减少请求次数。
+判断scroll是否滑到底
+                      
+                    </p>
+                    
+                    <p class="pull-right readMore">
+                        <a href="/2019/06/28/函数防抖（debounce）/">Read More...</a>
+                    </p>
+                    
+                </div>
+                <div class="clearfix"></div>
+                <hr class="nogutter">
+            </div>
+        </div>
+        
+        <div class="row">
+            <div class="col-md-8 col-md-offset-2 opening-statement">
+                <div class="col-md-4">
+                    <h3><a href="/2019/06/25/算法之快速排序（Quick-Sort）/">算法之快速排序（Quick Sort）</a></h3>
+                    <span>
+                        <span class="post-meta">
+      <time datetime="2019-06-25T13:57:00.000Z" itemprop="datePublished">
+          2019-06-25
+      </time>
+    
+</span>
+                    </span>
+                </div>
+                <div class="col-md-8">
+                    <p>
+                      
+                        1. 算法简介快速排序的基本思想：通过一趟排序将待排记录分隔成独立的两部分，其中一部分记录的关键字均比另一部分的关键字小，则可分别对这两部分记录继续进行排序，以达到整个序列有序。
+2. 算法描述和实现快速排序使用分治法来把一个串（list）分为两个子串（sub-lists）。具体算法描述如下：
+
+从数列中挑出一个元素，称为 “基准”（pivot）；
+重新排序数列，所有元素比基准值小的摆放在基准前面，所有元素比基准值大的摆在基准的后面（相
+                      
+                    </p>
+                    
+                    <p class="pull-right readMore">
+                        <a href="/2019/06/25/算法之快速排序（Quick-Sort）/">Read More...</a>
+                    </p>
+                    
+                </div>
+                <div class="clearfix"></div>
+                <hr class="nogutter">
+            </div>
+        </div>
+        
+        <div class="row">
+            <div class="col-md-8 col-md-offset-2 opening-statement">
+                <div class="col-md-4">
+                    <h3><a href="/2019/06/22/JS之用一次for循环来合并排序/">JS之用一次for循环来合并排序</a></h3>
+                    <span>
+                        <span class="post-meta">
+      <time datetime="2019-06-22T02:15:00.000Z" itemprop="datePublished">
+          2019-06-22
+      </time>
+    
+    
+    | 
+    <a href='/tags/JavaScript/'>JavaScript</a>,
+    
+    <a href='/tags/for循环/'>for循环</a>,
+    
+    <a href='/tags/排序/'>排序</a>
+    
+    
+</span>
+                    </span>
+                </div>
+                <div class="col-md-8">
+                    <p>
+                      
+                        今天给大家分享一道较为简单的js题，下面大家先看一看题目，在这之前先不要看我写的代码，看看自己有没有更好的方法。下面我先把题分享出来：首先先把题中重点的地方列举出来：
+
+数组的内容都是从小到大排好序的数字；
+合并之后的数字也是要从小到大排好序的；
+不要直接使用sort()方法（在下面的代码中我没有使用sort()方法）；
+只使用一次for循环。
+
+大家先仔细想一想思路，当你写完自己的代码时，认为自己代码是否有bug的最好方法就是带几组比
+                      
+                    </p>
+                    
+                    <p class="pull-right readMore">
+                        <a href="/2019/06/22/JS之用一次for循环来合并排序/">Read More...</a>
+                    </p>
+                    
+                </div>
+                <div class="clearfix"></div>
+                <hr class="nogutter">
+            </div>
+        </div>
+        
+        <div class="row">
+            <div class="col-md-8 col-md-offset-2 opening-statement">
+                <div class="col-md-4">
+                    <h3><a href="/2019/06/20/import和require的区别/">import和require的区别</a></h3>
+                    <span>
+                        <span class="post-meta">
+      <time datetime="2019-06-20T01:03:00.000Z" itemprop="datePublished">
+          2019-06-20
+      </time>
+    
+    
+    | 
+    <a href='/tags/ES6/'>ES6</a>,
+    
+    <a href='/tags/JavaScript/'>JavaScript</a>,
+    
+    <a href='/tags/import/'>import</a>,
+    
+    <a href='/tags/require/'>require</a>
+    
+    
+</span>
+                    </span>
+                </div>
+                <div class="col-md-8">
+                    <p>
+                      
+                        require 和 import，都是为了JS模块化使用。不知道有没有小伙伴和我一样，最开始有点分不清楚import和require的区别，今天就给大家梳理一下他们之间的区别。由于有时候多人协同开发时，会出现一个项目中同时使用了import和require引入的情况。在正常的情况下，一个项目中最好使对引入方式做一个规范。
+1. 遵循规范的区别
+import/export是ES6新规范
+require/exports是CommonJS的一
+                      
+                    </p>
+                    
+                    <p class="pull-right readMore">
+                        <a href="/2019/06/20/import和require的区别/">Read More...</a>
+                    </p>
+                    
+                </div>
+                <div class="clearfix"></div>
+                <hr class="nogutter">
+            </div>
+        </div>
         
         <div class="row">
             <div class="col-md-8 col-md-offset-2 opening-statement">
@@ -383,244 +633,6 @@ b. 第一轮结束后，继续第二轮
                     
                     <p class="pull-right readMore">
                         <a href="/2019/06/07/JavaScript中的难点及易错点（二）/">Read More...</a>
-                    </p>
-                    
-                </div>
-                <div class="clearfix"></div>
-                <hr class="nogutter">
-            </div>
-        </div>
-        
-        <div class="row">
-            <div class="col-md-8 col-md-offset-2 opening-statement">
-                <div class="col-md-4">
-                    <h3><a href="/2019/06/04/JavaScript中的难点及易错点（一）/">JavaScript中的难点及易错点（一）</a></h3>
-                    <span>
-                        <span class="post-meta">
-      <time datetime="2019-06-04T13:49:00.000Z" itemprop="datePublished">
-          2019-06-04
-      </time>
-    
-    
-    | 
-    <a href='/tags/JavaScript/'>JavaScript</a>,
-    
-    <a href='/tags/难点/'>难点</a>,
-    
-    <a href='/tags/易错点/'>易错点</a>
-    
-    
-</span>
-                    </span>
-                </div>
-                <div class="col-md-8">
-                    <p>
-                      
-                        1. 延时写法在想到让大家写一个延时的代码时，大家可能第一时间想到的是：setTimeout(&quot;callFunction()&quot;,1000);但是，我们可以对上述的代码进行一个更好的优化，可以将其改为如下所示代码：
-1234567function delayeFunction(content,time)&#123;	setTimeout(function()&#123;		// 可以对content的内容进行修改，在这
-                      
-                    </p>
-                    
-                    <p class="pull-right readMore">
-                        <a href="/2019/06/04/JavaScript中的难点及易错点（一）/">Read More...</a>
-                    </p>
-                    
-                </div>
-                <div class="clearfix"></div>
-                <hr class="nogutter">
-            </div>
-        </div>
-        
-        <div class="row">
-            <div class="col-md-8 col-md-offset-2 opening-statement">
-                <div class="col-md-4">
-                    <h3><a href="/2019/06/01/History历史记录管理/">History历史记录管理</a></h3>
-                    <span>
-                        <span class="post-meta">
-      <time datetime="2019-06-01T13:56:00.000Z" itemprop="datePublished">
-          2019-06-01
-      </time>
-    
-    
-    | 
-    <a href='/tags/HTML/'>HTML</a>,
-    
-    <a href='/tags/History/'>History</a>
-    
-    
-</span>
-                    </span>
-                </div>
-                <div class="col-md-8">
-                    <p>
-                      
-                        1. H5中将history的内容进行了一个增加H5中新增加的内容解决了网络部分的问题，其解决的重要问题是：无刷新历史记录切换。
-1.1 history.pushState()方法history.pushState(stateObj,’page2’,’bar.html’) 添加一条历史记录。参数：stateObj是传递的值，它是一个对象；page2是新的历史记录的标题，目前还没有什么用（相当于你写了它也不会去帮你读取它的）;bar.ht
-                      
-                    </p>
-                    
-                    <p class="pull-right readMore">
-                        <a href="/2019/06/01/History历史记录管理/">Read More...</a>
-                    </p>
-                    
-                </div>
-                <div class="clearfix"></div>
-                <hr class="nogutter">
-            </div>
-        </div>
-        
-        <div class="row">
-            <div class="col-md-8 col-md-offset-2 opening-statement">
-                <div class="col-md-4">
-                    <h3><a href="/2019/05/29/JavaScript之闭包/">JavaScript之闭包</a></h3>
-                    <span>
-                        <span class="post-meta">
-      <time datetime="2019-05-29T14:04:00.000Z" itemprop="datePublished">
-          2019-05-29
-      </time>
-    
-    
-    | 
-    <a href='/tags/JavaScript/'>JavaScript</a>,
-    
-    <a href='/tags/闭包/'>闭包</a>
-    
-    
-</span>
-                    </span>
-                </div>
-                <div class="col-md-8">
-                    <p>
-                      
-                        1. 闭包的定义mdn对闭包的定义：闭包是函数和声明该函数的词法环境的组合。可能读了上面的定义你有点懵，但是没有关系，我们继续往下看。其实对闭包的定义我们可以分为从理论角度或者从实践角度来看。
-从理论角度来看：所有的函数都是。因为它们都在创建的时候就将上层上下文的数据保存了起来了。哪怕是简单的全局变量也是如此，因为函数中访问全局变量就相当于是在访问自由变量，这个时候使用的是最外层的作用域。
-当然我们不能从理论角度来定义闭包，我们需要从实
-                      
-                    </p>
-                    
-                    <p class="pull-right readMore">
-                        <a href="/2019/05/29/JavaScript之闭包/">Read More...</a>
-                    </p>
-                    
-                </div>
-                <div class="clearfix"></div>
-                <hr class="nogutter">
-            </div>
-        </div>
-        
-        <div class="row">
-            <div class="col-md-8 col-md-offset-2 opening-statement">
-                <div class="col-md-4">
-                    <h3><a href="/2019/05/26/H5之Flex弹性盒子布局/">H5之Flex弹性盒子布局</a></h3>
-                    <span>
-                        <span class="post-meta">
-      <time datetime="2019-05-26T09:03:00.000Z" itemprop="datePublished">
-          2019-05-26
-      </time>
-    
-    
-    | 
-    <a href='/tags/HTML/'>HTML</a>,
-    
-    <a href='/tags/Flex/'>Flex</a>,
-    
-    <a href='/tags/布局/'>布局</a>
-    
-    
-</span>
-                    </span>
-                </div>
-                <div class="col-md-8">
-                    <p>
-                      
-                        1. 什么是Flex弹性盒子布局Flex是Flexible Box的缩写，意为”弹性布局”，用来为盒状模型提供最大的灵活性。它是一种一维的布局模型（只能实现一种方向，要么是垂直方向，要么是水平方向），它给flexbox的子元素之间提供了强大的空间分布和对齐能力（就是依赖于2根轴，分别是主轴和交叉轴，交叉轴始终与主轴垂直）。注意：任何一个容器都可以指定为 Flex布局，行内元素也可以使用 Flex布局。
-2. 给父级设置display: 
-                      
-                    </p>
-                    
-                    <p class="pull-right readMore">
-                        <a href="/2019/05/26/H5之Flex弹性盒子布局/">Read More...</a>
-                    </p>
-                    
-                </div>
-                <div class="clearfix"></div>
-                <hr class="nogutter">
-            </div>
-        </div>
-        
-        <div class="row">
-            <div class="col-md-8 col-md-offset-2 opening-statement">
-                <div class="col-md-4">
-                    <h3><a href="/2019/05/23/H5之Worker多线程/">H5之Worker多线程</a></h3>
-                    <span>
-                        <span class="post-meta">
-      <time datetime="2019-05-23T08:57:00.000Z" itemprop="datePublished">
-          2019-05-23
-      </time>
-    
-    
-    | 
-    <a href='/tags/HTML/'>HTML</a>,
-    
-    <a href='/tags/网络/'>网络</a>,
-    
-    <a href='/tags/Worker/'>Worker</a>
-    
-    
-</span>
-                    </span>
-                </div>
-                <div class="col-md-8">
-                    <p>
-                      
-                        1. 为什么js是单线程的？因为我们要响应用户的一些dom操作，如果是多线程的话，那么可能dom操作同时进行了，那么给用户展示的结果就混乱了。因此我们应该等待用户操作完成之后再响应下一个的操作，所以说js一直是一个单线程的语言。
-2. 什么是web worker呢？web worker 是运行在后台的 JavaScript，不占用浏览器自身线程，独立于其他脚本，可以提高应用的总体性能，并且提升用户体验。
-3. web worker的作用
-                      
-                    </p>
-                    
-                    <p class="pull-right readMore">
-                        <a href="/2019/05/23/H5之Worker多线程/">Read More...</a>
-                    </p>
-                    
-                </div>
-                <div class="clearfix"></div>
-                <hr class="nogutter">
-            </div>
-        </div>
-        
-        <div class="row">
-            <div class="col-md-8 col-md-offset-2 opening-statement">
-                <div class="col-md-4">
-                    <h3><a href="/2019/05/20/ES6之生成器Generator/">ES6之生成器Generator</a></h3>
-                    <span>
-                        <span class="post-meta">
-      <time datetime="2019-05-20T13:29:00.000Z" itemprop="datePublished">
-          2019-05-20
-      </time>
-    
-    
-    | 
-    <a href='/tags/ES6/'>ES6</a>,
-    
-    <a href='/tags/JavaScript/'>JavaScript</a>,
-    
-    <a href='/tags/Generator/'>Generator</a>
-    
-    
-</span>
-                    </span>
-                </div>
-                <div class="col-md-8">
-                    <p>
-                      
-                        1. 什么是生成器Generator生成器Generator在异步流程中，它可以控制我们的一个异步流程。我们先看看生成器的一个基础语法：function * fn(){} 注意：*放在开头或者中间或者结尾都是可以的。生成器与普通函数不同的第一点就是：普通函数使用 function 声明，而生成器函数使用 function* 声明。接下来我们再来看几行代码：
-12345678910function * fn()&#123;	yield "
-                      
-                    </p>
-                    
-                    <p class="pull-right readMore">
-                        <a href="/2019/05/20/ES6之生成器Generator/">Read More...</a>
                     </p>
                     
                 </div>
