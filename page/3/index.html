@@ -80,7 +80,7 @@
         		<a class="sb-toggle-submenu">Categories<span class="sb-caret"></span></a>
             	<ul class="sb-submenu">
 				  	
-				    <li><a href="/categories/HTML/CSS/" class="animsition-link">CSS<small>(1)</small></a></li>
+				    <li><a href="/categories/HTML/CSS/" class="animsition-link">CSS<small>(4)</small></a></li>
 				    
 				    <li><a href="/categories/ES6/" class="animsition-link">ES6<small>(4)</small></a></li>
 				    
@@ -88,7 +88,7 @@
 				    
 				    <li><a href="/categories/Git/" class="animsition-link">Git<small>(1)</small></a></li>
 				    
-				    <li><a href="/categories/HTML/" class="animsition-link">HTML<small>(13)</small></a></li>
+				    <li><a href="/categories/HTML/" class="animsition-link">HTML<small>(16)</small></a></li>
 				    
 				    <li><a href="/categories/JavaScript/" class="animsition-link">JavaScript<small>(22)</small></a></li>
 				    
@@ -213,6 +213,134 @@
 
 <section id="intro">
     <div class="container">
+        
+        <div class="row">
+            <div class="col-md-8 col-md-offset-2 opening-statement">
+                <div class="col-md-4">
+                    <h3><a href="/2019/06/13/ES6之Class类/">ES6之Class类</a></h3>
+                    <span>
+                        <span class="post-meta">
+      <time datetime="2019-06-13T15:18:00.000Z" itemprop="datePublished">
+          2019-06-13
+      </time>
+    
+    
+    | 
+    <a href='/tags/ES6/'>ES6</a>,
+    
+    <a href='/tags/JavaScript/'>JavaScript</a>,
+    
+    <a href='/tags/Class类/'>Class类</a>
+    
+    
+</span>
+                    </span>
+                </div>
+                <div class="col-md-8">
+                    <p>
+                      
+                        1. 类的由来JavaScript 语言中，生成实例对象的传统方法是通过构造函数，下面我们来看一段代码：
+123456789function Point(x, y) &#123;  this.x = x;  this.y = y;&#125;Point.prototype.toString = function () &#123;  return this.x + ', ' + this.y;&#125;;var p = new Poi
+                      
+                    </p>
+                    
+                    <p class="pull-right readMore">
+                        <a href="/2019/06/13/ES6之Class类/">Read More...</a>
+                    </p>
+                    
+                </div>
+                <div class="clearfix"></div>
+                <hr class="nogutter">
+            </div>
+        </div>
+        
+        <div class="row">
+            <div class="col-md-8 col-md-offset-2 opening-statement">
+                <div class="col-md-4">
+                    <h3><a href="/2019/06/10/JavaScript中的冒泡排序/">JavaScript中的冒泡排序</a></h3>
+                    <span>
+                        <span class="post-meta">
+      <time datetime="2019-06-10T11:28:00.000Z" itemprop="datePublished">
+          2019-06-10
+      </time>
+    
+    
+    | 
+    <a href='/tags/JavaScript/'>JavaScript</a>,
+    
+    <a href='/tags/冒泡排序/'>冒泡排序</a>,
+    
+    <a href='/tags/算法/'>算法</a>
+    
+    
+</span>
+                    </span>
+                </div>
+                <div class="col-md-8">
+                    <p>
+                      
+                        
+冒泡排序法想必大家都听说过吧，今天就给大家讲一讲关于冒泡排序法。
+冒泡排序法的时间复杂度为O(n^2)，冒泡排序相对是比较简单的并且冒泡排序也是容易理解的一种排序算法，在面试中也是容易被考到的。
+冒泡排序的一个基本思路是：
+
+a. 从数组头部开始，不断比较相邻的两个元素的大小，让较大的元素逐渐往后移动（交换两个元素的值），直到数组的末尾。经过第一轮的比较，就可以找到最大的元素，并将它移动到最后一个位置。
+b. 第一轮结束后，继续第二轮
+                      
+                    </p>
+                    
+                    <p class="pull-right readMore">
+                        <a href="/2019/06/10/JavaScript中的冒泡排序/">Read More...</a>
+                    </p>
+                    
+                </div>
+                <div class="clearfix"></div>
+                <hr class="nogutter">
+            </div>
+        </div>
+        
+        <div class="row">
+            <div class="col-md-8 col-md-offset-2 opening-statement">
+                <div class="col-md-4">
+                    <h3><a href="/2019/06/07/JavaScript中的难点及易错点（二）/">JavaScript中的难点及易错点（二）</a></h3>
+                    <span>
+                        <span class="post-meta">
+      <time datetime="2019-06-07T13:56:00.000Z" itemprop="datePublished">
+          2019-06-07
+      </time>
+    
+    
+    | 
+    <a href='/tags/JavaScript/'>JavaScript</a>,
+    
+    <a href='/tags/难点/'>难点</a>,
+    
+    <a href='/tags/易错点/'>易错点</a>
+    
+    
+</span>
+                    </span>
+                </div>
+                <div class="col-md-8">
+                    <p>
+                      
+                        1. 难点及易错点之立即执行函数说到立即执行函数大家可能一点都不陌生，但是当真正的深入我们会发现处处采坑，那我们接下来就从简单的开始捋一捋。一般来说，立即执行函数表现形式有两种常见的形式，分别为：
+12345// 常见形式一（括号在外面）：(function() &#123;&#125;)();// 常见形式二（括号在里面）：(function() &#123;&#125;());
+
+接下来我们再来看看一些其他不太常见的写法：
+1234
+                      
+                    </p>
+                    
+                    <p class="pull-right readMore">
+                        <a href="/2019/06/07/JavaScript中的难点及易错点（二）/">Read More...</a>
+                    </p>
+                    
+                </div>
+                <div class="clearfix"></div>
+                <hr class="nogutter">
+            </div>
+        </div>
         
         <div class="row">
             <div class="col-md-8 col-md-offset-2 opening-statement">
@@ -487,133 +615,6 @@
                     
                     <p class="pull-right readMore">
                         <a href="/2019/05/17/ES6之Iterator迭代器/">Read More...</a>
-                    </p>
-                    
-                </div>
-                <div class="clearfix"></div>
-                <hr class="nogutter">
-            </div>
-        </div>
-        
-        <div class="row">
-            <div class="col-md-8 col-md-offset-2 opening-statement">
-                <div class="col-md-4">
-                    <h3><a href="/2019/05/14/对象转基本类型/">对象转基本类型</a></h3>
-                    <span>
-                        <span class="post-meta">
-      <time datetime="2019-05-14T15:04:00.000Z" itemprop="datePublished">
-          2019-05-14
-      </time>
-    
-    
-    | 
-    <a href='/tags/JavaScript/'>JavaScript</a>,
-    
-    <a href='/tags/基本类型/'>基本类型</a>,
-    
-    <a href='/tags/对象/'>对象</a>
-    
-    
-</span>
-                    </span>
-                </div>
-                <div class="col-md-8">
-                    <p>
-                      
-                        1. 如果转换的类型是number假设需要转换的值我们称它为input；如果转换的类型是number，会执行以下步骤：
-
-如果input是原始值（即一些代表原始数据类型的值，也叫基本数据类型），直接返回这个值；
-否则，如果input是对象，调用input.valueOf()，如果结果是原始值，返回结果；
-否则，调用input.toString()。如果结果是原始值，返回结果；
-否则，抛出错误。
-
-2. 如果转换的类型是String假设需
-                      
-                    </p>
-                    
-                    <p class="pull-right readMore">
-                        <a href="/2019/05/14/对象转基本类型/">Read More...</a>
-                    </p>
-                    
-                </div>
-                <div class="clearfix"></div>
-                <hr class="nogutter">
-            </div>
-        </div>
-        
-        <div class="row">
-            <div class="col-md-8 col-md-offset-2 opening-statement">
-                <div class="col-md-4">
-                    <h3><a href="/2019/05/11/网络之巧妙的JSONP跨域/">网络之巧妙的JSONP跨域</a></h3>
-                    <span>
-                        <span class="post-meta">
-      <time datetime="2019-05-11T14:20:00.000Z" itemprop="datePublished">
-          2019-05-11
-      </time>
-    
-    
-    | 
-    <a href='/tags/HTML/'>HTML</a>,
-    
-    <a href='/tags/网络/'>网络</a>,
-    
-    <a href='/tags/JSONP/'>JSONP</a>
-    
-    
-</span>
-                    </span>
-                </div>
-                <div class="col-md-8">
-                    <p>
-                      
-                        1. 什么是同源策略？同源策略是浏览器的一种安全策略。同源策略阻止从一个源加载的文档或脚本获取或设置另一个源加载的文档的属性当浏览器的tab页执行一个脚本的时候会检查这个脚本是属于哪个页面的，如果非同源，那么在请求数据时，浏览器会在控制台中报一个异常，提示拒绝访问。协议、域名、端口均相同的源才属于同源。
-我们来进行一个练习，你就会知道什么是同源策略了，练习如下：以下哪些与http://vip.chanke.xyz/chanke/inde
-                      
-                    </p>
-                    
-                    <p class="pull-right readMore">
-                        <a href="/2019/05/11/网络之巧妙的JSONP跨域/">Read More...</a>
-                    </p>
-                    
-                </div>
-                <div class="clearfix"></div>
-                <hr class="nogutter">
-            </div>
-        </div>
-        
-        <div class="row">
-            <div class="col-md-8 col-md-offset-2 opening-statement">
-                <div class="col-md-4">
-                    <h3><a href="/2019/05/08/网络之CORS跨域资源共享/">网络之CORS跨域资源共享</a></h3>
-                    <span>
-                        <span class="post-meta">
-      <time datetime="2019-05-08T09:32:00.000Z" itemprop="datePublished">
-          2019-05-08
-      </time>
-    
-    
-    | 
-    <a href='/tags/HTML/'>HTML</a>,
-    
-    <a href='/tags/网络/'>网络</a>,
-    
-    <a href='/tags/CORS/'>CORS</a>
-    
-    
-</span>
-                    </span>
-                </div>
-                <div class="col-md-8">
-                    <p>
-                      
-                        Ajax是会受到同源的影响的，当我们要使用非同源的资源的时候，就会报错，所以说Ajax只能获取同源的资源。
-但是有解决办法让Ajax获取不同源的资源，需要遵循CORS机制。需要服务器给响应当中有一个“Access-Control-Allow-Origin”字段，如果响应中没有这个字段的话，就会报错。
-1. 什么是CORScross-origin resource sharing（CORS）跨域资源共享，是一种使用额外HTTP首部实现跨域
-                      
-                    </p>
-                    
-                    <p class="pull-right readMore">
-                        <a href="/2019/05/08/网络之CORS跨域资源共享/">Read More...</a>
                     </p>
                     
                 </div>
