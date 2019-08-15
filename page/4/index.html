@@ -90,7 +90,7 @@
 				    
 				    <li><a href="/categories/HTML/" class="animsition-link">HTML<small>(16)</small></a></li>
 				    
-				    <li><a href="/categories/JavaScript/" class="animsition-link">JavaScript<small>(22)</small></a></li>
+				    <li><a href="/categories/JavaScript/" class="animsition-link">JavaScript<small>(24)</small></a></li>
 				    
 				    <li><a href="/categories/ES6/JavaScript/" class="animsition-link">JavaScript<small>(4)</small></a></li>
 				    
@@ -213,6 +213,89 @@
 
 <section id="intro">
     <div class="container">
+        
+        <div class="row">
+            <div class="col-md-8 col-md-offset-2 opening-statement">
+                <div class="col-md-4">
+                    <h3><a href="/2019/05/20/ES6之生成器Generator/">ES6之生成器Generator</a></h3>
+                    <span>
+                        <span class="post-meta">
+      <time datetime="2019-05-20T13:29:00.000Z" itemprop="datePublished">
+          2019-05-20
+      </time>
+    
+    
+    | 
+    <a href='/tags/ES6/'>ES6</a>,
+    
+    <a href='/tags/JavaScript/'>JavaScript</a>,
+    
+    <a href='/tags/Generator/'>Generator</a>
+    
+    
+</span>
+                    </span>
+                </div>
+                <div class="col-md-8">
+                    <p>
+                      
+                        1. 什么是生成器Generator生成器Generator在异步流程中，它可以控制我们的一个异步流程。我们先看看生成器的一个基础语法：function * fn(){} 注意：*放在开头或者中间或者结尾都是可以的。生成器与普通函数不同的第一点就是：普通函数使用 function 声明，而生成器函数使用 function* 声明。接下来我们再来看几行代码：
+12345678910function * fn()&#123;	yield "
+                      
+                    </p>
+                    
+                    <p class="pull-right readMore">
+                        <a href="/2019/05/20/ES6之生成器Generator/">Read More...</a>
+                    </p>
+                    
+                </div>
+                <div class="clearfix"></div>
+                <hr class="nogutter">
+            </div>
+        </div>
+        
+        <div class="row">
+            <div class="col-md-8 col-md-offset-2 opening-statement">
+                <div class="col-md-4">
+                    <h3><a href="/2019/05/17/ES6之Iterator迭代器/">ES6之Iterator迭代器</a></h3>
+                    <span>
+                        <span class="post-meta">
+      <time datetime="2019-05-17T09:24:00.000Z" itemprop="datePublished">
+          2019-05-17
+      </time>
+    
+    
+    | 
+    <a href='/tags/ES6/'>ES6</a>,
+    
+    <a href='/tags/JavaScript/'>JavaScript</a>,
+    
+    <a href='/tags/Iterator/'>Iterator</a>
+    
+    
+</span>
+                    </span>
+                </div>
+                <div class="col-md-8">
+                    <p>
+                      
+                        1. 什么是迭代器迭代器是统一的接口，它是一个对象，对象里面有next方法，每次调用这个方法就会输出数据结构的成员。第一次输出第一个成员，第二次输出第二个成员，以此类推。输出成员的形式为：{value:值,done:true/false}。注意：done中的true表明当前循环完成了，false表明当前循环没有完成。
+2. 为什么要使用迭代器
+在没有使用迭代器之前，我们可以使用for循环来打印数组中的元素。
+
+缺点：a.理解方面比较差；
+                      
+                    </p>
+                    
+                    <p class="pull-right readMore">
+                        <a href="/2019/05/17/ES6之Iterator迭代器/">Read More...</a>
+                    </p>
+                    
+                </div>
+                <div class="clearfix"></div>
+                <hr class="nogutter">
+            </div>
+        </div>
         
         <div class="row">
             <div class="col-md-8 col-md-offset-2 opening-statement">
@@ -536,86 +619,6 @@
                     
                     <p class="pull-right readMore">
                         <a href="/2019/04/22/初识JavaScript的代理/">Read More...</a>
-                    </p>
-                    
-                </div>
-                <div class="clearfix"></div>
-                <hr class="nogutter">
-            </div>
-        </div>
-        
-        <div class="row">
-            <div class="col-md-8 col-md-offset-2 opening-statement">
-                <div class="col-md-4">
-                    <h3><a href="/2019/04/19/IE盒模型和标准盒模型的区别/">IE盒模型和标准盒模型的区别</a></h3>
-                    <span>
-                        <span class="post-meta">
-      <time datetime="2019-04-19T13:54:00.000Z" itemprop="datePublished">
-          2019-04-19
-      </time>
-    
-    
-    | 
-    <a href='/tags/HTML/'>HTML</a>,
-    
-    <a href='/tags/盒模型/'>盒模型</a>
-    
-    
-</span>
-                    </span>
-                </div>
-                <div class="col-md-8">
-                    <p>
-                      
-                        盒模型是面试中常考的一个内容，今天写这个笔记的原因就是：想让大家认真的理解IE盒模型和标准盒模型的区别。
-那什么是IE盒模型呢？盒模型是CSS中重要的一个概念，但是在IE5.5及更早的IE浏览器用的不是标准的盒模型，我们称之为IE盒模型。
-那IE盒模型和标准盒模型的区别是什么呢？答案是：IE的盒模型与标准盒模型（W3C盒模型）的区别在与width的计算。我们从下面的图来看一看：标准盒模型的width就是content内容区域的宽度，而I
-                      
-                    </p>
-                    
-                    <p class="pull-right readMore">
-                        <a href="/2019/04/19/IE盒模型和标准盒模型的区别/">Read More...</a>
-                    </p>
-                    
-                </div>
-                <div class="clearfix"></div>
-                <hr class="nogutter">
-            </div>
-        </div>
-        
-        <div class="row">
-            <div class="col-md-8 col-md-offset-2 opening-statement">
-                <div class="col-md-4">
-                    <h3><a href="/2019/04/16/网络之HTTP协议/">网络之HTTP协议</a></h3>
-                    <span>
-                        <span class="post-meta">
-      <time datetime="2019-04-16T09:15:00.000Z" itemprop="datePublished">
-          2019-04-16
-      </time>
-    
-    
-    | 
-    <a href='/tags/HTML/'>HTML</a>,
-    
-    <a href='/tags/网络/'>网络</a>,
-    
-    <a href='/tags/HTTP协议/'>HTTP协议</a>
-    
-    
-</span>
-                    </span>
-                </div>
-                <div class="col-md-8">
-                    <p>
-                      
-                        1. HTTP协议是什么超文本传输协议（HTTP，HyperText TransferProtocol)是用于从web服务器传输超文本到web浏览器的传送协议。所有的WWW文件都必须遵守这个标准
-2.GET和POST的区别其实GET请求和POST请求本质上没有什么区别，因为他们底层都是TCP链接。区别：
-（1）GET请求参数要放到URL中，而POST要放到body里呢。因为在请求的时候，为了交互数据的时候能更清晰一些，HTTP协议规定G
-                      
-                    </p>
-                    
-                    <p class="pull-right readMore">
-                        <a href="/2019/04/16/网络之HTTP协议/">Read More...</a>
                     </p>
                     
                 </div>

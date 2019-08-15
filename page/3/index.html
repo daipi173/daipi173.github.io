@@ -90,7 +90,7 @@
 				    
 				    <li><a href="/categories/HTML/" class="animsition-link">HTML<small>(16)</small></a></li>
 				    
-				    <li><a href="/categories/JavaScript/" class="animsition-link">JavaScript<small>(22)</small></a></li>
+				    <li><a href="/categories/JavaScript/" class="animsition-link">JavaScript<small>(24)</small></a></li>
 				    
 				    <li><a href="/categories/ES6/JavaScript/" class="animsition-link">JavaScript<small>(4)</small></a></li>
 				    
@@ -213,6 +213,90 @@
 
 <section id="intro">
     <div class="container">
+        
+        <div class="row">
+            <div class="col-md-8 col-md-offset-2 opening-statement">
+                <div class="col-md-4">
+                    <h3><a href="/2019/06/20/import和require的区别/">import和require的区别</a></h3>
+                    <span>
+                        <span class="post-meta">
+      <time datetime="2019-06-20T01:03:00.000Z" itemprop="datePublished">
+          2019-06-20
+      </time>
+    
+    
+    | 
+    <a href='/tags/ES6/'>ES6</a>,
+    
+    <a href='/tags/JavaScript/'>JavaScript</a>,
+    
+    <a href='/tags/import/'>import</a>,
+    
+    <a href='/tags/require/'>require</a>
+    
+    
+</span>
+                    </span>
+                </div>
+                <div class="col-md-8">
+                    <p>
+                      
+                        require 和 import，都是为了JS模块化使用。不知道有没有小伙伴和我一样，最开始有点分不清楚import和require的区别，今天就给大家梳理一下他们之间的区别。由于有时候多人协同开发时，会出现一个项目中同时使用了import和require引入的情况。在正常的情况下，一个项目中最好使对引入方式做一个规范。
+1. 遵循规范的区别
+import/export是ES6新规范
+require/exports是CommonJS的一
+                      
+                    </p>
+                    
+                    <p class="pull-right readMore">
+                        <a href="/2019/06/20/import和require的区别/">Read More...</a>
+                    </p>
+                    
+                </div>
+                <div class="clearfix"></div>
+                <hr class="nogutter">
+            </div>
+        </div>
+        
+        <div class="row">
+            <div class="col-md-8 col-md-offset-2 opening-statement">
+                <div class="col-md-4">
+                    <h3><a href="/2019/06/16/ES6之class类的补充/">ES6之class类的补充</a></h3>
+                    <span>
+                        <span class="post-meta">
+      <time datetime="2019-06-16T09:57:00.000Z" itemprop="datePublished">
+          2019-06-16
+      </time>
+    
+    
+    | 
+    <a href='/tags/ES6/'>ES6</a>,
+    
+    <a href='/tags/JavaScript/'>JavaScript</a>,
+    
+    <a href='/tags/Class类/'>Class类</a>
+    
+    
+</span>
+                    </span>
+                </div>
+                <div class="col-md-8">
+                    <p>
+                      
+                        1. 属性表达式类的属性名，可以采用表达式。给大家举一个例子，代码如下：
+1234567891011let propName = "getMethod";class Prop&#123;	constructor()&#123;		//...	&#125;	[propName]()&#123; // 此时Prop类的方法名getMethod是从“let propName = 'getMethod';”表达式得到的		console.log
+                      
+                    </p>
+                    
+                    <p class="pull-right readMore">
+                        <a href="/2019/06/16/ES6之class类的补充/">Read More...</a>
+                    </p>
+                    
+                </div>
+                <div class="clearfix"></div>
+                <hr class="nogutter">
+            </div>
+        </div>
         
         <div class="row">
             <div class="col-md-8 col-md-offset-2 opening-statement">
@@ -532,89 +616,6 @@ b. 第一轮结束后，继续第二轮
                     
                     <p class="pull-right readMore">
                         <a href="/2019/05/23/H5之Worker多线程/">Read More...</a>
-                    </p>
-                    
-                </div>
-                <div class="clearfix"></div>
-                <hr class="nogutter">
-            </div>
-        </div>
-        
-        <div class="row">
-            <div class="col-md-8 col-md-offset-2 opening-statement">
-                <div class="col-md-4">
-                    <h3><a href="/2019/05/20/ES6之生成器Generator/">ES6之生成器Generator</a></h3>
-                    <span>
-                        <span class="post-meta">
-      <time datetime="2019-05-20T13:29:00.000Z" itemprop="datePublished">
-          2019-05-20
-      </time>
-    
-    
-    | 
-    <a href='/tags/ES6/'>ES6</a>,
-    
-    <a href='/tags/JavaScript/'>JavaScript</a>,
-    
-    <a href='/tags/Generator/'>Generator</a>
-    
-    
-</span>
-                    </span>
-                </div>
-                <div class="col-md-8">
-                    <p>
-                      
-                        1. 什么是生成器Generator生成器Generator在异步流程中，它可以控制我们的一个异步流程。我们先看看生成器的一个基础语法：function * fn(){} 注意：*放在开头或者中间或者结尾都是可以的。生成器与普通函数不同的第一点就是：普通函数使用 function 声明，而生成器函数使用 function* 声明。接下来我们再来看几行代码：
-12345678910function * fn()&#123;	yield "
-                      
-                    </p>
-                    
-                    <p class="pull-right readMore">
-                        <a href="/2019/05/20/ES6之生成器Generator/">Read More...</a>
-                    </p>
-                    
-                </div>
-                <div class="clearfix"></div>
-                <hr class="nogutter">
-            </div>
-        </div>
-        
-        <div class="row">
-            <div class="col-md-8 col-md-offset-2 opening-statement">
-                <div class="col-md-4">
-                    <h3><a href="/2019/05/17/ES6之Iterator迭代器/">ES6之Iterator迭代器</a></h3>
-                    <span>
-                        <span class="post-meta">
-      <time datetime="2019-05-17T09:24:00.000Z" itemprop="datePublished">
-          2019-05-17
-      </time>
-    
-    
-    | 
-    <a href='/tags/ES6/'>ES6</a>,
-    
-    <a href='/tags/JavaScript/'>JavaScript</a>,
-    
-    <a href='/tags/Iterator/'>Iterator</a>
-    
-    
-</span>
-                    </span>
-                </div>
-                <div class="col-md-8">
-                    <p>
-                      
-                        1. 什么是迭代器迭代器是统一的接口，它是一个对象，对象里面有next方法，每次调用这个方法就会输出数据结构的成员。第一次输出第一个成员，第二次输出第二个成员，以此类推。输出成员的形式为：{value:值,done:true/false}。注意：done中的true表明当前循环完成了，false表明当前循环没有完成。
-2. 为什么要使用迭代器
-在没有使用迭代器之前，我们可以使用for循环来打印数组中的元素。
-
-缺点：a.理解方面比较差；
-                      
-                    </p>
-                    
-                    <p class="pull-right readMore">
-                        <a href="/2019/05/17/ES6之Iterator迭代器/">Read More...</a>
                     </p>
                     
                 </div>
