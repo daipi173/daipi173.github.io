@@ -1,0 +1,355 @@
+<!DOCTYPE html>
+<!--[if lte IE 8 ]>
+<html class="ie" xmlns="http://www.w3.org/1999/xhtml" xml:lang="en-US" lang="en-US">
+<![endif]-->
+<!--[if (gte IE 9)|!(IE)]><!-->
+<!--
+***************  *      *     *
+      8          *    *       *
+      8          *  *         *
+      8          **           *
+      8          *  *         *
+      8          *    *       *
+      8          *      *     *
+      8          *        *   ***********    -----Theme By Kieran(http://go.kieran.top)
+-->
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="zh-CN" lang="zh-CN">
+<!--<![endif]-->
+
+<head>
+  <title>手动封装Promise之同步代码 | daipi173的个人博客</title>
+  <!-- Meta data -->
+    <meta http-equiv="Content-Type" content="text/html" charset="UTF-8" >
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="generator" content="daipi173的个人博客">
+    <meta name="author" content="daipi173">
+    <meta name="description" content="" />
+    <meta name="keywords" content="" />
+
+    <!-- Favicon, (keep icon in root folder) -->
+    <link rel="Shortcut Icon" href="/img/favicon.ico" type="image/ico">
+
+    <link rel="alternate" href="/atom.xml" title="daipi173的个人博客" type="application/atom+xml">
+    <link rel="stylesheet" href="/css/all.css" media="screen" type="text/css">
+    
+    <link rel="stylesheet" href="/highlightjs/vs.css" type="text/css">
+    
+
+    <!--[if IE 8]>
+    <link rel="stylesheet" type="text/css" href="/css/ie8.css" />
+    <![endif]-->
+
+    <!-- jQuery | Load our jQuery, with an alternative source fallback to a local version if request is unavailable -->
+    <script src="/js/jquery-1.11.1.min.js"></script>
+    <script>window.jQuery || document.write('<script src="js/jquery-1.11.1.min.js"><\/script>')</script>
+
+    <!-- Load these in the <head> for quicker IE8+ load times -->
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+    <script src="/js/html5shiv.min.js"></script>
+    <script src="/js/respond.min.js"></script>
+    <![endif]-->
+
+  
+  
+  
+
+  <style>.col-md-8.col-md-offset-2.opening-statement img{display:none;}</style>
+</head>
+
+<!--
+<body class="post-template">
+-->
+<body id="index" class="lightnav animsition">
+
+      <!-- ============================ Off-canvas navigation =========================== -->
+
+    <div class="sb-slidebar sb-right sb-style-overlay sb-momentum-scrolling">
+        <div class="sb-close" aria-label="Close Menu" aria-hidden="true">
+            <img src="/img/close.png" alt="Close"/>
+        </div>
+        <!-- Lists in Slidebars -->
+        <ul class="sb-menu">
+            <li><a href="/" class="animsition-link" title="Home">Home</a></li>
+            <li><a href="/archives" class="animsition-link" title="archive">archives</a></li>
+            <!-- Dropdown Menu -->
+			 
+            
+        	<li>
+        		<a class="sb-toggle-submenu">Categories<span class="sb-caret"></span></a>
+            	<ul class="sb-submenu">
+				  	
+				    <li><a href="/categories/HTML/CSS/" class="animsition-link">CSS<small>(4)</small></a></li>
+				    
+				    <li><a href="/categories/ES6/" class="animsition-link">ES6<small>(4)</small></a></li>
+				    
+				    <li><a href="/categories/JavaScript/ES6/" class="animsition-link">ES6<small>(2)</small></a></li>
+				    
+				    <li><a href="/categories/Git/" class="animsition-link">Git<small>(1)</small></a></li>
+				    
+				    <li><a href="/categories/HTML/" class="animsition-link">HTML<small>(16)</small></a></li>
+				    
+				    <li><a href="/categories/JavaScript/" class="animsition-link">JavaScript<small>(25)</small></a></li>
+				    
+				    <li><a href="/categories/ES6/JavaScript/" class="animsition-link">JavaScript<small>(4)</small></a></li>
+				    
+				    <li><a href="/categories/vue/" class="animsition-link">vue<small>(1)</small></a></li>
+				    
+				    <li><a href="/categories/webpack/" class="animsition-link">webpack<small>(2)</small></a></li>
+				    
+				</ul>
+        	</li>
+			
+            
+            <li>
+                <a class="sb-toggle-submenu">Links<span class="sb-caret"></span></a>
+                <ul class="sb-submenu">
+                    
+                    <li><a href="https://daipi173.github.io/myweb/daipi173-myperson" class="animsition-link">Personal Project</a></li>
+                    
+                </ul>
+            </li>
+            
+        </ul>
+        <!-- Lists in Slidebars -->
+        <ul class="sb-menu secondary">
+            
+            <li><a href="/about.html" class="animsition-link" title="about">About</a></li>
+            <li><a href="/atom.xml" class="animsition-link" title="rss">RSS</a></li>
+        </ul>
+    </div>
+    
+    <!-- ============================ END Off-canvas navigation =========================== -->
+
+    <!-- ============================ #sb-site Main Page Wrapper =========================== -->
+
+    <div id="sb-site">
+        <!-- #sb-site - All page content should be contained within this id, except the off-canvas navigation itself -->
+
+        <!-- ============================ Header & Logo bar =========================== -->
+
+        <div id="navigation" class="navbar navbar-fixed-top">
+            <div class="navbar-inner">
+                <div class="container">
+                    <!-- Nav logo -->
+                    <div class="logo">
+                        <a href="/" title="Logo" class="animsition-link">
+                         <img src="/img/logo.png" alt="Logo" width="35px;"/> 
+                        </a>
+                    </div>
+                    <!-- // Nav logo -->
+                    <!-- Info-bar -->
+                    <nav>
+                        <ul class="nav">
+                            <li><a href="/" class="animsition-link">daipi173的个人博客</a></li>
+                            <li class="nolink"><span>Always </span>Creative.</li>
+                            
+                            <li><a href="https://github.com/" title="Github" target="_blank"><i class="icon-github"></i></a></li>
+                            
+                            
+                            <li><a href="https://twitter.com/" title="Twitter" target="_blank"><i class="icon-twitter"></i></a></li>
+                            
+                            
+                            <li><a href="https://www.facebook.com/" title="Facebook" target="_blank"><i class="icon-facebook"></i></a></li>
+                            
+                            
+                            <li><a href="https://google.com/" title="Google-Plus" target="_blank"><i class="icon-google-plus"></i></a></li>
+                            
+                            
+                            <li><a href="http://weibo.com/" title="Sina-Weibo" target="_blank"><i class="icon-sina-weibo"></i></a></li>
+                            
+                            <li class="nolink"><span>Welcome!</span></li>
+                        </ul>
+                    </nav>
+                    <!--// Info-bar -->
+                </div>
+                <!-- // .container -->
+                <div class="learnmore sb-toggle-right">More</div>
+                <button type="button" class="navbar-toggle menu-icon sb-toggle-right" title="More">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar before"></span>
+                <span class="icon-bar main"></span>
+                <span class="icon-bar after"></span>
+                </button>
+            </div>
+            <!-- // .navbar-inner -->
+        </div>
+
+        <!-- ============================ Header & Logo bar =========================== -->
+
+
+      
+<section id="intro">
+    <div class="container">
+        <div class="row col-md-offset-2">
+            <div class="col-md-8">
+    			<span class="post-meta">
+      <time datetime="2019-08-18T02:38:00.000Z" itemprop="datePublished">
+          2019-08-18
+      </time>
+    
+    
+    | 
+    <a href='/tags/JavaScript/'>JavaScript</a>,
+    
+    <a href='/tags/Promise/'>Promise</a>,
+    
+    <a href='/tags/同步/'>同步</a>
+    
+    
+</span>
+                <h1>手动封装Promise之同步代码</h1>
+            </div>
+        </div>
+        <div class="col-md-8 col-md-offset-2">
+      		<p>在封装之前，我需要给大家提及一下Promise的原理，因为Promise原理是在面试过程中常考的内容，需要大家认真理解并掌握。</p>
+<h1 id="1-Promise原理："><a href="#1-Promise原理：" class="headerlink" title="1. Promise原理："></a>1. Promise原理：</h1><p>首先Promise有<strong>三种状态</strong>，分别是pending、resolved（也可以叫fulfilled）、rejected。pending表示Promise对象实例创建的时候初始状态；resolved（fulfilled）可以理解为成功的状态；rejected可以理解为失败的状态。<br>构造一个Promise实例需要给Promise构造函数传入一个函数，然后传入的函数需要有两个形参，两个参数都是函数类型的参数，分别是resolved和rejected。<br>Promise上还有then方法，then方法就是用来指定Promise对象的状态改变时需要执行的操作。当状态变为resolved时需执行第一个函数onResolved；当状态变为rejected时需执行第二个函数onRejected。<br>在这里我们需要注意：pending状态<strong>只能</strong>变成resolved（fulfilled）成功状态或者pendin状态<strong>只能</strong>变成失败rejected状态这<strong>两种</strong>状态；<strong>不能</strong>resolved（fulfilled）成功状态变成pending状态或者失败状态变成pending状态或者resolved（fulfilled）成功状态和rejected失败状态之间各自相互转换。</p>
+<h1 id="2-手动封装Promise同步代码"><a href="#2-手动封装Promise同步代码" class="headerlink" title="2. 手动封装Promise同步代码"></a>2. 手动封装Promise同步代码</h1><p>在理解完上面的Promise原理之后，接下来我就带大家去封装一个同步的代码，在下一次的分享中我会接着带大家去封装一个Promise异步的代码。</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// Promise同步代码</span></span><br><span class="line">        <span class="comment">// 定义一个MyPromise的构造函数</span></span><br><span class="line">        <span class="function"><span class="keyword">function</span> <span class="title">MyPromise</span>(<span class="params">fn</span>)</span>&#123;</span><br><span class="line">            <span class="comment">// 初始化</span></span><br><span class="line">            <span class="keyword">let</span> _this = <span class="keyword">this</span>;</span><br><span class="line">            _this.status = <span class="string">'pending'</span>;</span><br><span class="line">            _this.value = <span class="literal">undefined</span>;</span><br><span class="line">            <span class="comment">// 定义resolved函数</span></span><br><span class="line">            <span class="function"><span class="keyword">function</span> <span class="title">resolved</span>(<span class="params">val</span>)</span>&#123;</span><br><span class="line">                _this.status = <span class="string">'resolved'</span>;</span><br><span class="line">                _this.value = val;</span><br><span class="line">            &#125;</span><br><span class="line">            <span class="comment">// 定义rejected函数</span></span><br><span class="line">            <span class="function"><span class="keyword">function</span> <span class="title">rejected</span>(<span class="params">err</span>)</span>&#123;</span><br><span class="line">                _this.status = <span class="string">'rejected'</span>;</span><br><span class="line">                _this.value = err;</span><br><span class="line">            &#125;</span><br><span class="line">            <span class="comment">// 自执行以下fn函数，因此才需要定义一个_this</span></span><br><span class="line">            fn(resolved,rejected);</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="comment">// 在MyPromise构造函数的原型上定义一个then方法</span></span><br><span class="line">        MyPromise.prototype.then = <span class="function"><span class="keyword">function</span>(<span class="params">onResolved,onRejected</span>)</span>&#123;</span><br><span class="line">            <span class="keyword">let</span> newPromise;</span><br><span class="line">            <span class="keyword">let</span> _this = <span class="keyword">this</span>;</span><br><span class="line">            <span class="comment">// 注意：如果不写下面两行代码的判断，那么在穿透时就会报错</span></span><br><span class="line">            <span class="comment">// 举一个例子：let p = new MyPromise((resolved,rejected)=&gt;&#123;</span></span><br><span class="line">            <span class="comment">//                       resolved('hi');</span></span><br><span class="line">            <span class="comment">//            &#125;);</span></span><br><span class="line">            <span class="comment">//            let p1 = p.then().then((data)=&gt;&#123;&#125;);  //报错</span></span><br><span class="line">            <span class="comment">// 报错信息为: onRejected is not a function</span></span><br><span class="line">            onResolved = <span class="keyword">typeof</span> onResolved === <span class="string">'function'</span> ? onResolved : <span class="function"><span class="keyword">function</span>(<span class="params">value</span>)</span>&#123;<span class="keyword">return</span> value;&#125;;</span><br><span class="line">            onRejected = <span class="keyword">typeof</span> onRejected === <span class="string">'function'</span> ? onRejected : <span class="function"><span class="keyword">function</span>(<span class="params">err</span>)</span>&#123;<span class="keyword">return</span> err;&#125;;</span><br><span class="line"></span><br><span class="line">            <span class="keyword">if</span>(_this.status === <span class="string">'resolved'</span>)&#123;</span><br><span class="line">                <span class="keyword">return</span> (newPromise = <span class="keyword">new</span> MyPromise(<span class="function"><span class="keyword">function</span>(<span class="params">resolved,rejected</span>)</span>&#123;</span><br><span class="line">                    <span class="keyword">let</span> result = onResolved(_this.value);</span><br><span class="line">                    <span class="keyword">if</span>(result <span class="keyword">instanceof</span> MyPromise)&#123;</span><br><span class="line">                        result.then(resolved,rejected);</span><br><span class="line">                    &#125;<span class="keyword">else</span>&#123;</span><br><span class="line">                        resolved(result);</span><br><span class="line">                    &#125;</span><br><span class="line">                &#125;));</span><br><span class="line">            &#125;</span><br><span class="line">            <span class="keyword">if</span>(_this.status === <span class="string">'rejected'</span>)&#123;</span><br><span class="line">                <span class="keyword">return</span> (newPromise = <span class="keyword">new</span> MyPromise(<span class="function"><span class="keyword">function</span>(<span class="params">resolved,rejected</span>)</span>&#123;</span><br><span class="line">                    <span class="keyword">let</span> result = onRejected(_this.value);</span><br><span class="line">                    <span class="keyword">if</span>(result <span class="keyword">instanceof</span> MyPromise)&#123;</span><br><span class="line">                        result.then(resolved,rejected);</span><br><span class="line">                    &#125;<span class="keyword">else</span>&#123;</span><br><span class="line">                        resolved(result);</span><br><span class="line">                    &#125;</span><br><span class="line">                &#125;));</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;;</span><br><span class="line"></span><br><span class="line">        <span class="keyword">let</span> p = <span class="keyword">new</span> MyPromise(<span class="function"><span class="keyword">function</span>(<span class="params">resolved,rejected</span>)</span>&#123;</span><br><span class="line">            resolved(<span class="string">'hello'</span>);</span><br><span class="line">        &#125;);</span><br><span class="line">        <span class="built_in">console</span>.log(p);   <span class="comment">// MyPromise &#123;status: "resolved", value: "hello"&#125;</span></span><br><span class="line">        <span class="keyword">let</span> p1 = p.then(<span class="function">(<span class="params">data</span>)=&gt;</span>&#123;</span><br><span class="line">            <span class="keyword">return</span> <span class="keyword">new</span> MyPromise(<span class="function"><span class="keyword">function</span>(<span class="params">resolved,rejected</span>)</span>&#123;</span><br><span class="line">                rejected(<span class="keyword">new</span> <span class="built_in">Error</span>(<span class="string">'Oh,I am Error!!!'</span>));</span><br><span class="line">            &#125;);</span><br><span class="line">        &#125;);</span><br><span class="line">        <span class="built_in">console</span>.log(p1);  <span class="comment">// MyPromise &#123;status: "rejected", value: Error: Oh,I am Error!!!&#125;</span></span><br><span class="line">        <span class="keyword">let</span> p2 = p1.then(<span class="function"><span class="keyword">function</span>(<span class="params">data</span>)</span>&#123;</span><br><span class="line">            <span class="keyword">return</span> <span class="string">'data:'</span> + data;</span><br><span class="line">        &#125;,<span class="function"><span class="keyword">function</span>(<span class="params">err</span>)</span>&#123;</span><br><span class="line">            <span class="keyword">return</span> <span class="string">'err:'</span> + err;</span><br><span class="line">        &#125;);</span><br><span class="line">        <span class="built_in">console</span>.log(p2);  <span class="comment">// MyPromise &#123;status: "resolved", value: "err:Error: Oh,I am Error!!!"&#125;</span></span><br><span class="line">        <span class="keyword">let</span> p3 = p.then().then(<span class="function"><span class="keyword">function</span>(<span class="params">data</span>)</span>&#123;&#125;);</span><br><span class="line">        <span class="built_in">console</span>.log(p3);  <span class="comment">// MyPromise &#123;status: "resolved", value: undefined&#125;</span></span><br></pre></td></tr></table></figure>
+
+
+            <div class="clearfix"></div>
+            <hr class="nogutter">
+        </div>
+        <nav class="m-pagination col-md-8 col-md-offset-2 col-sm-24" role="pagination">
+    
+    
+    <a class="pull-right" href="/2019/08/15/算法之数组的去重/">
+        算法之数组的去重 →
+    </a>
+    
+</nav>
+
+        <div class="col-md-8 col-md-offset-2 col-sm-24"><script type="text/javascript">
+  /**
+   * 搜狐畅言
+   */
+
+  /*
+  document.write('<div id="SOHUCS" sid="' + window.location.pathname.slice(1) + '" ></div>');
+
+  window.onload = function () {
+    (function () {
+      var appid = 'cytXXXX';
+      var conf = 'prod_xxxxxxxxxxxxxxxxx';
+      var width = window.innerWidth || document.documentElement.clientWidth;
+      var loadJs = function (d, a, id) {
+        var c = document.getElementsByTagName("head")[0] || document.head || document.documentElement;
+        var b = document.createElement("script");
+        b.setAttribute("type", "text/javascript");
+        b.setAttribute("charset", "UTF-8");
+        b.setAttribute("src", d);
+        if (id) {
+          b.setAttribute("id", id);
+        }
+        if (typeof a === "function") {
+          if (window.attachEvent) {
+            b.onreadystatechange = function () {
+              var e = b.readyState;
+              if (e === "loaded" || e === "complete") {
+                b.onreadystatechange = null;
+                a()
+              }
+            }
+          } else {
+            b.onload = a
+          }
+        }
+        c.appendChild(b)
+      };
+
+      loadJs("https://changyan.sohu.com/upload/changyan.js", function () {
+        window.changyan.api.config({
+          appid: appid,
+          conf: conf
+        })
+      });
+    })();
+  }
+  */
+
+</script>
+</div>
+    </div>
+</section>
+
+
+      
+<!-- ============================ Footer =========================== -->
+
+<footer>
+    <div class="container">
+            <div class="copy">
+                <p>
+                    &copy; 2014<script>new Date().getFullYear()>2010&&document.write("-"+new Date().getFullYear());</script>, Content By daipi173. All Rights Reserved.
+                </p>
+                <p>Theme By <a href="//go.kieran.top" style="color: #767D84">Kieran</a></p>
+            </div>
+            <div class="social">
+                <ul>
+                    
+                    <li><a href="https://github.com/" title="Github" target="_blank"><i class="icon-github"></i></a>&nbsp;</li>
+                    
+                    
+                    <li><a href="https://twitter.com/" title="Twitter" target="_blank"><i class="icon-twitter"></i></a>&nbsp;</li>
+                    
+                    
+                    <li><a href="https://www.facebook.com/" title="Facebook" target="_blank"><i class="icon-facebook"></i></a>&nbsp;</li>
+                    
+                    
+                    <li><a href="https://google.com/" title="Google-Plus" target="_blank"><i class="icon-google-plus"></i></a>&nbsp;</li>
+                    
+                    
+                    <li><a href="http://weibo.com/" title="Sina-Weibo" target="_blank"><i class="icon-sina-weibo"></i></a>&nbsp;</li>
+                    
+                </ul>
+            </div>
+            <div class="clearfix"> </div>
+        </div>
+</footer>
+
+<!-- ============================ END Footer =========================== -->
+      <!-- Load our scripts -->
+<!-- Resizable 'on-demand' full-height hero -->
+<script type="text/javascript">
+    var resizeHero = function () {
+        var hero = $(".cover,.heightblock"),
+            window1 = $(window);
+        hero.css({
+            "height": window1.height()
+        });
+    };
+
+    resizeHero();
+
+    $(window).resize(function () {
+        resizeHero();
+    });
+</script>
+<script src="/js/plugins.min.js"></script><!-- Bootstrap core and concatenated plugins always load here -->
+<script src="/js/scripts.js"></script><!-- Theme scripts -->
+
+
+<link rel="stylesheet" href="/fancybox/jquery.fancybox.css" media="screen" type="text/css">
+<script src="/fancybox/jquery.fancybox.pack.js"></script>
+<script type="text/javascript">
+$('#intro').find('img').each(function(){
+  var alt = this.alt;
+
+  if (alt){
+    $(this).after('<span class="caption" style="display:none">' + alt + '</span>');
+  }
+
+  $(this).wrap('<a href="' + this.src + '" title="' + alt + '" class="fancybox" rel="gallery" />');
+});
+(function($){
+  $('.fancybox').fancybox();
+})(jQuery);
+</script>
+
+
+
+      
+<script src="/live2dw/lib/L2Dwidget.min.js?094cbace49a39548bed64abff5988b05"></script><script>L2Dwidget.init({"pluginModelPath":"assets/","model":{"jsonPath":"/live2dw/assets/haruto.model.json"},"display":{"position":"right","width":150,"height":300},"mobile":{"show":true},"log":false,"pluginJsPath":"lib/","pluginRootPath":"live2dw/","tagMode":false});</script></body>
+</html>
