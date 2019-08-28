@@ -94,6 +94,8 @@
 				    
 				    <li><a href="/categories/ES6/JavaScript/" class="animsition-link">JavaScript<small>(4)</small></a></li>
 				    
+				    <li><a href="/categories/Vue/" class="animsition-link">Vue<small>(1)</small></a></li>
+				    
 				    <li><a href="/categories/vue/" class="animsition-link">vue<small>(1)</small></a></li>
 				    
 				    <li><a href="/categories/webpack/" class="animsition-link">webpack<small>(2)</small></a></li>
@@ -213,6 +215,45 @@
 
 <section id="intro">
     <div class="container">
+        
+        <div class="row">
+            <div class="col-md-8 col-md-offset-2 opening-statement">
+                <div class="col-md-4">
+                    <h3><a href="/2019/04/25/原型链的终点为什么不是Object-prototype，而是null/">原型链的终点为什么不是Object.prototype，而是null</a></h3>
+                    <span>
+                        <span class="post-meta">
+      <time datetime="2019-04-25T06:39:00.000Z" itemprop="datePublished">
+          2019-04-25
+      </time>
+    
+    
+    | 
+    <a href='/tags/JavaScript/'>JavaScript</a>,
+    
+    <a href='/tags/原型链/'>原型链</a>
+    
+    
+</span>
+                    </span>
+                </div>
+                <div class="col-md-8">
+                    <p>
+                      
+                        想必大家在学到原型链的时候，和我有一样的想法，为什么原型链的终点是null，而不是我们想要的Object.prototype。
+首先我们应该知道：1.原型链是指对象的原型链，因此原型链上的所有节点都是对象，那么就不能是数字、布尔值或者字符串等原始类型。2.原型链必须是有长度限制的。那什么是有长度限制呢？显然从任一节点出发，经过有限的步骤后必须到达一个终点，当然也不能形成一个环。
+在了解上面所讲的内容后，我们正式进入主题，那么应该用什么对
+                      
+                    </p>
+                    
+                    <p class="pull-right readMore">
+                        <a href="/2019/04/25/原型链的终点为什么不是Object-prototype，而是null/">Read More...</a>
+                    </p>
+                    
+                </div>
+                <div class="clearfix"></div>
+                <hr class="nogutter">
+            </div>
+        </div>
         
         <div class="row">
             <div class="col-md-8 col-md-offset-2 opening-statement">
@@ -572,48 +613,9 @@ undefined与null相等，但不恒等（===）;null的类型是对象，undified
             </div>
         </div>
         
-        <div class="row">
-            <div class="col-md-8 col-md-offset-2 opening-statement">
-                <div class="col-md-4">
-                    <h3><a href="/2019/03/26/JavaScript之可变函数/">JavaScript之可变函数</a></h3>
-                    <span>
-                        <span class="post-meta">
-      <time datetime="2019-03-26T09:23:00.000Z" itemprop="datePublished">
-          2019-03-26
-      </time>
-    
-    
-    | 
-    <a href='/tags/JavaScript/'>JavaScript</a>
-    
-    
-</span>
-                    </span>
-                </div>
-                <div class="col-md-8">
-                    <p>
-                      
-                        JavaScript拥有一组可变函数，使用它们，可以不必引用数组中的某个元素，就能改变数组内容。
-1.为数组添加元素1.1 push()方法push()方法会将一个元素或多个元素添加到数组末尾。例子：
-1234var nums = [1,2,3,4,5];   console.log(nums);    //1,2,3,4,5   nums.push(6);   console.log(nums);   //1,2,3,4,5,6
-
-1
-                      
-                    </p>
-                    
-                    <p class="pull-right readMore">
-                        <a href="/2019/03/26/JavaScript之可变函数/">Read More...</a>
-                    </p>
-                    
-                </div>
-                <div class="clearfix"></div>
-                <hr class="nogutter">
-            </div>
-        </div>
-        
         <nav class="pagination" role="pagination">
           <a class="pull-left" href="/page/4/">← Newer Posts</a>
-          
+          <a class="pull-right" href="/page/6/">Older Posts →</a>
         </nav>
     </div>
 </section>
