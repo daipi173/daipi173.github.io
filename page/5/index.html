@@ -90,7 +90,7 @@
 				    
 				    <li><a href="/categories/HTML/" class="animsition-link">HTML<small>(16)</small></a></li>
 				    
-				    <li><a href="/categories/JavaScript/" class="animsition-link">JavaScript<small>(25)</small></a></li>
+				    <li><a href="/categories/JavaScript/" class="animsition-link">JavaScript<small>(27)</small></a></li>
 				    
 				    <li><a href="/categories/ES6/JavaScript/" class="animsition-link">JavaScript<small>(4)</small></a></li>
 				    
@@ -215,6 +215,85 @@
 
 <section id="intro">
     <div class="container">
+        
+        <div class="row">
+            <div class="col-md-8 col-md-offset-2 opening-statement">
+                <div class="col-md-4">
+                    <h3><a href="/2019/05/02/网络之WebSocket双向通信/">网络之WebSocket双向通信</a></h3>
+                    <span>
+                        <span class="post-meta">
+      <time datetime="2019-05-02T12:01:00.000Z" itemprop="datePublished">
+          2019-05-02
+      </time>
+    
+    
+    | 
+    <a href='/tags/HTML/'>HTML</a>,
+    
+    <a href='/tags/网络/'>网络</a>,
+    
+    <a href='/tags/WebSocket/'>WebSocket</a>
+    
+    
+</span>
+                    </span>
+                </div>
+                <div class="col-md-8">
+                    <p>
+                      
+                        1. 背景协议：HTTP/HTTPS协议（HTTPS协议只是在HTTP协议基础之上加密了而已）版本：HTTP/1.0  HTTP/1.1举一个例子：比如我发送10张图片，用HTTP/1.0版本的话，需要TCP连接和断开10次，这样比较浪费性能；因此在HTTP/1.1中进行了一个升级，同样我要发送10张图片，我向服务器先建立一个TCP连接，把10个请求同时发送出去，10个响应同时拿到，此时这个连接断开。（这样相当于只连接和断开一次TCP，
+                      
+                    </p>
+                    
+                    <p class="pull-right readMore">
+                        <a href="/2019/05/02/网络之WebSocket双向通信/">Read More...</a>
+                    </p>
+                    
+                </div>
+                <div class="clearfix"></div>
+                <hr class="nogutter">
+            </div>
+        </div>
+        
+        <div class="row">
+            <div class="col-md-8 col-md-offset-2 opening-statement">
+                <div class="col-md-4">
+                    <h3><a href="/2019/04/29/网络之Cookie/">网络之Cookie</a></h3>
+                    <span>
+                        <span class="post-meta">
+      <time datetime="2019-04-29T06:45:00.000Z" itemprop="datePublished">
+          2019-04-29
+      </time>
+    
+    
+    | 
+    <a href='/tags/HTML/'>HTML</a>,
+    
+    <a href='/tags/网络/'>网络</a>,
+    
+    <a href='/tags/Cookie/'>Cookie</a>
+    
+    
+</span>
+                    </span>
+                </div>
+                <div class="col-md-8">
+                    <p>
+                      
+                        1. 个性化服务HTTP是无状态的请求/响应连接，导致连接断开后，再次连接服务器无法识别用户。什么是无状态？你先向服务器发送请求，建立TCP连接将请求发送过去，然后给我响应，TCP连接断开。在这一过程中没有做任何的保存，没有留下任何的痕迹。当你再一次访问的时候，需要重新的建立TCP连接，发送请求等操作。
+2. 使用一些技术来帮助服务器去识别用户方法一、跟踪客户端IP地址，但是很多地方的客户端都是动态的生成IP，因此服务器无法区分是不是同
+                      
+                    </p>
+                    
+                    <p class="pull-right readMore">
+                        <a href="/2019/04/29/网络之Cookie/">Read More...</a>
+                    </p>
+                    
+                </div>
+                <div class="clearfix"></div>
+                <hr class="nogutter">
+            </div>
+        </div>
         
         <div class="row">
             <div class="col-md-8 col-md-offset-2 opening-statement">
@@ -525,86 +604,6 @@ undefined与null相等，但不恒等（===）;null的类型是对象，undified
                     
                     <p class="pull-right readMore">
                         <a href="/2019/04/04/JavaScript之有趣的-——-运算/">Read More...</a>
-                    </p>
-                    
-                </div>
-                <div class="clearfix"></div>
-                <hr class="nogutter">
-            </div>
-        </div>
-        
-        <div class="row">
-            <div class="col-md-8 col-md-offset-2 opening-statement">
-                <div class="col-md-4">
-                    <h3><a href="/2019/04/01/JavaScript之函数/">JavaScript之函数</a></h3>
-                    <span>
-                        <span class="post-meta">
-      <time datetime="2019-04-01T04:13:00.000Z" itemprop="datePublished">
-          2019-04-01
-      </time>
-    
-    
-    | 
-    <a href='/tags/JavaScript/'>JavaScript</a>,
-    
-    <a href='/tags/function/'>function</a>
-    
-    
-</span>
-                    </span>
-                </div>
-                <div class="col-md-8">
-                    <p>
-                      
-                        1. 函数的创建方式1.1 静态方法12function add(a,b)&#123;return a + b;&#125;var add = function(a,b)&#123;return a + b;&#125;
-
-1.2 动态方法1var add = new Function("a","b","return a + b;");
-
-2. 函数参数及arguments1234function add(a,b,c)&#123;   
-                      
-                    </p>
-                    
-                    <p class="pull-right readMore">
-                        <a href="/2019/04/01/JavaScript之函数/">Read More...</a>
-                    </p>
-                    
-                </div>
-                <div class="clearfix"></div>
-                <hr class="nogutter">
-            </div>
-        </div>
-        
-        <div class="row">
-            <div class="col-md-8 col-md-offset-2 opening-statement">
-                <div class="col-md-4">
-                    <h3><a href="/2019/03/29/二维和多维数组/">二维和多维数组</a></h3>
-                    <span>
-                        <span class="post-meta">
-      <time datetime="2019-03-29T07:03:00.000Z" itemprop="datePublished">
-          2019-03-29
-      </time>
-    
-    
-    | 
-    <a href='/tags/JavaScript/'>JavaScript</a>,
-    
-    <a href='/tags/Array/'>Array</a>
-    
-    
-</span>
-                    </span>
-                </div>
-                <div class="col-md-8">
-                    <p>
-                      
-                        JavaScript只支持一维数组，但是通过在数组里保存数组元素的方式，可以轻松创建多维数组。
-1. 创建二维数组二维数组类似一种由行和列构成的数据表格。在JavaScript中创建二维数组，需要先创建一个数组，然后让数组的每个元素也是一个数组。其实例代码为：
-12345678910111213141516171819Array.matrix = function(numrows,numcols,initial)&#123;	var a
-                      
-                    </p>
-                    
-                    <p class="pull-right readMore">
-                        <a href="/2019/03/29/二维和多维数组/">Read More...</a>
                     </p>
                     
                 </div>

@@ -1,0 +1,408 @@
+<!DOCTYPE html>
+<!--[if lte IE 8 ]>
+<html class="ie" xmlns="http://www.w3.org/1999/xhtml" xml:lang="en-US" lang="en-US">
+<![endif]-->
+<!--[if (gte IE 9)|!(IE)]><!-->
+<!--
+***************  *      *     *
+      8          *    *       *
+      8          *  *         *
+      8          **           *
+      8          *  *         *
+      8          *    *       *
+      8          *      *     *
+      8          *        *   ***********    -----Theme By Kieran(http://go.kieran.top)
+-->
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="zh-CN" lang="zh-CN">
+<!--<![endif]-->
+
+<head>
+  <title>ES6总结（二） | daipi173的个人博客</title>
+  <!-- Meta data -->
+    <meta http-equiv="Content-Type" content="text/html" charset="UTF-8" >
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="generator" content="daipi173的个人博客">
+    <meta name="author" content="daipi173">
+    <meta name="description" content="" />
+    <meta name="keywords" content="" />
+
+    <!-- Favicon, (keep icon in root folder) -->
+    <link rel="Shortcut Icon" href="/img/favicon.ico" type="image/ico">
+
+    <link rel="alternate" href="/atom.xml" title="daipi173的个人博客" type="application/atom+xml">
+    <link rel="stylesheet" href="/css/all.css" media="screen" type="text/css">
+    
+    <link rel="stylesheet" href="/highlightjs/vs.css" type="text/css">
+    
+
+    <!--[if IE 8]>
+    <link rel="stylesheet" type="text/css" href="/css/ie8.css" />
+    <![endif]-->
+
+    <!-- jQuery | Load our jQuery, with an alternative source fallback to a local version if request is unavailable -->
+    <script src="/js/jquery-1.11.1.min.js"></script>
+    <script>window.jQuery || document.write('<script src="js/jquery-1.11.1.min.js"><\/script>')</script>
+
+    <!-- Load these in the <head> for quicker IE8+ load times -->
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+    <script src="/js/html5shiv.min.js"></script>
+    <script src="/js/respond.min.js"></script>
+    <![endif]-->
+
+  
+  
+  
+
+  <style>.col-md-8.col-md-offset-2.opening-statement img{display:none;}</style>
+</head>
+
+<!--
+<body class="post-template">
+-->
+<body id="index" class="lightnav animsition">
+
+      <!-- ============================ Off-canvas navigation =========================== -->
+
+    <div class="sb-slidebar sb-right sb-style-overlay sb-momentum-scrolling">
+        <div class="sb-close" aria-label="Close Menu" aria-hidden="true">
+            <img src="/img/close.png" alt="Close"/>
+        </div>
+        <!-- Lists in Slidebars -->
+        <ul class="sb-menu">
+            <li><a href="/" class="animsition-link" title="Home">Home</a></li>
+            <li><a href="/archives" class="animsition-link" title="archive">archives</a></li>
+            <!-- Dropdown Menu -->
+			 
+            
+        	<li>
+        		<a class="sb-toggle-submenu">Categories<span class="sb-caret"></span></a>
+            	<ul class="sb-submenu">
+				  	
+				    <li><a href="/categories/HTML/CSS/" class="animsition-link">CSS<small>(4)</small></a></li>
+				    
+				    <li><a href="/categories/ES6/" class="animsition-link">ES6<small>(4)</small></a></li>
+				    
+				    <li><a href="/categories/JavaScript/ES6/" class="animsition-link">ES6<small>(2)</small></a></li>
+				    
+				    <li><a href="/categories/Git/" class="animsition-link">Git<small>(1)</small></a></li>
+				    
+				    <li><a href="/categories/HTML/" class="animsition-link">HTML<small>(16)</small></a></li>
+				    
+				    <li><a href="/categories/JavaScript/" class="animsition-link">JavaScript<small>(27)</small></a></li>
+				    
+				    <li><a href="/categories/ES6/JavaScript/" class="animsition-link">JavaScript<small>(4)</small></a></li>
+				    
+				    <li><a href="/categories/Vue/" class="animsition-link">Vue<small>(1)</small></a></li>
+				    
+				    <li><a href="/categories/vue/" class="animsition-link">vue<small>(1)</small></a></li>
+				    
+				    <li><a href="/categories/webpack/" class="animsition-link">webpack<small>(2)</small></a></li>
+				    
+				</ul>
+        	</li>
+			
+            
+            <li>
+                <a class="sb-toggle-submenu">Links<span class="sb-caret"></span></a>
+                <ul class="sb-submenu">
+                    
+                    <li><a href="https://daipi173.github.io/myweb/daipi173-myperson" class="animsition-link">Personal Project</a></li>
+                    
+                </ul>
+            </li>
+            
+        </ul>
+        <!-- Lists in Slidebars -->
+        <ul class="sb-menu secondary">
+            
+            <li><a href="/about.html" class="animsition-link" title="about">About</a></li>
+            <li><a href="/atom.xml" class="animsition-link" title="rss">RSS</a></li>
+        </ul>
+    </div>
+    
+    <!-- ============================ END Off-canvas navigation =========================== -->
+
+    <!-- ============================ #sb-site Main Page Wrapper =========================== -->
+
+    <div id="sb-site">
+        <!-- #sb-site - All page content should be contained within this id, except the off-canvas navigation itself -->
+
+        <!-- ============================ Header & Logo bar =========================== -->
+
+        <div id="navigation" class="navbar navbar-fixed-top">
+            <div class="navbar-inner">
+                <div class="container">
+                    <!-- Nav logo -->
+                    <div class="logo">
+                        <a href="/" title="Logo" class="animsition-link">
+                         <img src="/img/logo.png" alt="Logo" width="35px;"/> 
+                        </a>
+                    </div>
+                    <!-- // Nav logo -->
+                    <!-- Info-bar -->
+                    <nav>
+                        <ul class="nav">
+                            <li><a href="/" class="animsition-link">daipi173的个人博客</a></li>
+                            <li class="nolink"><span>Always </span>Creative.</li>
+                            
+                            <li><a href="https://github.com/" title="Github" target="_blank"><i class="icon-github"></i></a></li>
+                            
+                            
+                            <li><a href="https://twitter.com/" title="Twitter" target="_blank"><i class="icon-twitter"></i></a></li>
+                            
+                            
+                            <li><a href="https://www.facebook.com/" title="Facebook" target="_blank"><i class="icon-facebook"></i></a></li>
+                            
+                            
+                            <li><a href="https://google.com/" title="Google-Plus" target="_blank"><i class="icon-google-plus"></i></a></li>
+                            
+                            
+                            <li><a href="http://weibo.com/" title="Sina-Weibo" target="_blank"><i class="icon-sina-weibo"></i></a></li>
+                            
+                            <li class="nolink"><span>Welcome!</span></li>
+                        </ul>
+                    </nav>
+                    <!--// Info-bar -->
+                </div>
+                <!-- // .container -->
+                <div class="learnmore sb-toggle-right">More</div>
+                <button type="button" class="navbar-toggle menu-icon sb-toggle-right" title="More">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar before"></span>
+                <span class="icon-bar main"></span>
+                <span class="icon-bar after"></span>
+                </button>
+            </div>
+            <!-- // .navbar-inner -->
+        </div>
+
+        <!-- ============================ Header & Logo bar =========================== -->
+
+
+      
+<section id="intro">
+    <div class="container">
+        <div class="row col-md-offset-2">
+            <div class="col-md-8">
+    			<span class="post-meta">
+      <time datetime="2019-08-28T10:50:00.000Z" itemprop="datePublished">
+          2019-08-28
+      </time>
+    
+    
+    | 
+    <a href='/tags/ES6/'>ES6</a>,
+    
+    <a href='/tags/JavaScript/'>JavaScript</a>
+    
+    
+</span>
+                <h1>ES6总结（二）</h1>
+            </div>
+        </div>
+        <div class="col-md-8 col-md-offset-2">
+      		<h1 id="1-参数处理"><a href="#1-参数处理" class="headerlink" title="1. 参数处理"></a>1. 参数处理</h1><ol>
+<li><p>参数默认值：<br>a. 基本使用方法；<br>b. 在默认值中使用其他变量。<br>如：</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 例1</span></span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">fn</span>(<span class="params">a=<span class="number">1</span>,b=<span class="number">2</span>,c=<span class="number">3</span></span>)</span>&#123; <span class="comment">// 这样写是为了提高可读性</span></span><br><span class="line">	<span class="built_in">console</span>.log(a,b,c);</span><br><span class="line">&#125;</span><br><span class="line">fn(); <span class="comment">// 1 2 3</span></span><br><span class="line"><span class="comment">// 例2</span></span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">fn</span>(<span class="params">a=<span class="number">1</span>,b=<span class="number">2</span>,c=<span class="number">3</span></span>)</span>&#123;</span><br><span class="line">	<span class="built_in">console</span>.log(a,b,c);</span><br><span class="line">&#125;</span><br><span class="line">fn(<span class="number">10</span>); <span class="comment">// 10 2 3</span></span><br></pre></td></tr></table></figure>
+</li>
+<li><p>惰性求值<br>为什么会有惰性求值，其原因就是因为<strong>提高它的性能</strong>。<br>如：</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">value</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">	<span class="keyword">return</span> <span class="number">20</span>;</span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">// 惰性求值，为了提高其性能</span></span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">fn</span>(<span class="params">a=value(</span>),<span class="title">b</span>=2,<span class="title">c</span>=3)</span>&#123;</span><br><span class="line">	<span class="built_in">console</span>.log(a,b,c);</span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">// 注意：当fn里面有值了，a=value()中的value就不会去执行了</span></span><br><span class="line">fn(<span class="number">10</span>); <span class="comment">// 10 2 3</span></span><br></pre></td></tr></table></figure>
+</li>
+<li><p>在默认值中使用其他变量<br>如：</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">fn</span>(<span class="params">a=<span class="number">1</span>,b=a</span>)</span>&#123;</span><br><span class="line">	<span class="built_in">console</span>.log(a,b);</span><br><span class="line">&#125;</span><br><span class="line">fn(); <span class="comment">// 1 1</span></span><br></pre></td></tr></table></figure>
+
+</li>
+</ol>
+<p>在上面代码中我们需要注意括号中的值是从左到右执行的，下面我再来给大家举一个例子：</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">fn</span>(<span class="params">a=b,b=<span class="number">1</span></span>)</span>&#123;</span><br><span class="line">	<span class="built_in">console</span>.log(a,b);</span><br><span class="line">&#125;</span><br><span class="line">fn(); <span class="comment">// 报错，因为是从左到右执行的，当a=b时，b还没有</span></span><br></pre></td></tr></table></figure>
+
+<p>下面还要再给大家举一个易错的例子：</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> c = <span class="number">3</span>; <span class="comment">// 外部</span></span><br><span class="line">functiono fn(a=c,b=<span class="number">1</span>)&#123;</span><br><span class="line">	<span class="keyword">const</span> c = <span class="number">4</span>; <span class="comment">// 内部</span></span><br><span class="line">	<span class="built_in">console</span>.log(a,b);</span><br><span class="line">&#125;</span><br><span class="line">fn(); <span class="comment">// 3 1</span></span><br><span class="line"><span class="comment">// 为什么打印出来的a为3？</span></span><br><span class="line"><span class="comment">// 因为函数参数的作用域是介于外部作用域和函数里面作用域之间的。</span></span><br><span class="line"><span class="comment">// 它可以访问到外部，但是不能访问到内部。</span></span><br></pre></td></tr></table></figure>
+
+<h1 id="2-剩余运算符-…"><a href="#2-剩余运算符-…" class="headerlink" title="2. 剩余运算符(…)"></a>2. 剩余运算符(…)</h1><ol>
+<li>剩余运算符(…)的作用<br>把散列的元素变成一个集合。</li>
+<li>剩余运算符(…)的场景<br>在函数或者解构中使用<br>如在函数中使用：<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 例1</span></span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">add</span>(<span class="params">...arr</span>)</span>&#123;</span><br><span class="line">	<span class="built_in">console</span>.log(arr);</span><br><span class="line">&#125;</span><br><span class="line">add(<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>); <span class="comment">// [1,2,3]</span></span><br><span class="line"><span class="comment">// 例2</span></span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">add</span>(<span class="params">a,...arr</span>)</span>&#123;</span><br><span class="line">	<span class="built_in">console</span>.log(a,arr);</span><br><span class="line">&#125;</span><br><span class="line">add(<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>); <span class="comment">// 1 [2,3]</span></span><br></pre></td></tr></table></figure>
+
+</li>
+</ol>
+<p>如在解构中使用：</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 例1</span></span><br><span class="line"><span class="keyword">let</span> [a,...b] = [<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>];</span><br><span class="line"><span class="built_in">console</span>.log(a,b); <span class="comment">// 1 [2,3]</span></span><br><span class="line"><span class="comment">// 例2</span></span><br><span class="line"><span class="keyword">let</span> &#123;a,b,...c&#125; = &#123;<span class="attr">a</span>: <span class="number">1</span>,<span class="attr">b</span>: <span class="number">2</span>,<span class="attr">c</span>: <span class="number">3</span>,<span class="attr">d</span>: <span class="number">4</span>&#125;;</span><br><span class="line"><span class="built_in">console</span>.log(a,b,c); <span class="comment">// 1 2 &#123;c: 3,d: 4&#125;</span></span><br></pre></td></tr></table></figure>
+
+<h1 id="3-扩展运算符-…"><a href="#3-扩展运算符-…" class="headerlink" title="3. 扩展运算符(…)"></a>3. 扩展运算符(…)</h1><ol>
+<li>扩展运算符(…)的作用<br>把一个集合变成散元素。</li>
+<li>扩展运算符(…)的场景<br>函数参数传递，数组和对象的复制。<br>如在函数参数传递中使用：<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">fn</span>(<span class="params">a,b,c</span>)</span>&#123;</span><br><span class="line">	<span class="built_in">console</span>.log(a,b,c);</span><br><span class="line">&#125;</span><br><span class="line">fn(...[<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>]); <span class="comment">// 1 2 3</span></span><br></pre></td></tr></table></figure>
+
+</li>
+</ol>
+<p>如数组的复制：<br><strong>注意：复制的数组改变，不会影响到原来的数组。</strong></p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 例1</span></span><br><span class="line"><span class="keyword">let</span> arr = [<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>];</span><br><span class="line"><span class="keyword">let</span> arr2 = [...arr];</span><br><span class="line"><span class="comment">// 注意：它是一个浅拷贝</span></span><br><span class="line"><span class="built_in">console</span>.log(arr2); <span class="comment">// [1,2,3]</span></span><br><span class="line"><span class="comment">// 例2</span></span><br><span class="line"><span class="keyword">let</span> arr = [<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>];</span><br><span class="line"><span class="keyword">let</span> arr1 = [...arr,<span class="number">4</span>,<span class="number">5</span>,<span class="number">6</span>];</span><br><span class="line"><span class="built_in">console</span>.log(arr1); <span class="comment">// [1,2,3,4,5,6]</span></span><br></pre></td></tr></table></figure>
+
+<p>如对象的复制：</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">let</span> obj = &#123;<span class="attr">a</span>: <span class="number">1</span>,<span class="attr">b</span>: <span class="number">2</span>,<span class="attr">c</span>: <span class="number">3</span>&#125;;</span><br><span class="line"><span class="keyword">let</span> obj2 = &#123;...obj&#125;;</span><br><span class="line"><span class="built_in">console</span>.log(obj2); <span class="comment">// &#123;a: 1,b: 2,c: 3&#125;</span></span><br></pre></td></tr></table></figure>
+
+<p>对于剩余运算符和扩展运算符的一个简单总结：<br>扩展运算符：…[1,2,3] —&gt; 1,2,3<br>剩余运算符：…1,2,3 —&gt; [1,2,3]</p>
+<h1 id="4-模拟命名参数"><a href="#4-模拟命名参数" class="headerlink" title="4. 模拟命名参数"></a>4. 模拟命名参数</h1><p>使用对象的解构赋值来模拟命名参数。<br>如：</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 例1</span></span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">fn</span>(<span class="params">&#123;start,end&#125;</span>)</span>&#123;</span><br><span class="line">	<span class="built_in">console</span>.log(start,end);</span><br><span class="line">&#125;</span><br><span class="line">fn(&#123;<span class="attr">start</span>: <span class="number">1</span>,<span class="attr">end</span>: <span class="number">2</span>&#125;); <span class="comment">// 1 2，相当于&#123;start,end&#125; = &#123;start: 1,end: 2&#125;</span></span><br><span class="line"><span class="comment">// 例2</span></span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">fn</span>(<span class="params">&#123;start=<span class="number">1</span>,end=<span class="number">2</span>&#125;</span>)</span>&#123;</span><br><span class="line">	<span class="built_in">console</span>.log(start,end);</span><br><span class="line">&#125;</span><br><span class="line">fn(&#123;&#125;); <span class="comment">// 1 2</span></span><br><span class="line"><span class="comment">// 上面代码等价于下面几行代码</span></span><br><span class="line"><span class="comment">// function fn(&#123;start=1,end=2&#125; = &#123;&#125;)&#123;</span></span><br><span class="line"><span class="comment">//     console.log(start,end);</span></span><br><span class="line"><span class="comment">// &#125;</span></span><br><span class="line"><span class="comment">// fn(); 1 2</span></span><br><span class="line"><span class="comment">// 例3</span></span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">fn</span>(<span class="params">&#123;start=<span class="number">1</span>,end=<span class="number">2</span>&#125;</span>)</span>&#123;</span><br><span class="line">	<span class="built_in">console</span>.log(start,end);</span><br><span class="line">&#125;</span><br><span class="line">fn(); <span class="comment">// 报错，因为它相当于&#123;start=1,end=2&#125; = undefined，此时左边模式与右边模式不匹配</span></span><br></pre></td></tr></table></figure>
+
+<h1 id="5-数字操作"><a href="#5-数字操作" class="headerlink" title="5. 数字操作"></a>5. 数字操作</h1><p>新的Number方法：<br>以前方法的移植；合理误差范围；判断是否为整型；安全整数的相应方法。<br>如：<br>a. Number.isNaN(1);<br>b. Number.isFinite(‘123’);<br>c. Number.parseFloat();<br>d. Number.parseInt();</p>
+<h1 id="6-模块化"><a href="#6-模块化" class="headerlink" title="6. 模块化"></a>6. 模块化</h1><p>一说到模块化，不得不说的就是箭头函数，它是一个语义化的函数。</p>
+<ol>
+<li>基本语法：()=&gt;{}<br>如：<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> foo1 = <span class="function">(<span class="params">a,b</span>)=&gt;</span>&#123;</span><br><span class="line">	<span class="built_in">console</span>.log(a,b);</span><br><span class="line">&#125;</span><br><span class="line">foo1(<span class="number">1</span>,<span class="number">2</span>); <span class="comment">// 3</span></span><br></pre></td></tr></table></figure>
+
+</li>
+</ol>
+<p><strong>使用箭头函数需要注意：</strong><br>a. 如果参数只有一个的话，我们的小括号可以省略；<br>b. 如果参数只有0个或者2个及2个以上的话，我们的小括号必须有；<br>c. 如果大括号里面只有1条语句的时候，大括号可以省略，大括号被省略时，如果这1条语句中有return的话，return也必须省略；<br>d. 如果大括号里面的语句两条及以上的时候，不可以省略大括号。</p>
+<ol start="2">
+<li><p>下面给大家分享一个易错的知识点，先看如下代码：</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 注意最外层的()括号是必须加的，否则它就只是一个代码块，从而就不会返回对象了。</span></span><br><span class="line"><span class="keyword">var</span> sum = <span class="function"><span class="params">()</span>=&gt;</span>(&#123;<span class="attr">name</span>: <span class="string">'a'</span>&#125;);</span><br><span class="line"><span class="comment">// 上面这句代码等价于下面这几行代码</span></span><br><span class="line"><span class="comment">// function sum()&#123;</span></span><br><span class="line"><span class="comment">//     return &#123;name: 'a'&#125;;</span></span><br><span class="line"><span class="comment">// &#125;</span></span><br></pre></td></tr></table></figure>
+</li>
+<li><p>箭头函数和函数的区别和注意事项<br>a. this指向问题：在箭头函数中是<strong>没有</strong>this指向的，this是借助父级作用域中的this指向，你通过call等方法改变它的this指向都是<strong>不好使</strong>的。<br>b. <strong>不能</strong>使用arguments。<br>c. <strong>不能</strong>当做构造函数。</p>
+</li>
+</ol>
+
+            <div class="clearfix"></div>
+            <hr class="nogutter">
+        </div>
+        <nav class="m-pagination col-md-8 col-md-offset-2 col-sm-24" role="pagination">
+    
+    
+    <a class="pull-right" href="/2019/08/24/ES6总结（一）/">
+        ES6总结（一） →
+    </a>
+    
+</nav>
+
+        <div class="col-md-8 col-md-offset-2 col-sm-24"><script type="text/javascript">
+  /**
+   * 搜狐畅言
+   */
+
+  /*
+  document.write('<div id="SOHUCS" sid="' + window.location.pathname.slice(1) + '" ></div>');
+
+  window.onload = function () {
+    (function () {
+      var appid = 'cytXXXX';
+      var conf = 'prod_xxxxxxxxxxxxxxxxx';
+      var width = window.innerWidth || document.documentElement.clientWidth;
+      var loadJs = function (d, a, id) {
+        var c = document.getElementsByTagName("head")[0] || document.head || document.documentElement;
+        var b = document.createElement("script");
+        b.setAttribute("type", "text/javascript");
+        b.setAttribute("charset", "UTF-8");
+        b.setAttribute("src", d);
+        if (id) {
+          b.setAttribute("id", id);
+        }
+        if (typeof a === "function") {
+          if (window.attachEvent) {
+            b.onreadystatechange = function () {
+              var e = b.readyState;
+              if (e === "loaded" || e === "complete") {
+                b.onreadystatechange = null;
+                a()
+              }
+            }
+          } else {
+            b.onload = a
+          }
+        }
+        c.appendChild(b)
+      };
+
+      loadJs("https://changyan.sohu.com/upload/changyan.js", function () {
+        window.changyan.api.config({
+          appid: appid,
+          conf: conf
+        })
+      });
+    })();
+  }
+  */
+
+</script>
+</div>
+    </div>
+</section>
+
+
+      
+<!-- ============================ Footer =========================== -->
+
+<footer>
+    <div class="container">
+            <div class="copy">
+                <p>
+                    &copy; 2014<script>new Date().getFullYear()>2010&&document.write("-"+new Date().getFullYear());</script>, Content By daipi173. All Rights Reserved.
+                </p>
+                <p>Theme By <a href="//go.kieran.top" style="color: #767D84">Kieran</a></p>
+            </div>
+            <div class="social">
+                <ul>
+                    
+                    <li><a href="https://github.com/" title="Github" target="_blank"><i class="icon-github"></i></a>&nbsp;</li>
+                    
+                    
+                    <li><a href="https://twitter.com/" title="Twitter" target="_blank"><i class="icon-twitter"></i></a>&nbsp;</li>
+                    
+                    
+                    <li><a href="https://www.facebook.com/" title="Facebook" target="_blank"><i class="icon-facebook"></i></a>&nbsp;</li>
+                    
+                    
+                    <li><a href="https://google.com/" title="Google-Plus" target="_blank"><i class="icon-google-plus"></i></a>&nbsp;</li>
+                    
+                    
+                    <li><a href="http://weibo.com/" title="Sina-Weibo" target="_blank"><i class="icon-sina-weibo"></i></a>&nbsp;</li>
+                    
+                </ul>
+            </div>
+            <div class="clearfix"> </div>
+        </div>
+</footer>
+
+<!-- ============================ END Footer =========================== -->
+      <!-- Load our scripts -->
+<!-- Resizable 'on-demand' full-height hero -->
+<script type="text/javascript">
+    var resizeHero = function () {
+        var hero = $(".cover,.heightblock"),
+            window1 = $(window);
+        hero.css({
+            "height": window1.height()
+        });
+    };
+
+    resizeHero();
+
+    $(window).resize(function () {
+        resizeHero();
+    });
+</script>
+<script src="/js/plugins.min.js"></script><!-- Bootstrap core and concatenated plugins always load here -->
+<script src="/js/scripts.js"></script><!-- Theme scripts -->
+
+
+<link rel="stylesheet" href="/fancybox/jquery.fancybox.css" media="screen" type="text/css">
+<script src="/fancybox/jquery.fancybox.pack.js"></script>
+<script type="text/javascript">
+$('#intro').find('img').each(function(){
+  var alt = this.alt;
+
+  if (alt){
+    $(this).after('<span class="caption" style="display:none">' + alt + '</span>');
+  }
+
+  $(this).wrap('<a href="' + this.src + '" title="' + alt + '" class="fancybox" rel="gallery" />');
+});
+(function($){
+  $('.fancybox').fancybox();
+})(jQuery);
+</script>
+
+
+
+      
+<script src="/live2dw/lib/L2Dwidget.min.js?094cbace49a39548bed64abff5988b05"></script><script>L2Dwidget.init({"pluginModelPath":"assets/","model":{"jsonPath":"/live2dw/assets/haruto.model.json"},"display":{"position":"right","width":150,"height":300},"mobile":{"show":true},"log":false,"pluginJsPath":"lib/","pluginRootPath":"live2dw/","tagMode":false});</script></body>
+</html>

@@ -1,0 +1,452 @@
+<!DOCTYPE html>
+<!--[if lte IE 8 ]>
+<html class="ie" xmlns="http://www.w3.org/1999/xhtml" xml:lang="en-US" lang="en-US">
+<![endif]-->
+<!--[if (gte IE 9)|!(IE)]><!-->
+<!--
+***************  *      *     *
+      8          *    *       *
+      8          *  *         *
+      8          **           *
+      8          *  *         *
+      8          *    *       *
+      8          *      *     *
+      8          *        *   ***********    -----Theme By Kieran(http://go.kieran.top)
+-->
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="zh-CN" lang="zh-CN">
+<!--<![endif]-->
+
+<head>
+  <title>ES6总结（一） | daipi173的个人博客</title>
+  <!-- Meta data -->
+    <meta http-equiv="Content-Type" content="text/html" charset="UTF-8" >
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="generator" content="daipi173的个人博客">
+    <meta name="author" content="daipi173">
+    <meta name="description" content="" />
+    <meta name="keywords" content="" />
+
+    <!-- Favicon, (keep icon in root folder) -->
+    <link rel="Shortcut Icon" href="/img/favicon.ico" type="image/ico">
+
+    <link rel="alternate" href="/atom.xml" title="daipi173的个人博客" type="application/atom+xml">
+    <link rel="stylesheet" href="/css/all.css" media="screen" type="text/css">
+    
+    <link rel="stylesheet" href="/highlightjs/vs.css" type="text/css">
+    
+
+    <!--[if IE 8]>
+    <link rel="stylesheet" type="text/css" href="/css/ie8.css" />
+    <![endif]-->
+
+    <!-- jQuery | Load our jQuery, with an alternative source fallback to a local version if request is unavailable -->
+    <script src="/js/jquery-1.11.1.min.js"></script>
+    <script>window.jQuery || document.write('<script src="js/jquery-1.11.1.min.js"><\/script>')</script>
+
+    <!-- Load these in the <head> for quicker IE8+ load times -->
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+    <script src="/js/html5shiv.min.js"></script>
+    <script src="/js/respond.min.js"></script>
+    <![endif]-->
+
+  
+  
+  
+
+  <style>.col-md-8.col-md-offset-2.opening-statement img{display:none;}</style>
+</head>
+
+<!--
+<body class="post-template">
+-->
+<body id="index" class="lightnav animsition">
+
+      <!-- ============================ Off-canvas navigation =========================== -->
+
+    <div class="sb-slidebar sb-right sb-style-overlay sb-momentum-scrolling">
+        <div class="sb-close" aria-label="Close Menu" aria-hidden="true">
+            <img src="/img/close.png" alt="Close"/>
+        </div>
+        <!-- Lists in Slidebars -->
+        <ul class="sb-menu">
+            <li><a href="/" class="animsition-link" title="Home">Home</a></li>
+            <li><a href="/archives" class="animsition-link" title="archive">archives</a></li>
+            <!-- Dropdown Menu -->
+			 
+            
+        	<li>
+        		<a class="sb-toggle-submenu">Categories<span class="sb-caret"></span></a>
+            	<ul class="sb-submenu">
+				  	
+				    <li><a href="/categories/HTML/CSS/" class="animsition-link">CSS<small>(4)</small></a></li>
+				    
+				    <li><a href="/categories/ES6/" class="animsition-link">ES6<small>(4)</small></a></li>
+				    
+				    <li><a href="/categories/JavaScript/ES6/" class="animsition-link">ES6<small>(2)</small></a></li>
+				    
+				    <li><a href="/categories/Git/" class="animsition-link">Git<small>(1)</small></a></li>
+				    
+				    <li><a href="/categories/HTML/" class="animsition-link">HTML<small>(16)</small></a></li>
+				    
+				    <li><a href="/categories/JavaScript/" class="animsition-link">JavaScript<small>(27)</small></a></li>
+				    
+				    <li><a href="/categories/ES6/JavaScript/" class="animsition-link">JavaScript<small>(4)</small></a></li>
+				    
+				    <li><a href="/categories/Vue/" class="animsition-link">Vue<small>(1)</small></a></li>
+				    
+				    <li><a href="/categories/vue/" class="animsition-link">vue<small>(1)</small></a></li>
+				    
+				    <li><a href="/categories/webpack/" class="animsition-link">webpack<small>(2)</small></a></li>
+				    
+				</ul>
+        	</li>
+			
+            
+            <li>
+                <a class="sb-toggle-submenu">Links<span class="sb-caret"></span></a>
+                <ul class="sb-submenu">
+                    
+                    <li><a href="https://daipi173.github.io/myweb/daipi173-myperson" class="animsition-link">Personal Project</a></li>
+                    
+                </ul>
+            </li>
+            
+        </ul>
+        <!-- Lists in Slidebars -->
+        <ul class="sb-menu secondary">
+            
+            <li><a href="/about.html" class="animsition-link" title="about">About</a></li>
+            <li><a href="/atom.xml" class="animsition-link" title="rss">RSS</a></li>
+        </ul>
+    </div>
+    
+    <!-- ============================ END Off-canvas navigation =========================== -->
+
+    <!-- ============================ #sb-site Main Page Wrapper =========================== -->
+
+    <div id="sb-site">
+        <!-- #sb-site - All page content should be contained within this id, except the off-canvas navigation itself -->
+
+        <!-- ============================ Header & Logo bar =========================== -->
+
+        <div id="navigation" class="navbar navbar-fixed-top">
+            <div class="navbar-inner">
+                <div class="container">
+                    <!-- Nav logo -->
+                    <div class="logo">
+                        <a href="/" title="Logo" class="animsition-link">
+                         <img src="/img/logo.png" alt="Logo" width="35px;"/> 
+                        </a>
+                    </div>
+                    <!-- // Nav logo -->
+                    <!-- Info-bar -->
+                    <nav>
+                        <ul class="nav">
+                            <li><a href="/" class="animsition-link">daipi173的个人博客</a></li>
+                            <li class="nolink"><span>Always </span>Creative.</li>
+                            
+                            <li><a href="https://github.com/" title="Github" target="_blank"><i class="icon-github"></i></a></li>
+                            
+                            
+                            <li><a href="https://twitter.com/" title="Twitter" target="_blank"><i class="icon-twitter"></i></a></li>
+                            
+                            
+                            <li><a href="https://www.facebook.com/" title="Facebook" target="_blank"><i class="icon-facebook"></i></a></li>
+                            
+                            
+                            <li><a href="https://google.com/" title="Google-Plus" target="_blank"><i class="icon-google-plus"></i></a></li>
+                            
+                            
+                            <li><a href="http://weibo.com/" title="Sina-Weibo" target="_blank"><i class="icon-sina-weibo"></i></a></li>
+                            
+                            <li class="nolink"><span>Welcome!</span></li>
+                        </ul>
+                    </nav>
+                    <!--// Info-bar -->
+                </div>
+                <!-- // .container -->
+                <div class="learnmore sb-toggle-right">More</div>
+                <button type="button" class="navbar-toggle menu-icon sb-toggle-right" title="More">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar before"></span>
+                <span class="icon-bar main"></span>
+                <span class="icon-bar after"></span>
+                </button>
+            </div>
+            <!-- // .navbar-inner -->
+        </div>
+
+        <!-- ============================ Header & Logo bar =========================== -->
+
+
+      
+<section id="intro">
+    <div class="container">
+        <div class="row col-md-offset-2">
+            <div class="col-md-8">
+    			<span class="post-meta">
+      <time datetime="2019-08-24T14:43:00.000Z" itemprop="datePublished">
+          2019-08-24
+      </time>
+    
+    
+    | 
+    <a href='/tags/ES6/'>ES6</a>,
+    
+    <a href='/tags/JavaScript/'>JavaScript</a>
+    
+    
+</span>
+                <h1>ES6总结（一）</h1>
+            </div>
+        </div>
+        <div class="col-md-8 col-md-offset-2">
+      		<p>在总结ES6之前，告诉大家一个好的网站，叫<strong>掘金网</strong>。</p>
+<h1 id="1-数据"><a href="#1-数据" class="headerlink" title="1. 数据"></a>1. 数据</h1><ol>
+<li>let<br>a. 不能变量声明提升；<br>b. 不能重复声明变量，这样可以防止污染变量。</li>
+<li>const<br>a. 定义的时候要有初始化值；<br>b. 初始化值不能改变（即绑定不能改变，也就是说内存地址是不能改变的）。<br>下面增对与const中b这一点举一个例子：<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 例子一</span></span><br><span class="line"><span class="keyword">const</span> age = <span class="number">10</span>;  <span class="comment">// age是一个原始值</span></span><br><span class="line">	  age = <span class="number">20</span>;  <span class="comment">// 报错，因为常量是不能进行更改的</span></span><br><span class="line"><span class="comment">// 例子二</span></span><br><span class="line"><span class="keyword">const</span> person = &#123;</span><br><span class="line">	name: <span class="string">"daipi173"</span>,</span><br><span class="line">	age: <span class="number">22</span></span><br><span class="line">&#125;;</span><br><span class="line">person.sex = <span class="string">"female"</span>;</span><br><span class="line"><span class="built_in">console</span>.log(person); <span class="comment">// 此时是不会报错的，会打印出：&#123;name: "daipi173", age: 22, sex: "female"&#125;</span></span><br></pre></td></tr></table></figure>
+
+</li>
+</ol>
+<h1 id="2-块级作用域"><a href="#2-块级作用域" class="headerlink" title="2. 块级作用域"></a>2. 块级作用域</h1><ol>
+<li>let、const声明的变量不会被绑定给window，但是var就会，语法：{块级作用域}。<br>如：<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">&#123;</span><br><span class="line">	<span class="keyword">let</span> a = <span class="number">1</span>;</span><br><span class="line">&#125;</span><br><span class="line"><span class="built_in">console</span>.log(a); <span class="comment">// 报错，报错信息为：a is not defined</span></span><br></pre></td></tr></table></figure>
+
+</li>
+</ol>
+<h1 id="3-声明变量let暂时性死区"><a href="#3-声明变量let暂时性死区" class="headerlink" title="3. 声明变量let暂时性死区"></a>3. 声明变量let暂时性死区</h1><ol>
+<li>在理解暂时性死区之前，我们需要先知道一点，先看看下面一段代码：<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">console</span>.log(a)</span><br><span class="line"><span class="keyword">var</span> a;  <span class="comment">// undefined，由于变量声明提升，因此该代码等价于下面两行的代码</span></span><br><span class="line"><span class="comment">// 等价于</span></span><br><span class="line"><span class="comment">// var a</span></span><br><span class="line"><span class="comment">// console.log(a) // undefined</span></span><br></pre></td></tr></table></figure>
+
+</li>
+</ol>
+<p>在ES6中，使用let声明的时候，又会产生不同的结果：</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">console</span>.log(a); <span class="comment">// ReferenceError: a is not defined</span></span><br><span class="line"><span class="keyword">let</span> a;</span><br></pre></td></tr></table></figure>
+
+<p>为什么会出现不同的结果，其原因就是因为我们忽略了let的暂时性死区（temporal dead zone，简称TDZ）。</p>
+<ol>
+<li>为什么会出现暂时性死区<br>ES6规定，let/const 命令会使区块形成封闭的作用域。若在声明之前使用变量，就会报错。<br>总之，在代码块内，使用 let 命令声明<strong>变量之前，该变量都是不可用的。</strong><br>这在语法上，称为 “暂时性死区”（ temporal dead zone，简称 TDZ）。<br>我们来举一个例子：<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> a = <span class="number">123</span>;</span><br><span class="line"><span class="keyword">if</span>(<span class="literal">true</span>)&#123;</span><br><span class="line">	a = <span class="string">'abc'</span>;  <span class="comment">// 报错</span></span><br><span class="line">	<span class="keyword">let</span> a;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+</li>
+</ol>
+<p>在上面的代码中，存在全局变量a，但是块级作用域内let又声明了一个局部变量a，<strong>导致后者绑定了这个块级作用域，所以在let声明变量前，对a赋值会报错。</strong><br><strong>注意：ES6明确规定，如果区块中存在let和const命令，这个区块对这些命令声明的变量，从一开始就形成了封闭作用域，凡是在声明之前就使用这些变量，就会报错。</strong></p>
+<ol start="2">
+<li>暂时性死区的其他影响<br>TDZ 也意味着 typeof 不再是一个百分之百安全的操作。在没有 let 之前，typeof 运算符是百分之百安全的，不会报错。<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">typeof</span> a; <span class="comment">// ReferenceError: a is not defined</span></span><br><span class="line"><span class="keyword">let</span> a;</span><br></pre></td></tr></table></figure>
+
+</li>
+</ol>
+<h1 id="4-字符串拓展"><a href="#4-字符串拓展" class="headerlink" title="4. 字符串拓展"></a>4. 字符串拓展</h1><ol>
+<li>includes方法<br>includes判断一个字符串是否在一串字符串中，返回true或者false。它和indexOf相似，只不过它返回的是-1或索引值。<br>如：<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">let</span> msg = <span class="string">'hello'</span>;</span><br><span class="line"><span class="built_in">console</span>.log(msg.includes(<span class="string">'h'</span>,<span class="number">2</span>));  <span class="comment">// false，这里的2表示从第三位开始查找（包括第三位）</span></span><br></pre></td></tr></table></figure>
+
+</li>
+</ol>
+<p>关于该方法我们还可以做一个兼容性处理，利用String.prototype.includes，用ES5的方法（兼容性写法）来实现一下：</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">if</span>(!<span class="built_in">String</span>.prototype.includes)&#123;</span><br><span class="line">	<span class="built_in">String</span>.prototype.includes = <span class="function"><span class="keyword">function</span>(<span class="params">search,start</span>)</span>&#123;</span><br><span class="line">		<span class="keyword">if</span>(<span class="keyword">typeof</span> start !== <span class="string">"number"</span>)&#123;</span><br><span class="line">			start = <span class="number">0</span>;</span><br><span class="line">		&#125;</span><br><span class="line">		<span class="keyword">if</span>(start + search.length &gt; <span class="keyword">this</span>.length)&#123;</span><br><span class="line">			<span class="keyword">return</span> <span class="literal">false</span>;</span><br><span class="line">		&#125;<span class="keyword">else</span>&#123;</span><br><span class="line">			<span class="keyword">return</span> <span class="keyword">this</span>.indexOf(search,start) !== <span class="number">-1</span>;</span><br><span class="line">		&#125;</span><br><span class="line">	&#125;;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<ol start="2">
+<li><p>startsWith方法<br>startsWith判断是否是以某个字符或者字符串开头，返回true或false。<br>如：</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">let</span> msg = <span class="string">'hello'</span>;</span><br><span class="line"><span class="built_in">console</span>.log(msg.startsWith(<span class="string">'h'</span>)); <span class="comment">// true</span></span><br><span class="line"><span class="built_in">console</span>.log(msg.startsWith(<span class="string">'hell'</span>)); <span class="comment">// true</span></span><br><span class="line"><span class="built_in">console</span>.log(msg.startsWith(<span class="string">'hello'</span>)); <span class="comment">// true</span></span><br><span class="line"><span class="built_in">console</span>.log(msg.startsWith(<span class="string">'hell'</span>,<span class="number">1</span>)); <span class="comment">// false，表示从第2位开始查找（包含第2位）</span></span><br><span class="line"><span class="built_in">console</span>.log(msg.startsWith(<span class="string">'ell'</span>,<span class="number">1</span>)); <span class="comment">// true</span></span><br></pre></td></tr></table></figure>
+</li>
+<li><p>endsWith方法<br>endsWith表示判断是否是以某个字符串或某串字符串结尾的，返回true或者false。<br>如：</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">let</span> msg = <span class="string">'hello'</span>;</span><br><span class="line"><span class="built_in">console</span>.log(msg.endsWith(<span class="string">'llo'</span>)); <span class="comment">// true</span></span><br><span class="line"><span class="built_in">console</span>.log(msg.endsWith(<span class="string">'l'</span>,<span class="number">1</span>)); <span class="comment">// false，这里面的1表示从第1位之前开始查找（包括第1位）</span></span><br></pre></td></tr></table></figure>
+</li>
+<li><p>repeat方法<br>repeat表示去重复一个字符串。<br>如：</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">let</span> msg = <span class="string">'hello'</span>;</span><br><span class="line"><span class="built_in">console</span>.log(msg.repeat(<span class="number">3</span>)); <span class="comment">// hellohellohello，这里面的3表示重复3次</span></span><br></pre></td></tr></table></figure>
+
+</li>
+</ol>
+<h1 id="5-解构赋值"><a href="#5-解构赋值" class="headerlink" title="5. 解构赋值"></a>5. 解构赋值</h1><ol>
+<li>数组解构赋值<br>语法：[variable1,variable2,…,variableN] = array;<br>如：<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">let</span> arr = [<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>];</span><br><span class="line"><span class="keyword">let</span> [a,b,c] = arr;</span><br><span class="line"><span class="built_in">console</span>.log(a,b,c); <span class="comment">// 1 2 3</span></span><br></pre></td></tr></table></figure>
+
+</li>
+</ol>
+<p>使用是需注意：<br>a. <strong>必须</strong>要进行<strong>初始化</strong>；<br>b. 可以在解构中忽略一些项；<br>如：</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">let</span> arr = [<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>];</span><br><span class="line"><span class="keyword">let</span> [,a,] = arr;</span><br><span class="line"><span class="built_in">console</span>.log(a); <span class="comment">// 2</span></span><br></pre></td></tr></table></figure>
+
+<p>c. 互换两个变量的值。<br>如：</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">let</span> x = <span class="number">1</span>;</span><br><span class="line"><span class="keyword">let</span> y = <span class="number">2</span>;</span><br><span class="line">[x,y] = [y,x]; <span class="comment">// 在这里[x,y]前面不用let声明了，因为x，y是声明过了的</span></span><br><span class="line"><span class="built_in">console</span>.log(x,y); <span class="comment">// 2 1</span></span><br></pre></td></tr></table></figure>
+
+<ol start="2">
+<li><p>默认值的使用<br>a. 当指定位置的项不存在；<br>b. 指定位置的值为undefined。<br>如：</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 例1</span></span><br><span class="line"><span class="keyword">let</span> [x,y] = [];</span><br><span class="line"><span class="built_in">console</span>.log(x,y); <span class="comment">// undefined undefined</span></span><br><span class="line"><span class="comment">// 例2</span></span><br><span class="line"><span class="keyword">let</span> [x=<span class="number">10</span>,y=<span class="number">20</span>] = [];</span><br><span class="line"><span class="built_in">console</span>.log(x,y); <span class="comment">// 10 20</span></span><br><span class="line"><span class="comment">// 例3</span></span><br><span class="line"><span class="keyword">let</span> [x=<span class="number">10</span>,y=<span class="number">20</span>] = [<span class="number">1</span>,<span class="number">2</span>];</span><br><span class="line"><span class="built_in">console</span>.log(x,y); <span class="comment">// 1 2</span></span><br><span class="line"><span class="comment">// 例4</span></span><br><span class="line"><span class="keyword">let</span> [x=<span class="number">10</span>,y=<span class="number">20</span>] = [<span class="literal">null</span>];</span><br><span class="line"><span class="built_in">console</span>.log(x,y); <span class="comment">// null 20</span></span><br></pre></td></tr></table></figure>
+</li>
+<li><p>对象解构赋值<br>先说一个对象解构赋值的小语法：</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">let</span> name = <span class="string">'dai'</span>;</span><br><span class="line"><span class="keyword">let</span> obj = &#123;</span><br><span class="line">	<span class="comment">// 第一个name叫属性名，它本质是一个字符串，第二个name是变量</span></span><br><span class="line">	name: name</span><br><span class="line">&#125;;</span><br><span class="line"><span class="built_in">console</span>.log(obj); <span class="comment">// &#123;name: 'dai'&#125;</span></span><br><span class="line"><span class="comment">// 如果冒号左边与右边的形式一样，但是含义不同，左边是字符串右边是变量</span></span><br><span class="line"><span class="comment">// 如果冒号左边与右边的形式一样，可以等价于下面的写法</span></span><br><span class="line"><span class="keyword">let</span> name = <span class="string">'dai'</span>;</span><br><span class="line"><span class="keyword">let</span> obj = &#123;</span><br><span class="line">	name <span class="comment">// ES6为了方便书写，简写成这样（属性名和属性值的形式是一样的时候，就可以缩写）</span></span><br><span class="line">&#125;;</span><br><span class="line"><span class="built_in">console</span>.log(obj); <span class="comment">// &#123;name: 'dai'&#125;</span></span><br></pre></td></tr></table></figure>
+
+</li>
+</ol>
+<p>如：</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">let</span> &#123;<span class="attr">name</span>: name,<span class="attr">age</span>: age&#125; = &#123;<span class="attr">name</span>: <span class="string">'daipi173'</span>,<span class="attr">age</span>: <span class="number">10</span>&#125;;</span><br><span class="line"><span class="built_in">console</span>.lo(name,age); <span class="comment">// daipi173 10</span></span><br><span class="line"><span class="comment">// 对于上面形式相同，我们可以简写为如下形式</span></span><br><span class="line"><span class="keyword">let</span> &#123;name,age&#125; = &#123;<span class="attr">name</span>: <span class="string">'daipi173'</span>,<span class="attr">age</span>: <span class="number">10</span>&#125;;</span><br><span class="line"><span class="built_in">console</span>.lo(name,age); <span class="comment">// daipi173 10</span></span><br></pre></td></tr></table></figure>
+
+<p>我们还可以这样写：</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">let</span> &#123;<span class="attr">name</span>: name1,<span class="attr">age</span>: age1&#125; = &#123;<span class="attr">name</span>: <span class="string">"daipi173"</span>,<span class="attr">age</span>: <span class="number">22</span>&#125;; <span class="comment">// 这里面的name1和age1是变量</span></span><br><span class="line"><span class="built_in">console</span>.log(name1,age1); <span class="comment">// daipi173 22</span></span><br></pre></td></tr></table></figure>
+
+<p>在使用对象解构赋值时，需要注意：<br>a. <strong>必须</strong>要进行<strong>初始化</strong>；<br>b. 在赋值的时候使用解构赋值。<br>如：</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">let</span> name1,age1;</span><br><span class="line"><span class="comment">// 在这里需要注意：必须要使用()括号其原因是因为会将&#123;&#125;当成一个代码块，如果代码块</span></span><br><span class="line"><span class="comment">// 后面有一个'='就会报语法错误。此时就需要添加()括号告诉js引擎我们是代码块而不是</span></span><br><span class="line"><span class="comment">// 表达式，表达式是一个对象。</span></span><br><span class="line">(&#123;<span class="attr">name</span>: name1,<span class="attr">age</span>: age1&#125; = &#123;<span class="attr">name</span>: <span class="string">'daipi173'</span>,<span class="attr">age</span>: <span class="number">22</span>&#125;);</span><br><span class="line"><span class="built_in">console</span>.log(name1,age1); <span class="comment">// daipi173 22</span></span><br></pre></td></tr></table></figure>
+
+<p>c. 解构赋值表达式的值是表达式<strong>右侧</strong>的值。<br>如：</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">let</span> name1,age1;</span><br><span class="line"><span class="built_in">console</span>.log(&#123;<span class="attr">name</span>: name1,<span class="attr">age</span>: age1&#125; = &#123;<span class="attr">name</span>: <span class="string">'daipi173'</span>,<span class="attr">age</span>: <span class="number">22</span>&#125;);</span><br><span class="line"><span class="comment">// &#123;name: 'daipi173',age: 22&#125;</span></span><br></pre></td></tr></table></figure>
+
+<p>它的作用我们可以写一段代码来解释：</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">fn</span>(<span class="params">value</span>)</span>&#123;</span><br><span class="line">	<span class="comment">// 作用：此时就可以不再这里添加上</span></span><br><span class="line">	<span class="comment">// let name = value.name;</span></span><br><span class="line">	<span class="comment">// let age = value.age;</span></span><br><span class="line">	<span class="built_in">console</span>.log(name,age);</span><br><span class="line">	<span class="built_in">console</span>.log(value); <span class="comment">// 打印出来就是表达式右侧的值</span></span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">let</span> obj = &#123;</span><br><span class="line">	name: <span class="string">'daipi173'</span>,</span><br><span class="line">	age: <span class="number">22</span></span><br><span class="line">&#125;;</span><br><span class="line">fn(&#123;name,age&#125; = obj);</span><br><span class="line"><span class="comment">// daipi173 22</span></span><br><span class="line"><span class="comment">// &#123;name: "daipi173", age: 22&#125;</span></span><br></pre></td></tr></table></figure>
+
+<ol start="4">
+<li><p>对象解构赋值的默认值<br>如：</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 例1</span></span><br><span class="line"><span class="keyword">let</span> &#123;name,age&#125; = &#123;&#125;;</span><br><span class="line"><span class="built_in">console</span>.log(name,age); <span class="comment">// undefined undefined</span></span><br><span class="line"><span class="comment">// 例2</span></span><br><span class="line"><span class="keyword">let</span> &#123;name=<span class="string">'daipi173'</span>,age=<span class="number">22</span>&#125; = &#123;&#125;;</span><br><span class="line"><span class="built_in">console</span>.log(name,age); <span class="comment">// daipi173 22</span></span><br><span class="line"><span class="comment">// 例3</span></span><br><span class="line"><span class="keyword">let</span> &#123;name=<span class="string">'daipi173'</span>,age=<span class="number">22</span>&#125; = &#123;<span class="attr">name</span>: <span class="string">'dai'</span>,<span class="attr">age</span>: <span class="number">18</span>&#125;;</span><br><span class="line"><span class="built_in">console</span>.log(name,age); <span class="comment">// dai 18</span></span><br><span class="line"><span class="comment">// 例4</span></span><br><span class="line"><span class="keyword">let</span> &#123;name=<span class="string">'daipi173'</span>,age=<span class="number">22</span>&#125; = &#123;<span class="attr">name</span>: <span class="literal">null</span>,<span class="attr">age</span>: <span class="number">18</span>&#125;;</span><br><span class="line"><span class="built_in">console</span>.log(name,age); <span class="comment">// null 18</span></span><br></pre></td></tr></table></figure>
+</li>
+<li><p>混合解构：对象和数组组合使用</p>
+</li>
+</ol>
+<p><strong>注意：匹配模式：看左边与右边能否对应上。</strong><br>如：</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">let</span> [a,b,[c,d]] = [<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>]; <span class="comment">// 报错，其原因就是因为左右两边没有匹配上</span></span><br><span class="line"><span class="comment">// 我们可以将上面的代码改为如下所示的代码</span></span><br><span class="line"><span class="comment">// let [a,b,[c,d]] = [1,2,[]]; 此时就不会报错了，其原因是因为左右两边匹配上了</span></span><br></pre></td></tr></table></figure>
+
+<p>再给大家举一个例子：</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">let</span> &#123;<span class="attr">age</span>: [a,b,c]&#125; = &#123;<span class="attr">age</span>: [<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>]&#125;;</span><br><span class="line"><span class="built_in">console</span>.log(a,b,c); <span class="comment">// 1 2 3</span></span><br></pre></td></tr></table></figure>
+            <div class="clearfix"></div>
+            <hr class="nogutter">
+        </div>
+        <nav class="m-pagination col-md-8 col-md-offset-2 col-sm-24" role="pagination">
+    
+    <a class="pull-left" href="/2019/08/28/ES6总结（二）/" style="float: left;">
+        ← ES6总结（二）
+    </a>
+    
+    
+    <a class="pull-right" href="/2019/08/21/Vue之自定义指令/">
+        Vue之自定义指令 →
+    </a>
+    
+</nav>
+
+        <div class="col-md-8 col-md-offset-2 col-sm-24"><script type="text/javascript">
+  /**
+   * 搜狐畅言
+   */
+
+  /*
+  document.write('<div id="SOHUCS" sid="' + window.location.pathname.slice(1) + '" ></div>');
+
+  window.onload = function () {
+    (function () {
+      var appid = 'cytXXXX';
+      var conf = 'prod_xxxxxxxxxxxxxxxxx';
+      var width = window.innerWidth || document.documentElement.clientWidth;
+      var loadJs = function (d, a, id) {
+        var c = document.getElementsByTagName("head")[0] || document.head || document.documentElement;
+        var b = document.createElement("script");
+        b.setAttribute("type", "text/javascript");
+        b.setAttribute("charset", "UTF-8");
+        b.setAttribute("src", d);
+        if (id) {
+          b.setAttribute("id", id);
+        }
+        if (typeof a === "function") {
+          if (window.attachEvent) {
+            b.onreadystatechange = function () {
+              var e = b.readyState;
+              if (e === "loaded" || e === "complete") {
+                b.onreadystatechange = null;
+                a()
+              }
+            }
+          } else {
+            b.onload = a
+          }
+        }
+        c.appendChild(b)
+      };
+
+      loadJs("https://changyan.sohu.com/upload/changyan.js", function () {
+        window.changyan.api.config({
+          appid: appid,
+          conf: conf
+        })
+      });
+    })();
+  }
+  */
+
+</script>
+</div>
+    </div>
+</section>
+
+
+      
+<!-- ============================ Footer =========================== -->
+
+<footer>
+    <div class="container">
+            <div class="copy">
+                <p>
+                    &copy; 2014<script>new Date().getFullYear()>2010&&document.write("-"+new Date().getFullYear());</script>, Content By daipi173. All Rights Reserved.
+                </p>
+                <p>Theme By <a href="//go.kieran.top" style="color: #767D84">Kieran</a></p>
+            </div>
+            <div class="social">
+                <ul>
+                    
+                    <li><a href="https://github.com/" title="Github" target="_blank"><i class="icon-github"></i></a>&nbsp;</li>
+                    
+                    
+                    <li><a href="https://twitter.com/" title="Twitter" target="_blank"><i class="icon-twitter"></i></a>&nbsp;</li>
+                    
+                    
+                    <li><a href="https://www.facebook.com/" title="Facebook" target="_blank"><i class="icon-facebook"></i></a>&nbsp;</li>
+                    
+                    
+                    <li><a href="https://google.com/" title="Google-Plus" target="_blank"><i class="icon-google-plus"></i></a>&nbsp;</li>
+                    
+                    
+                    <li><a href="http://weibo.com/" title="Sina-Weibo" target="_blank"><i class="icon-sina-weibo"></i></a>&nbsp;</li>
+                    
+                </ul>
+            </div>
+            <div class="clearfix"> </div>
+        </div>
+</footer>
+
+<!-- ============================ END Footer =========================== -->
+      <!-- Load our scripts -->
+<!-- Resizable 'on-demand' full-height hero -->
+<script type="text/javascript">
+    var resizeHero = function () {
+        var hero = $(".cover,.heightblock"),
+            window1 = $(window);
+        hero.css({
+            "height": window1.height()
+        });
+    };
+
+    resizeHero();
+
+    $(window).resize(function () {
+        resizeHero();
+    });
+</script>
+<script src="/js/plugins.min.js"></script><!-- Bootstrap core and concatenated plugins always load here -->
+<script src="/js/scripts.js"></script><!-- Theme scripts -->
+
+
+<link rel="stylesheet" href="/fancybox/jquery.fancybox.css" media="screen" type="text/css">
+<script src="/fancybox/jquery.fancybox.pack.js"></script>
+<script type="text/javascript">
+$('#intro').find('img').each(function(){
+  var alt = this.alt;
+
+  if (alt){
+    $(this).after('<span class="caption" style="display:none">' + alt + '</span>');
+  }
+
+  $(this).wrap('<a href="' + this.src + '" title="' + alt + '" class="fancybox" rel="gallery" />');
+});
+(function($){
+  $('.fancybox').fancybox();
+})(jQuery);
+</script>
+
+
+
+      
+<script src="/live2dw/lib/L2Dwidget.min.js?094cbace49a39548bed64abff5988b05"></script><script>L2Dwidget.init({"pluginModelPath":"assets/","model":{"jsonPath":"/live2dw/assets/haruto.model.json"},"display":{"position":"right","width":150,"height":300},"mobile":{"show":true},"log":false,"pluginJsPath":"lib/","pluginRootPath":"live2dw/","tagMode":false});</script></body>
+</html>

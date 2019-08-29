@@ -90,7 +90,7 @@
 				    
 				    <li><a href="/categories/HTML/" class="animsition-link">HTML<small>(16)</small></a></li>
 				    
-				    <li><a href="/categories/JavaScript/" class="animsition-link">JavaScript<small>(25)</small></a></li>
+				    <li><a href="/categories/JavaScript/" class="animsition-link">JavaScript<small>(27)</small></a></li>
 				    
 				    <li><a href="/categories/ES6/JavaScript/" class="animsition-link">JavaScript<small>(4)</small></a></li>
 				    
@@ -215,6 +215,86 @@
 
 <section id="intro">
     <div class="container">
+        
+        <div class="row">
+            <div class="col-md-8 col-md-offset-2 opening-statement">
+                <div class="col-md-4">
+                    <h3><a href="/2019/07/01/函数节流（throttle）/">函数节流（throttle）</a></h3>
+                    <span>
+                        <span class="post-meta">
+      <time datetime="2019-07-01T14:32:00.000Z" itemprop="datePublished">
+          2019-07-01
+      </time>
+    
+    
+    | 
+    <a href='/tags/JavaScript/'>JavaScript</a>,
+    
+    <a href='/tags/函数节流/'>函数节流</a>
+    
+    
+</span>
+                    </span>
+                </div>
+                <div class="col-md-8">
+                    <p>
+                      
+                        1. 什么是函数节流（throttle）函数节流（throttle）概念：规定一个单位时间，在这个单位时间内，只能有一次触发事件的回调函数执行，如果在同一个单位时间内某事件被触发多次，只有一次能生效。
+2. 生活中的例子当 1 秒内连续播放 24 张以上的图片时，在人眼的视觉中就会形成一个连贯的动画，所以在电影的播放中大概是以每秒 24 张的速度播放的，为什么不是 100 张或更多呢？其原因是因为 24 张就可以满足人类视觉需求的时候，
+                      
+                    </p>
+                    
+                    <p class="pull-right readMore">
+                        <a href="/2019/07/01/函数节流（throttle）/">Read More...</a>
+                    </p>
+                    
+                </div>
+                <div class="clearfix"></div>
+                <hr class="nogutter">
+            </div>
+        </div>
+        
+        <div class="row">
+            <div class="col-md-8 col-md-offset-2 opening-statement">
+                <div class="col-md-4">
+                    <h3><a href="/2019/06/28/函数防抖（debounce）/">函数防抖（debounce）</a></h3>
+                    <span>
+                        <span class="post-meta">
+      <time datetime="2019-06-28T11:43:00.000Z" itemprop="datePublished">
+          2019-06-28
+      </time>
+    
+    
+    | 
+    <a href='/tags/JavaScript/'>JavaScript</a>,
+    
+    <a href='/tags/函数防抖/'>函数防抖</a>
+    
+    
+</span>
+                    </span>
+                </div>
+                <div class="col-md-8">
+                    <p>
+                      
+                        1. 什么是函数防抖（debounce）在事件被触发n秒后再执行回调，如果在这n秒内又被触发，则重新计时。
+2. 生活中的例子如果有人进电梯（触发事件），那电梯将在5秒钟后关闭（执行事件监听器），这时如果又有人进电梯了（在5秒内再次触发该事件），我们又得等5秒再关闭（重新计时）。
+3. 函数防抖的应用场景
+给按钮加函数防抖防止表单多次提交。
+对于输入框连续输入进行AJAX验证时，用函数防抖能有效减少请求次数。
+判断scroll是否滑到底
+                      
+                    </p>
+                    
+                    <p class="pull-right readMore">
+                        <a href="/2019/06/28/函数防抖（debounce）/">Read More...</a>
+                    </p>
+                    
+                </div>
+                <div class="clearfix"></div>
+                <hr class="nogutter">
+            </div>
+        </div>
         
         <div class="row">
             <div class="col-md-8 col-md-offset-2 opening-statement">
@@ -540,83 +620,6 @@ b. 第一轮结束后，继续第二轮
                     
                     <p class="pull-right readMore">
                         <a href="/2019/06/04/JavaScript中的难点及易错点（一）/">Read More...</a>
-                    </p>
-                    
-                </div>
-                <div class="clearfix"></div>
-                <hr class="nogutter">
-            </div>
-        </div>
-        
-        <div class="row">
-            <div class="col-md-8 col-md-offset-2 opening-statement">
-                <div class="col-md-4">
-                    <h3><a href="/2019/06/01/History历史记录管理/">History历史记录管理</a></h3>
-                    <span>
-                        <span class="post-meta">
-      <time datetime="2019-06-01T13:56:00.000Z" itemprop="datePublished">
-          2019-06-01
-      </time>
-    
-    
-    | 
-    <a href='/tags/HTML/'>HTML</a>,
-    
-    <a href='/tags/History/'>History</a>
-    
-    
-</span>
-                    </span>
-                </div>
-                <div class="col-md-8">
-                    <p>
-                      
-                        1. H5中将history的内容进行了一个增加H5中新增加的内容解决了网络部分的问题，其解决的重要问题是：无刷新历史记录切换。
-1.1 history.pushState()方法history.pushState(stateObj,’page2’,’bar.html’) 添加一条历史记录。参数：stateObj是传递的值，它是一个对象；page2是新的历史记录的标题，目前还没有什么用（相当于你写了它也不会去帮你读取它的）;bar.ht
-                      
-                    </p>
-                    
-                    <p class="pull-right readMore">
-                        <a href="/2019/06/01/History历史记录管理/">Read More...</a>
-                    </p>
-                    
-                </div>
-                <div class="clearfix"></div>
-                <hr class="nogutter">
-            </div>
-        </div>
-        
-        <div class="row">
-            <div class="col-md-8 col-md-offset-2 opening-statement">
-                <div class="col-md-4">
-                    <h3><a href="/2019/05/29/JavaScript之闭包/">JavaScript之闭包</a></h3>
-                    <span>
-                        <span class="post-meta">
-      <time datetime="2019-05-29T14:04:00.000Z" itemprop="datePublished">
-          2019-05-29
-      </time>
-    
-    
-    | 
-    <a href='/tags/JavaScript/'>JavaScript</a>,
-    
-    <a href='/tags/闭包/'>闭包</a>
-    
-    
-</span>
-                    </span>
-                </div>
-                <div class="col-md-8">
-                    <p>
-                      
-                        1. 闭包的定义mdn对闭包的定义：闭包是函数和声明该函数的词法环境的组合。可能读了上面的定义你有点懵，但是没有关系，我们继续往下看。其实对闭包的定义我们可以分为从理论角度或者从实践角度来看。
-从理论角度来看：所有的函数都是。因为它们都在创建的时候就将上层上下文的数据保存了起来了。哪怕是简单的全局变量也是如此，因为函数中访问全局变量就相当于是在访问自由变量，这个时候使用的是最外层的作用域。
-当然我们不能从理论角度来定义闭包，我们需要从实
-                      
-                    </p>
-                    
-                    <p class="pull-right readMore">
-                        <a href="/2019/05/29/JavaScript之闭包/">Read More...</a>
                     </p>
                     
                 </div>

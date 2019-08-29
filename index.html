@@ -90,7 +90,7 @@
 				    
 				    <li><a href="/categories/HTML/" class="animsition-link">HTML<small>(16)</small></a></li>
 				    
-				    <li><a href="/categories/JavaScript/" class="animsition-link">JavaScript<small>(25)</small></a></li>
+				    <li><a href="/categories/JavaScript/" class="animsition-link">JavaScript<small>(27)</small></a></li>
 				    
 				    <li><a href="/categories/ES6/JavaScript/" class="animsition-link">JavaScript<small>(4)</small></a></li>
 				    
@@ -215,6 +215,85 @@
 
 <section id="intro">
     <div class="container">
+        
+        <div class="row">
+            <div class="col-md-8 col-md-offset-2 opening-statement">
+                <div class="col-md-4">
+                    <h3><a href="/2019/08/28/ES6总结（二）/">ES6总结（二）</a></h3>
+                    <span>
+                        <span class="post-meta">
+      <time datetime="2019-08-28T10:50:00.000Z" itemprop="datePublished">
+          2019-08-28
+      </time>
+    
+    
+    | 
+    <a href='/tags/ES6/'>ES6</a>,
+    
+    <a href='/tags/JavaScript/'>JavaScript</a>
+    
+    
+</span>
+                    </span>
+                </div>
+                <div class="col-md-8">
+                    <p>
+                      
+                        1. 参数处理
+参数默认值：a. 基本使用方法；b. 在默认值中使用其他变量。如：
+12345678910// 例1function fn(a=1,b=2,c=3)&#123; // 这样写是为了提高可读性	console.log(a,b,c);&#125;fn(); // 1 2 3// 例2function fn(a=1,b=2,c=3)&#123;	console.log(a,b,c);&#125;fn(10); // 10 2 
+                      
+                    </p>
+                    
+                    <p class="pull-right readMore">
+                        <a href="/2019/08/28/ES6总结（二）/">Read More...</a>
+                    </p>
+                    
+                </div>
+                <div class="clearfix"></div>
+                <hr class="nogutter">
+            </div>
+        </div>
+        
+        <div class="row">
+            <div class="col-md-8 col-md-offset-2 opening-statement">
+                <div class="col-md-4">
+                    <h3><a href="/2019/08/24/ES6总结（一）/">ES6总结（一）</a></h3>
+                    <span>
+                        <span class="post-meta">
+      <time datetime="2019-08-24T14:43:00.000Z" itemprop="datePublished">
+          2019-08-24
+      </time>
+    
+    
+    | 
+    <a href='/tags/ES6/'>ES6</a>,
+    
+    <a href='/tags/JavaScript/'>JavaScript</a>
+    
+    
+</span>
+                    </span>
+                </div>
+                <div class="col-md-8">
+                    <p>
+                      
+                        在总结ES6之前，告诉大家一个好的网站，叫掘金网。
+1. 数据
+leta. 不能变量声明提升；b. 不能重复声明变量，这样可以防止污染变量。
+consta. 定义的时候要有初始化值；b. 初始化值不能改变（即绑定不能改变，也就是说内存地址是不能改变的）。下面增对与const中b这一点举一个例子：12345678910// 例子一const age = 10;  // age是一个原始值	  age = 20;  // 报错，因为常量是不
+                      
+                    </p>
+                    
+                    <p class="pull-right readMore">
+                        <a href="/2019/08/24/ES6总结（一）/">Read More...</a>
+                    </p>
+                    
+                </div>
+                <div class="clearfix"></div>
+                <hr class="nogutter">
+            </div>
+        </div>
         
         <div class="row">
             <div class="col-md-8 col-md-offset-2 opening-statement">
@@ -545,87 +624,6 @@ eval执行上下文（了解一下即可，因为现在不太使用了）。
                     
                     <p class="pull-right readMore">
                         <a href="/2019/08/05/执行上下文/">Read More...</a>
-                    </p>
-                    
-                </div>
-                <div class="clearfix"></div>
-                <hr class="nogutter">
-            </div>
-        </div>
-        
-        <div class="row">
-            <div class="col-md-8 col-md-offset-2 opening-statement">
-                <div class="col-md-4">
-                    <h3><a href="/2019/08/03/关于this常用的场景总结/">关于this常用的场景总结</a></h3>
-                    <span>
-                        <span class="post-meta">
-      <time datetime="2019-08-03T10:43:00.000Z" itemprop="datePublished">
-          2019-08-03
-      </time>
-    
-    
-    | 
-    <a href='/tags/JavaScript/'>JavaScript</a>,
-    
-    <a href='/tags/this/'>this</a>
-    
-    
-</span>
-                    </span>
-                </div>
-                <div class="col-md-8">
-                    <p>
-                      
-                        关于this指向问题是初学者最头疼的一件事情，但是没有关系，接下来我会总结在学习或者工作中常用的几个例子。
-
-全局执行上下文的this是指向window的；举一个例子，在全局上打印this：
-1console.log(this); // window
-
-函数执行上下文的this需要看函数调用的时候，而不是看函数定义的时候，因为函数调用的时候才会形成执行上下文，形成执行上下文的时候，会有一个属性叫this；（关于执行上下文到时候我会专门写
-                      
-                    </p>
-                    
-                    <p class="pull-right readMore">
-                        <a href="/2019/08/03/关于this常用的场景总结/">Read More...</a>
-                    </p>
-                    
-                </div>
-                <div class="clearfix"></div>
-                <hr class="nogutter">
-            </div>
-        </div>
-        
-        <div class="row">
-            <div class="col-md-8 col-md-offset-2 opening-statement">
-                <div class="col-md-4">
-                    <h3><a href="/2019/08/01/手动封装AJAX/">手动封装AJAX</a></h3>
-                    <span>
-                        <span class="post-meta">
-      <time datetime="2019-08-01T09:13:00.000Z" itemprop="datePublished">
-          2019-08-01
-      </time>
-    
-    
-    | 
-    <a href='/tags/JavaScript/'>JavaScript</a>,
-    
-    <a href='/tags/网络/'>网络</a>,
-    
-    <a href='/tags/AJAX/'>AJAX</a>
-    
-    
-</span>
-                    </span>
-                </div>
-                <div class="col-md-8">
-                    <p>
-                      
-                        1234567891011121314151617181920212223242526272829303132333435363738394041424344// （1） web浏览器// （2） ajax对象       // （3） 初始化 HTTP 请求参数(请求方式, 地址, 同步or异步)// （4） 发送请求// （5） 监控数据        // （6） 检查数据 使用// （1） web浏览器function ajax
-                      
-                    </p>
-                    
-                    <p class="pull-right readMore">
-                        <a href="/2019/08/01/手动封装AJAX/">Read More...</a>
                     </p>
                     
                 </div>
