@@ -90,7 +90,7 @@
 				    
 				    <li><a href="/categories/HTML/" class="animsition-link">HTML<small>(16)</small></a></li>
 				    
-				    <li><a href="/categories/JavaScript/" class="animsition-link">JavaScript<small>(32)</small></a></li>
+				    <li><a href="/categories/JavaScript/" class="animsition-link">JavaScript<small>(34)</small></a></li>
 				    
 				    <li><a href="/categories/ES6/JavaScript/" class="animsition-link">JavaScript<small>(4)</small></a></li>
 				    
@@ -215,6 +215,87 @@
 
 <section id="intro">
     <div class="container">
+        
+        <div class="row">
+            <div class="col-md-8 col-md-offset-2 opening-statement">
+                <div class="col-md-4">
+                    <h3><a href="/2019/05/23/H5之Worker多线程/">H5之Worker多线程</a></h3>
+                    <span>
+                        <span class="post-meta">
+      <time datetime="2019-05-23T08:57:00.000Z" itemprop="datePublished">
+          2019-05-23
+      </time>
+    
+    
+    | 
+    <a href='/tags/HTML/'>HTML</a>,
+    
+    <a href='/tags/网络/'>网络</a>,
+    
+    <a href='/tags/Worker/'>Worker</a>
+    
+    
+</span>
+                    </span>
+                </div>
+                <div class="col-md-8">
+                    <p>
+                      
+                        1. 为什么js是单线程的？因为我们要响应用户的一些dom操作，如果是多线程的话，那么可能dom操作同时进行了，那么给用户展示的结果就混乱了。因此我们应该等待用户操作完成之后再响应下一个的操作，所以说js一直是一个单线程的语言。
+2. 什么是web worker呢？web worker 是运行在后台的 JavaScript，不占用浏览器自身线程，独立于其他脚本，可以提高应用的总体性能，并且提升用户体验。
+3. web worker的作用
+                      
+                    </p>
+                    
+                    <p class="pull-right readMore">
+                        <a href="/2019/05/23/H5之Worker多线程/">Read More...</a>
+                    </p>
+                    
+                </div>
+                <div class="clearfix"></div>
+                <hr class="nogutter">
+            </div>
+        </div>
+        
+        <div class="row">
+            <div class="col-md-8 col-md-offset-2 opening-statement">
+                <div class="col-md-4">
+                    <h3><a href="/2019/05/20/ES6之生成器Generator/">ES6之生成器Generator</a></h3>
+                    <span>
+                        <span class="post-meta">
+      <time datetime="2019-05-20T13:29:00.000Z" itemprop="datePublished">
+          2019-05-20
+      </time>
+    
+    
+    | 
+    <a href='/tags/ES6/'>ES6</a>,
+    
+    <a href='/tags/JavaScript/'>JavaScript</a>,
+    
+    <a href='/tags/Generator/'>Generator</a>
+    
+    
+</span>
+                    </span>
+                </div>
+                <div class="col-md-8">
+                    <p>
+                      
+                        1. 什么是生成器Generator生成器Generator在异步流程中，它可以控制我们的一个异步流程。我们先看看生成器的一个基础语法：function * fn(){} 注意：*放在开头或者中间或者结尾都是可以的。生成器与普通函数不同的第一点就是：普通函数使用 function 声明，而生成器函数使用 function* 声明。接下来我们再来看几行代码：
+12345678910function * fn()&#123;	yield "
+                      
+                    </p>
+                    
+                    <p class="pull-right readMore">
+                        <a href="/2019/05/20/ES6之生成器Generator/">Read More...</a>
+                    </p>
+                    
+                </div>
+                <div class="clearfix"></div>
+                <hr class="nogutter">
+            </div>
+        </div>
         
         <div class="row">
             <div class="col-md-8 col-md-offset-2 opening-statement">
@@ -539,87 +620,6 @@
                     
                     <p class="pull-right readMore">
                         <a href="/2019/04/25/原型链的终点为什么不是Object-prototype，而是null/">Read More...</a>
-                    </p>
-                    
-                </div>
-                <div class="clearfix"></div>
-                <hr class="nogutter">
-            </div>
-        </div>
-        
-        <div class="row">
-            <div class="col-md-8 col-md-offset-2 opening-statement">
-                <div class="col-md-4">
-                    <h3><a href="/2019/04/22/初识JavaScript的代理/">初识JavaScript的代理</a></h3>
-                    <span>
-                        <span class="post-meta">
-      <time datetime="2019-04-22T06:56:00.000Z" itemprop="datePublished">
-          2019-04-22
-      </time>
-    
-    
-    | 
-    <a href='/tags/JavaScript/'>JavaScript</a>,
-    
-    <a href='/tags/Proxy/'>Proxy</a>
-    
-    
-</span>
-                    </span>
-                </div>
-                <div class="col-md-8">
-                    <p>
-                      
-                        1. 首先我们先清楚一点，什么是代理？可能你上网搜索的时候会发现关于代理的理解太过于死板或者不易理解。我给大家说两个比喻来告诉大家什么是代理。
-
-你喜欢一个女孩子但是不敢要别人的微信号，于是你朋友去帮你要的那个女孩子的微信号。
-你在家打游戏，忽然感觉到饿了，但是又不想自己做饭。于是你女朋友出门买菜并做饭给你吃。
-
-2. 当我们理解了什么是代理之后，那么什么又是JavaScript代理呢？官网显示的资料是：Proxy。Proxy 可以理解
-                      
-                    </p>
-                    
-                    <p class="pull-right readMore">
-                        <a href="/2019/04/22/初识JavaScript的代理/">Read More...</a>
-                    </p>
-                    
-                </div>
-                <div class="clearfix"></div>
-                <hr class="nogutter">
-            </div>
-        </div>
-        
-        <div class="row">
-            <div class="col-md-8 col-md-offset-2 opening-statement">
-                <div class="col-md-4">
-                    <h3><a href="/2019/04/19/IE盒模型和标准盒模型的区别/">IE盒模型和标准盒模型的区别</a></h3>
-                    <span>
-                        <span class="post-meta">
-      <time datetime="2019-04-19T13:54:00.000Z" itemprop="datePublished">
-          2019-04-19
-      </time>
-    
-    
-    | 
-    <a href='/tags/HTML/'>HTML</a>,
-    
-    <a href='/tags/盒模型/'>盒模型</a>
-    
-    
-</span>
-                    </span>
-                </div>
-                <div class="col-md-8">
-                    <p>
-                      
-                        盒模型是面试中常考的一个内容，今天写这个笔记的原因就是：想让大家认真的理解IE盒模型和标准盒模型的区别。
-那什么是IE盒模型呢？盒模型是CSS中重要的一个概念，但是在IE5.5及更早的IE浏览器用的不是标准的盒模型，我们称之为IE盒模型。
-那IE盒模型和标准盒模型的区别是什么呢？答案是：IE的盒模型与标准盒模型（W3C盒模型）的区别在与width的计算。我们从下面的图来看一看：标准盒模型的width就是content内容区域的宽度，而I
-                      
-                    </p>
-                    
-                    <p class="pull-right readMore">
-                        <a href="/2019/04/19/IE盒模型和标准盒模型的区别/">Read More...</a>
                     </p>
                     
                 </div>

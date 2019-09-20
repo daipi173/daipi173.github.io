@@ -1,0 +1,380 @@
+<!DOCTYPE html>
+<!--[if lte IE 8 ]>
+<html class="ie" xmlns="http://www.w3.org/1999/xhtml" xml:lang="en-US" lang="en-US">
+<![endif]-->
+<!--[if (gte IE 9)|!(IE)]><!-->
+<!--
+***************  *      *     *
+      8          *    *       *
+      8          *  *         *
+      8          **           *
+      8          *  *         *
+      8          *    *       *
+      8          *      *     *
+      8          *        *   ***********    -----Theme By Kieran(http://go.kieran.top)
+-->
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="zh-CN" lang="zh-CN">
+<!--<![endif]-->
+
+<head>
+  <title>Web前端性能优化（一） | daipi173的个人博客</title>
+  <!-- Meta data -->
+    <meta http-equiv="Content-Type" content="text/html" charset="UTF-8" >
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="generator" content="daipi173的个人博客">
+    <meta name="author" content="daipi173">
+    <meta name="description" content="" />
+    <meta name="keywords" content="" />
+
+    <!-- Favicon, (keep icon in root folder) -->
+    <link rel="Shortcut Icon" href="/img/favicon.ico" type="image/ico">
+
+    <link rel="alternate" href="/atom.xml" title="daipi173的个人博客" type="application/atom+xml">
+    <link rel="stylesheet" href="/css/all.css" media="screen" type="text/css">
+    
+    <link rel="stylesheet" href="/highlightjs/vs.css" type="text/css">
+    
+
+    <!--[if IE 8]>
+    <link rel="stylesheet" type="text/css" href="/css/ie8.css" />
+    <![endif]-->
+
+    <!-- jQuery | Load our jQuery, with an alternative source fallback to a local version if request is unavailable -->
+    <script src="/js/jquery-1.11.1.min.js"></script>
+    <script>window.jQuery || document.write('<script src="js/jquery-1.11.1.min.js"><\/script>')</script>
+
+    <!-- Load these in the <head> for quicker IE8+ load times -->
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+    <script src="/js/html5shiv.min.js"></script>
+    <script src="/js/respond.min.js"></script>
+    <![endif]-->
+
+  
+  
+  
+
+  <style>.col-md-8.col-md-offset-2.opening-statement img{display:none;}</style>
+</head>
+
+<!--
+<body class="post-template">
+-->
+<body id="index" class="lightnav animsition">
+
+      <!-- ============================ Off-canvas navigation =========================== -->
+
+    <div class="sb-slidebar sb-right sb-style-overlay sb-momentum-scrolling">
+        <div class="sb-close" aria-label="Close Menu" aria-hidden="true">
+            <img src="/img/close.png" alt="Close"/>
+        </div>
+        <!-- Lists in Slidebars -->
+        <ul class="sb-menu">
+            <li><a href="/" class="animsition-link" title="Home">Home</a></li>
+            <li><a href="/archives" class="animsition-link" title="archive">archives</a></li>
+            <!-- Dropdown Menu -->
+			 
+            
+        	<li>
+        		<a class="sb-toggle-submenu">Categories<span class="sb-caret"></span></a>
+            	<ul class="sb-submenu">
+				  	
+				    <li><a href="/categories/HTML/CSS/" class="animsition-link">CSS<small>(4)</small></a></li>
+				    
+				    <li><a href="/categories/ES6/" class="animsition-link">ES6<small>(4)</small></a></li>
+				    
+				    <li><a href="/categories/JavaScript/ES6/" class="animsition-link">ES6<small>(6)</small></a></li>
+				    
+				    <li><a href="/categories/Git/" class="animsition-link">Git<small>(1)</small></a></li>
+				    
+				    <li><a href="/categories/HTML/" class="animsition-link">HTML<small>(16)</small></a></li>
+				    
+				    <li><a href="/categories/JavaScript/" class="animsition-link">JavaScript<small>(34)</small></a></li>
+				    
+				    <li><a href="/categories/ES6/JavaScript/" class="animsition-link">JavaScript<small>(4)</small></a></li>
+				    
+				    <li><a href="/categories/Vue/" class="animsition-link">Vue<small>(1)</small></a></li>
+				    
+				    <li><a href="/categories/vue/" class="animsition-link">vue<small>(1)</small></a></li>
+				    
+				    <li><a href="/categories/webpack/" class="animsition-link">webpack<small>(2)</small></a></li>
+				    
+				</ul>
+        	</li>
+			
+            
+            <li>
+                <a class="sb-toggle-submenu">Links<span class="sb-caret"></span></a>
+                <ul class="sb-submenu">
+                    
+                    <li><a href="https://daipi173.github.io/myweb/daipi173-myperson" class="animsition-link">Personal Project</a></li>
+                    
+                </ul>
+            </li>
+            
+        </ul>
+        <!-- Lists in Slidebars -->
+        <ul class="sb-menu secondary">
+            
+            <li><a href="/about.html" class="animsition-link" title="about">About</a></li>
+            <li><a href="/atom.xml" class="animsition-link" title="rss">RSS</a></li>
+        </ul>
+    </div>
+    
+    <!-- ============================ END Off-canvas navigation =========================== -->
+
+    <!-- ============================ #sb-site Main Page Wrapper =========================== -->
+
+    <div id="sb-site">
+        <!-- #sb-site - All page content should be contained within this id, except the off-canvas navigation itself -->
+
+        <!-- ============================ Header & Logo bar =========================== -->
+
+        <div id="navigation" class="navbar navbar-fixed-top">
+            <div class="navbar-inner">
+                <div class="container">
+                    <!-- Nav logo -->
+                    <div class="logo">
+                        <a href="/" title="Logo" class="animsition-link">
+                         <img src="/img/logo.png" alt="Logo" width="35px;"/> 
+                        </a>
+                    </div>
+                    <!-- // Nav logo -->
+                    <!-- Info-bar -->
+                    <nav>
+                        <ul class="nav">
+                            <li><a href="/" class="animsition-link">daipi173的个人博客</a></li>
+                            <li class="nolink"><span>Always </span>Creative.</li>
+                            
+                            <li><a href="https://github.com/" title="Github" target="_blank"><i class="icon-github"></i></a></li>
+                            
+                            
+                            <li><a href="https://twitter.com/" title="Twitter" target="_blank"><i class="icon-twitter"></i></a></li>
+                            
+                            
+                            <li><a href="https://www.facebook.com/" title="Facebook" target="_blank"><i class="icon-facebook"></i></a></li>
+                            
+                            
+                            <li><a href="https://google.com/" title="Google-Plus" target="_blank"><i class="icon-google-plus"></i></a></li>
+                            
+                            
+                            <li><a href="http://weibo.com/" title="Sina-Weibo" target="_blank"><i class="icon-sina-weibo"></i></a></li>
+                            
+                            <li class="nolink"><span>Welcome!</span></li>
+                        </ul>
+                    </nav>
+                    <!--// Info-bar -->
+                </div>
+                <!-- // .container -->
+                <div class="learnmore sb-toggle-right">More</div>
+                <button type="button" class="navbar-toggle menu-icon sb-toggle-right" title="More">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar before"></span>
+                <span class="icon-bar main"></span>
+                <span class="icon-bar after"></span>
+                </button>
+            </div>
+            <!-- // .navbar-inner -->
+        </div>
+
+        <!-- ============================ Header & Logo bar =========================== -->
+
+
+      
+<section id="intro">
+    <div class="container">
+        <div class="row col-md-offset-2">
+            <div class="col-md-8">
+    			<span class="post-meta">
+      <time datetime="2019-09-17T09:13:00.000Z" itemprop="datePublished">
+          2019-09-17
+      </time>
+    
+    
+    | 
+    <a href='/tags/JavaScript/'>JavaScript</a>,
+    
+    <a href='/tags/性能优化/'>性能优化</a>
+    
+    
+</span>
+                <h1>Web前端性能优化（一）</h1>
+            </div>
+        </div>
+        <div class="col-md-8 col-md-offset-2">
+      		<p>Web前端性能优化算是面试中很经典的问题了。Web前端性能优化是一个复杂的过程，涉及到的知识点非常多，包括网页，服务器，CSS，Javascript，图片等方面。</p>
+<h1 id="1-JS相关"><a href="#1-JS相关" class="headerlink" title="1. JS相关"></a>1. JS相关</h1><ol>
+<li>js的时间线；<br>首先大家需要先了解js的时间线，在看完js的时间线之后我们就知道了为什么js要放到最下面加载，下面我就给大家看看js的时间线图：<br><a href="https://s2.ax1x.com/2019/09/20/nXLsfI.png" title="js的时间线" target="_blank" rel="noopener"><img src="https://s2.ax1x.com/2019/09/20/nXLsfI.png" alt="js的时间线" title="js的时间线"></a></li>
+<li>懒执行；<br>所谓的懒执行就是将某些逻辑延迟到<strong>使用时</strong>再计算。该技术可以用于<strong>首屏优化</strong>，对于某些耗时逻辑并不需要在首屏使用的，就可以使用懒执行。懒执行需要<strong>唤醒</strong>，一般可以通过定时器或者事件的调用来唤醒。</li>
+<li>对DOM动画使用CSS类，而不是使用js；</li>
+<li>使用快速DOM遍历，即document.getElementById()；</li>
+<li>指针引用存储到浏览器内对象中；</li>
+<li>批量更改DOM，尤其是在更新样式时；</li>
+<li>在将DOM添加到页面之前单独构建DOM；</li>
+<li>在可滚动的DIV中使用缓冲的DOM。</li>
+</ol>
+<h1 id="2-渲染相关"><a href="#2-渲染相关" class="headerlink" title="2. 渲染相关"></a>2. 渲染相关</h1><ol>
+<li>渲染过程优化<br>想要对渲染过程优化理解好，就需要首先了解一下渲染机制：<br>a. 处理HTML并构建DOM树；<br>b. 处理CSS并构建CSSOM树；<br>c. 将DOM与CSSOM合并成一个渲染树；<br>d. 根据渲染树来布局，计算每个节点的位置；<br>e. 调用GPU（即图形处理器，又称显示核心、视觉处理器、显示芯片，是一种专门在个人电脑、工作站、游戏机和一些移动设备（如平板电脑、智能手机等）上做图像和图形相关运算工作的微处理器。）绘制，合成图层，显示在屏幕上。</li>
+</ol>
+<p><strong>注意：</strong>在构建CSSOM树时，会<strong>阻塞渲染</strong>，直至CSSOM树构建完成。并且构建CSSOM树时一个<strong>十分消耗性能</strong>的过程，所有应该尽量保证层级扁平，减少过度层叠，<strong>越是具体的CSS选择器，执行速度越慢。</strong></p>
+<ol start="2">
+<li>重排（重排又被称为回流）重绘<br>a. 重排重绘的整体概念：<br>DOM的变化影响到了元素的几何属性（宽高），浏览器重新计算元素的几何属性，其他元素的几何属性和位置也会受到影响，浏览器需要重新构造渲染树，这个过程称为<strong>重排</strong>，浏览器将受到影响的部分重新绘制到屏幕上的过程称为<strong>重绘</strong>。<br>b. 重绘（repaint）：和回流是渲染步骤中的一小节，但是这两个步骤对于性能影响很大。重绘是当节点需要更改外观而不会影响布局的，比如改变颜色color就称为重绘；<br>c. 回流（reflow）：是布局或者几何属性需要改变就称为回流；</li>
+</ol>
+<p><strong>注意：1. 重排一定重绘，重绘不一定重排。</strong>举一个例子：比如只对DOM元素操作其背景色，那么就只会发生重绘，不涉及几何元素会不会发生重排。2. <strong>回流所需的成本比重绘高的多</strong>，改变<strong>深层次的节点</strong>很可能导致父节点的一系列回流。<br>d. 下列情况会发生重排：<br>1）首先是无法避免的，浏览器页面初始化渲染；<br>2）添加、删除<strong>可见</strong>DOM元素；<br>3）改变元素位置position；<br>4）改变元素尺寸（宽、高、内外边距、边框等）；<br>5）改变元素内容（文本或图片等）；<br>6）改变浏览器窗口尺寸。<br><strong>注意：不同的条件下发生重排的范围及程度会不同，某些情况甚至会重排整个页面，</strong>比如：resize（window.resize事件会在窗口尺寸改变时触发，哪怕只是改变了1像素。）或者scroll。<br>e. 减少重排和重绘：<br>1）使用translate来替代top；<br>2）使用visibility来替换display:none，因为前者只会引起重绘，而后者会引发回流，因为改变了布局；<br>3）把DOM离线后修改，比如：先把DOM给display:none（此时有一次reflow回流），然后你修改100次，然后再把它显示出来；<br>4）不要把DOM节点的属性放在一个循环中，然后当成循环中的变量；<br>5）不要使用table布局，可能很小的一个小改动会造成整个table的重新布局；<br>6）动画实现速度的选择，动画速度越快，回流次数越多，我们也可以使用requestAnimationFrame；<br>7）CSS选择符<strong>从右往左</strong>匹配查找，避免DOM深度过深；<br>8）不在布局信息改变时做DOM查询，否则会导致渲染队列强制刷新；<br>9）使用cssText（本质就是设置HTML元素的style属性值）或者className一次性改变属性；<br>10）使用文档碎片fragment，如果要批量添加DOM，可以先让元素脱离文档流，操作完后再带入文档流，这样只会触发一次重排；<br>11）对于多次重排的元素，如动画，使用绝对定位（position:absolute|fixed）脱离文档流，让他的改变不影响到其他元素。</p>
+<ol start="3">
+<li>图层<br>一般来说，可以把普通文档流看成一个图层。<strong>特定</strong>的属性可以生成一个新的图层。不同的图层渲染<strong>互不影响</strong>，所以对于某些频繁需要渲染的，建议<strong>单独生成一个新图层</strong>，提高性能。但也不能生成<strong>过多</strong>的图层，会引起反作用。</li>
+</ol>
+<p><strong>注意：将频繁运动的动画变为图层，图层能够阻止该节点回流影响别的元素。比如对于video标签，浏览器会自动将该节点变为图层。</strong><br>通过以下几个常用属性可以生成新图层：<br>1）3D变换：translate3d、translateZ；<br>2）will-change通过告知浏览器该元素会有哪些变化，使浏览器提前做好优化准备，增强页面渲染性能；<br>3）video、iframe标签；<br>4）通过动画实现的opacity动画转换；<br>5）position:fixed。</p>
+<ol start="4">
+<li>懒加载<br>懒加载就是将不关键的资源<strong>延后加载</strong>。懒加载的原理就是<strong>只加载自定义区域</strong>（通常是可视区域，但也可以是即将进入可视区域）<strong>内需要加载的东西。</strong><br>对于图片来说，先设置图片标签的src属性为一张<strong>占位图</strong>，将真实的图片资源放入一个自定义属性中，<strong>当进入自定义区域时</strong>，就将自定义属性替换为src属性，这样图片就会去下载资源，实现了图片懒加载。（懒加载不仅可以用于图片，也可以使用在别的资源上，比如进入可视区域才开始播放视频等等。）<br>下面这张图是我再掘金网上看到的很详细的一个解释图片懒加载的原理：<br><a href="https://s2.ax1x.com/2019/09/20/njeivT.png" title="图片懒加载原理" target="_blank" rel="noopener"><img src="https://s2.ax1x.com/2019/09/20/njeivT.png" alt="图片懒加载原理" title="图片懒加载原理"></a><br>在这里我再提及上面图上的一点：就是为什么要尽量避免src里面为空？因为：避免使用空的 src 属性<strong>可以缩减浏览器首屏渲染的时间</strong>，因为浏览器在渲染过程中会把 src 属性中的空内容进行加载，<strong>直至加载失败</strong>，影响 DOMContentLoaded 与 Loaded 事件之间的资源准备过程，拉长了首屏渲染所用的时间。</li>
+</ol>
+
+            <div class="clearfix"></div>
+            <hr class="nogutter">
+        </div>
+        <nav class="m-pagination col-md-8 col-md-offset-2 col-sm-24" role="pagination">
+    
+    <a class="pull-left" href="/2019/09/20/Web前端性能优化（二）/" style="float: left;">
+        ← Web前端性能优化（二）
+    </a>
+    
+    
+    <a class="pull-right" href="/2019/09/14/如何实现让三个灯不断交替重复亮灯/">
+        如何实现让三个灯不断交替重复亮灯 →
+    </a>
+    
+</nav>
+
+        <div class="col-md-8 col-md-offset-2 col-sm-24"><script type="text/javascript">
+  /**
+   * 搜狐畅言
+   */
+
+  /*
+  document.write('<div id="SOHUCS" sid="' + window.location.pathname.slice(1) + '" ></div>');
+
+  window.onload = function () {
+    (function () {
+      var appid = 'cytXXXX';
+      var conf = 'prod_xxxxxxxxxxxxxxxxx';
+      var width = window.innerWidth || document.documentElement.clientWidth;
+      var loadJs = function (d, a, id) {
+        var c = document.getElementsByTagName("head")[0] || document.head || document.documentElement;
+        var b = document.createElement("script");
+        b.setAttribute("type", "text/javascript");
+        b.setAttribute("charset", "UTF-8");
+        b.setAttribute("src", d);
+        if (id) {
+          b.setAttribute("id", id);
+        }
+        if (typeof a === "function") {
+          if (window.attachEvent) {
+            b.onreadystatechange = function () {
+              var e = b.readyState;
+              if (e === "loaded" || e === "complete") {
+                b.onreadystatechange = null;
+                a()
+              }
+            }
+          } else {
+            b.onload = a
+          }
+        }
+        c.appendChild(b)
+      };
+
+      loadJs("https://changyan.sohu.com/upload/changyan.js", function () {
+        window.changyan.api.config({
+          appid: appid,
+          conf: conf
+        })
+      });
+    })();
+  }
+  */
+
+</script>
+</div>
+    </div>
+</section>
+
+
+      
+<!-- ============================ Footer =========================== -->
+
+<footer>
+    <div class="container">
+            <div class="copy">
+                <p>
+                    &copy; 2014<script>new Date().getFullYear()>2010&&document.write("-"+new Date().getFullYear());</script>, Content By daipi173. All Rights Reserved.
+                </p>
+                <p>Theme By <a href="//go.kieran.top" style="color: #767D84">Kieran</a></p>
+            </div>
+            <div class="social">
+                <ul>
+                    
+                    <li><a href="https://github.com/" title="Github" target="_blank"><i class="icon-github"></i></a>&nbsp;</li>
+                    
+                    
+                    <li><a href="https://twitter.com/" title="Twitter" target="_blank"><i class="icon-twitter"></i></a>&nbsp;</li>
+                    
+                    
+                    <li><a href="https://www.facebook.com/" title="Facebook" target="_blank"><i class="icon-facebook"></i></a>&nbsp;</li>
+                    
+                    
+                    <li><a href="https://google.com/" title="Google-Plus" target="_blank"><i class="icon-google-plus"></i></a>&nbsp;</li>
+                    
+                    
+                    <li><a href="http://weibo.com/" title="Sina-Weibo" target="_blank"><i class="icon-sina-weibo"></i></a>&nbsp;</li>
+                    
+                </ul>
+            </div>
+            <div class="clearfix"> </div>
+        </div>
+</footer>
+
+<!-- ============================ END Footer =========================== -->
+      <!-- Load our scripts -->
+<!-- Resizable 'on-demand' full-height hero -->
+<script type="text/javascript">
+    var resizeHero = function () {
+        var hero = $(".cover,.heightblock"),
+            window1 = $(window);
+        hero.css({
+            "height": window1.height()
+        });
+    };
+
+    resizeHero();
+
+    $(window).resize(function () {
+        resizeHero();
+    });
+</script>
+<script src="/js/plugins.min.js"></script><!-- Bootstrap core and concatenated plugins always load here -->
+<script src="/js/scripts.js"></script><!-- Theme scripts -->
+
+
+<link rel="stylesheet" href="/fancybox/jquery.fancybox.css" media="screen" type="text/css">
+<script src="/fancybox/jquery.fancybox.pack.js"></script>
+<script type="text/javascript">
+$('#intro').find('img').each(function(){
+  var alt = this.alt;
+
+  if (alt){
+    $(this).after('<span class="caption" style="display:none">' + alt + '</span>');
+  }
+
+  $(this).wrap('<a href="' + this.src + '" title="' + alt + '" class="fancybox" rel="gallery" />');
+});
+(function($){
+  $('.fancybox').fancybox();
+})(jQuery);
+</script>
+
+
+
+      
+<script src="/live2dw/lib/L2Dwidget.min.js?094cbace49a39548bed64abff5988b05"></script><script>L2Dwidget.init({"pluginModelPath":"assets/","model":{"jsonPath":"/live2dw/assets/haruto.model.json"},"display":{"position":"right","width":150,"height":300},"mobile":{"show":true},"log":false,"pluginJsPath":"lib/","pluginRootPath":"live2dw/","tagMode":false});</script></body>
+</html>

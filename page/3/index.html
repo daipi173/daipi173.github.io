@@ -90,7 +90,7 @@
 				    
 				    <li><a href="/categories/HTML/" class="animsition-link">HTML<small>(16)</small></a></li>
 				    
-				    <li><a href="/categories/JavaScript/" class="animsition-link">JavaScript<small>(32)</small></a></li>
+				    <li><a href="/categories/JavaScript/" class="animsition-link">JavaScript<small>(34)</small></a></li>
 				    
 				    <li><a href="/categories/ES6/JavaScript/" class="animsition-link">JavaScript<small>(4)</small></a></li>
 				    
@@ -215,6 +215,87 @@
 
 <section id="intro">
     <div class="container">
+        
+        <div class="row">
+            <div class="col-md-8 col-md-offset-2 opening-statement">
+                <div class="col-md-4">
+                    <h3><a href="/2019/07/25/关于解决margin塌陷和合并问题/">关于解决margin塌陷和合并问题</a></h3>
+                    <span>
+                        <span class="post-meta">
+      <time datetime="2019-07-25T08:14:00.000Z" itemprop="datePublished">
+          2019-07-25
+      </time>
+    
+    
+    | 
+    <a href='/tags/HTML/'>HTML</a>,
+    
+    <a href='/tags/CSS/'>CSS</a>,
+    
+    <a href='/tags/margin/'>margin</a>
+    
+    
+</span>
+                    </span>
+                </div>
+                <div class="col-md-8">
+                    <p>
+                      
+                        在标准的文档流中，竖直方向（注意：左右方向是不会出现塌陷的现象。）的margin会出现叠加现象，即较大的margin会覆盖掉较小的margin，竖直方向的两个盒子中间只有一个较大的margin，这就是margin的塌陷现象。
+1. 什么是外边距合并外边距合并就是：当两个垂直外边距相遇时，它们将形成一个外边距。合并的外边距的高度等于两个发生合并的外边距的高度中的较大者。
+2. 常见的几种情况
+两个元素是父子关系，见如下代码：1234567
+                      
+                    </p>
+                    
+                    <p class="pull-right readMore">
+                        <a href="/2019/07/25/关于解决margin塌陷和合并问题/">Read More...</a>
+                    </p>
+                    
+                </div>
+                <div class="clearfix"></div>
+                <hr class="nogutter">
+            </div>
+        </div>
+        
+        <div class="row">
+            <div class="col-md-8 col-md-offset-2 opening-statement">
+                <div class="col-md-4">
+                    <h3><a href="/2019/07/22/使用hexo来搭建博客/">使用hexo来搭建博客</a></h3>
+                    <span>
+                        <span class="post-meta">
+      <time datetime="2019-07-22T09:07:00.000Z" itemprop="datePublished">
+          2019-07-22
+      </time>
+    
+    
+    | 
+    <a href='/tags/Git/'>Git</a>,
+    
+    <a href='/tags/Hexo/'>Hexo</a>
+    
+    
+</span>
+                    </span>
+                </div>
+                <div class="col-md-8">
+                    <p>
+                      
+                        今天给大家介绍的是如何使用hexo工具来搭建个人博客。
+1. 什么是hexo简单一点的说：hexo是一个快速、简洁且高效的博客框架。
+2. hexo相关文件的介绍打开编辑器在终端先下载hexo-cli，因此执行的命令是:npm install hexo-cli -g。然后再执行命令:hexo init myBlog来新建一个网站，其中myBlog是我自己随意取得名字，这里大家可以取自己喜欢的名字。当下载完成之后执行命令:cd myBlo
+                      
+                    </p>
+                    
+                    <p class="pull-right readMore">
+                        <a href="/2019/07/22/使用hexo来搭建博客/">Read More...</a>
+                    </p>
+                    
+                </div>
+                <div class="clearfix"></div>
+                <hr class="nogutter">
+            </div>
+        </div>
         
         <div class="row">
             <div class="col-md-8 col-md-offset-2 opening-statement">
@@ -520,96 +601,6 @@ GET方法进行一个请求：index.html文件和getNews.php文件在同一个�
                     
                     <p class="pull-right readMore">
                         <a href="/2019/06/25/算法之快速排序（Quick-Sort）/">Read More...</a>
-                    </p>
-                    
-                </div>
-                <div class="clearfix"></div>
-                <hr class="nogutter">
-            </div>
-        </div>
-        
-        <div class="row">
-            <div class="col-md-8 col-md-offset-2 opening-statement">
-                <div class="col-md-4">
-                    <h3><a href="/2019/06/22/JS之用一次for循环来合并排序/">JS之用一次for循环来合并排序</a></h3>
-                    <span>
-                        <span class="post-meta">
-      <time datetime="2019-06-22T02:15:00.000Z" itemprop="datePublished">
-          2019-06-22
-      </time>
-    
-    
-    | 
-    <a href='/tags/JavaScript/'>JavaScript</a>,
-    
-    <a href='/tags/for循环/'>for循环</a>,
-    
-    <a href='/tags/排序/'>排序</a>
-    
-    
-</span>
-                    </span>
-                </div>
-                <div class="col-md-8">
-                    <p>
-                      
-                        今天给大家分享一道较为简单的js题，下面大家先看一看题目，在这之前先不要看我写的代码，看看自己有没有更好的方法。下面我先把题分享出来：首先先把题中重点的地方列举出来：
-
-数组的内容都是从小到大排好序的数字；
-合并之后的数字也是要从小到大排好序的；
-不要直接使用sort()方法（在下面的代码中我没有使用sort()方法）；
-只使用一次for循环。
-
-大家先仔细想一想思路，当你写完自己的代码时，认为自己代码是否有bug的最好方法就是带几组比
-                      
-                    </p>
-                    
-                    <p class="pull-right readMore">
-                        <a href="/2019/06/22/JS之用一次for循环来合并排序/">Read More...</a>
-                    </p>
-                    
-                </div>
-                <div class="clearfix"></div>
-                <hr class="nogutter">
-            </div>
-        </div>
-        
-        <div class="row">
-            <div class="col-md-8 col-md-offset-2 opening-statement">
-                <div class="col-md-4">
-                    <h3><a href="/2019/06/20/import和require的区别/">import和require的区别</a></h3>
-                    <span>
-                        <span class="post-meta">
-      <time datetime="2019-06-20T01:03:00.000Z" itemprop="datePublished">
-          2019-06-20
-      </time>
-    
-    
-    | 
-    <a href='/tags/ES6/'>ES6</a>,
-    
-    <a href='/tags/JavaScript/'>JavaScript</a>,
-    
-    <a href='/tags/import/'>import</a>,
-    
-    <a href='/tags/require/'>require</a>
-    
-    
-</span>
-                    </span>
-                </div>
-                <div class="col-md-8">
-                    <p>
-                      
-                        require 和 import，都是为了JS模块化使用。不知道有没有小伙伴和我一样，最开始有点分不清楚import和require的区别，今天就给大家梳理一下他们之间的区别。由于有时候多人协同开发时，会出现一个项目中同时使用了import和require引入的情况。在正常的情况下，一个项目中最好使对引入方式做一个规范。
-1. 遵循规范的区别
-import/export是ES6新规范
-require/exports是CommonJS的一
-                      
-                    </p>
-                    
-                    <p class="pull-right readMore">
-                        <a href="/2019/06/20/import和require的区别/">Read More...</a>
                     </p>
                     
                 </div>

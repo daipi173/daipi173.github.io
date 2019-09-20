@@ -90,7 +90,7 @@
 				    
 				    <li><a href="/categories/HTML/" class="animsition-link">HTML<small>(16)</small></a></li>
 				    
-				    <li><a href="/categories/JavaScript/" class="animsition-link">JavaScript<small>(32)</small></a></li>
+				    <li><a href="/categories/JavaScript/" class="animsition-link">JavaScript<small>(34)</small></a></li>
 				    
 				    <li><a href="/categories/ES6/JavaScript/" class="animsition-link">JavaScript<small>(4)</small></a></li>
 				    
@@ -215,6 +215,87 @@
 
 <section id="intro">
     <div class="container">
+        
+        <div class="row">
+            <div class="col-md-8 col-md-offset-2 opening-statement">
+                <div class="col-md-4">
+                    <h3><a href="/2019/08/18/手动封装Promise之同步代码/">手动封装Promise之同步代码</a></h3>
+                    <span>
+                        <span class="post-meta">
+      <time datetime="2019-08-18T02:38:00.000Z" itemprop="datePublished">
+          2019-08-18
+      </time>
+    
+    
+    | 
+    <a href='/tags/JavaScript/'>JavaScript</a>,
+    
+    <a href='/tags/Promise/'>Promise</a>,
+    
+    <a href='/tags/同步/'>同步</a>
+    
+    
+</span>
+                    </span>
+                </div>
+                <div class="col-md-8">
+                    <p>
+                      
+                        在封装之前，我需要给大家提及一下Promise的原理，因为Promise原理是在面试过程中常考的内容，需要大家认真理解并掌握。
+1. Promise原理：首先Promise有三种状态，分别是pending、resolved（也可以叫fulfilled）、rejected。pending表示Promise对象实例创建的时候初始状态；resolved（fulfilled）可以理解为成功的状态；rejected可以理解为失败的状态。构造一个P
+                      
+                    </p>
+                    
+                    <p class="pull-right readMore">
+                        <a href="/2019/08/18/手动封装Promise之同步代码/">Read More...</a>
+                    </p>
+                    
+                </div>
+                <div class="clearfix"></div>
+                <hr class="nogutter">
+            </div>
+        </div>
+        
+        <div class="row">
+            <div class="col-md-8 col-md-offset-2 opening-statement">
+                <div class="col-md-4">
+                    <h3><a href="/2019/08/15/算法之数组的去重/">算法之数组的去重</a></h3>
+                    <span>
+                        <span class="post-meta">
+      <time datetime="2019-08-15T08:32:00.000Z" itemprop="datePublished">
+          2019-08-15
+      </time>
+    
+    
+    | 
+    <a href='/tags/JavaScript/'>JavaScript</a>,
+    
+    <a href='/tags/算法/'>算法</a>,
+    
+    <a href='/tags/数组去重/'>数组去重</a>
+    
+    
+</span>
+                    </span>
+                </div>
+                <div class="col-md-8">
+                    <p>
+                      
+                        1. 数组的去重（处理基本类型）
+方法一：
+1234567891011121314// 数组去重// 它的时间复杂度为O(n^2)，因为它有两个两个循环，// 第一个为"for of"循环，第二个为indexOf循环，因为indexOf需要遍历整个数组去查。        let arr = ["1",2,3,"a",3,5,"a",&#123;a:1&#125;];        function unique(arr)&#123; 
+                      
+                    </p>
+                    
+                    <p class="pull-right readMore">
+                        <a href="/2019/08/15/算法之数组的去重/">Read More...</a>
+                    </p>
+                    
+                </div>
+                <div class="clearfix"></div>
+                <hr class="nogutter">
+            </div>
+        </div>
         
         <div class="row">
             <div class="col-md-8 col-md-offset-2 opening-statement">
@@ -547,87 +628,6 @@ a. 首先我们需要清楚一点，就是daipi173.github.io域名相当于服�
                     
                     <p class="pull-right readMore">
                         <a href="/2019/07/30/当我们在浏览器中输入URL时，Web页面是如何呈现的/">Read More...</a>
-                    </p>
-                    
-                </div>
-                <div class="clearfix"></div>
-                <hr class="nogutter">
-            </div>
-        </div>
-        
-        <div class="row">
-            <div class="col-md-8 col-md-offset-2 opening-statement">
-                <div class="col-md-4">
-                    <h3><a href="/2019/07/25/关于解决margin塌陷和合并问题/">关于解决margin塌陷和合并问题</a></h3>
-                    <span>
-                        <span class="post-meta">
-      <time datetime="2019-07-25T08:14:00.000Z" itemprop="datePublished">
-          2019-07-25
-      </time>
-    
-    
-    | 
-    <a href='/tags/HTML/'>HTML</a>,
-    
-    <a href='/tags/CSS/'>CSS</a>,
-    
-    <a href='/tags/margin/'>margin</a>
-    
-    
-</span>
-                    </span>
-                </div>
-                <div class="col-md-8">
-                    <p>
-                      
-                        在标准的文档流中，竖直方向（注意：左右方向是不会出现塌陷的现象。）的margin会出现叠加现象，即较大的margin会覆盖掉较小的margin，竖直方向的两个盒子中间只有一个较大的margin，这就是margin的塌陷现象。
-1. 什么是外边距合并外边距合并就是：当两个垂直外边距相遇时，它们将形成一个外边距。合并的外边距的高度等于两个发生合并的外边距的高度中的较大者。
-2. 常见的几种情况
-两个元素是父子关系，见如下代码：1234567
-                      
-                    </p>
-                    
-                    <p class="pull-right readMore">
-                        <a href="/2019/07/25/关于解决margin塌陷和合并问题/">Read More...</a>
-                    </p>
-                    
-                </div>
-                <div class="clearfix"></div>
-                <hr class="nogutter">
-            </div>
-        </div>
-        
-        <div class="row">
-            <div class="col-md-8 col-md-offset-2 opening-statement">
-                <div class="col-md-4">
-                    <h3><a href="/2019/07/22/使用hexo来搭建博客/">使用hexo来搭建博客</a></h3>
-                    <span>
-                        <span class="post-meta">
-      <time datetime="2019-07-22T09:07:00.000Z" itemprop="datePublished">
-          2019-07-22
-      </time>
-    
-    
-    | 
-    <a href='/tags/Git/'>Git</a>,
-    
-    <a href='/tags/Hexo/'>Hexo</a>
-    
-    
-</span>
-                    </span>
-                </div>
-                <div class="col-md-8">
-                    <p>
-                      
-                        今天给大家介绍的是如何使用hexo工具来搭建个人博客。
-1. 什么是hexo简单一点的说：hexo是一个快速、简洁且高效的博客框架。
-2. hexo相关文件的介绍打开编辑器在终端先下载hexo-cli，因此执行的命令是:npm install hexo-cli -g。然后再执行命令:hexo init myBlog来新建一个网站，其中myBlog是我自己随意取得名字，这里大家可以取自己喜欢的名字。当下载完成之后执行命令:cd myBlo
-                      
-                    </p>
-                    
-                    <p class="pull-right readMore">
-                        <a href="/2019/07/22/使用hexo来搭建博客/">Read More...</a>
                     </p>
                     
                 </div>

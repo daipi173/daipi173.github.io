@@ -90,7 +90,7 @@
 				    
 				    <li><a href="/categories/HTML/" class="animsition-link">HTML<small>(16)</small></a></li>
 				    
-				    <li><a href="/categories/JavaScript/" class="animsition-link">JavaScript<small>(32)</small></a></li>
+				    <li><a href="/categories/JavaScript/" class="animsition-link">JavaScript<small>(34)</small></a></li>
 				    
 				    <li><a href="/categories/ES6/JavaScript/" class="animsition-link">JavaScript<small>(4)</small></a></li>
 				    
@@ -215,6 +215,85 @@
 
 <section id="intro">
     <div class="container">
+        
+        <div class="row">
+            <div class="col-md-8 col-md-offset-2 opening-statement">
+                <div class="col-md-4">
+                    <h3><a href="/2019/09/20/Web前端性能优化（二）/">Web前端性能优化（二）</a></h3>
+                    <span>
+                        <span class="post-meta">
+      <time datetime="2019-09-20T07:14:00.000Z" itemprop="datePublished">
+          2019-09-20
+      </time>
+    
+    
+    | 
+    <a href='/tags/JavaScript/'>JavaScript</a>,
+    
+    <a href='/tags/性能优化/'>性能优化</a>
+    
+    
+</span>
+                    </span>
+                </div>
+                <div class="col-md-8">
+                    <p>
+                      
+                        上一篇文章介绍了Web前端性能优化（一），设计到的内容有：JS相关、渲染相关。今天我会接着上一篇来继续讲解Web前端性能的优化点。
+1. 文件优化
+图片优化a. 计算图片大小下面给大家举一个例子：对于一张100 * 100像素的图片来说，图像上有10000个像素点，如果每个像素的值是RGBA存储的话，那么也就是说每个像素有4个通道，每个通道有1个字节（8位=1个字节），所以该图片大小大概为：10000 * 1 * 4 / 1024 = 
+                      
+                    </p>
+                    
+                    <p class="pull-right readMore">
+                        <a href="/2019/09/20/Web前端性能优化（二）/">Read More...</a>
+                    </p>
+                    
+                </div>
+                <div class="clearfix"></div>
+                <hr class="nogutter">
+            </div>
+        </div>
+        
+        <div class="row">
+            <div class="col-md-8 col-md-offset-2 opening-statement">
+                <div class="col-md-4">
+                    <h3><a href="/2019/09/17/Web前端性能优化（一）/">Web前端性能优化（一）</a></h3>
+                    <span>
+                        <span class="post-meta">
+      <time datetime="2019-09-17T09:13:00.000Z" itemprop="datePublished">
+          2019-09-17
+      </time>
+    
+    
+    | 
+    <a href='/tags/JavaScript/'>JavaScript</a>,
+    
+    <a href='/tags/性能优化/'>性能优化</a>
+    
+    
+</span>
+                    </span>
+                </div>
+                <div class="col-md-8">
+                    <p>
+                      
+                        Web前端性能优化算是面试中很经典的问题了。Web前端性能优化是一个复杂的过程，涉及到的知识点非常多，包括网页，服务器，CSS，Javascript，图片等方面。
+1. JS相关
+js的时间线；首先大家需要先了解js的时间线，在看完js的时间线之后我们就知道了为什么js要放到最下面加载，下面我就给大家看看js的时间线图：
+懒执行；所谓的懒执行就是将某些逻辑延迟到使用时再计算。该技术可以用于首屏优化，对于某些耗时逻辑并不需要在首屏使用的，
+                      
+                    </p>
+                    
+                    <p class="pull-right readMore">
+                        <a href="/2019/09/17/Web前端性能优化（一）/">Read More...</a>
+                    </p>
+                    
+                </div>
+                <div class="clearfix"></div>
+                <hr class="nogutter">
+            </div>
+        </div>
         
         <div class="row">
             <div class="col-md-8 col-md-offset-2 opening-statement">
@@ -534,87 +613,6 @@ consta. 定义的时候要有初始化值；b. 初始化值不能改变（即绑
                     
                     <p class="pull-right readMore">
                         <a href="/2019/08/21/Vue之自定义指令/">Read More...</a>
-                    </p>
-                    
-                </div>
-                <div class="clearfix"></div>
-                <hr class="nogutter">
-            </div>
-        </div>
-        
-        <div class="row">
-            <div class="col-md-8 col-md-offset-2 opening-statement">
-                <div class="col-md-4">
-                    <h3><a href="/2019/08/18/手动封装Promise之同步代码/">手动封装Promise之同步代码</a></h3>
-                    <span>
-                        <span class="post-meta">
-      <time datetime="2019-08-18T02:38:00.000Z" itemprop="datePublished">
-          2019-08-18
-      </time>
-    
-    
-    | 
-    <a href='/tags/JavaScript/'>JavaScript</a>,
-    
-    <a href='/tags/Promise/'>Promise</a>,
-    
-    <a href='/tags/同步/'>同步</a>
-    
-    
-</span>
-                    </span>
-                </div>
-                <div class="col-md-8">
-                    <p>
-                      
-                        在封装之前，我需要给大家提及一下Promise的原理，因为Promise原理是在面试过程中常考的内容，需要大家认真理解并掌握。
-1. Promise原理：首先Promise有三种状态，分别是pending、resolved（也可以叫fulfilled）、rejected。pending表示Promise对象实例创建的时候初始状态；resolved（fulfilled）可以理解为成功的状态；rejected可以理解为失败的状态。构造一个P
-                      
-                    </p>
-                    
-                    <p class="pull-right readMore">
-                        <a href="/2019/08/18/手动封装Promise之同步代码/">Read More...</a>
-                    </p>
-                    
-                </div>
-                <div class="clearfix"></div>
-                <hr class="nogutter">
-            </div>
-        </div>
-        
-        <div class="row">
-            <div class="col-md-8 col-md-offset-2 opening-statement">
-                <div class="col-md-4">
-                    <h3><a href="/2019/08/15/算法之数组的去重/">算法之数组的去重</a></h3>
-                    <span>
-                        <span class="post-meta">
-      <time datetime="2019-08-15T08:32:00.000Z" itemprop="datePublished">
-          2019-08-15
-      </time>
-    
-    
-    | 
-    <a href='/tags/JavaScript/'>JavaScript</a>,
-    
-    <a href='/tags/算法/'>算法</a>,
-    
-    <a href='/tags/数组去重/'>数组去重</a>
-    
-    
-</span>
-                    </span>
-                </div>
-                <div class="col-md-8">
-                    <p>
-                      
-                        1. 数组的去重（处理基本类型）
-方法一：
-1234567891011121314// 数组去重// 它的时间复杂度为O(n^2)，因为它有两个两个循环，// 第一个为"for of"循环，第二个为indexOf循环，因为indexOf需要遍历整个数组去查。        let arr = ["1",2,3,"a",3,5,"a",&#123;a:1&#125;];        function unique(arr)&#123; 
-                      
-                    </p>
-                    
-                    <p class="pull-right readMore">
-                        <a href="/2019/08/15/算法之数组的去重/">Read More...</a>
                     </p>
                     
                 </div>
