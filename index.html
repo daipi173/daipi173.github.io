@@ -90,7 +90,7 @@
 				    
 				    <li><a href="/categories/HTML/" class="animsition-link">HTML<small>(16)</small></a></li>
 				    
-				    <li><a href="/categories/JavaScript/" class="animsition-link">JavaScript<small>(34)</small></a></li>
+				    <li><a href="/categories/JavaScript/" class="animsition-link">JavaScript<small>(35)</small></a></li>
 				    
 				    <li><a href="/categories/ES6/JavaScript/" class="animsition-link">JavaScript<small>(4)</small></a></li>
 				    
@@ -215,6 +215,45 @@
 
 <section id="intro">
     <div class="container">
+        
+        <div class="row">
+            <div class="col-md-8 col-md-offset-2 opening-statement">
+                <div class="col-md-4">
+                    <h3><a href="/2019/09/25/跨域方式总结/">跨域方式总结</a></h3>
+                    <span>
+                        <span class="post-meta">
+      <time datetime="2019-09-25T03:40:00.000Z" itemprop="datePublished">
+          2019-09-25
+      </time>
+    
+    
+    | 
+    <a href='/tags/JavaScript/'>JavaScript</a>,
+    
+    <a href='/tags/跨域/'>跨域</a>
+    
+    
+</span>
+                    </span>
+                </div>
+                <div class="col-md-8">
+                    <p>
+                      
+                        因为浏览器处于安全考虑，有同源策略。换句话说，如果协议、域名或者端口有一个不同的话就是跨域。由于Ajax只能获取同源的资源，因此Ajax请求会失败。
+下面我们就来总结一下跨域方式有哪一些：
+1. 方法一：JSONP原理：Web页面上调用js文件不受跨域影响，凡是具有src属性标签都不受同源策略的影响，正是因为这个特性，我们把资源放到script标签中，src属性的格式是”url+参数”，比如url?cd=doJSON，cd是我们和后台协
+                      
+                    </p>
+                    
+                    <p class="pull-right readMore">
+                        <a href="/2019/09/25/跨域方式总结/">Read More...</a>
+                    </p>
+                    
+                </div>
+                <div class="clearfix"></div>
+                <hr class="nogutter">
+            </div>
+        </div>
         
         <div class="row">
             <div class="col-md-8 col-md-offset-2 opening-statement">
@@ -574,45 +613,6 @@ consta. 定义的时候要有初始化值；b. 初始化值不能改变（即绑
                     
                     <p class="pull-right readMore">
                         <a href="/2019/08/24/ES6总结（一）/">Read More...</a>
-                    </p>
-                    
-                </div>
-                <div class="clearfix"></div>
-                <hr class="nogutter">
-            </div>
-        </div>
-        
-        <div class="row">
-            <div class="col-md-8 col-md-offset-2 opening-statement">
-                <div class="col-md-4">
-                    <h3><a href="/2019/08/21/Vue之自定义指令/">Vue之自定义指令</a></h3>
-                    <span>
-                        <span class="post-meta">
-      <time datetime="2019-08-21T15:38:00.000Z" itemprop="datePublished">
-          2019-08-21
-      </time>
-    
-    
-    | 
-    <a href='/tags/Vue/'>Vue</a>,
-    
-    <a href='/tags/自定义指令/'>自定义指令</a>
-    
-    
-</span>
-                    </span>
-                </div>
-                <div class="col-md-8">
-                    <p>
-                      
-                        1. Vue自定义指令的简述Vue除了提供了默认内置的指令外，还允许开发人员根据实际情况自定义指令，它的作用价值在于当开发人员在某些场景下需要对普通DOM元素进行操作的时候。
-2. Vue自定义指令的划分Vue自定义指令可以划分为全局指令和局部指令。注意：指令本质就是操作我们当前的DOM节点，不管是内置指令还是自定义指令，都是操作DOM节点的。
-3. 如何注册自定义指令在上面第二点提到了Vue自定义指令可以划分为全局指令以及局部指令。我
-                      
-                    </p>
-                    
-                    <p class="pull-right readMore">
-                        <a href="/2019/08/21/Vue之自定义指令/">Read More...</a>
                     </p>
                     
                 </div>

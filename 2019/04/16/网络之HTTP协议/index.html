@@ -90,7 +90,7 @@
 				    
 				    <li><a href="/categories/HTML/" class="animsition-link">HTML<small>(16)</small></a></li>
 				    
-				    <li><a href="/categories/JavaScript/" class="animsition-link">JavaScript<small>(34)</small></a></li>
+				    <li><a href="/categories/JavaScript/" class="animsition-link">JavaScript<small>(35)</small></a></li>
 				    
 				    <li><a href="/categories/ES6/JavaScript/" class="animsition-link">JavaScript<small>(4)</small></a></li>
 				    
@@ -206,15 +206,17 @@
         </div>
         <div class="col-md-8 col-md-offset-2">
       		<h1 id="1-HTTP协议是什么"><a href="#1-HTTP协议是什么" class="headerlink" title="1. HTTP协议是什么"></a>1. HTTP协议是什么</h1><p>超文本传输协议（HTTP，HyperText TransferProtocol)是用于从web服务器传输超文本到web浏览器的传送协议。<strong>所有的WWW文件都必须遵守这个标准</strong></p>
-<h1 id="2-GET和POST的区别"><a href="#2-GET和POST的区别" class="headerlink" title="2.GET和POST的区别"></a>2.GET和POST的区别</h1><p>其实GET请求和POST请求<strong>本质上没有什么区别</strong>，因为他们底层都是<strong>TCP链接</strong>。<br>区别：</p>
-<p>（1）GET请求参数要放到URL中，而POST要放到body里呢。因为在请求的时候，为了交互数据的时候能更清晰一些，HTTP协议规定GET要放到URL中</p>
-<p>（2）GET请求在URL中传送的参数是有长度限制的，而POST么有（<strong>严格来说</strong>GET请求和POST请求都是有长度限制的，只不过GET请求传递的参数<strong>更短</strong>一些，POST请求传递的参数<strong>更多</strong>一些）<br>一次传输数据量太大对浏览器和服务器都是很大负担。而且如果服务器不做处理的话，恶意攻击传入大量数据容易导致服务器崩溃。</p>
-<p>（3）POST请求相对比GET请求安全，那仅仅是因为GET放到了URL中而已。（POST请求打开控制台，在network中找到Form Data就可以知道传送的数据）</p>
+<p>www万维网：是一个由许多互相链接的超文本组成的系统，通过互联网访问。</p>
+<h1 id="2-GET和POST的区别"><a href="#2-GET和POST的区别" class="headerlink" title="2.GET和POST的区别"></a>2.GET和POST的区别</h1><p>其实GET请求和POST请求<strong>本质上没有什么区别</strong>，因为他们底层都是<strong>TCP链接</strong>。<br>区别：<br>（1）从用途来说，GET和POST是http请求方式。GET向特定的资源发出请求。POST向指定资源提交数据进行处理请求（例如提交表单或者上传文件）；</p>
+<p>（2）GET请求参数要放到URL中，而POST要放到body里呢。因为在请求的时候，为了交互数据的时候能更清晰一些，HTTP协议规定GET要放到URL中；</p>
+<p>（3）GET请求在URL中传送的参数是有长度限制的，而POST没有（<strong>严格来说</strong>GET请求和POST请求都是有长度限制的，只不过GET请求传递的参数<strong>更短</strong>一些，POST请求传递的参数<strong>更多</strong>一些）。对于数据量来说。数据量太大对浏览器和服务器都是很大负担。业界不成文的规定是，大多数浏览器通常都会限制url长度在2K个字节，而大多数服务器最多处理64K大小的url。超过的部分，不会处理，所以就有了我们现在知道的数据长度受限的问题；（一次传输数据量太大对浏览器和服务器都是很大负担。而且如果服务器不做处理的话，恶意攻击传入大量数据容易导致服务器崩溃。）</p>
+<p>（4）POST请求相对比GET请求安全，那仅仅是因为GET放到了URL中而已。（POST请求打开控制台，在network中找到Form Data就可以知道传送的数据）；</p>
+<p>（5）最本质的一点，GET和POST最大的区别主要是GET请求是幂等性（所谓的幂等性指的是：用户对同一操作发起的一次请求或者多次请求的结果是一致的，不会因为多次点击而产生了副作用，在这里副作用指的是对服务器上的资源做改变。）。</p>
 <h1 id="3-协议及版本"><a href="#3-协议及版本" class="headerlink" title="3. 协议及版本"></a>3. 协议及版本</h1><p>HTML/1.0 非持久连接，但是通过非标准手段也可以实现持久连接。<br>HTML/1.1 默认持久连接。</p>
-<h1 id="4-常见的状态码"><a href="#4-常见的状态码" class="headerlink" title="4. 常见的状态码"></a>4. 常见的状态码</h1><p>1、2XX 成功 响应结果表明请求被正常处理了。<br>200 OK 表示从客户端发来的请求在服务器端被正常处理了</p>
-<p>2、3XX 重定向  响应结果表明浏览器需要执行某些特殊的处理以正确处理请求。<br>301 Moved Permanentl永久性重定向。该状态码表示请求的资源已被分配了新的 URI，以后应使用资源现在所指的 URI。<br>302 Found 临时性重定向。该状态码表示请求的资源已被分配了新的 URI，希望用户（本次）能使用新的 URI 访问。<br>304 当你发出一个GET请求（GET请求是有缓存的）的时候服务器会从缓存中调用你要访问的内容，这个时候服务器就可以判断这个页面是不是更新过了，如果未更新过那么他会给你返回一个304状态码。</p>
-<p>3、4XX 客户端错误 响应结果表明客户端是发生错误的原因所在<br>403 Forbidden该状态码表明对请求资源的访问被服务器拒绝了。<br>404 Not Foud 该状态码表明服务器上无法找到请求的资源。</p>
-<p>4、5XX 服务器错误 的响应结果表明服务器本身发生错误。<br>500 Internal Server Error 该状态码表明服务器端在执行请求时发生了错误。<br>503 Service Unavailable 该状态码表明服务器暂时处于超负载或正在进行停机维护，现在无法处理请求</p>
+<h1 id="4-常见的状态码"><a href="#4-常见的状态码" class="headerlink" title="4. 常见的状态码"></a>4. 常见的状态码</h1><p>1、2XX 成功<br>200 OK，表示从客户端发来的请求在服务器端被正常处理了；<br>204 No Content，表示请求成功，但响应报文不含实体的主体部分；<br>205 Reset Content，表示请求成功，但响应报文不含实体的主体部分，但是与204响应不同在于要求请求方重置内容；<br>206 Partial Content，进行范围请求。</p>
+<p>2、3XX 重定向<br>301 Moved Permanentl，永久性重定向。该状态码表示请求的资源已被分配了新的 URI，以后应使用资源现在所指的 URI；<br>302 Found，临时性重定向。该状态码表示请求的资源已被分配了新的 URI，希望用户（本次）能使用新的 URI 访问；<br>303 see other，表示资源存在着另一个URL，应使用GET方法定向获取资源；<br>304 not modified，当你发出一个GET请求（GET请求是有缓存的）的时候服务器会从缓存中调用你要访问的内容，这个时候服务器就可以判断这个页面是不是更新过了，如果未更新过那么他会给你返回一个304状态码；<br>307 temporary redirect，临时重定向，和302含义相同。</p>
+<p>3、4XX 客户端错误<br>400 bad request，请求报文存在语法错误；<br>401 unauthorized，表示发送的请求需要有通过HTTP认证的认证消息；<br>403 Forbidden，表示对请求资源的访问被服务器拒绝了；<br>404 Not Foud 表示服务器上无法找到请求的资源。</p>
+<p>4、5XX 服务器错误<br>500 Internal Server Error 该状态码表明服务器端在执行请求时发生了错误；<br>501 Not Implemented，表示服务器不支持当前请求所需要的某个功能；<br>503 Service Unavailable 该状态码表明服务器暂时处于超负载或正在进行停机维护，现在无法处理请求。</p>
 
             <div class="clearfix"></div>
             <hr class="nogutter">
