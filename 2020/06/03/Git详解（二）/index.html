@@ -1,0 +1,412 @@
+<!DOCTYPE html>
+<!--[if lte IE 8 ]>
+<html class="ie" xmlns="http://www.w3.org/1999/xhtml" xml:lang="en-US" lang="en-US">
+<![endif]-->
+<!--[if (gte IE 9)|!(IE)]><!-->
+<!--
+***************  *      *     *
+      8          *    *       *
+      8          *  *         *
+      8          **           *
+      8          *  *         *
+      8          *    *       *
+      8          *      *     *
+      8          *        *   ***********    -----Theme By Kieran(http://go.kieran.top)
+-->
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="zh-CN" lang="zh-CN">
+<!--<![endif]-->
+
+<head>
+  <title>Git详解（二） | daipi173的个人博客</title>
+  <!-- Meta data -->
+    <meta http-equiv="Content-Type" content="text/html" charset="UTF-8" >
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="generator" content="daipi173的个人博客">
+    <meta name="author" content="daipi173">
+    <meta name="description" content="" />
+    <meta name="keywords" content="" />
+
+    <!-- Favicon, (keep icon in root folder) -->
+    <link rel="Shortcut Icon" href="/img/favicon.ico" type="image/ico">
+
+    <link rel="alternate" href="/atom.xml" title="daipi173的个人博客" type="application/atom+xml">
+    <link rel="stylesheet" href="/css/all.css" media="screen" type="text/css">
+    
+    <link rel="stylesheet" href="/highlightjs/vs.css" type="text/css">
+    
+
+    <!--[if IE 8]>
+    <link rel="stylesheet" type="text/css" href="/css/ie8.css" />
+    <![endif]-->
+
+    <!-- jQuery | Load our jQuery, with an alternative source fallback to a local version if request is unavailable -->
+    <script src="/js/jquery-1.11.1.min.js"></script>
+    <script>window.jQuery || document.write('<script src="js/jquery-1.11.1.min.js"><\/script>')</script>
+
+    <!-- Load these in the <head> for quicker IE8+ load times -->
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+    <script src="/js/html5shiv.min.js"></script>
+    <script src="/js/respond.min.js"></script>
+    <![endif]-->
+
+  
+  
+  
+
+  <style>.col-md-8.col-md-offset-2.opening-statement img{display:none;}</style>
+</head>
+
+<!--
+<body class="post-template">
+-->
+<body id="index" class="lightnav animsition">
+
+      <!-- ============================ Off-canvas navigation =========================== -->
+
+    <div class="sb-slidebar sb-right sb-style-overlay sb-momentum-scrolling">
+        <div class="sb-close" aria-label="Close Menu" aria-hidden="true">
+            <img src="/img/close.png" alt="Close"/>
+        </div>
+        <!-- Lists in Slidebars -->
+        <ul class="sb-menu">
+            <li><a href="/" class="animsition-link" title="Home">Home</a></li>
+            <li><a href="/archives" class="animsition-link" title="archive">archives</a></li>
+            <!-- Dropdown Menu -->
+			 
+            
+        	<li>
+        		<a class="sb-toggle-submenu">Categories<span class="sb-caret"></span></a>
+            	<ul class="sb-submenu">
+				  	
+				    <li><a href="/categories/JavaScript/Array/" class="animsition-link">Array<small>(1)</small></a></li>
+				    
+				    <li><a href="/categories/HTML/CSS/" class="animsition-link">CSS<small>(4)</small></a></li>
+				    
+				    <li><a href="/categories/HTML/Chrome浏览器/" class="animsition-link">Chrome浏览器<small>(1)</small></a></li>
+				    
+				    <li><a href="/categories/JavaScript/ES6/" class="animsition-link">ES6<small>(6)</small></a></li>
+				    
+				    <li><a href="/categories/ES6/" class="animsition-link">ES6<small>(4)</small></a></li>
+				    
+				    <li><a href="/categories/JavaScript/Vue/Eslint/" class="animsition-link">Eslint<small>(1)</small></a></li>
+				    
+				    <li><a href="/categories/总结/Git/" class="animsition-link">Git<small>(1)</small></a></li>
+				    
+				    <li><a href="/categories/Git/" class="animsition-link">Git<small>(4)</small></a></li>
+				    
+				    <li><a href="/categories/HTML/" class="animsition-link">HTML<small>(17)</small></a></li>
+				    
+				    <li><a href="/categories/ES6/JavaScript/" class="animsition-link">JavaScript<small>(4)</small></a></li>
+				    
+				    <li><a href="/categories/JavaScript/" class="animsition-link">JavaScript<small>(41)</small></a></li>
+				    
+				    <li><a href="/categories/Javascript/" class="animsition-link">Javascript<small>(2)</small></a></li>
+				    
+				    <li><a href="/categories/React/" class="animsition-link">React<small>(2)</small></a></li>
+				    
+				    <li><a href="/categories/Git/Vue/" class="animsition-link">Vue<small>(1)</small></a></li>
+				    
+				    <li><a href="/categories/Vue/" class="animsition-link">Vue<small>(2)</small></a></li>
+				    
+				    <li><a href="/categories/JavaScript/Vue/" class="animsition-link">Vue<small>(1)</small></a></li>
+				    
+				    <li><a href="/categories/React/Webpack/" class="animsition-link">Webpack<small>(1)</small></a></li>
+				    
+				    <li><a href="/categories/React/antd/" class="animsition-link">antd<small>(1)</small></a></li>
+				    
+				    <li><a href="/categories/React/antd/css局部样式/" class="animsition-link">css局部样式<small>(1)</small></a></li>
+				    
+				    <li><a href="/categories/Vue/懒加载/总结/element-ui/" class="animsition-link">element ui<small>(1)</small></a></li>
+				    
+				    <li><a href="/categories/vue/" class="animsition-link">vue<small>(1)</small></a></li>
+				    
+				    <li><a href="/categories/webpack/" class="animsition-link">webpack<small>(2)</small></a></li>
+				    
+				    <li><a href="/categories/总结/" class="animsition-link">总结<small>(1)</small></a></li>
+				    
+				    <li><a href="/categories/JavaScript/总结/" class="animsition-link">总结<small>(2)</small></a></li>
+				    
+				    <li><a href="/categories/Vue/懒加载/总结/" class="animsition-link">总结<small>(1)</small></a></li>
+				    
+				    <li><a href="/categories/Git/Vue/总结/" class="animsition-link">总结<small>(1)</small></a></li>
+				    
+				    <li><a href="/categories/Vue/懒加载/" class="animsition-link">懒加载<small>(1)</small></a></li>
+				    
+				    <li><a href="/categories/JavaScript/Array/扁平化/" class="animsition-link">扁平化<small>(1)</small></a></li>
+				    
+				    <li><a href="/categories/JavaScript/整数存储相加/" class="animsition-link">整数存储相加<small>(1)</small></a></li>
+				    
+				    <li><a href="/categories/Javascript/算法/" class="animsition-link">算法<small>(1)</small></a></li>
+				    
+				</ul>
+        	</li>
+			
+            
+            <li>
+                <a class="sb-toggle-submenu">Links<span class="sb-caret"></span></a>
+                <ul class="sb-submenu">
+                    
+                    <li><a href="https://daipi173.github.io/myweb/daipi173-myperson" class="animsition-link">Personal Project</a></li>
+                    
+                </ul>
+            </li>
+            
+        </ul>
+        <!-- Lists in Slidebars -->
+        <ul class="sb-menu secondary">
+            
+            <li><a href="/about.html" class="animsition-link" title="about">About</a></li>
+            <li><a href="/atom.xml" class="animsition-link" title="rss">RSS</a></li>
+        </ul>
+    </div>
+    
+    <!-- ============================ END Off-canvas navigation =========================== -->
+
+    <!-- ============================ #sb-site Main Page Wrapper =========================== -->
+
+    <div id="sb-site">
+        <!-- #sb-site - All page content should be contained within this id, except the off-canvas navigation itself -->
+
+        <!-- ============================ Header & Logo bar =========================== -->
+
+        <div id="navigation" class="navbar navbar-fixed-top">
+            <div class="navbar-inner">
+                <div class="container">
+                    <!-- Nav logo -->
+                    <div class="logo">
+                        <a href="/" title="Logo" class="animsition-link">
+                         <img src="/img/logo.png" alt="Logo" width="35px;"/> 
+                        </a>
+                    </div>
+                    <!-- // Nav logo -->
+                    <!-- Info-bar -->
+                    <nav>
+                        <ul class="nav">
+                            <li><a href="/" class="animsition-link">daipi173的个人博客</a></li>
+                            <li class="nolink"><span>Always </span>Creative.</li>
+                            
+                            <li><a href="https://github.com/" title="Github" target="_blank"><i class="icon-github"></i></a></li>
+                            
+                            
+                            <li><a href="https://twitter.com/" title="Twitter" target="_blank"><i class="icon-twitter"></i></a></li>
+                            
+                            
+                            <li><a href="https://www.facebook.com/" title="Facebook" target="_blank"><i class="icon-facebook"></i></a></li>
+                            
+                            
+                            <li><a href="https://google.com/" title="Google-Plus" target="_blank"><i class="icon-google-plus"></i></a></li>
+                            
+                            
+                            <li><a href="http://weibo.com/" title="Sina-Weibo" target="_blank"><i class="icon-sina-weibo"></i></a></li>
+                            
+                            <li class="nolink"><span>Welcome!</span></li>
+                        </ul>
+                    </nav>
+                    <!--// Info-bar -->
+                </div>
+                <!-- // .container -->
+                <div class="learnmore sb-toggle-right">More</div>
+                <button type="button" class="navbar-toggle menu-icon sb-toggle-right" title="More">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar before"></span>
+                <span class="icon-bar main"></span>
+                <span class="icon-bar after"></span>
+                </button>
+            </div>
+            <!-- // .navbar-inner -->
+        </div>
+
+        <!-- ============================ Header & Logo bar =========================== -->
+
+
+      
+<section id="intro">
+    <div class="container">
+        <div class="row col-md-offset-2">
+            <div class="col-md-8">
+    			<span class="post-meta">
+      <time datetime="2020-06-03T05:06:00.000Z" itemprop="datePublished">
+          2020-06-03
+      </time>
+    
+    
+    | 
+    <a href='/tags/Git/'>Git</a>
+    
+    
+</span>
+                <h1>Git详解（二）</h1>
+            </div>
+        </div>
+        <div class="col-md-8 col-md-offset-2">
+      		<p><strong>提示：在使用git的时候，你需要对linux脚本命令有所了解，如果你很熟悉vim的话，那么恭喜你接下来的相关内容对你来说会非常简单，当然如果你不会的话，也没关系，照着下面的操作你也可以成功实现。</strong></p>
+<h1 id="1-git-rebase的使用"><a href="#1-git-rebase的使用" class="headerlink" title="1. git rebase的使用"></a>1. git rebase的使用</h1><h3 id="1-如何修改commit提交"><a href="#1-如何修改commit提交" class="headerlink" title="1. 如何修改commit提交"></a>1. 如何修改commit提交</h3><p>（1）首先我在github远程仓库中创建了一个git的项目，这个时候它里面只有一个READEME.md文件，然后我在本地会使用ssh方式来克隆线上的git项目；<br>（2）在你指定的文件夹中，右键选择Git Bash Here打开相应的界面，然后使用clone指令克隆文件：git clone <a href="mailto:git@github.com" target="_blank" rel="noopener">git@github.com</a>:daipi173/git.git，克隆完成之后你就会在本地看到一个git文件夹，它里面有一个READEME.md文件，此使就证明你已经克隆成功了；<br>（3）接着我们将git文件夹用vscode编辑器打开，然后开始进行相关的开发操作；<br>（4）现在我在项目中新增加了两个文件，分别时index.html和second.html文件，这个时候我向本地仓库提交了两个版本，使用git log –oneline查看commit提交的历史，如下图所示：<br><a href="https://s1.ax1x.com/2020/05/31/tlOfk4.png" title="提交两个文件commit" target="_blank" rel="noopener"><img src="https://s1.ax1x.com/2020/05/31/tlOfk4.png" alt="提交两个文件commit" title="提交两个文件commit"></a><br>（5）这个时候我又在second.html文件中添加了一部分内容，然后又commit提交了一个版本，但是这个时候我不小心将commit中的注释内容写错了，如下图所示：<br><a href="https://s1.ax1x.com/2020/05/31/tlXc8A.png" title="将commit注释写错了" target="_blank" rel="noopener"><img src="https://s1.ax1x.com/2020/05/31/tlXc8A.png" alt="将commit注释写错了" title="将commit注释写错了"></a><br>解决办法：由于该提交是最后一次提交的，因此我们可以git commit –amend来修改最后一次提交的信息，需要注意的是：<strong>git commit –amend只能修改最后一次提交的信息</strong>。当我在vscode终端中敲入指令：git commit –amend之后会显示如下所示内容：<br><a href="https://s1.ax1x.com/2020/05/31/tljZVO.png" title="使用--amend指令修改的界面" target="_blank" rel="noopener"><img src="https://s1.ax1x.com/2020/05/31/tljZVO.png" alt="使用--amend指令修改的界面" title="使用--amend指令修改的界面"></a><br>只要你会linux脚本语言就应该很熟悉怎么修改，当我们将光标移动到你修改的地方，然后点击键盘中的i就可以开始进行修改，当你修改完之后先按下键盘上的esc，然后再同时按下shift+:之后（如果没有效果的话，可以尝试先按下键盘上的esc，然后再连续按两次大写字母z），然后再在冒号后面输入wq即可，这个时候你再在vscode终端中输入指令git log –oneline然后会看到修改之后的commit，如下图所示：<br><a href="https://s1.ax1x.com/2020/05/31/tlvlY4.png" title="使用--amend修改之后的commit" target="_blank" rel="noopener"><img src="https://s1.ax1x.com/2020/05/31/tlvlY4.png" alt="使用--amend修改之后的commit" title="使用--amend修改之后的commit"></a><br>（6）接着你是不是会想到git commit –amend只能修改最后一次提交的信息，那么如果想修改指定的历史提交应该如何做呢？很简单，这个时候我们应该使用git rebase -i来进行一个解决（在这里i表示interactive互动）。接下来我举一个例子：<br>假设我将第三次提交的commit进行修改，这个时候我将second.html改为second01.html，然后不想再提交一个注释，而是想将第三次提交的commit中的second.html修改为second01.html，然后具体的步骤如下所示：<br>a. git add .将修改全部内容放入暂存区中；<br>b. git commit -m “xxx…”；<br>c. git log –oneline看看我们的commit提交历史，然后找到你要修改的内容，在这里我举的例子如下图所示：<br><a href="https://s1.ax1x.com/2020/06/01/t8dGxP.png" title="找到需要修改commit提交内容" target="_blank" rel="noopener"><img src="https://s1.ax1x.com/2020/06/01/t8dGxP.png" alt="找到需要修改commit提交内容" title="找到需要修改commit提交内容"></a><br>d. 这个时候当我找到要修改第三个commit的内容，然后执行指令：git rebase -i HEAD~3（这里的意思是：从HEAD版本开始往过去数3个版本，3可以换位你要修改内容的位置数）；<br>e. 在进入到vim之后，我们找到要修改的commit提交内容之后，然后将它的pick修改为edit，然后保存退出（先按下键盘上的esc，然后再同时按下shift+:之后（如果没有效果的话，可以尝试先按下键盘上的esc，然后再连续按两次大写字母z），然后再在冒号后面输入wq即可），如下图所示：<br><a href="https://s1.ax1x.com/2020/06/01/t8BXoF.png" title="将commit中的pick修改为edit" target="_blank" rel="noopener"><img src="https://s1.ax1x.com/2020/06/01/t8BXoF.png" alt="将commit中的pick修改为edit" title="将commit中的pick修改为edit"></a><br>f. 接着退出vim界面之后，可以按照退出之后git给你的提示进行下一步的操作，接着我们按照提示进行相应的指令：git commit –amend进入修改commit的vim页面，然后我们找到要修改内容之后点击键盘i进行相应的编辑，然后保存退出（保存退出布置和第5步一致）；<br>g. 此使你会看见vscode显示的是变基，其原因是因为我们使用rebase的原因，接着要解决的话也是按照git给你的提示来进行：git rebase –continue；<br>h. 这个时候我们再使用指令：git log –oneline就会发现我们指定commit提交的内容已经修改了。<br><strong>注意：如果你想终止rebase的话，可以使用指令：git rebase –abort</strong></p>
+<h3 id="2-如何压缩合并commit提交"><a href="#2-如何压缩合并commit提交" class="headerlink" title="2. 如何压缩合并commit提交"></a>2. 如何压缩合并commit提交</h3><p>就拿上面举的例子来接着做测试，我们是不是会感觉因为修改了一个second01.html名字就多一次commit提交，感觉commit提交的太频繁了，这个时候我需要将最后一个提交和第三个提交进行一个合并，那么具体的一个过程如下所示：<br>（1）git rebase -i HEAD~3；<br>（2）然后找到要合并的内容，然后将pick修改为squash或者s，然后再保存退出；<br>（3）接着它会进入到合并的vim界面，然后我们进行一个相关的修改，写入你合并之后的commit内容，然后保存并退出，如下图所示：<br><a href="https://s1.ax1x.com/2020/06/01/t8RkPf.png" title="修改合并的commit内容" target="_blank" rel="noopener"><img src="https://s1.ax1x.com/2020/06/01/t8RkPf.png" alt="修改合并的commit内容" title="修改合并的commit内容"></a><br>（4）接着你查看commit提交历史，执行指令：git log –oneline之后就可以看到两个commit被合并为一个新的commit指令。</p>
+<h3 id="3-git-rebase成功之后如何进行一个撤销"><a href="#3-git-rebase成功之后如何进行一个撤销" class="headerlink" title="3. git rebase成功之后如何进行一个撤销"></a>3. git rebase成功之后如何进行一个撤销</h3><p>在使用git rebase<strong>过程中</strong>我们可以使用git rebase –abort/–continue来进行终止或者继续的操作，但是如果当我们成功之后那么应该如何进行撤销呢？<br>答案很简单，我们可以使用reset指令来执行，具体内容如下所示：<br>（1）首先查看本地记录：git reflog；<br>（2）接着我们可以找到我们要撤销到哪一个步骤的id，id就是我们看到的那一串字母加数字组合的值；<br>（3）接着我们找到id并复制，然后按键盘的esc之后，再按q进行一个退出，然后执行指令：git reset –hard id值。<br><strong>注意：撤销回退时，使用git reset需要格外的小心</strong></p>
+<h1 id="2-git-revert和git-reset撤销"><a href="#2-git-revert和git-reset撤销" class="headerlink" title="2. git revert和git reset撤销"></a>2. git revert和git reset撤销</h1><p>在提交的时候，你肯定会有写错的时候，这个时候你就会想到如何进行撤回，接下来我就带领大家来学习一下如何进行撤回操作。<br>我还是紧接着上面的例子继续往下进行演示，这个时候我在index.html文件中添加了一部分的内容，然后我commit提交了一个新的版本，但是这个时候我的操作有误需要进行一个撤销操作，那么下面就是有两个撤回的操作，接下来分别进行一个演示，看看他们之间的不同点是什么。<br>首先，当我进行一个新的commit提交之后，然后接着使用查看历史提交指令：git log –oneline进行一个查看，然后得到的内容如下所示：<br><a href="https://s1.ax1x.com/2020/06/01/tJnJk8.png" title="新的commit提交内容" target="_blank" rel="noopener"><img src="https://s1.ax1x.com/2020/06/01/tJnJk8.png" alt="新的commit提交内容" title="新的commit提交内容"></a></p>
+<h3 id="1-git-revert"><a href="#1-git-revert" class="headerlink" title="1. git revert"></a>1. git revert</h3><p>（1）首先找到你要撤回的地方，在这里我需要撤回是最后一次提交内容，使用的是git revert HEAD指令（这里的HEAD你可以指定你要指向的位置），然后就进入到vim界面，然后你需要将本次的操作进行一个commit提交说明，然后当你将commit提交操作内容注释写完之后就可以保存退出该界面；<br>（2）其实这个时候你就可以看到你需要撤回的代码已经被撤回，然后当你再一次查看历史提交时，会发现页面上多了一条commit的提交，也就是你第一步写的内容，其实这就是revert与reset不同点，并且HEAD的指向也继续向前移动了。</p>
+<h3 id="2-git-reset"><a href="#2-git-reset" class="headerlink" title="2. git reset"></a>2. git reset</h3><p>（1）git reset –hard<br>（2）git reset –soft<br><strong>区别：</strong>–hard会彻底回退到某个版本，本地的源码也会变为上一个版本的内容（它会抛弃当前工作区的修改）；–soft会回退到某个版本，只是回退了commit的信息，不会恢复到上一个版本，如果你还需要提交，直接commit即可（它会回退到之前的版本，但是保留当前工作区的修改，可以重新提交）。<br>下面来看看它们之间具体不同的地方，首先看看index.html文件中的代码，其中div标签中的内容就是我后面添加的内容，也就是commit提交信息”add:在index.html中添加了更多的内容，但是这个时候操作有误需要进行撤回”：</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">&lt;!DOCTYPE html&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">html</span> <span class="attr">lang</span>=<span class="string">"zh"</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">head</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">meta</span> <span class="attr">charset</span>=<span class="string">"UTF-8"</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">title</span>&gt;</span>Document<span class="tag">&lt;/<span class="name">title</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">head</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">body</span>&gt;</span></span><br><span class="line">  我是创建的第一个文件</span><br><span class="line">  <span class="tag">&lt;<span class="name">div</span>&gt;</span>在index.html文件中添加了更多的内容<span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">body</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">html</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+<p>（1）首先测试–hard的展示效果，由于git log –oneline我们查看历史提交记录中我们需要撤销的是最后一次的提交，因此在vscode终端中执行指令：git reset head~1 –hard，这个时候index.html中的内容变为如下所示：</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">&lt;!DOCTYPE html&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">html</span> <span class="attr">lang</span>=<span class="string">"zh"</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">head</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">meta</span> <span class="attr">charset</span>=<span class="string">"UTF-8"</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">title</span>&gt;</span>Document<span class="tag">&lt;/<span class="name">title</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">head</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">body</span>&gt;</span></span><br><span class="line">  我是创建的第一个文件</span><br><span class="line"><span class="tag">&lt;/<span class="name">body</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">html</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+<p>并且当我们使用git log –oneline查看历史信息时，commit变为如下所示：<br><a href="https://s1.ax1x.com/2020/06/02/tYJuk9.png" title="使用git reset --hard的内容" target="_blank" rel="noopener"><img src="https://s1.ax1x.com/2020/06/02/tYJuk9.png" alt="使用git reset --hard的内容" title="使用git reset --hard的内容"></a><br>从这里我们可以看到commit的最后一次提交被撤回了，并且index.html中的内容也被修改了。<br>（2）接着我们测试–soft的展示效果，由于git log –oneline我们查看历史提交记录中我们需要撤销的是最后一次的提交，因此在vscode终端中执行指令：git reset head~1 –soft，这个时候index.html中的内容变为如下所示：</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">&lt;!DOCTYPE html&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">html</span> <span class="attr">lang</span>=<span class="string">"zh"</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">head</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">meta</span> <span class="attr">charset</span>=<span class="string">"UTF-8"</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">title</span>&gt;</span>Document<span class="tag">&lt;/<span class="name">title</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">head</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">body</span>&gt;</span></span><br><span class="line">  我是创建的第一个文件</span><br><span class="line">  <span class="tag">&lt;<span class="name">div</span>&gt;</span>在index.html文件中添加了更多的内容<span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">body</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">html</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+<p>并且当我们使用git log –oneline查看历史信息时，commit变为如下所示：<br><a href="https://s1.ax1x.com/2020/06/02/tYJuk9.png" title="使用git reset --hard的内容" target="_blank" rel="noopener"><img src="https://s1.ax1x.com/2020/06/02/tYJuk9.png" alt="使用git reset --soft的内容" title="使用git reset --hard的内容"></a><br>从这里我们可以看到commit的最后一次提交被撤回了，但是index.html中的内容没有被修改。</p>
+<h3 id="3-git-revert和git-reset的区别"><a href="#3-git-revert和git-reset的区别" class="headerlink" title="3. git revert和git reset的区别"></a>3. git revert和git reset的区别</h3><p>区别：<br>（1）git revert会使用一次新的commit来进行回滚之前的commit，而git reset是直接删除掉指定的commit；<br>（2）git revert会将HEAD继续向前移动，只是新的commit的内容与我们要revert的内容正好相反，能够抵消被revert的内容，而git reset是把HEAD向后移动；<br>（3）git revert是用一次逆向的commit来中和之前的提交，因此在后续合并老分支时，然后回滚的这部分不会再次出现，但是git reset是将指定的commit在某个分支上删除，因此在后续合并老分支时，这些被回滚的commit还会被引入。<br><strong>注意：在使用reset的时候需要特别特别的小心，特别是–hard。</strong></p>
+<h3 id="4-git撤销已经push到远端的commit"><a href="#4-git撤销已经push到远端的commit" class="headerlink" title="4. git撤销已经push到远端的commit"></a>4. git撤销已经push到远端的commit</h3><p>在使用git时，如果push到远端后发现有错误时，或者希望能够回退到以前的版本，这个时候该如何解决问题，答案很简答，需要在push到远程的时候使用强推，但是一般不建议这样做，因为这样子是十分危险的，接下来我就讲解一下具体的过程。<br>这个时候假设我们最后一次提交commit的内容还是”add:在index.html中添加了更多的内容，但是这个时候操作有误需要进行撤回”，这个时候先push到远程仓库，执行指令：git push origin，这个时候远程仓库就有我们提交的几条信息。<br>但是我们忽然发现commit提交的有问题，需要将最后一次的提交撤回，这个时候具体的过程是：<br>（1）首先我们需要回退到对应的版本，在这里我们需要找到最后一次提交，执行指令：git reset –hard head~1；<br>（2）这个时候如果使用push指令：git push origin会报错，报错内容如下所示：<br><a href="https://s1.ax1x.com/2020/06/02/tYN41I.png" title="push到远程仓库时报错" target="_blank" rel="noopener"><img src="https://s1.ax1x.com/2020/06/02/tYN41I.png" alt="push到远程仓库时报错" title="push到远程仓库时报错"></a><br>其实报错原因很简单，就是本地的版本落后于远程的版本；<br>（3）这个时候为了覆盖掉远程端的版本信息，要使远程端的仓库也回退到相应的版本，那么需要使用强推指令，因此在push后面添加–force或者-f，即：git push origin -f；<br>（4）接着我们再去远程仓库看提交记录和你写的代码，这个时候就会看到远程仓库的信息也被更新了。</p>
+<h1 id="3-git-stash暂存"><a href="#3-git-stash暂存" class="headerlink" title="3. git stash暂存"></a>3. git stash暂存</h1><p>git stash也是在开发过程中很常用的，一般用在比如你在开发代码时，临时负责人让你修改另一部分的内容或者重新写一个比较重要且急需的代码时，但是你又不想将现在这个开发一半的代码提交，这个时候就可以临时的开一个暂存来写这部分代码，具体演示过程如下所示：<br>（1）假设在index.html文件进行一个新的开发，这个时候index.html中的代码才开发到一半，此时index.html中的代码如下所示：</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">&lt;!DOCTYPE html&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">html</span> <span class="attr">lang</span>=<span class="string">"zh"</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">head</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">meta</span> <span class="attr">charset</span>=<span class="string">"UTF-8"</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">title</span>&gt;</span>Document<span class="tag">&lt;/<span class="name">title</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">head</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">body</span>&gt;</span></span><br><span class="line">  我是创建的第一个文件</span><br><span class="line">  <span class="tag">&lt;<span class="name">div</span>&gt;</span>我是index.html文件开发到一半的内容，这个时候有新的需求。<span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">body</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">html</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+<p>（2）但是这个时候负责人很急需要你改一个bug，此使你不想将这个开发一半的代码提交，此使就可以使用暂存指令：git stash；<br>（3）当你把急需的bug修改完成提交之后，这个时候在让它从栈中弹出，即执行指令：git stash pop。<br><strong>注意：git stash也需要和git add进行一个配合使用。</strong><br>你还可以查看stash中相关的list列表：git stash list；删除所有存储进度：git stash clear（需要消息使用，如果删除的话当使用pop时就没有效果并提示你：No stash entries found）</p>
+<h1 id="4-git-merge合并"><a href="#4-git-merge合并" class="headerlink" title="4. git merge合并"></a>4. git merge合并</h1><p>git merge也是在工作中常常会用到的一个指令，它的主要作用是从指定的commit合并到当前分支的操作。<br>它的主要作用有两部分：<br>（1）用于从一个分支到另一个分支的合并，接下来看看它的演示过程：<br>在本地checkout一个新的分支，执行指令：git checkout -b new-test，然后在index.html中写关于new-test的代码，接着执行git add .以及git commit -m “…”，然后我们切换回master分支：git checkout master，这个时候你看index.html文件中的代码又回到最初的内容，这个时候如果想把new-test分支上的代码合并到master分支上，即执行：git merge new-test，当你git log –oneline查看历史提交记录时，new-test分支上的commit也合并到master分支上了；<br>（2）用于git pull拉取中，其实就是git pull = git fetch + git merge，其实git pull和git fetch最大的区别就是：git pull从远程获取新版本到本地，并且它会自动merge合并，但是fetch从远程获取到新版本到本地，但是它并不会自动merge合并。</p>
+<h1 id="5-git-pull和git-pull-–rebase的区别"><a href="#5-git-pull和git-pull-–rebase的区别" class="headerlink" title="5. git pull和git pull –rebase的区别"></a>5. git pull和git pull –rebase的区别</h1><p>首先可以看一下它们两个的等价条件：<br>（1）git pull = git fetch + git merge；<br>（2）git pull –rebase = git fetch + git rebase。<br>第二点git pull会提交多余的commit，而git pull –rebase拉取下来后，可以省略掉无用的commit（参考来自于网络：–rebase的本意是想让事情的发展看起来很连续和优美，而不是多出很多无用的merge commit），接着就进行一个测试，具体演示过程如下所示：<br>（1）首先在远程的仓库中修改一下index.html中的内容，然后再在vscode的终端中执行指令：git pull，这个时候你会看到终端中报错，报错内容如下所示：<br><a href="https://s1.ax1x.com/2020/06/02/tYovTS.png" title="git pull报错" target="_blank" rel="noopener"><img src="https://s1.ax1x.com/2020/06/02/tYovTS.png" alt="git pull报错" title="git pull报错"></a><br>当你执行：git pull –rebase时它也会给你报错，报错内容如下所示：<br><a href="https://s1.ax1x.com/2020/06/02/tYTnfJ.png" title="git pull --rebase报错" target="_blank" rel="noopener"><img src="https://s1.ax1x.com/2020/06/02/tYTnfJ.png" alt="git pull --rebase报错" title="git pull --rebase报错"></a><br>报错原因其实是：如果你没有将修改提交到暂存区，那么无论是pull还是pull –rebase都是不可以拉下来代码的；<br>（2）接着如果我们git add .将它们放到暂存区，但是并没有commit将修改的内容放到新的版本中，然后我们再执行git pull或者git pull –rebase也是都会报错的，在这里就不进行贴图了，如果感兴趣的小伙伴可以自己手动尝试一下，接着我就说明一下报错的原因是：工作区不commit是无法pull代码的，同理可以推导出工作区不commit是无法push代码的；<br>（3）从（2）中结论我们可以知道必须commit才可以push或者pull代码，接着我们先来测试git pull的过程，首先我们需要git add .以及git commit -m “…”，然后执行拉取远程代码：git pull，然后拉取下来合并冲突，接着执行git add .和git commit -m “…”；<br>（4）如果测试git pull –rebase的话，首先执行git add .和git commit -m “…”，然后执行拉取远程代码：git pull –rebase，然后拉取下来合并冲突，接着git add .和git rebase –continue不断重复合并冲突，知道冲突被合并完（如何知道冲突被合并完，你可以vscode会提示你当前如何是基变的话，证明还没有将冲突合并完）；<br>（5）根据上面的，我们可以看出git pull需要多一次commit提交，而git pull –rebase不需要多一次的提交。</p>
+
+            <div class="clearfix"></div>
+            <hr class="nogutter">
+        </div>
+        <nav class="m-pagination col-md-8 col-md-offset-2 col-sm-24" role="pagination">
+    
+    
+    <a class="pull-right" href="/2020/05/31/Git详解（一）/">
+        Git详解（一） →
+    </a>
+    
+</nav>
+
+        <div class="col-md-8 col-md-offset-2 col-sm-24"><script type="text/javascript">
+  /**
+   * 搜狐畅言
+   */
+
+  /*
+  document.write('<div id="SOHUCS" sid="' + window.location.pathname.slice(1) + '" ></div>');
+
+  window.onload = function () {
+    (function () {
+      var appid = 'cytXXXX';
+      var conf = 'prod_xxxxxxxxxxxxxxxxx';
+      var width = window.innerWidth || document.documentElement.clientWidth;
+      var loadJs = function (d, a, id) {
+        var c = document.getElementsByTagName("head")[0] || document.head || document.documentElement;
+        var b = document.createElement("script");
+        b.setAttribute("type", "text/javascript");
+        b.setAttribute("charset", "UTF-8");
+        b.setAttribute("src", d);
+        if (id) {
+          b.setAttribute("id", id);
+        }
+        if (typeof a === "function") {
+          if (window.attachEvent) {
+            b.onreadystatechange = function () {
+              var e = b.readyState;
+              if (e === "loaded" || e === "complete") {
+                b.onreadystatechange = null;
+                a()
+              }
+            }
+          } else {
+            b.onload = a
+          }
+        }
+        c.appendChild(b)
+      };
+
+      loadJs("https://changyan.sohu.com/upload/changyan.js", function () {
+        window.changyan.api.config({
+          appid: appid,
+          conf: conf
+        })
+      });
+    })();
+  }
+  */
+
+</script>
+</div>
+    </div>
+</section>
+
+
+      
+<!-- ============================ Footer =========================== -->
+
+<footer>
+    <div class="container">
+            <div class="copy">
+                <p>
+                    &copy; 2014<script>new Date().getFullYear()>2010&&document.write("-"+new Date().getFullYear());</script>, Content By daipi173. All Rights Reserved.
+                </p>
+                <p>Theme By <a href="//go.kieran.top" style="color: #767D84">Kieran</a></p>
+            </div>
+            <div class="social">
+                <ul>
+                    
+                    <li><a href="https://github.com/" title="Github" target="_blank"><i class="icon-github"></i></a>&nbsp;</li>
+                    
+                    
+                    <li><a href="https://twitter.com/" title="Twitter" target="_blank"><i class="icon-twitter"></i></a>&nbsp;</li>
+                    
+                    
+                    <li><a href="https://www.facebook.com/" title="Facebook" target="_blank"><i class="icon-facebook"></i></a>&nbsp;</li>
+                    
+                    
+                    <li><a href="https://google.com/" title="Google-Plus" target="_blank"><i class="icon-google-plus"></i></a>&nbsp;</li>
+                    
+                    
+                    <li><a href="http://weibo.com/" title="Sina-Weibo" target="_blank"><i class="icon-sina-weibo"></i></a>&nbsp;</li>
+                    
+                </ul>
+            </div>
+            <div class="clearfix"> </div>
+        </div>
+</footer>
+
+<!-- ============================ END Footer =========================== -->
+      <!-- Load our scripts -->
+<!-- Resizable 'on-demand' full-height hero -->
+<script type="text/javascript">
+    var resizeHero = function () {
+        var hero = $(".cover,.heightblock"),
+            window1 = $(window);
+        hero.css({
+            "height": window1.height()
+        });
+    };
+
+    resizeHero();
+
+    $(window).resize(function () {
+        resizeHero();
+    });
+</script>
+<script src="/js/plugins.min.js"></script><!-- Bootstrap core and concatenated plugins always load here -->
+<script src="/js/scripts.js"></script><!-- Theme scripts -->
+
+
+<link rel="stylesheet" href="/fancybox/jquery.fancybox.css" media="screen" type="text/css">
+<script src="/fancybox/jquery.fancybox.pack.js"></script>
+<script type="text/javascript">
+$('#intro').find('img').each(function(){
+  var alt = this.alt;
+
+  if (alt){
+    $(this).after('<span class="caption" style="display:none">' + alt + '</span>');
+  }
+
+  $(this).wrap('<a href="' + this.src + '" title="' + alt + '" class="fancybox" rel="gallery" />');
+});
+(function($){
+  $('.fancybox').fancybox();
+})(jQuery);
+</script>
+
+
+
+      
+<script src="/live2dw/lib/L2Dwidget.min.js?094cbace49a39548bed64abff5988b05"></script><script>L2Dwidget.init({"pluginModelPath":"assets/","model":{"jsonPath":"/live2dw/assets/haruto.model.json"},"display":{"position":"right","width":150,"height":300},"mobile":{"show":true},"log":false,"pluginJsPath":"lib/","pluginRootPath":"live2dw/","tagMode":false});</script></body>
+</html>

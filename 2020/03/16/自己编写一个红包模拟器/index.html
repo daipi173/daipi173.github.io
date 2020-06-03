@@ -1,0 +1,393 @@
+<!DOCTYPE html>
+<!--[if lte IE 8 ]>
+<html class="ie" xmlns="http://www.w3.org/1999/xhtml" xml:lang="en-US" lang="en-US">
+<![endif]-->
+<!--[if (gte IE 9)|!(IE)]><!-->
+<!--
+***************  *      *     *
+      8          *    *       *
+      8          *  *         *
+      8          **           *
+      8          *  *         *
+      8          *    *       *
+      8          *      *     *
+      8          *        *   ***********    -----Theme By Kieran(http://go.kieran.top)
+-->
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="zh-CN" lang="zh-CN">
+<!--<![endif]-->
+
+<head>
+  <title>自己编写一个红包模拟器 | daipi173的个人博客</title>
+  <!-- Meta data -->
+    <meta http-equiv="Content-Type" content="text/html" charset="UTF-8" >
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="generator" content="daipi173的个人博客">
+    <meta name="author" content="daipi173">
+    <meta name="description" content="" />
+    <meta name="keywords" content="" />
+
+    <!-- Favicon, (keep icon in root folder) -->
+    <link rel="Shortcut Icon" href="/img/favicon.ico" type="image/ico">
+
+    <link rel="alternate" href="/atom.xml" title="daipi173的个人博客" type="application/atom+xml">
+    <link rel="stylesheet" href="/css/all.css" media="screen" type="text/css">
+    
+    <link rel="stylesheet" href="/highlightjs/vs.css" type="text/css">
+    
+
+    <!--[if IE 8]>
+    <link rel="stylesheet" type="text/css" href="/css/ie8.css" />
+    <![endif]-->
+
+    <!-- jQuery | Load our jQuery, with an alternative source fallback to a local version if request is unavailable -->
+    <script src="/js/jquery-1.11.1.min.js"></script>
+    <script>window.jQuery || document.write('<script src="js/jquery-1.11.1.min.js"><\/script>')</script>
+
+    <!-- Load these in the <head> for quicker IE8+ load times -->
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+    <script src="/js/html5shiv.min.js"></script>
+    <script src="/js/respond.min.js"></script>
+    <![endif]-->
+
+  
+  
+  
+
+  <style>.col-md-8.col-md-offset-2.opening-statement img{display:none;}</style>
+</head>
+
+<!--
+<body class="post-template">
+-->
+<body id="index" class="lightnav animsition">
+
+      <!-- ============================ Off-canvas navigation =========================== -->
+
+    <div class="sb-slidebar sb-right sb-style-overlay sb-momentum-scrolling">
+        <div class="sb-close" aria-label="Close Menu" aria-hidden="true">
+            <img src="/img/close.png" alt="Close"/>
+        </div>
+        <!-- Lists in Slidebars -->
+        <ul class="sb-menu">
+            <li><a href="/" class="animsition-link" title="Home">Home</a></li>
+            <li><a href="/archives" class="animsition-link" title="archive">archives</a></li>
+            <!-- Dropdown Menu -->
+			 
+            
+        	<li>
+        		<a class="sb-toggle-submenu">Categories<span class="sb-caret"></span></a>
+            	<ul class="sb-submenu">
+				  	
+				    <li><a href="/categories/JavaScript/Array/" class="animsition-link">Array<small>(1)</small></a></li>
+				    
+				    <li><a href="/categories/HTML/CSS/" class="animsition-link">CSS<small>(4)</small></a></li>
+				    
+				    <li><a href="/categories/HTML/Chrome浏览器/" class="animsition-link">Chrome浏览器<small>(1)</small></a></li>
+				    
+				    <li><a href="/categories/JavaScript/ES6/" class="animsition-link">ES6<small>(6)</small></a></li>
+				    
+				    <li><a href="/categories/ES6/" class="animsition-link">ES6<small>(4)</small></a></li>
+				    
+				    <li><a href="/categories/JavaScript/Vue/Eslint/" class="animsition-link">Eslint<small>(1)</small></a></li>
+				    
+				    <li><a href="/categories/总结/Git/" class="animsition-link">Git<small>(1)</small></a></li>
+				    
+				    <li><a href="/categories/Git/" class="animsition-link">Git<small>(4)</small></a></li>
+				    
+				    <li><a href="/categories/HTML/" class="animsition-link">HTML<small>(17)</small></a></li>
+				    
+				    <li><a href="/categories/ES6/JavaScript/" class="animsition-link">JavaScript<small>(4)</small></a></li>
+				    
+				    <li><a href="/categories/JavaScript/" class="animsition-link">JavaScript<small>(41)</small></a></li>
+				    
+				    <li><a href="/categories/Javascript/" class="animsition-link">Javascript<small>(2)</small></a></li>
+				    
+				    <li><a href="/categories/React/" class="animsition-link">React<small>(2)</small></a></li>
+				    
+				    <li><a href="/categories/Git/Vue/" class="animsition-link">Vue<small>(1)</small></a></li>
+				    
+				    <li><a href="/categories/Vue/" class="animsition-link">Vue<small>(2)</small></a></li>
+				    
+				    <li><a href="/categories/JavaScript/Vue/" class="animsition-link">Vue<small>(1)</small></a></li>
+				    
+				    <li><a href="/categories/React/Webpack/" class="animsition-link">Webpack<small>(1)</small></a></li>
+				    
+				    <li><a href="/categories/React/antd/" class="animsition-link">antd<small>(1)</small></a></li>
+				    
+				    <li><a href="/categories/React/antd/css局部样式/" class="animsition-link">css局部样式<small>(1)</small></a></li>
+				    
+				    <li><a href="/categories/Vue/懒加载/总结/element-ui/" class="animsition-link">element ui<small>(1)</small></a></li>
+				    
+				    <li><a href="/categories/vue/" class="animsition-link">vue<small>(1)</small></a></li>
+				    
+				    <li><a href="/categories/webpack/" class="animsition-link">webpack<small>(2)</small></a></li>
+				    
+				    <li><a href="/categories/总结/" class="animsition-link">总结<small>(1)</small></a></li>
+				    
+				    <li><a href="/categories/JavaScript/总结/" class="animsition-link">总结<small>(2)</small></a></li>
+				    
+				    <li><a href="/categories/Vue/懒加载/总结/" class="animsition-link">总结<small>(1)</small></a></li>
+				    
+				    <li><a href="/categories/Git/Vue/总结/" class="animsition-link">总结<small>(1)</small></a></li>
+				    
+				    <li><a href="/categories/Vue/懒加载/" class="animsition-link">懒加载<small>(1)</small></a></li>
+				    
+				    <li><a href="/categories/JavaScript/Array/扁平化/" class="animsition-link">扁平化<small>(1)</small></a></li>
+				    
+				    <li><a href="/categories/JavaScript/整数存储相加/" class="animsition-link">整数存储相加<small>(1)</small></a></li>
+				    
+				    <li><a href="/categories/Javascript/算法/" class="animsition-link">算法<small>(1)</small></a></li>
+				    
+				</ul>
+        	</li>
+			
+            
+            <li>
+                <a class="sb-toggle-submenu">Links<span class="sb-caret"></span></a>
+                <ul class="sb-submenu">
+                    
+                    <li><a href="https://daipi173.github.io/myweb/daipi173-myperson" class="animsition-link">Personal Project</a></li>
+                    
+                </ul>
+            </li>
+            
+        </ul>
+        <!-- Lists in Slidebars -->
+        <ul class="sb-menu secondary">
+            
+            <li><a href="/about.html" class="animsition-link" title="about">About</a></li>
+            <li><a href="/atom.xml" class="animsition-link" title="rss">RSS</a></li>
+        </ul>
+    </div>
+    
+    <!-- ============================ END Off-canvas navigation =========================== -->
+
+    <!-- ============================ #sb-site Main Page Wrapper =========================== -->
+
+    <div id="sb-site">
+        <!-- #sb-site - All page content should be contained within this id, except the off-canvas navigation itself -->
+
+        <!-- ============================ Header & Logo bar =========================== -->
+
+        <div id="navigation" class="navbar navbar-fixed-top">
+            <div class="navbar-inner">
+                <div class="container">
+                    <!-- Nav logo -->
+                    <div class="logo">
+                        <a href="/" title="Logo" class="animsition-link">
+                         <img src="/img/logo.png" alt="Logo" width="35px;"/> 
+                        </a>
+                    </div>
+                    <!-- // Nav logo -->
+                    <!-- Info-bar -->
+                    <nav>
+                        <ul class="nav">
+                            <li><a href="/" class="animsition-link">daipi173的个人博客</a></li>
+                            <li class="nolink"><span>Always </span>Creative.</li>
+                            
+                            <li><a href="https://github.com/" title="Github" target="_blank"><i class="icon-github"></i></a></li>
+                            
+                            
+                            <li><a href="https://twitter.com/" title="Twitter" target="_blank"><i class="icon-twitter"></i></a></li>
+                            
+                            
+                            <li><a href="https://www.facebook.com/" title="Facebook" target="_blank"><i class="icon-facebook"></i></a></li>
+                            
+                            
+                            <li><a href="https://google.com/" title="Google-Plus" target="_blank"><i class="icon-google-plus"></i></a></li>
+                            
+                            
+                            <li><a href="http://weibo.com/" title="Sina-Weibo" target="_blank"><i class="icon-sina-weibo"></i></a></li>
+                            
+                            <li class="nolink"><span>Welcome!</span></li>
+                        </ul>
+                    </nav>
+                    <!--// Info-bar -->
+                </div>
+                <!-- // .container -->
+                <div class="learnmore sb-toggle-right">More</div>
+                <button type="button" class="navbar-toggle menu-icon sb-toggle-right" title="More">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar before"></span>
+                <span class="icon-bar main"></span>
+                <span class="icon-bar after"></span>
+                </button>
+            </div>
+            <!-- // .navbar-inner -->
+        </div>
+
+        <!-- ============================ Header & Logo bar =========================== -->
+
+
+      
+<section id="intro">
+    <div class="container">
+        <div class="row col-md-offset-2">
+            <div class="col-md-8">
+    			<span class="post-meta">
+      <time datetime="2020-03-16T04:05:00.000Z" itemprop="datePublished">
+          2020-03-16
+      </time>
+    
+    
+    | 
+    <a href='/tags/Javascript/'>Javascript</a>
+    
+    
+</span>
+                <h1>自己编写一个红包模拟器</h1>
+            </div>
+        </div>
+        <div class="col-md-8 col-md-offset-2">
+      		<p>具体代码如下所示：</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br><span class="line">87</span><br><span class="line">88</span><br><span class="line">89</span><br><span class="line">90</span><br><span class="line">91</span><br><span class="line">92</span><br><span class="line">93</span><br><span class="line">94</span><br><span class="line">95</span><br><span class="line">96</span><br><span class="line">97</span><br><span class="line">98</span><br><span class="line">99</span><br><span class="line">100</span><br><span class="line">101</span><br><span class="line">102</span><br><span class="line">103</span><br><span class="line">104</span><br><span class="line">105</span><br><span class="line">106</span><br><span class="line">107</span><br><span class="line">108</span><br><span class="line">109</span><br><span class="line">110</span><br><span class="line">111</span><br><span class="line">112</span><br><span class="line">113</span><br><span class="line">114</span><br><span class="line">115</span><br><span class="line">116</span><br><span class="line">117</span><br><span class="line">118</span><br><span class="line">119</span><br><span class="line">120</span><br><span class="line">121</span><br><span class="line">122</span><br><span class="line">123</span><br><span class="line">124</span><br><span class="line">125</span><br><span class="line">126</span><br><span class="line">127</span><br><span class="line">128</span><br><span class="line">129</span><br><span class="line">130</span><br><span class="line">131</span><br><span class="line">132</span><br><span class="line">133</span><br><span class="line">134</span><br><span class="line">135</span><br><span class="line">136</span><br><span class="line">137</span><br><span class="line">138</span><br><span class="line">139</span><br><span class="line">140</span><br><span class="line">141</span><br><span class="line">142</span><br><span class="line">143</span><br><span class="line">144</span><br><span class="line">145</span><br><span class="line">146</span><br><span class="line">147</span><br><span class="line">148</span><br><span class="line">149</span><br><span class="line">150</span><br><span class="line">151</span><br><span class="line">152</span><br><span class="line">153</span><br><span class="line">154</span><br><span class="line">155</span><br><span class="line">156</span><br><span class="line">157</span><br><span class="line">158</span><br><span class="line">159</span><br><span class="line">160</span><br><span class="line">161</span><br><span class="line">162</span><br><span class="line">163</span><br><span class="line">164</span><br><span class="line">165</span><br><span class="line">166</span><br><span class="line">167</span><br><span class="line">168</span><br><span class="line">169</span><br><span class="line">170</span><br><span class="line">171</span><br><span class="line">172</span><br><span class="line">173</span><br><span class="line">174</span><br><span class="line">175</span><br><span class="line">176</span><br><span class="line">177</span><br><span class="line">178</span><br><span class="line">179</span><br><span class="line">180</span><br><span class="line">181</span><br><span class="line">182</span><br><span class="line">183</span><br><span class="line">184</span><br><span class="line">185</span><br><span class="line">186</span><br><span class="line">187</span><br><span class="line">188</span><br><span class="line">189</span><br><span class="line">190</span><br><span class="line">191</span><br><span class="line">192</span><br><span class="line">193</span><br><span class="line">194</span><br><span class="line">195</span><br><span class="line">196</span><br><span class="line">197</span><br><span class="line">198</span><br><span class="line">199</span><br><span class="line">200</span><br><span class="line">201</span><br><span class="line">202</span><br><span class="line">203</span><br><span class="line">204</span><br><span class="line">205</span><br><span class="line">206</span><br><span class="line">207</span><br><span class="line">208</span><br><span class="line">209</span><br><span class="line">210</span><br><span class="line">211</span><br><span class="line">212</span><br><span class="line">213</span><br><span class="line">214</span><br><span class="line">215</span><br><span class="line">216</span><br><span class="line">217</span><br><span class="line">218</span><br><span class="line">219</span><br><span class="line">220</span><br><span class="line">221</span><br><span class="line">222</span><br><span class="line">223</span><br><span class="line">224</span><br><span class="line">225</span><br><span class="line">226</span><br><span class="line">227</span><br><span class="line">228</span><br><span class="line">229</span><br><span class="line">230</span><br><span class="line">231</span><br><span class="line">232</span><br><span class="line">233</span><br><span class="line">234</span><br><span class="line">235</span><br><span class="line">236</span><br><span class="line">237</span><br><span class="line">238</span><br><span class="line">239</span><br><span class="line">240</span><br><span class="line">241</span><br><span class="line">242</span><br><span class="line">243</span><br><span class="line">244</span><br><span class="line">245</span><br><span class="line">246</span><br><span class="line">247</span><br><span class="line">248</span><br><span class="line">249</span><br><span class="line">250</span><br><span class="line">251</span><br><span class="line">252</span><br><span class="line">253</span><br><span class="line">254</span><br></pre></td><td class="code"><pre><span class="line">  <span class="meta">&lt;!DOCTYPE html&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">html</span> <span class="attr">lang</span>=<span class="string">"zh"</span>&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="tag">&lt;<span class="name">head</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">meta</span> <span class="attr">charset</span>=<span class="string">"UTF-8"</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">title</span>&gt;</span>Document<span class="tag">&lt;/<span class="name">title</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">head</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">style</span>&gt;</span></span><br><span class="line">    #wrapper &#123;</span><br><span class="line">      position: absolute;</span><br><span class="line">      left: 50%;</span><br><span class="line">      top: 50%;</span><br><span class="line">      margin-left: -150px;</span><br><span class="line">      margin-top: -100px;</span><br><span class="line">      width: 300px;</span><br><span class="line">      height: 200px;</span><br><span class="line">      text-align: center;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    .count-box label,</span><br><span class="line">    .amount-box label &#123;</span><br><span class="line">      display: inline-block;</span><br><span class="line">      width: 70px;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    .send &#123;</span><br><span class="line">      margin-top: 10px;</span><br><span class="line">      padding: 5px 0;</span><br><span class="line">      background-color: #63B8FF;</span><br><span class="line">      width: 140px;</span><br><span class="line">      color: white;</span><br><span class="line">      cursor: pointer;</span><br><span class="line">    &#125;</span><br><span class="line">    /* 红包 */</span><br><span class="line">    #red-box &#123;</span><br><span class="line">      display: none;</span><br><span class="line">      overflow: hidden;</span><br><span class="line">      position: absolute;</span><br><span class="line">      left: 50%;</span><br><span class="line">      top: 50%;</span><br><span class="line">      width: 300px;</span><br><span class="line">      height: 450px;</span><br><span class="line">      transform: translate(-50%, -50%);</span><br><span class="line">      background-color: #B22222;</span><br><span class="line">      border-radius: 10px;</span><br><span class="line">    &#125;</span><br><span class="line">    .close &#123;</span><br><span class="line">      position: absolute;</span><br><span class="line">      right: 20px;</span><br><span class="line">      top: 20px;</span><br><span class="line">      z-index: 1000;</span><br><span class="line">      cursor: pointer;</span><br><span class="line">      user-select: none;</span><br><span class="line">      color: #fff;</span><br><span class="line">    &#125;</span><br><span class="line">    .user-info,</span><br><span class="line">    .show-info &#123;</span><br><span class="line">      width: 100%;</span><br><span class="line">      text-align: center;</span><br><span class="line">    &#125;</span><br><span class="line">    .show-info &#123;</span><br><span class="line">     display: none;</span><br><span class="line">    &#125;</span><br><span class="line">    .user-info img,</span><br><span class="line">    .show-info img &#123;</span><br><span class="line">      height: 80px;</span><br><span class="line">      width: 80px;</span><br><span class="line">      border-radius: 40px;</span><br><span class="line">      margin-top: 20px;</span><br><span class="line">    &#125;</span><br><span class="line">    .slide &#123;</span><br><span class="line">      position: absolute;</span><br><span class="line">      top: 0;</span><br><span class="line">      left: 0;</span><br><span class="line">      height: 300px;</span><br><span class="line">      width: 300px;</span><br><span class="line">      background-color: #EE6A50;</span><br><span class="line">      border-radius: 0 0 50px 50px;</span><br><span class="line">    &#125;</span><br><span class="line">    .slide-animation &#123;</span><br><span class="line">      animation: slideTop .5s linear forwards;</span><br><span class="line">    &#125;</span><br><span class="line">    @keyframes slideTop &#123;</span><br><span class="line">      0% &#123; height: 300px; &#125;</span><br><span class="line">      100% &#123; height: 60px; &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    .open &#123;</span><br><span class="line">      position: absolute;</span><br><span class="line">      bottom: -40px;</span><br><span class="line">      left: 50%;</span><br><span class="line">      margin-left: -40px;</span><br><span class="line">      width: 80px;</span><br><span class="line">      height: 80px;</span><br><span class="line">      line-height: 80px;</span><br><span class="line">      text-align: center;</span><br><span class="line">      background: orange;</span><br><span class="line">      border-radius: 40px;</span><br><span class="line">      border: 1px solid #fff;</span><br><span class="line">      cursor: pointer;</span><br><span class="line">      animation: openSlide 1s infinite forwards;</span><br><span class="line">      </span><br><span class="line">    &#125;</span><br><span class="line">    @keyframes openSlide &#123;</span><br><span class="line">      0% &#123; transform: rotateY(0deg); &#125;</span><br><span class="line">      100% &#123; transform: rotateY(380deg); &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    .title &#123;</span><br><span class="line">      color: #fff;</span><br><span class="line">      font-weight: bold;</span><br><span class="line">    &#125;</span><br><span class="line">    .own-money &#123;</span><br><span class="line">      color: #fff;</span><br><span class="line">      font-size: 20px;</span><br><span class="line">      font-weight: bold;</span><br><span class="line">    &#125;</span><br><span class="line">    .money-rank &#123;</span><br><span class="line">      color: #fff;</span><br><span class="line">      font-size: 12px;</span><br><span class="line">      font-weight: bold;</span><br><span class="line">    &#125;</span><br><span class="line">    /* 随机产生红包 */</span><br><span class="line">    .user-receive &#123;</span><br><span class="line">      background-color: rgba(255, 165, 0, .5);</span><br><span class="line">      margin: 10px auto;</span><br><span class="line">      height: 200px;</span><br><span class="line">      width: 200px;</span><br><span class="line">      border-radius: 10px;</span><br><span class="line">      padding: 2px 5px;</span><br><span class="line">      overflow: auto;</span><br><span class="line">    &#125;</span><br><span class="line">    .user-receive p &#123;</span><br><span class="line">      text-align: left;</span><br><span class="line">      color: #fff;</span><br><span class="line">      font-size: 12px;</span><br><span class="line">      margin: 5px;</span><br><span class="line">    &#125;</span><br><span class="line">    .user-receive span &#123;</span><br><span class="line">      margin-left: 5px;</span><br><span class="line">      color: yellow;</span><br><span class="line">      font-size: 8px;</span><br><span class="line">    &#125;</span><br><span class="line">  </span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="xml">  <span class="tag">&lt;<span class="name">div</span> <span class="attr">id</span>=<span class="string">"wrapper"</span>&gt;</span></span></span><br><span class="line"><span class="xml">    <span class="tag">&lt;<span class="name">h1</span>&gt;</span>红包模拟器<span class="tag">&lt;/<span class="name">h1</span>&gt;</span></span></span><br><span class="line"><span class="xml">    <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"count-box"</span>&gt;</span></span></span><br><span class="line"><span class="xml">      <span class="tag">&lt;<span class="name">label</span> <span class="attr">for</span>=<span class="string">"count"</span>&gt;</span>红包个数<span class="tag">&lt;/<span class="name">label</span>&gt;</span></span></span><br><span class="line">      </span><br><span class="line"><span class="xml">    <span class="tag">&lt;/<span class="name">div</span>&gt;</span></span></span><br><span class="line"><span class="xml">    <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"amount-box"</span>&gt;</span></span></span><br><span class="line"><span class="xml">      <span class="tag">&lt;<span class="name">label</span> <span class="attr">for</span>=<span class="string">"amount"</span>&gt;</span>总金额<span class="tag">&lt;/<span class="name">label</span>&gt;</span></span></span><br><span class="line">      </span><br><span class="line"><span class="xml">    <span class="tag">&lt;/<span class="name">div</span>&gt;</span></span></span><br><span class="line"><span class="xml">    <span class="tag">&lt;<span class="name">button</span> <span class="attr">class</span>=<span class="string">"send"</span>&gt;</span>发红包<span class="tag">&lt;/<span class="name">button</span>&gt;</span></span></span><br><span class="line"><span class="xml">  <span class="tag">&lt;/<span class="name">div</span>&gt;</span></span></span><br><span class="line"><span class="xml">  <span class="comment">&lt;!-- 红包 --&gt;</span></span></span><br><span class="line"><span class="xml">  <span class="tag">&lt;<span class="name">div</span> <span class="attr">id</span>=<span class="string">"red-box"</span>&gt;</span></span></span><br><span class="line"><span class="xml">    <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"close"</span>&gt;</span>X<span class="tag">&lt;/<span class="name">div</span>&gt;</span>   </span></span><br><span class="line"><span class="xml">    <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"slide"</span>&gt;</span></span></span><br><span class="line"><span class="xml">      <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"user-info"</span>&gt;</span></span></span><br><span class="line"><span class="xml">        <span class="tag">&lt;<span class="name">img</span> <span class="attr">src</span>=<span class="string">"http://s3a.pstatp.com/cg_growth/resource/boilerplate/images/redpacket/avatar.png"</span>&gt;</span></span></span><br><span class="line"><span class="xml">        <span class="tag">&lt;<span class="name">p</span> <span class="attr">class</span>=<span class="string">"title"</span>&gt;</span>JScoder<span class="tag">&lt;/<span class="name">p</span>&gt;</span></span></span><br><span class="line"><span class="xml">        <span class="tag">&lt;<span class="name">p</span>&gt;</span>给您发送了一个红包<span class="tag">&lt;/<span class="name">p</span>&gt;</span></span></span><br><span class="line"><span class="xml">        <span class="tag">&lt;<span class="name">p</span> <span class="attr">class</span>=<span class="string">"title"</span>&gt;</span>恭喜发财 大吉大利<span class="tag">&lt;/<span class="name">p</span>&gt;</span></span></span><br><span class="line"><span class="xml">      <span class="tag">&lt;/<span class="name">div</span>&gt;</span></span></span><br><span class="line"><span class="xml">      <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"show-info"</span>&gt;</span></span></span><br><span class="line"><span class="xml">        <span class="tag">&lt;<span class="name">img</span> <span class="attr">src</span>=<span class="string">"http://s3a.pstatp.com/cg_growth/resource/boilerplate/images/redpacket/avatar.png"</span>&gt;</span></span></span><br><span class="line"><span class="xml">        <span class="tag">&lt;<span class="name">p</span> <span class="attr">class</span>=<span class="string">"own-money"</span>&gt;</span><span class="tag">&lt;/<span class="name">p</span>&gt;</span></span></span><br><span class="line"><span class="xml">        <span class="tag">&lt;<span class="name">p</span> <span class="attr">class</span>=<span class="string">"money-rank"</span>&gt;</span>红包领取榜<span class="tag">&lt;/<span class="name">p</span>&gt;</span></span></span><br><span class="line"><span class="xml">        <span class="comment">&lt;!-- 随机红包产生 --&gt;</span></span></span><br><span class="line"><span class="xml">        <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"user-receive"</span>&gt;</span><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span></span><br><span class="line"><span class="xml">      <span class="tag">&lt;/<span class="name">div</span>&gt;</span></span></span><br><span class="line"><span class="xml">      <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"open"</span>&gt;</span>拆红包<span class="tag">&lt;/<span class="name">div</span>&gt;</span></span></span><br><span class="line"><span class="xml">    <span class="tag">&lt;/<span class="name">div</span>&gt;</span></span></span><br><span class="line"><span class="xml">  <span class="tag">&lt;/<span class="name">div</span>&gt;</span></span></span><br><span class="line">  </span><br><span class="line">    let send = document.querySelector('.send')</span><br><span class="line">    let close = document.querySelector('.close')</span><br><span class="line">    let redBox = document.querySelector('#red-box')</span><br><span class="line">    let open = document.querySelector('.open')</span><br><span class="line">    let slide = document.querySelector('.slide')</span><br><span class="line">    let sendRed = document.querySelector('.send-red')</span><br><span class="line">    let userInfo = document.querySelector('.user-info')</span><br><span class="line">    let showInfo = document.querySelector('.show-info')</span><br><span class="line"></span><br><span class="line">    send.onclick = function () &#123;</span><br><span class="line">      // 当红包个数或者总金额为0时，提示需要输入</span><br><span class="line">      let count = document.querySelector('#count').value</span><br><span class="line">      let amount = document.querySelector('#amount').value</span><br><span class="line">      if (count == '' || amount == '') &#123;</span><br><span class="line">        alert('输入有问题！请输入红包个数或者总金额数不能为空')</span><br><span class="line">        return</span><br><span class="line">      &#125;</span><br><span class="line">      if (count == '0' || amount == '0') &#123;</span><br><span class="line">        alert('输入有问题！输入的红包个数或者总金额数不能为0')</span><br><span class="line">        return</span><br><span class="line">      &#125;</span><br><span class="line">      redBox.style.display = 'block'</span><br><span class="line">    &#125;</span><br><span class="line">    close.onclick = function () &#123;</span><br><span class="line">      redBox.style.display = 'none'</span><br><span class="line">      userInfo.style.display = 'block'</span><br><span class="line">      showInfo.style.display = 'none'</span><br><span class="line">      open.style.display = 'block'</span><br><span class="line">      slide.className = 'slide'</span><br><span class="line">    &#125;</span><br><span class="line">    // 拆红包</span><br><span class="line">    open.onclick = function () &#123;</span><br><span class="line">      randomMoney()</span><br><span class="line">      this.style.display = 'none'</span><br><span class="line">      userInfo.style.display = 'none'</span><br><span class="line">      showInfo.style.display = 'block'</span><br><span class="line">      slide.className = 'slide slide-animation'</span><br><span class="line">    &#125;</span><br><span class="line">    // 随机产生金额</span><br><span class="line">    function randomMoney () &#123;</span><br><span class="line">      let count = document.querySelector('#count').value</span><br><span class="line">      let amount = document.querySelector('#amount').value</span><br><span class="line">      let ownMoney = document.querySelector('.own-money')</span><br><span class="line">      let userReceive = document.querySelector('.user-receive')</span><br><span class="line">      let oSpan = document.createElement('span')</span><br><span class="line">      let max = 0.01 // 记录运气最佳</span><br><span class="line">      let key = 0 // 记录运气最佳的下标</span><br><span class="line">      let everyMoney = randomFn(amount, count)</span><br><span class="line">      userReceive.innerHTML = '' // 点击关闭时对他进行一个重置</span><br><span class="line">      everyMoney.forEach((item, index) =&amp;gt; &#123;</span><br><span class="line">        if (max &amp;lt;= item) &#123;</span><br><span class="line">          max = item</span><br><span class="line">          key = index</span><br><span class="line">        &#125;</span><br><span class="line">        let p = document.createElement(&amp;#039;p&amp;#039;)</span><br><span class="line">        p.innerText = `用户$&#123;index+1&#125;：$&#123;item&#125;`</span><br><span class="line">        userReceive.appendChild(p)</span><br><span class="line">      &#125;)</span><br><span class="line">      ownMoney.innerText = max</span><br><span class="line">      oSpan.innerText = &amp;#039;运气最佳&amp;#039;</span><br><span class="line">      userReceive.children[key].appendChild(oSpan)</span><br><span class="line">    &#125;</span><br><span class="line">    // 随机分配函数</span><br><span class="line">    // 思路：每次0.01&amp;lt;=得出的红包值&amp;lt;=剩余金额-剩余人数*0.01，最后一个人获得剩余全部</span><br><span class="line">    function randomFn (amount, count) &#123;</span><br><span class="line">      let total = amount</span><br><span class="line">      let arr = []</span><br><span class="line">      for (let i = 0 ; i &amp;lt; count - 1 ; i++) &#123;</span><br><span class="line">        // 改为向上取整，保证每个红包的值至少为0.01</span><br><span class="line">        let one = Math.ceil(Math.random() * (total - (count - 1 - i) * 0.01) * 100) / 100</span><br><span class="line">        arr.push(one)</span><br><span class="line">        total -= one</span><br><span class="line">      &#125;</span><br><span class="line">      arr.push(Number(total.toFixed(2)))</span><br><span class="line">      return arr</span><br><span class="line">    &#125;</span><br></pre></td></tr></table></figure>
+            <div class="clearfix"></div>
+            <hr class="nogutter">
+        </div>
+        <nav class="m-pagination col-md-8 col-md-offset-2 col-sm-24" role="pagination">
+    
+    <a class="pull-left" href="/2020/04/10/使用react脚手架下的webpack配置局部css样式/" style="float: left;">
+        ← 使用react脚手架下的webpack配置局部css样式
+    </a>
+    
+    
+    <a class="pull-right" href="/2019/12/18/工作中的解题思想（七）/">
+        工作中的解题思想（七） →
+    </a>
+    
+</nav>
+
+        <div class="col-md-8 col-md-offset-2 col-sm-24"><script type="text/javascript">
+  /**
+   * 搜狐畅言
+   */
+
+  /*
+  document.write('<div id="SOHUCS" sid="' + window.location.pathname.slice(1) + '" ></div>');
+
+  window.onload = function () {
+    (function () {
+      var appid = 'cytXXXX';
+      var conf = 'prod_xxxxxxxxxxxxxxxxx';
+      var width = window.innerWidth || document.documentElement.clientWidth;
+      var loadJs = function (d, a, id) {
+        var c = document.getElementsByTagName("head")[0] || document.head || document.documentElement;
+        var b = document.createElement("script");
+        b.setAttribute("type", "text/javascript");
+        b.setAttribute("charset", "UTF-8");
+        b.setAttribute("src", d);
+        if (id) {
+          b.setAttribute("id", id);
+        }
+        if (typeof a === "function") {
+          if (window.attachEvent) {
+            b.onreadystatechange = function () {
+              var e = b.readyState;
+              if (e === "loaded" || e === "complete") {
+                b.onreadystatechange = null;
+                a()
+              }
+            }
+          } else {
+            b.onload = a
+          }
+        }
+        c.appendChild(b)
+      };
+
+      loadJs("https://changyan.sohu.com/upload/changyan.js", function () {
+        window.changyan.api.config({
+          appid: appid,
+          conf: conf
+        })
+      });
+    })();
+  }
+  */
+
+</script>
+</div>
+    </div>
+</section>
+
+
+      
+<!-- ============================ Footer =========================== -->
+
+<footer>
+    <div class="container">
+            <div class="copy">
+                <p>
+                    &copy; 2014<script>new Date().getFullYear()>2010&&document.write("-"+new Date().getFullYear());</script>, Content By daipi173. All Rights Reserved.
+                </p>
+                <p>Theme By <a href="//go.kieran.top" style="color: #767D84">Kieran</a></p>
+            </div>
+            <div class="social">
+                <ul>
+                    
+                    <li><a href="https://github.com/" title="Github" target="_blank"><i class="icon-github"></i></a>&nbsp;</li>
+                    
+                    
+                    <li><a href="https://twitter.com/" title="Twitter" target="_blank"><i class="icon-twitter"></i></a>&nbsp;</li>
+                    
+                    
+                    <li><a href="https://www.facebook.com/" title="Facebook" target="_blank"><i class="icon-facebook"></i></a>&nbsp;</li>
+                    
+                    
+                    <li><a href="https://google.com/" title="Google-Plus" target="_blank"><i class="icon-google-plus"></i></a>&nbsp;</li>
+                    
+                    
+                    <li><a href="http://weibo.com/" title="Sina-Weibo" target="_blank"><i class="icon-sina-weibo"></i></a>&nbsp;</li>
+                    
+                </ul>
+            </div>
+            <div class="clearfix"> </div>
+        </div>
+</footer>
+
+<!-- ============================ END Footer =========================== -->
+      <!-- Load our scripts -->
+<!-- Resizable 'on-demand' full-height hero -->
+<script type="text/javascript">
+    var resizeHero = function () {
+        var hero = $(".cover,.heightblock"),
+            window1 = $(window);
+        hero.css({
+            "height": window1.height()
+        });
+    };
+
+    resizeHero();
+
+    $(window).resize(function () {
+        resizeHero();
+    });
+</script>
+<script src="/js/plugins.min.js"></script><!-- Bootstrap core and concatenated plugins always load here -->
+<script src="/js/scripts.js"></script><!-- Theme scripts -->
+
+
+<link rel="stylesheet" href="/fancybox/jquery.fancybox.css" media="screen" type="text/css">
+<script src="/fancybox/jquery.fancybox.pack.js"></script>
+<script type="text/javascript">
+$('#intro').find('img').each(function(){
+  var alt = this.alt;
+
+  if (alt){
+    $(this).after('<span class="caption" style="display:none">' + alt + '</span>');
+  }
+
+  $(this).wrap('<a href="' + this.src + '" title="' + alt + '" class="fancybox" rel="gallery" />');
+});
+(function($){
+  $('.fancybox').fancybox();
+})(jQuery);
+</script>
+
+
+
+      
+<script src="/live2dw/lib/L2Dwidget.min.js?094cbace49a39548bed64abff5988b05"></script><script>L2Dwidget.init({"pluginModelPath":"assets/","model":{"jsonPath":"/live2dw/assets/haruto.model.json"},"display":{"position":"right","width":150,"height":300},"mobile":{"show":true},"log":false,"pluginJsPath":"lib/","pluginRootPath":"live2dw/","tagMode":false});</script></body>
+</html>

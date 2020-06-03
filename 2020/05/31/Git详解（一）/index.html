@@ -1,0 +1,426 @@
+<!DOCTYPE html>
+<!--[if lte IE 8 ]>
+<html class="ie" xmlns="http://www.w3.org/1999/xhtml" xml:lang="en-US" lang="en-US">
+<![endif]-->
+<!--[if (gte IE 9)|!(IE)]><!-->
+<!--
+***************  *      *     *
+      8          *    *       *
+      8          *  *         *
+      8          **           *
+      8          *  *         *
+      8          *    *       *
+      8          *      *     *
+      8          *        *   ***********    -----Theme By Kieran(http://go.kieran.top)
+-->
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="zh-CN" lang="zh-CN">
+<!--<![endif]-->
+
+<head>
+  <title>Git详解（一） | daipi173的个人博客</title>
+  <!-- Meta data -->
+    <meta http-equiv="Content-Type" content="text/html" charset="UTF-8" >
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="generator" content="daipi173的个人博客">
+    <meta name="author" content="daipi173">
+    <meta name="description" content="" />
+    <meta name="keywords" content="" />
+
+    <!-- Favicon, (keep icon in root folder) -->
+    <link rel="Shortcut Icon" href="/img/favicon.ico" type="image/ico">
+
+    <link rel="alternate" href="/atom.xml" title="daipi173的个人博客" type="application/atom+xml">
+    <link rel="stylesheet" href="/css/all.css" media="screen" type="text/css">
+    
+    <link rel="stylesheet" href="/highlightjs/vs.css" type="text/css">
+    
+
+    <!--[if IE 8]>
+    <link rel="stylesheet" type="text/css" href="/css/ie8.css" />
+    <![endif]-->
+
+    <!-- jQuery | Load our jQuery, with an alternative source fallback to a local version if request is unavailable -->
+    <script src="/js/jquery-1.11.1.min.js"></script>
+    <script>window.jQuery || document.write('<script src="js/jquery-1.11.1.min.js"><\/script>')</script>
+
+    <!-- Load these in the <head> for quicker IE8+ load times -->
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+    <script src="/js/html5shiv.min.js"></script>
+    <script src="/js/respond.min.js"></script>
+    <![endif]-->
+
+  
+  
+  
+
+  <style>.col-md-8.col-md-offset-2.opening-statement img{display:none;}</style>
+</head>
+
+<!--
+<body class="post-template">
+-->
+<body id="index" class="lightnav animsition">
+
+      <!-- ============================ Off-canvas navigation =========================== -->
+
+    <div class="sb-slidebar sb-right sb-style-overlay sb-momentum-scrolling">
+        <div class="sb-close" aria-label="Close Menu" aria-hidden="true">
+            <img src="/img/close.png" alt="Close"/>
+        </div>
+        <!-- Lists in Slidebars -->
+        <ul class="sb-menu">
+            <li><a href="/" class="animsition-link" title="Home">Home</a></li>
+            <li><a href="/archives" class="animsition-link" title="archive">archives</a></li>
+            <!-- Dropdown Menu -->
+			 
+            
+        	<li>
+        		<a class="sb-toggle-submenu">Categories<span class="sb-caret"></span></a>
+            	<ul class="sb-submenu">
+				  	
+				    <li><a href="/categories/JavaScript/Array/" class="animsition-link">Array<small>(1)</small></a></li>
+				    
+				    <li><a href="/categories/HTML/CSS/" class="animsition-link">CSS<small>(4)</small></a></li>
+				    
+				    <li><a href="/categories/HTML/Chrome浏览器/" class="animsition-link">Chrome浏览器<small>(1)</small></a></li>
+				    
+				    <li><a href="/categories/JavaScript/ES6/" class="animsition-link">ES6<small>(6)</small></a></li>
+				    
+				    <li><a href="/categories/ES6/" class="animsition-link">ES6<small>(4)</small></a></li>
+				    
+				    <li><a href="/categories/JavaScript/Vue/Eslint/" class="animsition-link">Eslint<small>(1)</small></a></li>
+				    
+				    <li><a href="/categories/总结/Git/" class="animsition-link">Git<small>(1)</small></a></li>
+				    
+				    <li><a href="/categories/Git/" class="animsition-link">Git<small>(4)</small></a></li>
+				    
+				    <li><a href="/categories/HTML/" class="animsition-link">HTML<small>(17)</small></a></li>
+				    
+				    <li><a href="/categories/ES6/JavaScript/" class="animsition-link">JavaScript<small>(4)</small></a></li>
+				    
+				    <li><a href="/categories/JavaScript/" class="animsition-link">JavaScript<small>(41)</small></a></li>
+				    
+				    <li><a href="/categories/Javascript/" class="animsition-link">Javascript<small>(2)</small></a></li>
+				    
+				    <li><a href="/categories/React/" class="animsition-link">React<small>(2)</small></a></li>
+				    
+				    <li><a href="/categories/Git/Vue/" class="animsition-link">Vue<small>(1)</small></a></li>
+				    
+				    <li><a href="/categories/Vue/" class="animsition-link">Vue<small>(2)</small></a></li>
+				    
+				    <li><a href="/categories/JavaScript/Vue/" class="animsition-link">Vue<small>(1)</small></a></li>
+				    
+				    <li><a href="/categories/React/Webpack/" class="animsition-link">Webpack<small>(1)</small></a></li>
+				    
+				    <li><a href="/categories/React/antd/" class="animsition-link">antd<small>(1)</small></a></li>
+				    
+				    <li><a href="/categories/React/antd/css局部样式/" class="animsition-link">css局部样式<small>(1)</small></a></li>
+				    
+				    <li><a href="/categories/Vue/懒加载/总结/element-ui/" class="animsition-link">element ui<small>(1)</small></a></li>
+				    
+				    <li><a href="/categories/vue/" class="animsition-link">vue<small>(1)</small></a></li>
+				    
+				    <li><a href="/categories/webpack/" class="animsition-link">webpack<small>(2)</small></a></li>
+				    
+				    <li><a href="/categories/总结/" class="animsition-link">总结<small>(1)</small></a></li>
+				    
+				    <li><a href="/categories/JavaScript/总结/" class="animsition-link">总结<small>(2)</small></a></li>
+				    
+				    <li><a href="/categories/Vue/懒加载/总结/" class="animsition-link">总结<small>(1)</small></a></li>
+				    
+				    <li><a href="/categories/Git/Vue/总结/" class="animsition-link">总结<small>(1)</small></a></li>
+				    
+				    <li><a href="/categories/Vue/懒加载/" class="animsition-link">懒加载<small>(1)</small></a></li>
+				    
+				    <li><a href="/categories/JavaScript/Array/扁平化/" class="animsition-link">扁平化<small>(1)</small></a></li>
+				    
+				    <li><a href="/categories/JavaScript/整数存储相加/" class="animsition-link">整数存储相加<small>(1)</small></a></li>
+				    
+				    <li><a href="/categories/Javascript/算法/" class="animsition-link">算法<small>(1)</small></a></li>
+				    
+				</ul>
+        	</li>
+			
+            
+            <li>
+                <a class="sb-toggle-submenu">Links<span class="sb-caret"></span></a>
+                <ul class="sb-submenu">
+                    
+                    <li><a href="https://daipi173.github.io/myweb/daipi173-myperson" class="animsition-link">Personal Project</a></li>
+                    
+                </ul>
+            </li>
+            
+        </ul>
+        <!-- Lists in Slidebars -->
+        <ul class="sb-menu secondary">
+            
+            <li><a href="/about.html" class="animsition-link" title="about">About</a></li>
+            <li><a href="/atom.xml" class="animsition-link" title="rss">RSS</a></li>
+        </ul>
+    </div>
+    
+    <!-- ============================ END Off-canvas navigation =========================== -->
+
+    <!-- ============================ #sb-site Main Page Wrapper =========================== -->
+
+    <div id="sb-site">
+        <!-- #sb-site - All page content should be contained within this id, except the off-canvas navigation itself -->
+
+        <!-- ============================ Header & Logo bar =========================== -->
+
+        <div id="navigation" class="navbar navbar-fixed-top">
+            <div class="navbar-inner">
+                <div class="container">
+                    <!-- Nav logo -->
+                    <div class="logo">
+                        <a href="/" title="Logo" class="animsition-link">
+                         <img src="/img/logo.png" alt="Logo" width="35px;"/> 
+                        </a>
+                    </div>
+                    <!-- // Nav logo -->
+                    <!-- Info-bar -->
+                    <nav>
+                        <ul class="nav">
+                            <li><a href="/" class="animsition-link">daipi173的个人博客</a></li>
+                            <li class="nolink"><span>Always </span>Creative.</li>
+                            
+                            <li><a href="https://github.com/" title="Github" target="_blank"><i class="icon-github"></i></a></li>
+                            
+                            
+                            <li><a href="https://twitter.com/" title="Twitter" target="_blank"><i class="icon-twitter"></i></a></li>
+                            
+                            
+                            <li><a href="https://www.facebook.com/" title="Facebook" target="_blank"><i class="icon-facebook"></i></a></li>
+                            
+                            
+                            <li><a href="https://google.com/" title="Google-Plus" target="_blank"><i class="icon-google-plus"></i></a></li>
+                            
+                            
+                            <li><a href="http://weibo.com/" title="Sina-Weibo" target="_blank"><i class="icon-sina-weibo"></i></a></li>
+                            
+                            <li class="nolink"><span>Welcome!</span></li>
+                        </ul>
+                    </nav>
+                    <!--// Info-bar -->
+                </div>
+                <!-- // .container -->
+                <div class="learnmore sb-toggle-right">More</div>
+                <button type="button" class="navbar-toggle menu-icon sb-toggle-right" title="More">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar before"></span>
+                <span class="icon-bar main"></span>
+                <span class="icon-bar after"></span>
+                </button>
+            </div>
+            <!-- // .navbar-inner -->
+        </div>
+
+        <!-- ============================ Header & Logo bar =========================== -->
+
+
+      
+<section id="intro">
+    <div class="container">
+        <div class="row col-md-offset-2">
+            <div class="col-md-8">
+    			<span class="post-meta">
+      <time datetime="2020-05-31T04:42:00.000Z" itemprop="datePublished">
+          2020-05-31
+      </time>
+    
+    
+    | 
+    <a href='/tags/Git/'>Git</a>
+    
+    
+</span>
+                <h1>Git详解（一）</h1>
+            </div>
+        </div>
+        <div class="col-md-8 col-md-offset-2">
+      		<p>在工作中，我们离不开git的使用，接下来我会带领大家去真正的认识和使用git。</p>
+<h1 id="1-什么是git"><a href="#1-什么是git" class="headerlink" title="1. 什么是git"></a>1. 什么是git</h1><p>git是一个<strong>开源的分布式版本控制系统</strong>，并且它可以有效、高速的处理从很小到非常大的项目版本管理。(参考百度百科)<br>上面说到了分布式版本系统，那么延展出来的还有集中式版本系统，通常它的代表是cvs、svn。关于什么是集中式、什么是分布式，我在廖雪峰的官方网站上找了一篇通俗易懂的文章，下面放一个参考链接：<a href="https://www.liaoxuefeng.com/wiki/896043488029600/896202780297248" title="集中式vs分布式" target="_blank" rel="noopener">集中式vs分布式</a><br>其实说了这么多，简单点：在工作开发时，git其实就是作为<strong>版本控制工具</strong>来完成团队之间的协作。</p>
+<h1 id="2-git的整体操作流程"><a href="#2-git的整体操作流程" class="headerlink" title="2. git的整体操作流程"></a>2. git的整体操作流程</h1><p>关于git整体操作流程，里面主要涉及了四个关键部分：</p>
+<ol>
+<li>workspace工作区：就是我们本地电脑写代码、存放项目文件的地方；</li>
+<li>index/stage暂存区：需要注意的是当我们在使用git管理项目文件时，在我们本地项目文件中会多出一个隐藏.git文件夹，我们称这个隐藏的文件夹为版本库，通常是通过add提交指令来进行暂存的；</li>
+<li>repository本地仓库：通常使用commit提交命令将暂存区中的文件添加到本地仓库中；</li>
+<li>remote远程仓库：从字面意思来理解就是存放在远程git仓库上的，比如我们可以放在gitHub、gitLab等上面。</li>
+</ol>
+<p><strong>注意：</strong>上面提到隐藏.git文件夹，它里面包含了两部分：第一部分是一个暂存区；第二部分是git自动创建的master分支，并且它会将HEAD指针指向master分支。</p>
+<p>关于上面说的四个关键部分，接下来看一张来自于网络上的图片对于这几点的整合：<br><a href="https://user-gold-cdn.xitu.io/2018/4/25/162fcc0987bf1c0a?imageView2/0/w/1280/h/960/format/webp/ignore-error/1" title="git整体流程操作" target="_blank" rel="noopener"><img src="https://user-gold-cdn.xitu.io/2018/4/25/162fcc0987bf1c0a?imageView2/0/w/1280/h/960/format/webp/ignore-error/1" alt="git整体流程操作" title="git整体流程操作"></a><br>接下来再来看一个网络上更详细的流程图，这里是介绍了关于工作区到我们本地仓库的详细过程：<br><a href="https://user-gold-cdn.xitu.io/2018/4/25/162fcc0e7e711dc7?imageView2/0/w/1280/h/960/format/webp/ignore-error/1" title="git更详细流程图" target="_blank" rel="noopener"><img src="https://user-gold-cdn.xitu.io/2018/4/25/162fcc0e7e711dc7?imageView2/0/w/1280/h/960/format/webp/ignore-error/1" alt="git更详细流程图" title="git更详细流程图"></a><br>可能看到这里你还是有点懵圈，但关于git的一些指令也没有太详细的了解过，没关系，接下来我会来解释以及演示git相关的工作中常用到的指令，当你看完之后再回过头来看看这幅图就会有了一个很好的理解。</p>
+<h1 id="3-工作中会用到的git指令"><a href="#3-工作中会用到的git指令" class="headerlink" title="3. 工作中会用到的git指令"></a>3. 工作中会用到的git指令</h1><p><strong>注意：在进入该演示过程时，我是默认你已经安装了git的，如果没有安装的话去git官网安装即可，在下面演示的过程中要的仓库是gitHub仓库。</strong><br>接下来我会演示在工作中会用到的git指令，在这里出现的git指令有常用的、也有不常用的，对于不常用的我们也要有所了解，当哪天真的需要用的时候至少不会出现不知道这个指令的用法。<br>下面这些指令是工作中常见的指令，我会先列出来带大家熟悉相关的一些指令，然后在下一个章节中将不容易理解或者易出错的指令进行一个演示。</p>
+<ol>
+<li><p>git的配置指令<br>（1）列出当前配置：git config –list<br>（2）第一次使用git时，我们需要配置一下用户的信息：<br>配置你的用户名：git config –global user.name “daipi173”<br>配置你的用户邮箱：git config –global user.emali “<a href="mailto:939628886@qq.com" target="_blank" rel="noopener">939628886@qq.com</a>“</p>
+</li>
+<li><p>新仓库的创建（工作区上的指令）<br>（1）在本地工作区中创建一个新的本地仓库：git init；<br>（2）从远程git仓库复制项目：git clone [url]<br>在这里url表示你远程仓库的地址，通常建议使用ssh来进行克隆，因为如果你使用https来进行克隆的话，那么当你push的时是需要验证用户名和密码的，而使用ssh是不要的，但是如果你要使用ssh的话是需要添加ssh key，否则是无法进行克隆的。关于如何添加ssh key，我在这里贴出一个gitHub官网的添加过程，里面有mac、windows以及linux的相关配置，链接如下：<a href="https://help.github.com/cn/github/authenticating-to-github/adding-a-new-ssh-key-to-your-github-account" title="新增 SSH 密钥到 GitHub 帐户" target="_blank" rel="noopener">新增 SSH 密钥到 GitHub 帐户</a></p>
+</li>
+<li><p>提交（工作区上的指令）<br>（1）提交工作区中指定文件到暂存区：git add [file1] [file2]…；<br>（2）提交工作区中某个文件夹中所有文件到暂存区：git add [directory]；<br>（3）提交工作区中所有文件到暂存区（通常使用该指令最多）：git add .</p>
+</li>
+<li><p>查询新信息（工作区上的指令）<br>（1）查询当前工作区所有文件的状态：git status；<br>（2）比较工作区中当前文件和暂存区之间的差异，也就是修改之后还没有暂存的内容：git diff；<br>（3）比较工作区中指定文件和暂存区上差异：git diff</p>
+</li>
+<li><p>提交文件到版本库（暂存区上的指令）<br>（1）将暂存区中的文件提交到本地仓库中，也就是有了一个新的版本：git commit -m “写上你提交版本的信息”；<br>（2）将所有已经使用git管理过的文件暂存后一并提交，也就是跳过add到暂存区的过程：git commit -a -m “写上你提交版本的信息”；<br>（3）提交文件时，发现注释写错了或者文件有问题，是可以撤销上一次的提交的：git commit –amend</p>
+</li>
+<li><p>查看信息（暂存区上的指令）<br>（1）查看这个项目commit提交历史，如果超出一屏则可以使用空格键来展示下一屏，或者按q退出：git log；<br>（2）压缩每一个commit提交到一行：git log –oneline；<br>（3）查看提交历史时，如果它后面添加参数-p表示提供的信息更加详细，并且它会将修改的内容也给展示出来了，用-n表示限制只展示最近n条commit历史，比如-3表示只显示最近的3次commit历史：git log -p -3；<br>（4）比较暂存区与上一个版本的差别：git diff –cached</p>
+</li>
+<li><p>本地仓库上的指令<br>（1）查看本地仓库关联的远程仓库（在clone完每个远程仓库之后，远程仓库默认的名字叫origin）：git remote；<br>（2）查看本地仓库关联的远程仓库，并且当加上-v的e参数后，会显示远程仓库的url地址：git remote -v；<br>（3）添加远程仓库：git remote add [remote-name] [url]，比如：git remote add first git://github.com/…；<br>（4）从远程仓库中拉取本地仓库中没有的更新：git fetch [remote-name]，比如：git fetch origin；（git fetch和git pull的区别：git fetch只是将远程的数据拉取到本地仓库，但是它并不会自动合并到当前工作分支中，只能人工进行合并；git pull不仅将远程的数据拉取到本地仓库，它还会将远程分支自动合并到本地仓库中的当前分支）；<br>（5）将本地仓库中某一个分支推送到远程仓库中：git push [remote-name] [branch-name]，比如：git push origin master；<br>（6）如果想将本地分支推送到远程仓库的不同名分支：git push [remote-name] [local-branch]:[remote-branch]；<br>（7）如果想删除远程分支：git push [remote-name] :[remote-branch]，你可以理解为：在这里省略了本地分支，相当于将空内容推送给远程分支，就等价于删除掉了远程分支；<br>（8）查看远程仓库详细信息：git remote show [remote-name]，比如：git remote show origin；<br>（9）修改某个远程仓库在本地的名字：git remote rename [old-name] [new-name]，比如：git remote rename origin new-origin；<br>（10）移除远程仓库：git remote rm [remote-name]</p>
+</li>
+<li><p>撤销（工作区上的指令）<br>（1）删除工作区文件，并且也从暂存区删除对应文件的记录：git rm  ；<br>（2）从暂存区中删除文件，但是工作区依然还有该文件：git rm –cached ；<br>（3）隐藏当前变更，以便能够切换分支：git stash；<br>（4）查看当前所有的储藏：git stash list</p>
+</li>
+<li><p>分支管理（暂存区上的指令）<br>（1）创建分支：git branch ，比如：git branch new-branch；<br>（2）从当前所处的分支切换到其他分支：git checkout ，比如：git checkout other-branch；<br>（3）新建并切换到新建的分支上（等价于上面1和2的一个结合）：git checkout -b ；<br>（4）删除分支：git branch -d ；<br>（5）显示本地仓库中的所有分支：git branch；<br>（6）查看哪些分支已经合并到当前分支：git branch –merged；<br>（7）查看每一个分支的最后一次提交：git branch -v；<br>（8）将远程分支合并到当前分支：git merge [remote-name]/[branch-name]</p>
+</li>
+</ol>
+<h1 id="4-git中本地和远程分支的使用"><a href="#4-git中本地和远程分支的使用" class="headerlink" title="4. git中本地和远程分支的使用"></a>4. git中本地和远程分支的使用</h1><p>（1）说一下git pull的完整格式：git pull [远程仓库名] [远程分支名]:[本地分支名]<br>举一个例子：git pull origin dev:dev表示拉取远程仓库origin中dev分支，与本地的dev分支进行merge合并；<br>如果你要是与本地的当前分支merge合并，那么冒号以及冒号后面的本地分支名可以不用写，比如：git pull origin dev；<br><strong>注意：git会将本地库分支与远程分支之间建立一种追踪关系。</strong>举一个例子：在git clone的时候，所有本地分支默认与远程仓库的<strong>同名分支</strong>建立追踪关系。即本地master分支会自动追踪origin/master分支。<br>那么如果当前处于本地dev分支上，并且本地dev分支与远程的dev分支有追踪关系，那么远程的分支名可以省略，对于上面的写法可以简写为：git pull origin；<br>（2）在使用git时，比如需要将master、origin master和origin/master进行一个区分，对于它们三个的理解如下所示：<br>a. master是一件事情，代表本地的某个分支名；<br>b. origin master是两件事情，origin代表远程名，master代表远程分支名；<br>c. origin/master是一件事情，它是远程分支名，表示从远程拉取代码之后在本地建立的一份拷贝（也称为本地分支）；<br>接下来举一个实际一点的例子：<br>a. git fetch origin master表示从名为origin的远程上拉取名为master的分支到本地分支origin/master中（因为是拉取代码，所以需要同时指定远程名与分支名，当然就要分开写）；<br>b. git merge origin/master表示合并名为origin/master的分支到当前所在分支（因为是分支的合并，所以与远程名没有直接的关系，没有出现远程名，但是需要指定被合并的分支）；<br>c. git push origin master表示推送本地的master分支到远程origin上（因为是推送代码，所以涉及到远程名与分支名，当然就要分开写）。</p>
+<h1 id="5-git之多人协作开发使用步骤"><a href="#5-git之多人协作开发使用步骤" class="headerlink" title="5. git之多人协作开发使用步骤"></a>5. git之多人协作开发使用步骤</h1><p>工作中遇到多人协作开发是不可避免的，这个时候常常会遇到的问题就是冲突合并的问题，那么接下来我就给大家讲讲解决冲突的步骤：<br>首先需要声明的是，本地和远程仓库的版本不同，我在远程仓库中修改了两个版本，即本地仓库落后远程仓库两个版本，将index.html和second01.html两个文件都添加了一部分的内容，这个时候开发人员的本地需要拉取线上的代码并进行冲突合并。<br>（1）这个时候假设你把index.html和second01.html中的部分功能已经完成，然后你需要先进行一个git add .和git commit -m “…”的操作；<br>（2）然后再拉取线上的内容：git pull –rebase，这个时候会看到冲突的部分，然后你就根据需求和你的合作伙伴先把冲突问题解决，然后执行git add .接着再执行git rebase –continue直到我们将冲突解决完成（如何查看自己冲突是否解决完？可以利用vscode工具下面的源代码管理，它的快捷键是ctrl+shift+G）;<br>（3）当你最后一次执行git rebase –continue时，它会跳入到vim界面，你只需要保存并退出即可；<br>（4）提交到远程仓库即可：git push origin。<br>参考链接：<a href="https://juejin.im/post/5ae072906fb9a07a9e4ce596" title="git基本操作，一篇文章就够了！" target="_blank" rel="noopener">git基本操作，一篇文章就够了！</a></p>
+
+            <div class="clearfix"></div>
+            <hr class="nogutter">
+        </div>
+        <nav class="m-pagination col-md-8 col-md-offset-2 col-sm-24" role="pagination">
+    
+    <a class="pull-left" href="/2020/06/03/Git详解（二）/" style="float: left;">
+        ← Git详解（二）
+    </a>
+    
+    
+    <a class="pull-right" href="/2020/05/10/react中使用css-modules导致antd样式失效/">
+        react中使用css modules导致antd样式失效 →
+    </a>
+    
+</nav>
+
+        <div class="col-md-8 col-md-offset-2 col-sm-24"><script type="text/javascript">
+  /**
+   * 搜狐畅言
+   */
+
+  /*
+  document.write('<div id="SOHUCS" sid="' + window.location.pathname.slice(1) + '" ></div>');
+
+  window.onload = function () {
+    (function () {
+      var appid = 'cytXXXX';
+      var conf = 'prod_xxxxxxxxxxxxxxxxx';
+      var width = window.innerWidth || document.documentElement.clientWidth;
+      var loadJs = function (d, a, id) {
+        var c = document.getElementsByTagName("head")[0] || document.head || document.documentElement;
+        var b = document.createElement("script");
+        b.setAttribute("type", "text/javascript");
+        b.setAttribute("charset", "UTF-8");
+        b.setAttribute("src", d);
+        if (id) {
+          b.setAttribute("id", id);
+        }
+        if (typeof a === "function") {
+          if (window.attachEvent) {
+            b.onreadystatechange = function () {
+              var e = b.readyState;
+              if (e === "loaded" || e === "complete") {
+                b.onreadystatechange = null;
+                a()
+              }
+            }
+          } else {
+            b.onload = a
+          }
+        }
+        c.appendChild(b)
+      };
+
+      loadJs("https://changyan.sohu.com/upload/changyan.js", function () {
+        window.changyan.api.config({
+          appid: appid,
+          conf: conf
+        })
+      });
+    })();
+  }
+  */
+
+</script>
+</div>
+    </div>
+</section>
+
+
+      
+<!-- ============================ Footer =========================== -->
+
+<footer>
+    <div class="container">
+            <div class="copy">
+                <p>
+                    &copy; 2014<script>new Date().getFullYear()>2010&&document.write("-"+new Date().getFullYear());</script>, Content By daipi173. All Rights Reserved.
+                </p>
+                <p>Theme By <a href="//go.kieran.top" style="color: #767D84">Kieran</a></p>
+            </div>
+            <div class="social">
+                <ul>
+                    
+                    <li><a href="https://github.com/" title="Github" target="_blank"><i class="icon-github"></i></a>&nbsp;</li>
+                    
+                    
+                    <li><a href="https://twitter.com/" title="Twitter" target="_blank"><i class="icon-twitter"></i></a>&nbsp;</li>
+                    
+                    
+                    <li><a href="https://www.facebook.com/" title="Facebook" target="_blank"><i class="icon-facebook"></i></a>&nbsp;</li>
+                    
+                    
+                    <li><a href="https://google.com/" title="Google-Plus" target="_blank"><i class="icon-google-plus"></i></a>&nbsp;</li>
+                    
+                    
+                    <li><a href="http://weibo.com/" title="Sina-Weibo" target="_blank"><i class="icon-sina-weibo"></i></a>&nbsp;</li>
+                    
+                </ul>
+            </div>
+            <div class="clearfix"> </div>
+        </div>
+</footer>
+
+<!-- ============================ END Footer =========================== -->
+      <!-- Load our scripts -->
+<!-- Resizable 'on-demand' full-height hero -->
+<script type="text/javascript">
+    var resizeHero = function () {
+        var hero = $(".cover,.heightblock"),
+            window1 = $(window);
+        hero.css({
+            "height": window1.height()
+        });
+    };
+
+    resizeHero();
+
+    $(window).resize(function () {
+        resizeHero();
+    });
+</script>
+<script src="/js/plugins.min.js"></script><!-- Bootstrap core and concatenated plugins always load here -->
+<script src="/js/scripts.js"></script><!-- Theme scripts -->
+
+
+<link rel="stylesheet" href="/fancybox/jquery.fancybox.css" media="screen" type="text/css">
+<script src="/fancybox/jquery.fancybox.pack.js"></script>
+<script type="text/javascript">
+$('#intro').find('img').each(function(){
+  var alt = this.alt;
+
+  if (alt){
+    $(this).after('<span class="caption" style="display:none">' + alt + '</span>');
+  }
+
+  $(this).wrap('<a href="' + this.src + '" title="' + alt + '" class="fancybox" rel="gallery" />');
+});
+(function($){
+  $('.fancybox').fancybox();
+})(jQuery);
+</script>
+
+
+
+      
+<script src="/live2dw/lib/L2Dwidget.min.js?094cbace49a39548bed64abff5988b05"></script><script>L2Dwidget.init({"pluginModelPath":"assets/","model":{"jsonPath":"/live2dw/assets/haruto.model.json"},"display":{"position":"right","width":150,"height":300},"mobile":{"show":true},"log":false,"pluginJsPath":"lib/","pluginRootPath":"live2dw/","tagMode":false});</script></body>
+</html>

@@ -86,15 +86,15 @@
 				    
 				    <li><a href="/categories/HTML/Chrome浏览器/" class="animsition-link">Chrome浏览器<small>(1)</small></a></li>
 				    
-				    <li><a href="/categories/ES6/" class="animsition-link">ES6<small>(4)</small></a></li>
-				    
 				    <li><a href="/categories/JavaScript/ES6/" class="animsition-link">ES6<small>(6)</small></a></li>
+				    
+				    <li><a href="/categories/ES6/" class="animsition-link">ES6<small>(4)</small></a></li>
 				    
 				    <li><a href="/categories/JavaScript/Vue/Eslint/" class="animsition-link">Eslint<small>(1)</small></a></li>
 				    
 				    <li><a href="/categories/总结/Git/" class="animsition-link">Git<small>(1)</small></a></li>
 				    
-				    <li><a href="/categories/Git/" class="animsition-link">Git<small>(2)</small></a></li>
+				    <li><a href="/categories/Git/" class="animsition-link">Git<small>(4)</small></a></li>
 				    
 				    <li><a href="/categories/HTML/" class="animsition-link">HTML<small>(17)</small></a></li>
 				    
@@ -102,11 +102,21 @@
 				    
 				    <li><a href="/categories/JavaScript/" class="animsition-link">JavaScript<small>(41)</small></a></li>
 				    
+				    <li><a href="/categories/Javascript/" class="animsition-link">Javascript<small>(2)</small></a></li>
+				    
+				    <li><a href="/categories/React/" class="animsition-link">React<small>(2)</small></a></li>
+				    
+				    <li><a href="/categories/Git/Vue/" class="animsition-link">Vue<small>(1)</small></a></li>
+				    
 				    <li><a href="/categories/Vue/" class="animsition-link">Vue<small>(2)</small></a></li>
 				    
 				    <li><a href="/categories/JavaScript/Vue/" class="animsition-link">Vue<small>(1)</small></a></li>
 				    
-				    <li><a href="/categories/Git/Vue/" class="animsition-link">Vue<small>(1)</small></a></li>
+				    <li><a href="/categories/React/Webpack/" class="animsition-link">Webpack<small>(1)</small></a></li>
+				    
+				    <li><a href="/categories/React/antd/" class="animsition-link">antd<small>(1)</small></a></li>
+				    
+				    <li><a href="/categories/React/antd/css局部样式/" class="animsition-link">css局部样式<small>(1)</small></a></li>
 				    
 				    <li><a href="/categories/Vue/懒加载/总结/element-ui/" class="animsition-link">element ui<small>(1)</small></a></li>
 				    
@@ -127,6 +137,8 @@
 				    <li><a href="/categories/JavaScript/Array/扁平化/" class="animsition-link">扁平化<small>(1)</small></a></li>
 				    
 				    <li><a href="/categories/JavaScript/整数存储相加/" class="animsition-link">整数存储相加<small>(1)</small></a></li>
+				    
+				    <li><a href="/categories/Javascript/算法/" class="animsition-link">算法<small>(1)</small></a></li>
 				    
 				</ul>
         	</li>
@@ -243,6 +255,269 @@
 
 <section id="intro">
     <div class="container">
+        
+        <div class="row">
+            <div class="col-md-8 col-md-offset-2 opening-statement">
+                <div class="col-md-4">
+                    <h3><a href="/2019/11/24/工作中的解题思想（四）/">工作中的解题思想（四）</a></h3>
+                    <span>
+                        <span class="post-meta">
+      <time datetime="2019-11-24T08:54:00.000Z" itemprop="datePublished">
+          2019-11-24
+      </time>
+    
+    
+    | 
+    <a href='/tags/Git/'>Git</a>,
+    
+    <a href='/tags/总结/'>总结</a>
+    
+    
+</span>
+                    </span>
+                </div>
+                <div class="col-md-8">
+                    <p>
+                      
+                        
+提交commit的规范
+
+
+type: commit 的类型
+feat: 新特性
+fix: 修改问题
+refactor: 代码重构
+docs: 文档修改
+style: 代码格式修改, 注意不是 css 修改
+test: 测试用例修改
+chore: 其他修改, 比如构建流程, 依赖管理.
+scope: commit 影响的范围, 比如: route, component, utils, build...
+subject: commit 
+                      
+                    </p>
+                    
+                    <p class="pull-right readMore">
+                        <a href="/2019/11/24/工作中的解题思想（四）/">Read More...</a>
+                    </p>
+                    
+                </div>
+                <div class="clearfix"></div>
+                <hr class="nogutter">
+            </div>
+        </div>
+        
+        <div class="row">
+            <div class="col-md-8 col-md-offset-2 opening-statement">
+                <div class="col-md-4">
+                    <h3><a href="/2019/11/21/工作中的解题思想（三）/">工作中的解题思想（三）</a></h3>
+                    <span>
+                        <span class="post-meta">
+      <time datetime="2019-11-21T08:48:00.000Z" itemprop="datePublished">
+          2019-11-21
+      </time>
+    
+    
+    | 
+    <a href='/tags/JavaScript/'>JavaScript</a>,
+    
+    <a href='/tags/总结/'>总结</a>
+    
+    
+</span>
+                    </span>
+                </div>
+                <div class="col-md-8">
+                    <p>
+                      
+                        
+关于原型链以及instanceof的使用
+
+参考链接：https://juejin.im/post/5c19c1b6e51d451d1e06c163
+构造函数的返回值
+
+
+// 例子1
+function Person(name) {
+    this.name = name
+    return name;
+}
+let p = new Person('Tom');
+// 问：p或者Person返回什么？
+// 答：{name: 'To
+                      
+                    </p>
+                    
+                    <p class="pull-right readMore">
+                        <a href="/2019/11/21/工作中的解题思想（三）/">Read More...</a>
+                    </p>
+                    
+                </div>
+                <div class="clearfix"></div>
+                <hr class="nogutter">
+            </div>
+        </div>
+        
+        <div class="row">
+            <div class="col-md-8 col-md-offset-2 opening-statement">
+                <div class="col-md-4">
+                    <h3><a href="/2019/10/28/工作中的解题思想（二）/">工作中的解题思想（二）</a></h3>
+                    <span>
+                        <span class="post-meta">
+      <time datetime="2019-10-28T10:01:00.000Z" itemprop="datePublished">
+          2019-10-28
+      </time>
+    
+    
+    | 
+    <a href='/tags/Vue/'>Vue</a>,
+    
+    <a href='/tags/总结/'>总结</a>
+    
+    
+</span>
+                    </span>
+                </div>
+                <div class="col-md-8">
+                    <p>
+                      
+                        
+vue中：scss、scoped、deep配合使用例子：12345&lt;style lang="scss" scoped&gt;/deep/ .el-input,.el-select &#123;  width: 100%;&#125;&lt;/style&gt;
+
+
+
+scoped：a. 当  标签有 scoped 属性时，它的 CSS 只作用于当前组件中的元素；b. 使用 scoped 后，父组件的样式将不会渗透到子组件中；c.
+                      
+                    </p>
+                    
+                    <p class="pull-right readMore">
+                        <a href="/2019/10/28/工作中的解题思想（二）/">Read More...</a>
+                    </p>
+                    
+                </div>
+                <div class="clearfix"></div>
+                <hr class="nogutter">
+            </div>
+        </div>
+        
+        <div class="row">
+            <div class="col-md-8 col-md-offset-2 opening-statement">
+                <div class="col-md-4">
+                    <h3><a href="/2019/10/22/工作中的解题思想（一）/">工作中的解题思想（一）</a></h3>
+                    <span>
+                        <span class="post-meta">
+      <time datetime="2019-10-22T01:07:00.000Z" itemprop="datePublished">
+          2019-10-22
+      </time>
+    
+    
+    | 
+    <a href='/tags/Vue/'>Vue</a>,
+    
+    <a href='/tags/Git/'>Git</a>,
+    
+    <a href='/tags/总结/'>总结</a>
+    
+    
+</span>
+                    </span>
+                </div>
+                <div class="col-md-8">
+                    <p>
+                      
+                        
+像vue处理大量的表单数据时（涉及到深度克隆），处理的思想可以将深度克隆转变成浅度克隆，也就是在哪里用到的时候，再用浅克隆将它取出来使用；
+
+当有几十万条的数据时，如何高效的将他们筛选出来？最主要的思路就是筛选，当我们将条件分的很细的时候，筛选出来的数据可能会很少，就像百度搜索页面一样，看着有上百条或者上千条的搜索记录，实际上通过筛选出来符合条件的就很有限，这样我们就达到了高效率的筛选；然后筛选出来的数据会存在数据库中，接着数据库利用
+                      
+                    </p>
+                    
+                    <p class="pull-right readMore">
+                        <a href="/2019/10/22/工作中的解题思想（一）/">Read More...</a>
+                    </p>
+                    
+                </div>
+                <div class="clearfix"></div>
+                <hr class="nogutter">
+            </div>
+        </div>
+        
+        <div class="row">
+            <div class="col-md-8 col-md-offset-2 opening-statement">
+                <div class="col-md-4">
+                    <h3><a href="/2019/10/16/实现超出整数存储范围的两个大整数相加/">实现超出整数存储范围的两个大整数相加</a></h3>
+                    <span>
+                        <span class="post-meta">
+      <time datetime="2019-10-16T07:07:00.000Z" itemprop="datePublished">
+          2019-10-16
+      </time>
+    
+    
+    | 
+    <a href='/tags/JavaScript/'>JavaScript</a>
+    
+    
+</span>
+                    </span>
+                </div>
+                <div class="col-md-8">
+                    <p>
+                      
+                        试题：实现超出整数存储范围的两个大整数相加
+
+实现超出整数存储范围的两个大整数相加function add(a,b)。注意a和b以及函数的返回值都是字符串。比如我实现一个’123456789123456789’和’111111’相加的返回值为’123456789123567900’实现思路，我给大家画了一幅图：
+接下来实现的代码：
+ function add(a, b) {
+      let lenA = a.length,
+    
+                      
+                    </p>
+                    
+                    <p class="pull-right readMore">
+                        <a href="/2019/10/16/实现超出整数存储范围的两个大整数相加/">Read More...</a>
+                    </p>
+                    
+                </div>
+                <div class="clearfix"></div>
+                <hr class="nogutter">
+            </div>
+        </div>
+        
+        <div class="row">
+            <div class="col-md-8 col-md-offset-2 opening-statement">
+                <div class="col-md-4">
+                    <h3><a href="/2019/10/10/如何实现Chrome浏览器右上角的翻译页面/">如何实现Chrome浏览器右上角的翻译页面</a></h3>
+                    <span>
+                        <span class="post-meta">
+      <time datetime="2019-10-10T14:21:00.000Z" itemprop="datePublished">
+          2019-10-10
+      </time>
+    
+    
+    | 
+    <a href='/tags/HTML/'>HTML</a>
+    
+    
+</span>
+                    </span>
+                </div>
+                <div class="col-md-8">
+                    <p>
+                      
+                        想必用过Chrome浏览器的同学，应该会很熟悉下面这幅图里面的内容：
+其实要实现它并不难，只需要在html标签中的lang属性里面加上en的值即可。上面图中的代码如下所示：
+12345678910&lt;!DOCTYPE html&gt;&lt;html lang="en"&gt;&lt;head&gt;    &lt;meta charset="UTF-8"&gt;    &lt;title&gt;Document&lt;/title
+                      
+                    </p>
+                    
+                    <p class="pull-right readMore">
+                        <a href="/2019/10/10/如何实现Chrome浏览器右上角的翻译页面/">Read More...</a>
+                    </p>
+                    
+                </div>
+                <div class="clearfix"></div>
+                <hr class="nogutter">
+            </div>
+        </div>
         
         <div class="row">
             <div class="col-md-8 col-md-offset-2 opening-statement">
@@ -392,255 +667,6 @@ js的时间线；首先大家需要先了解js的时间线，在看完js的时�
                     
                     <p class="pull-right readMore">
                         <a href="/2019/09/14/如何实现让三个灯不断交替重复亮灯/">Read More...</a>
-                    </p>
-                    
-                </div>
-                <div class="clearfix"></div>
-                <hr class="nogutter">
-            </div>
-        </div>
-        
-        <div class="row">
-            <div class="col-md-8 col-md-offset-2 opening-statement">
-                <div class="col-md-4">
-                    <h3><a href="/2019/09/11/ES6总结（六）/">ES6总结（六）</a></h3>
-                    <span>
-                        <span class="post-meta">
-      <time datetime="2019-09-11T08:32:00.000Z" itemprop="datePublished">
-          2019-09-11
-      </time>
-    
-    
-    | 
-    <a href='/tags/ES6/'>ES6</a>,
-    
-    <a href='/tags/JavaScript/'>JavaScript</a>,
-    
-    <a href='/tags/异步/'>异步</a>
-    
-    
-</span>
-                    </span>
-                </div>
-                <div class="col-md-8">
-                    <p>
-                      
-                        1. 异步为什么需要异步？因为js是单线程的，js在一段时间之内只能做一件事。什么是异步？在说异步之前，先说一下什么是同步。同步：一定要等任务执行完了，得到结果，才执行下一个任务。异步：不等任务执行完，直接执行下一个任务。
-2. Promise
-去网上可以搜索PromiseA+规范；
-
-Promise是内置的构造函数，用来管理回调Promise函数的（想象成回调函数的状态机）；
-
-使用new Promise()来创建一个Promise对
-                      
-                    </p>
-                    
-                    <p class="pull-right readMore">
-                        <a href="/2019/09/11/ES6总结（六）/">Read More...</a>
-                    </p>
-                    
-                </div>
-                <div class="clearfix"></div>
-                <hr class="nogutter">
-            </div>
-        </div>
-        
-        <div class="row">
-            <div class="col-md-8 col-md-offset-2 opening-statement">
-                <div class="col-md-4">
-                    <h3><a href="/2019/09/08/ES6总结（五）/">ES6总结（五）</a></h3>
-                    <span>
-                        <span class="post-meta">
-      <time datetime="2019-09-08T08:21:00.000Z" itemprop="datePublished">
-          2019-09-08
-      </time>
-    
-    
-    | 
-    <a href='/tags/ES6/'>ES6</a>,
-    
-    <a href='/tags/JavaScript/'>JavaScript</a>
-    
-    
-</span>
-                    </span>
-                </div>
-                <div class="col-md-8">
-                    <p>
-                      
-                        1. 集合
-创建数组a. Array.of()方法创建一个具有可变数量参数的新数组实例，而不考虑参数的数量或类型；如：12345Array.of(7); // [7]Array.of(1,2,3); // [1,2,3]// Array.of和Array的区别Array(7); // [,,,,,,]Array(1,2,3); // [1,2,3]
-
-
-
-b. Array.from()可以把set数据结构或者类数组转化为一个数组。如：
-
-                      
-                    </p>
-                    
-                    <p class="pull-right readMore">
-                        <a href="/2019/09/08/ES6总结（五）/">Read More...</a>
-                    </p>
-                    
-                </div>
-                <div class="clearfix"></div>
-                <hr class="nogutter">
-            </div>
-        </div>
-        
-        <div class="row">
-            <div class="col-md-8 col-md-offset-2 opening-statement">
-                <div class="col-md-4">
-                    <h3><a href="/2019/09/04/ES6总结（四）/">ES6总结（四）</a></h3>
-                    <span>
-                        <span class="post-meta">
-      <time datetime="2019-09-04T13:06:00.000Z" itemprop="datePublished">
-          2019-09-04
-      </time>
-    
-    
-    | 
-    <a href='/tags/ES6/'>ES6</a>,
-    
-    <a href='/tags/JavaScript/'>JavaScript</a>
-    
-    
-</span>
-                    </span>
-                </div>
-                <div class="col-md-8">
-                    <p>
-                      
-                        1. 类
-JavaScript和Java关于类的区别首先需要清楚JavaScript是基于原型的（连接），而Java是基于类的（复制）。
-类的声明类声明是以class关键字开始的，然后是类的名字，剩余部分像是对象字面量的简写。下面来看看JavaScript是如何定义使用类的，如下所示：1234567891011class Dog&#123;	// 构造函数使用constructor来定义	constructor(name,age)&#1
-                      
-                    </p>
-                    
-                    <p class="pull-right readMore">
-                        <a href="/2019/09/04/ES6总结（四）/">Read More...</a>
-                    </p>
-                    
-                </div>
-                <div class="clearfix"></div>
-                <hr class="nogutter">
-            </div>
-        </div>
-        
-        <div class="row">
-            <div class="col-md-8 col-md-offset-2 opening-statement">
-                <div class="col-md-4">
-                    <h3><a href="/2019/09/01/ES6总结（三）/">ES6总结（三）</a></h3>
-                    <span>
-                        <span class="post-meta">
-      <time datetime="2019-09-01T03:05:00.000Z" itemprop="datePublished">
-          2019-09-01
-      </time>
-    
-    
-    | 
-    <a href='/tags/ES6/'>ES6</a>,
-    
-    <a href='/tags/JavaScript/'>JavaScript</a>
-    
-    
-</span>
-                    </span>
-                </div>
-                <div class="col-md-8">
-                    <p>
-                      
-                        1. 对象的扩展
-新的对象字面量特征：a. 方法的定义：如：1234567let obj = &#123;	a: 1,	show()&#123; // 把中间的冒号和function省略了		console.log('show');	&#125;&#125;;obj.show(); // show
-
-
-
-b. 属性的简写如：
-123456789let name = 'dai';let obj = &#123;	name: name&#1
-                      
-                    </p>
-                    
-                    <p class="pull-right readMore">
-                        <a href="/2019/09/01/ES6总结（三）/">Read More...</a>
-                    </p>
-                    
-                </div>
-                <div class="clearfix"></div>
-                <hr class="nogutter">
-            </div>
-        </div>
-        
-        <div class="row">
-            <div class="col-md-8 col-md-offset-2 opening-statement">
-                <div class="col-md-4">
-                    <h3><a href="/2019/08/28/ES6总结（二）/">ES6总结（二）</a></h3>
-                    <span>
-                        <span class="post-meta">
-      <time datetime="2019-08-28T10:50:00.000Z" itemprop="datePublished">
-          2019-08-28
-      </time>
-    
-    
-    | 
-    <a href='/tags/ES6/'>ES6</a>,
-    
-    <a href='/tags/JavaScript/'>JavaScript</a>
-    
-    
-</span>
-                    </span>
-                </div>
-                <div class="col-md-8">
-                    <p>
-                      
-                        1. 参数处理
-参数默认值：a. 基本使用方法；b. 在默认值中使用其他变量。如：
-12345678910// 例1function fn(a=1,b=2,c=3)&#123; // 这样写是为了提高可读性	console.log(a,b,c);&#125;fn(); // 1 2 3// 例2function fn(a=1,b=2,c=3)&#123;	console.log(a,b,c);&#125;fn(10); // 10 2 
-                      
-                    </p>
-                    
-                    <p class="pull-right readMore">
-                        <a href="/2019/08/28/ES6总结（二）/">Read More...</a>
-                    </p>
-                    
-                </div>
-                <div class="clearfix"></div>
-                <hr class="nogutter">
-            </div>
-        </div>
-        
-        <div class="row">
-            <div class="col-md-8 col-md-offset-2 opening-statement">
-                <div class="col-md-4">
-                    <h3><a href="/2019/08/24/ES6总结（一）/">ES6总结（一）</a></h3>
-                    <span>
-                        <span class="post-meta">
-      <time datetime="2019-08-24T14:43:00.000Z" itemprop="datePublished">
-          2019-08-24
-      </time>
-    
-    
-    | 
-    <a href='/tags/ES6/'>ES6</a>,
-    
-    <a href='/tags/JavaScript/'>JavaScript</a>
-    
-    
-</span>
-                    </span>
-                </div>
-                <div class="col-md-8">
-                    <p>
-                      
-                        在总结ES6之前，告诉大家一个好的网站，叫掘金网。
-1. 数据
-leta. 不能变量声明提升；b. 不能重复声明变量，这样可以防止污染变量。
-consta. 定义的时候要有初始化值；b. 初始化值不能改变（即绑定不能改变，也就是说内存地址是不能改变的）。下面增对与const中b这一点举一个例子：12345678910// 例子一const age = 10;  // age是一个原始值	  age = 20;  // 报错，因为常量是不
-                      
-                    </p>
-                    
-                    <p class="pull-right readMore">
-                        <a href="/2019/08/24/ES6总结（一）/">Read More...</a>
                     </p>
                     
                 </div>
