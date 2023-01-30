@@ -1,0 +1,508 @@
+<!DOCTYPE html>
+<!--[if lte IE 8 ]>
+<html class="ie" xmlns="http://www.w3.org/1999/xhtml" xml:lang="en-US" lang="en-US">
+<![endif]-->
+<!--[if (gte IE 9)|!(IE)]><!-->
+<!--
+***************  *      *     *
+      8          *    *       *
+      8          *  *         *
+      8          **           *
+      8          *  *         *
+      8          *    *       *
+      8          *      *     *
+      8          *        *   ***********    -----Theme By Kieran(http://go.kieran.top)
+-->
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="zh-CN" lang="zh-CN">
+<!--<![endif]-->
+
+<head>
+  <title>你对Array.prototype.reduce究竟有多了解？ | daipi173的个人博客</title>
+  <!-- Meta data -->
+    <meta http-equiv="Content-Type" content="text/html" charset="UTF-8" >
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="generator" content="daipi173的个人博客">
+    <meta name="author" content="daipi173">
+    <meta name="description" content="" />
+    <meta name="keywords" content="" />
+
+    <!-- Favicon, (keep icon in root folder) -->
+    <link rel="Shortcut Icon" href="/img/favicon.ico" type="image/ico">
+
+    <link rel="alternate" href="/atom.xml" title="daipi173的个人博客" type="application/atom+xml">
+    <link rel="stylesheet" href="/css/all.css" media="screen" type="text/css">
+    
+    <link rel="stylesheet" href="/highlightjs/vs.css" type="text/css">
+    
+
+    <!--[if IE 8]>
+    <link rel="stylesheet" type="text/css" href="/css/ie8.css" />
+    <![endif]-->
+
+    <!-- jQuery | Load our jQuery, with an alternative source fallback to a local version if request is unavailable -->
+    <script src="/js/jquery-1.11.1.min.js"></script>
+    <script>window.jQuery || document.write('<script src="js/jquery-1.11.1.min.js"><\/script>')</script>
+
+    <!-- Load these in the <head> for quicker IE8+ load times -->
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+    <script src="/js/html5shiv.min.js"></script>
+    <script src="/js/respond.min.js"></script>
+    <![endif]-->
+
+  
+  
+  
+
+  <style>.col-md-8.col-md-offset-2.opening-statement img{display:none;}</style>
+</head>
+
+<!--
+<body class="post-template">
+-->
+<body id="index" class="lightnav animsition">
+
+      <!-- ============================ Off-canvas navigation =========================== -->
+
+    <div class="sb-slidebar sb-right sb-style-overlay sb-momentum-scrolling">
+        <div class="sb-close" aria-label="Close Menu" aria-hidden="true">
+            <img src="/img/close.png" alt="Close"/>
+        </div>
+        <!-- Lists in Slidebars -->
+        <ul class="sb-menu">
+            <li><a href="/" class="animsition-link" title="Home">Home</a></li>
+            <li><a href="/archives" class="animsition-link" title="archive">archives</a></li>
+            <!-- Dropdown Menu -->
+			 
+            
+        	<li>
+        		<a class="sb-toggle-submenu">Categories<span class="sb-caret"></span></a>
+            	<ul class="sb-submenu">
+				  	
+				    <li><a href="/categories/JavaScript/Array/" class="animsition-link">Array<small>(1)</small></a></li>
+				    
+				    <li><a href="/categories/HTML/CSS/" class="animsition-link">CSS<small>(4)</small></a></li>
+				    
+				    <li><a href="/categories/HTML/Chrome浏览器/" class="animsition-link">Chrome浏览器<small>(1)</small></a></li>
+				    
+				    <li><a href="/categories/React/Component/" class="animsition-link">Component<small>(1)</small></a></li>
+				    
+				    <li><a href="/categories/ES6/" class="animsition-link">ES6<small>(4)</small></a></li>
+				    
+				    <li><a href="/categories/JavaScript/ES6/" class="animsition-link">ES6<small>(6)</small></a></li>
+				    
+				    <li><a href="/categories/JavaScript/Vue/Eslint/" class="animsition-link">Eslint<small>(1)</small></a></li>
+				    
+				    <li><a href="/categories/Git/" class="animsition-link">Git<small>(4)</small></a></li>
+				    
+				    <li><a href="/categories/总结/Git/" class="animsition-link">Git<small>(1)</small></a></li>
+				    
+				    <li><a href="/categories/HTML/" class="animsition-link">HTML<small>(17)</small></a></li>
+				    
+				    <li><a href="/categories/React/Hook/" class="animsition-link">Hook<small>(1)</small></a></li>
+				    
+				    <li><a href="/categories/JavaScript/" class="animsition-link">JavaScript<small>(40)</small></a></li>
+				    
+				    <li><a href="/categories/ES6/JavaScript/" class="animsition-link">JavaScript<small>(4)</small></a></li>
+				    
+				    <li><a href="/categories/Javascript/" class="animsition-link">Javascript<small>(11)</small></a></li>
+				    
+				    <li><a href="/categories/Redux/Middleware中间件/" class="animsition-link">Middleware中间件<small>(1)</small></a></li>
+				    
+				    <li><a href="/categories/React/Component/PureComponent/" class="animsition-link">PureComponent<small>(1)</small></a></li>
+				    
+				    <li><a href="/categories/React/" class="animsition-link">React<small>(8)</small></a></li>
+				    
+				    <li><a href="/categories/Redux/" class="animsition-link">Redux<small>(3)</small></a></li>
+				    
+				    <li><a href="/categories/Vue/" class="animsition-link">Vue<small>(2)</small></a></li>
+				    
+				    <li><a href="/categories/Git/Vue/" class="animsition-link">Vue<small>(1)</small></a></li>
+				    
+				    <li><a href="/categories/JavaScript/Vue/" class="animsition-link">Vue<small>(1)</small></a></li>
+				    
+				    <li><a href="/categories/React/Webpack/" class="animsition-link">Webpack<small>(1)</small></a></li>
+				    
+				    <li><a href="/categories/React/antd/" class="animsition-link">antd<small>(1)</small></a></li>
+				    
+				    <li><a href="/categories/Javascript/bind/call/apply/" class="animsition-link">apply<small>(1)</small></a></li>
+				    
+				    <li><a href="/categories/Javascript/bind/" class="animsition-link">bind<small>(1)</small></a></li>
+				    
+				    <li><a href="/categories/Javascript/bind/call/" class="animsition-link">call<small>(1)</small></a></li>
+				    
+				    <li><a href="/categories/Redux/connect/" class="animsition-link">connect<small>(2)</small></a></li>
+				    
+				    <li><a href="/categories/React/antd/css局部样式/" class="animsition-link">css局部样式<small>(1)</small></a></li>
+				    
+				    <li><a href="/categories/Vue/懒加载/总结/element-ui/" class="animsition-link">element ui<small>(1)</small></a></li>
+				    
+				    <li><a href="/categories/express/" class="animsition-link">express<small>(1)</small></a></li>
+				    
+				    <li><a href="/categories/git/" class="animsition-link">git<small>(1)</small></a></li>
+				    
+				    <li><a href="/categories/Javascript/map/" class="animsition-link">map<small>(1)</small></a></li>
+				    
+				    <li><a href="/categories/Javascript/map/parseInt/" class="animsition-link">parseInt<small>(1)</small></a></li>
+				    
+				    <li><a href="/categories/Javascript/reduce/" class="animsition-link">reduce<small>(1)</small></a></li>
+				    
+				    <li><a href="/categories/React/setState/" class="animsition-link">setState<small>(2)</small></a></li>
+				    
+				    <li><a href="/categories/ubuntu/" class="animsition-link">ubuntu<small>(3)</small></a></li>
+				    
+				    <li><a href="/categories/React/useContext/" class="animsition-link">useContext<small>(1)</small></a></li>
+				    
+				    <li><a href="/categories/Redux/connect/useSelector/" class="animsition-link">useSelector<small>(1)</small></a></li>
+				    
+				    <li><a href="/categories/vue/" class="animsition-link">vue<small>(1)</small></a></li>
+				    
+				    <li><a href="/categories/webpack/" class="animsition-link">webpack<small>(2)</small></a></li>
+				    
+				    <li><a href="/categories/算法/两数之和/" class="animsition-link">两数之和<small>(1)</small></a></li>
+				    
+				    <li><a href="/categories/express/中间件/" class="animsition-link">中间件<small>(1)</small></a></li>
+				    
+				    <li><a href="/categories/Javascript/优化/" class="animsition-link">优化<small>(1)</small></a></li>
+				    
+				    <li><a href="/categories/算法/观察者模式/发布订阅模式/" class="animsition-link">发布订阅模式<small>(2)</small></a></li>
+				    
+				    <li><a href="/categories/Javascript/对象/基本类型/" class="animsition-link">基本类型<small>(2)</small></a></li>
+				    
+				    <li><a href="/categories/Javascript/基本类型/" class="animsition-link">基本类型<small>(1)</small></a></li>
+				    
+				    <li><a href="/categories/算法/多数元素/" class="animsition-link">多数元素<small>(1)</small></a></li>
+				    
+				    <li><a href="/categories/Javascript/对象/" class="animsition-link">对象<small>(2)</small></a></li>
+				    
+				    <li><a href="/categories/React/useContext/性能/" class="animsition-link">性能<small>(1)</small></a></li>
+				    
+				    <li><a href="/categories/性能优化/" class="animsition-link">性能优化<small>(1)</small></a></li>
+				    
+				    <li><a href="/categories/JavaScript/总结/" class="animsition-link">总结<small>(2)</small></a></li>
+				    
+				    <li><a href="/categories/总结/" class="animsition-link">总结<small>(1)</small></a></li>
+				    
+				    <li><a href="/categories/Git/Vue/总结/" class="animsition-link">总结<small>(1)</small></a></li>
+				    
+				    <li><a href="/categories/Vue/懒加载/总结/" class="animsition-link">总结<small>(1)</small></a></li>
+				    
+				    <li><a href="/categories/Vue/懒加载/" class="animsition-link">懒加载<small>(1)</small></a></li>
+				    
+				    <li><a href="/categories/JavaScript/Array/扁平化/" class="animsition-link">扁平化<small>(1)</small></a></li>
+				    
+				    <li><a href="/categories/JavaScript/整数存储相加/" class="animsition-link">整数存储相加<small>(1)</small></a></li>
+				    
+				    <li><a href="/categories/日志/" class="animsition-link">日志<small>(1)</small></a></li>
+				    
+				    <li><a href="/categories/模板引擎/" class="animsition-link">模板引擎<small>(1)</small></a></li>
+				    
+				    <li><a href="/categories/Javascript/水印/" class="animsition-link">水印<small>(1)</small></a></li>
+				    
+				    <li><a href="/categories/算法/环形链表/" class="animsition-link">环形链表<small>(1)</small></a></li>
+				    
+				    <li><a href="/categories/算法/相交链表/" class="animsition-link">相交链表<small>(1)</small></a></li>
+				    
+				    <li><a href="/categories/算法/" class="animsition-link">算法<small>(12)</small></a></li>
+				    
+				    <li><a href="/categories/Javascript/算法/" class="animsition-link">算法<small>(2)</small></a></li>
+				    
+				    <li><a href="/categories/链表/算法/" class="animsition-link">算法<small>(1)</small></a></li>
+				    
+				    <li><a href="/categories/React/虚拟dom/" class="animsition-link">虚拟dom<small>(1)</small></a></li>
+				    
+				    <li><a href="/categories/性能优化/虚拟列表/" class="animsition-link">虚拟列表<small>(1)</small></a></li>
+				    
+				    <li><a href="/categories/算法/观察者模式/" class="animsition-link">观察者模式<small>(2)</small></a></li>
+				    
+				    <li><a href="/categories/链表/" class="animsition-link">链表<small>(1)</small></a></li>
+				    
+				    <li><a href="/categories/算法/链表/" class="animsition-link">链表<small>(2)</small></a></li>
+				    
+				</ul>
+        	</li>
+			
+            
+            <li>
+                <a class="sb-toggle-submenu">Links<span class="sb-caret"></span></a>
+                <ul class="sb-submenu">
+                    
+                    <li><a target="_blank" rel="noopener" href="https://daipi173.github.io/myweb/daipi173-myperson" class="animsition-link">Personal Project</a></li>
+                    
+                </ul>
+            </li>
+            
+        </ul>
+        <!-- Lists in Slidebars -->
+        <ul class="sb-menu secondary">
+            
+            <li><a href="/about.html" class="animsition-link" title="about">About</a></li>
+            <li><a href="/atom.xml" class="animsition-link" title="rss">RSS</a></li>
+        </ul>
+    </div>
+    
+    <!-- ============================ END Off-canvas navigation =========================== -->
+
+    <!-- ============================ #sb-site Main Page Wrapper =========================== -->
+
+    <div id="sb-site">
+        <!-- #sb-site - All page content should be contained within this id, except the off-canvas navigation itself -->
+
+        <!-- ============================ Header & Logo bar =========================== -->
+
+        <div id="navigation" class="navbar navbar-fixed-top">
+            <div class="navbar-inner">
+                <div class="container">
+                    <!-- Nav logo -->
+                    <div class="logo">
+                        <a href="/" title="Logo" class="animsition-link">
+                         <img src="/img/logo.png" alt="Logo" width="35px;"/> 
+                        </a>
+                    </div>
+                    <!-- // Nav logo -->
+                    <!-- Info-bar -->
+                    <nav>
+                        <ul class="nav">
+                            <li><a href="/" class="animsition-link">daipi173的个人博客</a></li>
+                            <li class="nolink"><span>Always </span>Creative.</li>
+                            
+                            <li><a href="https://github.com/" title="Github" target="_blank"><i class="icon-github"></i></a></li>
+                            
+                            
+                            <li><a href="https://twitter.com/" title="Twitter" target="_blank"><i class="icon-twitter"></i></a></li>
+                            
+                            
+                            <li><a href="https://www.facebook.com/" title="Facebook" target="_blank"><i class="icon-facebook"></i></a></li>
+                            
+                            
+                            <li><a href="https://google.com/" title="Google-Plus" target="_blank"><i class="icon-google-plus"></i></a></li>
+                            
+                            
+                            <li><a href="http://weibo.com/" title="Sina-Weibo" target="_blank"><i class="icon-sina-weibo"></i></a></li>
+                            
+                            <li class="nolink"><span>Welcome!</span></li>
+                        </ul>
+                    </nav>
+                    <!--// Info-bar -->
+                </div>
+                <!-- // .container -->
+                <div class="learnmore sb-toggle-right">More</div>
+                <button type="button" class="navbar-toggle menu-icon sb-toggle-right" title="More">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar before"></span>
+                <span class="icon-bar main"></span>
+                <span class="icon-bar after"></span>
+                </button>
+            </div>
+            <!-- // .navbar-inner -->
+        </div>
+
+        <!-- ============================ Header & Logo bar =========================== -->
+
+
+      
+<section id="intro">
+    <div class="container">
+        <div class="row col-md-offset-2">
+            <div class="col-md-8">
+    			<span class="post-meta">
+      <time datetime="2021-04-01T08:47:00.000Z" itemprop="datePublished">
+          2021-04-01
+      </time>
+    
+    
+    | 
+    <a href='/tags/Javascript/'>Javascript</a>
+    
+    
+</span>
+                <h1>你对Array.prototype.reduce究竟有多了解？</h1>
+            </div>
+        </div>
+        <div class="col-md-8 col-md-offset-2">
+      		<p>“ 做前端这么久了，想必大家肯定对数组原型链上面的reduce或多或少有了解，其实最开始学习前端的时候对reduce可能就停留在求和这一类的思考上，今天我就来带领大家走进reduce的世界，reduce能做的事情可真的多，唉呀妈呀真香”</p>
+<h1 id="1-reduce的回顾和它原理"><a href="#1-reduce的回顾和它原理" class="headerlink" title="1. reduce的回顾和它原理"></a>1. reduce的回顾和它原理</h1><ol>
+<li>首先我们先来回顾一下reduce的用法。</li>
+</ol>
+<p>reduce接收两个参数：</p>
+<p>（1）第一个参数是 callback 回调函数(必填)；</p>
+<p>  callback回调函数中又会接收四个参数：(其实在日常学习、开发中使用到最多的是前两个参数，即acc累计器和cur当前值)</p>
+<p>a. Accumulator (acc) (累计器)</p>
+<p>b. Current Value (cur) (当前值)</p>
+<p>c. Current Index (idx) (当前索引)</p>
+<p>d. Source Array (src) (源数组)</p>
+<p>（2）第二个参数是初始值initialValue，作为第一次调用 callback函数时的第一个参数的值。如果没有提供初始值，则将使用数组中的第一个元素。注意：在<strong>没有初始值</strong>的<strong>空数组</strong>上调用 reduce 将<strong>报错</strong>。</p>
+<ol start="2">
+<li>reduce的运行过程：</li>
+</ol>
+<p>callback回调函数的返回值分配给<strong>累计器acc</strong>，该返回值在数组的每个<strong>迭代</strong>中被记住，并最后成为最终的单个结果值。</p>
+<ol start="3">
+<li>举两个例子：<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">// 不使用reduce第二个参数initialValue赋初始值，那么reduce会从index为1的地方开始执行回调</span><br><span class="line">[1,2,3,4].reduce((acc, cur) =&gt; acc + cur); // 10</span><br><span class="line"></span><br><span class="line">// 使用reduce第二个参数initialValue赋初始值，那么reduce会从index为0的地方开始执行回调</span><br><span class="line">[1,2,3,4].reduce((acc, cur) =&gt; acc + cur, 5); // 15</span><br><span class="line">MDN wiki</span><br></pre></td></tr></table></figure>
+<a target="_blank" rel="noopener" href="https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Array/Reduce">MDN wiki</a></li>
+</ol>
+<p><strong>reduce内部编写原理：</strong><br>在回顾了reduce的用法之后我们就来剖析一下reduce究竟是怎么实现的。<br>（1）首先需要判断一下给reduce中传递的第一个回调函数cbs是否是函数；<br>（2）然后reduce中第二个参数initVal是否传递有值，用一个变量acc去接收，如果第二个参数有值就去该值，否则就取数组中index为1的值；<br>（3）接着再定义一个startIndex变量用来判断for循环是从0开始，还是从1开始，当initVal有值时startIndex为0，否则为1；<br>（4）for循环中利用cbs每次return回来的值来更新acc；<br>（5）当for循环结束之后就返回acc的值。</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">// 在这里不要使用箭头函数，否则this会指向window而不是指向数组本身</span><br><span class="line">Array.prototype.myReduce = function (cbs, initVal) &#123;</span><br><span class="line">    if (typeof cbs !== &#x27;function&#x27;) &#123;</span><br><span class="line">        throw new TypeError(&#x27;cbs is not a function&#x27;);</span><br><span class="line">    &#125;</span><br><span class="line">    let acc = initVal || this[0];</span><br><span class="line">    const startIndex = initVal ? 0 : 1;</span><br><span class="line">    for (let i = startIndex; i &lt; this.length; i++) &#123;</span><br><span class="line">        acc = cbs(acc, this[i], i, this);</span><br><span class="line">    &#125;</span><br><span class="line">    return acc;</span><br><span class="line">&#125;;</span><br><span class="line">[1,2,3].myReduce((acc, cur, index) =&gt; acc + cur, 5); // 11</span><br></pre></td></tr></table></figure>
+<p>在实现reduce方法的时候需要注意this的指向问题，在外层不要使用箭头函数，否则this不会指向数组本身而是指向window对象。<br>在了解并自己编写reduce方法之后，我们就更加明白reduce的使用了，接下来的我会带领大家用reduce来玩转map、forEach等方法的实现。</p>
+<h1 id="2-reduce编写forEach"><a href="#2-reduce编写forEach" class="headerlink" title="2. reduce编写forEach"></a>2. reduce编写forEach</h1><p>首先你得知道forEach的使用，在这里我就不多介绍它的使用了，在这类forEach第一个参数接收一个callback回调函数，回调函数中接收三个参数分别是item当前元素、index当前元素索引、arr原数组。接下来就是使用reduc来实现forEach方法，具体代码如下所示：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">const arr = [1,2,3,4,5];</span><br><span class="line">// 注意在这里不能使用箭头符号，否则this是指向window而不是arr</span><br><span class="line">Array.prototype.reduceForEach = function (cbs) &#123;</span><br><span class="line">    return this.reduce((acc, cur, index, arr) =&gt; &#123;</span><br><span class="line">        cbs(cur, index, arr);</span><br><span class="line">    // 这里需要添加[]，否则会从index为1开始计算，而不是从index为0开始(其实就是起到填充的作用)</span><br><span class="line">    &#125;, []);</span><br><span class="line">&#125;;</span><br><span class="line">arr.reduceForEach((item, index) =&gt; console.log(item, index));</span><br></pre></td></tr></table></figure>
+<p>在编写的时候需要注意的就是this的指向问题，还有就是需要给reduce函数传递第二个参数，作用的作为填充，能让cur从下标index为0开始，而不是作为1开始计算。</p>
+<h1 id="3-reduce编写map"><a href="#3-reduce编写map" class="headerlink" title="3. reduce编写map"></a>3. reduce编写map</h1><p>在02中我们尝试用reduce编写forEach方法，我们来使用reudce编写map，其实大同小异，map和forEach的不同点在于map会有return返回值。接下来就是放reduce编写map的代码时刻，具体代码如下所示：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">const arr = [1,2,3,4,5];</span><br><span class="line">Array.prototype.reduceMap = function (cbs) &#123;</span><br><span class="line">    return this.reduce((acc, cur, index, arr) =&gt; &#123;</span><br><span class="line">        const item = cbs(cur, index, arr); // 获取到每次改变值</span><br><span class="line">        acc.push(item); // 将每次改变值存储到acc累计器中</span><br><span class="line">        return acc;</span><br><span class="line">        // 需要给acc赋初始值为空数组，否则会报错</span><br><span class="line">    &#125;, []);</span><br><span class="line">&#125;;</span><br><span class="line">arr.reduceMap((item, index) =&gt; item + index); // [1, 3, 5, 7, 9]</span><br></pre></td></tr></table></figure>
+<p>在编写时需要注意reduce第二个参数需要接收一个初始值，为空数组，然后我们需要存储每一次当前元素改变之后的值，然后通过push到数组中进行一个存储，最后再返回即可。</p>
+<h1 id="4-reduce编写filter"><a href="#4-reduce编写filter" class="headerlink" title="4. reduce编写filter"></a>4. reduce编写filter</h1><p>在使用reduce写了forEach和map两个方法之后，是不是感觉开始顺手了呢？那么趁现在趁热打铁，我们继续reduce来编写filter方法。具体代码如下所示：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">const arr = [1,2,3,4,5];</span><br><span class="line">Array.prototype.reduceFilter = function (cbs) &#123;</span><br><span class="line">    return this.reduce((acc, cur, index, arr) =&gt; &#123;</span><br><span class="line">        const item = cbs(cur, index);</span><br><span class="line">        if (item) &#123;</span><br><span class="line">        // item存在证明匹配上，那么就需要把匹配上的当前值存到累计器中</span><br><span class="line">            acc.push(cur);</span><br><span class="line">        &#125;</span><br><span class="line">        // 由于filter即使你什么都没有匹配上，还是会返回[]，所以最后我们需要返回acc累计器</span><br><span class="line">        return acc;</span><br><span class="line">    &#125;, []);</span><br><span class="line">&#125;;</span><br><span class="line">arr.reduceFilter((item, index) =&gt; item % 2 !== 0); // [1,3,5]</span><br></pre></td></tr></table></figure>
+<p>在编写filter方法时，我们需要注意到的是在最后无论匹配还是没有匹配上都需要一个返回值，这个返回值就是acc累计器，因为filter方法是即使你没有匹配上也会返回一个空数组。如果匹配上的话就将当前匹配上的cur当前值push存储到acc累计器中。</p>
+<h1 id="5-reduce编写find"><a href="#5-reduce编写find" class="headerlink" title="5. reduce编写find"></a>5. reduce编写find</h1><p>使用reduce编写find方法可能会有一些难度，但是当你掌握上面几种方法的变换写法之后，再来写find方法也是得心应手。</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line">Array.prototype.reduceFind = function (cbs) &#123;</span><br><span class="line">    return this.reduce((acc, cur, index, arr) =&gt; &#123;</span><br><span class="line">        const findItem = cbs(cur, index, arr);</span><br><span class="line">        // 在数组中找到第一个元素，此时acc为空数组应该将其置为cur当前元素值</span><br><span class="line">        if (findItem) &#123;</span><br><span class="line">            if (acc instanceof Array &amp;&amp; acc.length === 0) &#123;</span><br><span class="line">                acc = cur;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        // 将数组整个都循环完没有找到，此时acc应该为空数组[]，这时需要将acc置为undefined</span><br><span class="line">        if ((index === arr.length - 1) &amp;&amp; acc instanceof Array &amp;&amp; acc.length === 0) &#123;</span><br><span class="line">            acc = undefined;</span><br><span class="line">        &#125;</span><br><span class="line">        return acc;</span><br><span class="line">    &#125;, []);</span><br><span class="line">&#125;;</span><br><span class="line">arr.reduceFind((item, index) =&gt; item % 2 !== 0); // 1</span><br></pre></td></tr></table></figure>
+
+<p>其实在工作中reduce真的有超级多的用处，就比如我们常说的二维数组变一位数组、数组去重等。不得不说从会用reduce到熟悉掌握之后，你就会说真香呀，啊哈哈哈。今天就介绍到这里，是不是对reduce的原理以及reduce的相关扩展有了更近一步的了解了呢。如果你觉得很赞或者对你有帮助的话请三连哟。</p>
+
+            <div class="clearfix"></div>
+            <hr class="nogutter">
+        </div>
+        <nav class="m-pagination col-md-8 col-md-offset-2 col-sm-24" role="pagination">
+    
+    <a class="pull-left" href="/2021/04/05/%E6%89%8B%E5%8A%A8%E5%B0%81%E8%A3%85bind%E3%80%81call%E3%80%81apply%E6%96%B9%E6%B3%95/" style="float: left;">
+        ← 手动封装bind、call、apply方法
+    </a>
+    
+    
+    <a class="pull-right" href="/2021/03/31/js%E6%89%8B%E5%8A%A8%E5%B0%81%E8%A3%85%E8%A7%82%E5%AF%9F%E8%80%85%E6%A8%A1%E5%BC%8F%E5%92%8C%E5%8F%91%E5%B8%83%E8%AE%A2%E9%98%85%E6%A8%A1%E5%BC%8F/">
+        js手动封装观察者模式和发布订阅模式 →
+    </a>
+    
+</nav>
+
+        <div class="col-md-8 col-md-offset-2 col-sm-24"><script type="text/javascript">
+  /**
+   * 搜狐畅言
+   */
+
+  /*
+  document.write('<div id="SOHUCS" sid="' + window.location.pathname.slice(1) + '" ></div>');
+
+  window.onload = function () {
+    (function () {
+      var appid = 'cytXXXX';
+      var conf = 'prod_xxxxxxxxxxxxxxxxx';
+      var width = window.innerWidth || document.documentElement.clientWidth;
+      var loadJs = function (d, a, id) {
+        var c = document.getElementsByTagName("head")[0] || document.head || document.documentElement;
+        var b = document.createElement("script");
+        b.setAttribute("type", "text/javascript");
+        b.setAttribute("charset", "UTF-8");
+        b.setAttribute("src", d);
+        if (id) {
+          b.setAttribute("id", id);
+        }
+        if (typeof a === "function") {
+          if (window.attachEvent) {
+            b.onreadystatechange = function () {
+              var e = b.readyState;
+              if (e === "loaded" || e === "complete") {
+                b.onreadystatechange = null;
+                a()
+              }
+            }
+          } else {
+            b.onload = a
+          }
+        }
+        c.appendChild(b)
+      };
+
+      loadJs("https://changyan.sohu.com/upload/changyan.js", function () {
+        window.changyan.api.config({
+          appid: appid,
+          conf: conf
+        })
+      });
+    })();
+  }
+  */
+
+</script>
+</div>
+    </div>
+</section>
+
+
+      
+<!-- ============================ Footer =========================== -->
+
+<footer>
+    <div class="container">
+            <div class="copy">
+                <p>
+                    &copy; 2014<script>new Date().getFullYear()>2010&&document.write("-"+new Date().getFullYear());</script>, Content By daipi173. All Rights Reserved.
+                </p>
+                <p>Theme By <a target="_blank" rel="noopener" href="//go.kieran.top" style="color: #767D84">Kieran</a></p>
+            </div>
+            <div class="social">
+                <ul>
+                    
+                    <li><a href="https://github.com/" title="Github" target="_blank"><i class="icon-github"></i></a>&nbsp;</li>
+                    
+                    
+                    <li><a href="https://twitter.com/" title="Twitter" target="_blank"><i class="icon-twitter"></i></a>&nbsp;</li>
+                    
+                    
+                    <li><a href="https://www.facebook.com/" title="Facebook" target="_blank"><i class="icon-facebook"></i></a>&nbsp;</li>
+                    
+                    
+                    <li><a href="https://google.com/" title="Google-Plus" target="_blank"><i class="icon-google-plus"></i></a>&nbsp;</li>
+                    
+                    
+                    <li><a href="http://weibo.com/" title="Sina-Weibo" target="_blank"><i class="icon-sina-weibo"></i></a>&nbsp;</li>
+                    
+                </ul>
+            </div>
+            <div class="clearfix"> </div>
+        </div>
+</footer>
+
+<!-- ============================ END Footer =========================== -->
+      <!-- Load our scripts -->
+<!-- Resizable 'on-demand' full-height hero -->
+<script type="text/javascript">
+    var resizeHero = function () {
+        var hero = $(".cover,.heightblock"),
+            window1 = $(window);
+        hero.css({
+            "height": window1.height()
+        });
+    };
+
+    resizeHero();
+
+    $(window).resize(function () {
+        resizeHero();
+    });
+</script>
+<script src="/js/plugins.min.js"></script><!-- Bootstrap core and concatenated plugins always load here -->
+<script src="/js/scripts.js"></script><!-- Theme scripts -->
+
+
+<link rel="stylesheet" href="/fancybox/jquery.fancybox.css" media="screen" type="text/css">
+<script src="/fancybox/jquery.fancybox.pack.js"></script>
+<script type="text/javascript">
+$('#intro').find('img').each(function(){
+  var alt = this.alt;
+
+  if (alt){
+    $(this).after('<span class="caption" style="display:none">' + alt + '</span>');
+  }
+
+  $(this).wrap('<a href="' + this.src + '" title="' + alt + '" class="fancybox" rel="gallery" />');
+});
+(function($){
+  $('.fancybox').fancybox();
+})(jQuery);
+</script>
+
+
+
+      
+<script src="/live2dw/lib/L2Dwidget.min.js?094cbace49a39548bed64abff5988b05"></script><script>L2Dwidget.init({"pluginModelPath":"assets/","model":{"jsonPath":"/live2dw/assets/haruto.model.json"},"display":{"position":"right","width":150,"height":300},"mobile":{"show":true},"log":false,"pluginJsPath":"lib/","pluginRootPath":"live2dw/","tagMode":false});</script></body>
+</html>

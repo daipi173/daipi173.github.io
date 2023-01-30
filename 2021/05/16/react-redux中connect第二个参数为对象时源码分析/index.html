@@ -1,0 +1,491 @@
+<!DOCTYPE html>
+<!--[if lte IE 8 ]>
+<html class="ie" xmlns="http://www.w3.org/1999/xhtml" xml:lang="en-US" lang="en-US">
+<![endif]-->
+<!--[if (gte IE 9)|!(IE)]><!-->
+<!--
+***************  *      *     *
+      8          *    *       *
+      8          *  *         *
+      8          **           *
+      8          *  *         *
+      8          *    *       *
+      8          *      *     *
+      8          *        *   ***********    -----Theme By Kieran(http://go.kieran.top)
+-->
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="zh-CN" lang="zh-CN">
+<!--<![endif]-->
+
+<head>
+  <title>react-redux中connect第二个参数为对象时源码分析 | daipi173的个人博客</title>
+  <!-- Meta data -->
+    <meta http-equiv="Content-Type" content="text/html" charset="UTF-8" >
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="generator" content="daipi173的个人博客">
+    <meta name="author" content="daipi173">
+    <meta name="description" content="" />
+    <meta name="keywords" content="" />
+
+    <!-- Favicon, (keep icon in root folder) -->
+    <link rel="Shortcut Icon" href="/img/favicon.ico" type="image/ico">
+
+    <link rel="alternate" href="/atom.xml" title="daipi173的个人博客" type="application/atom+xml">
+    <link rel="stylesheet" href="/css/all.css" media="screen" type="text/css">
+    
+    <link rel="stylesheet" href="/highlightjs/vs.css" type="text/css">
+    
+
+    <!--[if IE 8]>
+    <link rel="stylesheet" type="text/css" href="/css/ie8.css" />
+    <![endif]-->
+
+    <!-- jQuery | Load our jQuery, with an alternative source fallback to a local version if request is unavailable -->
+    <script src="/js/jquery-1.11.1.min.js"></script>
+    <script>window.jQuery || document.write('<script src="js/jquery-1.11.1.min.js"><\/script>')</script>
+
+    <!-- Load these in the <head> for quicker IE8+ load times -->
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+    <script src="/js/html5shiv.min.js"></script>
+    <script src="/js/respond.min.js"></script>
+    <![endif]-->
+
+  
+  
+  
+
+  <style>.col-md-8.col-md-offset-2.opening-statement img{display:none;}</style>
+</head>
+
+<!--
+<body class="post-template">
+-->
+<body id="index" class="lightnav animsition">
+
+      <!-- ============================ Off-canvas navigation =========================== -->
+
+    <div class="sb-slidebar sb-right sb-style-overlay sb-momentum-scrolling">
+        <div class="sb-close" aria-label="Close Menu" aria-hidden="true">
+            <img src="/img/close.png" alt="Close"/>
+        </div>
+        <!-- Lists in Slidebars -->
+        <ul class="sb-menu">
+            <li><a href="/" class="animsition-link" title="Home">Home</a></li>
+            <li><a href="/archives" class="animsition-link" title="archive">archives</a></li>
+            <!-- Dropdown Menu -->
+			 
+            
+        	<li>
+        		<a class="sb-toggle-submenu">Categories<span class="sb-caret"></span></a>
+            	<ul class="sb-submenu">
+				  	
+				    <li><a href="/categories/JavaScript/Array/" class="animsition-link">Array<small>(1)</small></a></li>
+				    
+				    <li><a href="/categories/HTML/CSS/" class="animsition-link">CSS<small>(4)</small></a></li>
+				    
+				    <li><a href="/categories/HTML/Chrome浏览器/" class="animsition-link">Chrome浏览器<small>(1)</small></a></li>
+				    
+				    <li><a href="/categories/React/Component/" class="animsition-link">Component<small>(1)</small></a></li>
+				    
+				    <li><a href="/categories/ES6/" class="animsition-link">ES6<small>(4)</small></a></li>
+				    
+				    <li><a href="/categories/JavaScript/ES6/" class="animsition-link">ES6<small>(6)</small></a></li>
+				    
+				    <li><a href="/categories/JavaScript/Vue/Eslint/" class="animsition-link">Eslint<small>(1)</small></a></li>
+				    
+				    <li><a href="/categories/Git/" class="animsition-link">Git<small>(4)</small></a></li>
+				    
+				    <li><a href="/categories/总结/Git/" class="animsition-link">Git<small>(1)</small></a></li>
+				    
+				    <li><a href="/categories/HTML/" class="animsition-link">HTML<small>(17)</small></a></li>
+				    
+				    <li><a href="/categories/React/Hook/" class="animsition-link">Hook<small>(1)</small></a></li>
+				    
+				    <li><a href="/categories/JavaScript/" class="animsition-link">JavaScript<small>(40)</small></a></li>
+				    
+				    <li><a href="/categories/ES6/JavaScript/" class="animsition-link">JavaScript<small>(4)</small></a></li>
+				    
+				    <li><a href="/categories/Javascript/" class="animsition-link">Javascript<small>(11)</small></a></li>
+				    
+				    <li><a href="/categories/Redux/Middleware中间件/" class="animsition-link">Middleware中间件<small>(1)</small></a></li>
+				    
+				    <li><a href="/categories/React/Component/PureComponent/" class="animsition-link">PureComponent<small>(1)</small></a></li>
+				    
+				    <li><a href="/categories/React/" class="animsition-link">React<small>(8)</small></a></li>
+				    
+				    <li><a href="/categories/Redux/" class="animsition-link">Redux<small>(3)</small></a></li>
+				    
+				    <li><a href="/categories/Vue/" class="animsition-link">Vue<small>(2)</small></a></li>
+				    
+				    <li><a href="/categories/Git/Vue/" class="animsition-link">Vue<small>(1)</small></a></li>
+				    
+				    <li><a href="/categories/JavaScript/Vue/" class="animsition-link">Vue<small>(1)</small></a></li>
+				    
+				    <li><a href="/categories/React/Webpack/" class="animsition-link">Webpack<small>(1)</small></a></li>
+				    
+				    <li><a href="/categories/React/antd/" class="animsition-link">antd<small>(1)</small></a></li>
+				    
+				    <li><a href="/categories/Javascript/bind/call/apply/" class="animsition-link">apply<small>(1)</small></a></li>
+				    
+				    <li><a href="/categories/Javascript/bind/" class="animsition-link">bind<small>(1)</small></a></li>
+				    
+				    <li><a href="/categories/Javascript/bind/call/" class="animsition-link">call<small>(1)</small></a></li>
+				    
+				    <li><a href="/categories/Redux/connect/" class="animsition-link">connect<small>(2)</small></a></li>
+				    
+				    <li><a href="/categories/React/antd/css局部样式/" class="animsition-link">css局部样式<small>(1)</small></a></li>
+				    
+				    <li><a href="/categories/Vue/懒加载/总结/element-ui/" class="animsition-link">element ui<small>(1)</small></a></li>
+				    
+				    <li><a href="/categories/express/" class="animsition-link">express<small>(1)</small></a></li>
+				    
+				    <li><a href="/categories/git/" class="animsition-link">git<small>(1)</small></a></li>
+				    
+				    <li><a href="/categories/Javascript/map/" class="animsition-link">map<small>(1)</small></a></li>
+				    
+				    <li><a href="/categories/Javascript/map/parseInt/" class="animsition-link">parseInt<small>(1)</small></a></li>
+				    
+				    <li><a href="/categories/Javascript/reduce/" class="animsition-link">reduce<small>(1)</small></a></li>
+				    
+				    <li><a href="/categories/React/setState/" class="animsition-link">setState<small>(2)</small></a></li>
+				    
+				    <li><a href="/categories/ubuntu/" class="animsition-link">ubuntu<small>(3)</small></a></li>
+				    
+				    <li><a href="/categories/React/useContext/" class="animsition-link">useContext<small>(1)</small></a></li>
+				    
+				    <li><a href="/categories/Redux/connect/useSelector/" class="animsition-link">useSelector<small>(1)</small></a></li>
+				    
+				    <li><a href="/categories/vue/" class="animsition-link">vue<small>(1)</small></a></li>
+				    
+				    <li><a href="/categories/webpack/" class="animsition-link">webpack<small>(2)</small></a></li>
+				    
+				    <li><a href="/categories/算法/两数之和/" class="animsition-link">两数之和<small>(1)</small></a></li>
+				    
+				    <li><a href="/categories/express/中间件/" class="animsition-link">中间件<small>(1)</small></a></li>
+				    
+				    <li><a href="/categories/Javascript/优化/" class="animsition-link">优化<small>(1)</small></a></li>
+				    
+				    <li><a href="/categories/算法/观察者模式/发布订阅模式/" class="animsition-link">发布订阅模式<small>(2)</small></a></li>
+				    
+				    <li><a href="/categories/Javascript/对象/基本类型/" class="animsition-link">基本类型<small>(2)</small></a></li>
+				    
+				    <li><a href="/categories/Javascript/基本类型/" class="animsition-link">基本类型<small>(1)</small></a></li>
+				    
+				    <li><a href="/categories/算法/多数元素/" class="animsition-link">多数元素<small>(1)</small></a></li>
+				    
+				    <li><a href="/categories/Javascript/对象/" class="animsition-link">对象<small>(2)</small></a></li>
+				    
+				    <li><a href="/categories/React/useContext/性能/" class="animsition-link">性能<small>(1)</small></a></li>
+				    
+				    <li><a href="/categories/性能优化/" class="animsition-link">性能优化<small>(1)</small></a></li>
+				    
+				    <li><a href="/categories/JavaScript/总结/" class="animsition-link">总结<small>(2)</small></a></li>
+				    
+				    <li><a href="/categories/总结/" class="animsition-link">总结<small>(1)</small></a></li>
+				    
+				    <li><a href="/categories/Git/Vue/总结/" class="animsition-link">总结<small>(1)</small></a></li>
+				    
+				    <li><a href="/categories/Vue/懒加载/总结/" class="animsition-link">总结<small>(1)</small></a></li>
+				    
+				    <li><a href="/categories/Vue/懒加载/" class="animsition-link">懒加载<small>(1)</small></a></li>
+				    
+				    <li><a href="/categories/JavaScript/Array/扁平化/" class="animsition-link">扁平化<small>(1)</small></a></li>
+				    
+				    <li><a href="/categories/JavaScript/整数存储相加/" class="animsition-link">整数存储相加<small>(1)</small></a></li>
+				    
+				    <li><a href="/categories/日志/" class="animsition-link">日志<small>(1)</small></a></li>
+				    
+				    <li><a href="/categories/模板引擎/" class="animsition-link">模板引擎<small>(1)</small></a></li>
+				    
+				    <li><a href="/categories/Javascript/水印/" class="animsition-link">水印<small>(1)</small></a></li>
+				    
+				    <li><a href="/categories/算法/环形链表/" class="animsition-link">环形链表<small>(1)</small></a></li>
+				    
+				    <li><a href="/categories/算法/相交链表/" class="animsition-link">相交链表<small>(1)</small></a></li>
+				    
+				    <li><a href="/categories/算法/" class="animsition-link">算法<small>(12)</small></a></li>
+				    
+				    <li><a href="/categories/Javascript/算法/" class="animsition-link">算法<small>(2)</small></a></li>
+				    
+				    <li><a href="/categories/链表/算法/" class="animsition-link">算法<small>(1)</small></a></li>
+				    
+				    <li><a href="/categories/React/虚拟dom/" class="animsition-link">虚拟dom<small>(1)</small></a></li>
+				    
+				    <li><a href="/categories/性能优化/虚拟列表/" class="animsition-link">虚拟列表<small>(1)</small></a></li>
+				    
+				    <li><a href="/categories/算法/观察者模式/" class="animsition-link">观察者模式<small>(2)</small></a></li>
+				    
+				    <li><a href="/categories/链表/" class="animsition-link">链表<small>(1)</small></a></li>
+				    
+				    <li><a href="/categories/算法/链表/" class="animsition-link">链表<small>(2)</small></a></li>
+				    
+				</ul>
+        	</li>
+			
+            
+            <li>
+                <a class="sb-toggle-submenu">Links<span class="sb-caret"></span></a>
+                <ul class="sb-submenu">
+                    
+                    <li><a target="_blank" rel="noopener" href="https://daipi173.github.io/myweb/daipi173-myperson" class="animsition-link">Personal Project</a></li>
+                    
+                </ul>
+            </li>
+            
+        </ul>
+        <!-- Lists in Slidebars -->
+        <ul class="sb-menu secondary">
+            
+            <li><a href="/about.html" class="animsition-link" title="about">About</a></li>
+            <li><a href="/atom.xml" class="animsition-link" title="rss">RSS</a></li>
+        </ul>
+    </div>
+    
+    <!-- ============================ END Off-canvas navigation =========================== -->
+
+    <!-- ============================ #sb-site Main Page Wrapper =========================== -->
+
+    <div id="sb-site">
+        <!-- #sb-site - All page content should be contained within this id, except the off-canvas navigation itself -->
+
+        <!-- ============================ Header & Logo bar =========================== -->
+
+        <div id="navigation" class="navbar navbar-fixed-top">
+            <div class="navbar-inner">
+                <div class="container">
+                    <!-- Nav logo -->
+                    <div class="logo">
+                        <a href="/" title="Logo" class="animsition-link">
+                         <img src="/img/logo.png" alt="Logo" width="35px;"/> 
+                        </a>
+                    </div>
+                    <!-- // Nav logo -->
+                    <!-- Info-bar -->
+                    <nav>
+                        <ul class="nav">
+                            <li><a href="/" class="animsition-link">daipi173的个人博客</a></li>
+                            <li class="nolink"><span>Always </span>Creative.</li>
+                            
+                            <li><a href="https://github.com/" title="Github" target="_blank"><i class="icon-github"></i></a></li>
+                            
+                            
+                            <li><a href="https://twitter.com/" title="Twitter" target="_blank"><i class="icon-twitter"></i></a></li>
+                            
+                            
+                            <li><a href="https://www.facebook.com/" title="Facebook" target="_blank"><i class="icon-facebook"></i></a></li>
+                            
+                            
+                            <li><a href="https://google.com/" title="Google-Plus" target="_blank"><i class="icon-google-plus"></i></a></li>
+                            
+                            
+                            <li><a href="http://weibo.com/" title="Sina-Weibo" target="_blank"><i class="icon-sina-weibo"></i></a></li>
+                            
+                            <li class="nolink"><span>Welcome!</span></li>
+                        </ul>
+                    </nav>
+                    <!--// Info-bar -->
+                </div>
+                <!-- // .container -->
+                <div class="learnmore sb-toggle-right">More</div>
+                <button type="button" class="navbar-toggle menu-icon sb-toggle-right" title="More">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar before"></span>
+                <span class="icon-bar main"></span>
+                <span class="icon-bar after"></span>
+                </button>
+            </div>
+            <!-- // .navbar-inner -->
+        </div>
+
+        <!-- ============================ Header & Logo bar =========================== -->
+
+
+      
+<section id="intro">
+    <div class="container">
+        <div class="row col-md-offset-2">
+            <div class="col-md-8">
+    			<span class="post-meta">
+      <time datetime="2021-05-16T08:47:00.000Z" itemprop="datePublished">
+          2021-05-16
+      </time>
+    
+    
+    | 
+    <a href='/tags/Redux/'>Redux</a>
+    
+    
+</span>
+                <h1>react-redux中connect第二个参数为对象时源码分析</h1>
+            </div>
+        </div>
+        <div class="col-md-8 col-md-offset-2">
+      		<p>“ 记着当初才来公司的时候上手项目时，对redux的插件使用多少有些困惑，今天来讲解一下react-redux中connect方法第二个参数为对象时的封装。”</p>
+<h1 id="1-connect"><a href="#1-connect" class="headerlink" title="1. connect"></a>1. connect</h1><p>首先找到connect的封装，在connect.js文件中，先简化一下它的代码封装，得到如下所示代码：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line">export function createConnect(&#123;</span><br><span class="line">  connectHOC = connectAdvanced,</span><br><span class="line">  mapStateToPropsFactories = defaultMapStateToPropsFactories,</span><br><span class="line">  mapDispatchToPropsFactories = defaultMapDispatchToPropsFactories,</span><br><span class="line">  mergePropsFactories = defaultMergePropsFactories,</span><br><span class="line">  selectorFactory = defaultSelectorFactory</span><br><span class="line">&#125;) &#123;</span><br><span class="line">  return function connect(&#123;</span><br><span class="line">    mapStateToProps,</span><br><span class="line">    mapDispatchToProps,</span><br><span class="line">    // ...</span><br><span class="line">  &#125;) &#123;</span><br><span class="line">    // ...</span><br><span class="line">    return connectHOC(selectorFactory, &#123;</span><br><span class="line">    // ...</span><br><span class="line">    &#125;)</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">export default createConnect()</span><br></pre></td></tr></table></figure>
+
+<p>有没有瞬间感觉过程清晰了一些呢？其实在我们引用connect时就是引入了connect函数，而当我们调用connect的时候其实它回返了封装之后的组件，用专业术语说的话就是高阶组件，这个就是connect的一个特点。<br>如果你对connect整体感兴趣，不妨来看看它的源码，在这里我就不一一讲解了。接下来我会来分析connect中第二个参数mapDispatchToProps为对象时的具体流程。</p>
+<h1 id="2-mapDispatchToProps为对象时的执行过程"><a href="#2-mapDispatchToProps为对象时的执行过程" class="headerlink" title="2. mapDispatchToProps为对象时的执行过程"></a>2. mapDispatchToProps为对象时的执行过程</h1><p>首先来看下面代码，可能你在日常开发中也会遇到或者写过的，但是你有没有想过它为什么会这样来执行呢？</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line">export function dispatchTest() &#123;</span><br><span class="line">    return ()=&gt;&#123;</span><br><span class="line">      // todo ...</span><br><span class="line">      console.log(1111);</span><br><span class="line">    &#125;;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">// 组件中使用</span><br><span class="line">import &#123;connect&#125; from &#x27;react-redux&#x27;;</span><br><span class="line">// 这里是装饰器的写法，不懂的话可以自行网上搜索查看</span><br><span class="line">@connect(state =&gt; (&#123;&#125;), &#123; dispatchTest &#125;)</span><br><span class="line">class Test extends Component &#123;</span><br><span class="line">  componentDidMount () &#123;</span><br><span class="line">    this.props.dispatchTest(); </span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>其实这个时候在componentDidMount生命周期中调用dispatchTest方法是能够打印出1111的，是不是此时你有点疑惑我不是只执行了一次，按理应该返回一个函数呀？不慌，听我慢慢给你道来。<br>首先去看connect方法中initMapDispatchToProps变量，它是match方法返回值，接着我们又去找match方法，然后我把重要的代码抽出来讲解，它具体代码如下所示：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br></pre></td><td class="code"><pre><span class="line">/**</span><br><span class="line">*@params mapDispatchToProps：connect方法中我们传递的第二个参数值</span><br><span class="line">*/</span><br><span class="line">const initMapDispatchToProps = match(</span><br><span class="line">  mapDispatchToProps,</span><br><span class="line">  mapDispatchToPropsFactories,</span><br><span class="line">  &#x27;mapDispatchToProps&#x27;</span><br><span class="line">)</span><br><span class="line"></span><br><span class="line">function match(arg, factories, name) &#123;</span><br><span class="line">  for (let i = factories.length - 1; i &gt;= 0; i--) &#123;</span><br><span class="line">    const result = factories[i](arg)</span><br><span class="line">    if (result) return result</span><br><span class="line">  &#125;</span><br><span class="line"></span><br><span class="line">  return (dispatch, options) =&gt; &#123;</span><br><span class="line">    throw new Error(</span><br><span class="line">      `Invalid value of type $&#123;typeof arg&#125; for $&#123;name&#125; argument when connecting component $&#123;</span><br><span class="line">        options.wrappedComponentName</span><br><span class="line">      &#125;.`</span><br><span class="line">    )</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>上面的代码其实也是很简单的，mapDispatchToPropsFactories方法我们来解析一下，在这里我们只分析为对象时的函数源码，具体如下所示：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line">import &#123; bindActionCreators &#125; from &#x27;redux&#x27;</span><br><span class="line">import &#123; wrapMapToPropsConstant, wrapMapToPropsFunc &#125; from &#x27;./wrapMapToProps&#x27;</span><br><span class="line"></span><br><span class="line">export function whenMapDispatchToPropsIsObject(mapDispatchToProps) &#123;</span><br><span class="line">  return mapDispatchToProps &amp;&amp; typeof mapDispatchToProps === &#x27;object&#x27;</span><br><span class="line">    ? wrapMapToPropsConstant(dispatch =&gt;</span><br><span class="line">        bindActionCreators(mapDispatchToProps, dispatch)</span><br><span class="line">      )</span><br><span class="line">    : undefined</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">export default [</span><br><span class="line">  whenMapDispatchToPropsIsObject</span><br><span class="line">]</span><br></pre></td></tr></table></figure>
+<p>在这里我们重点看处理对象的那个函数，这个函数里首先先来看一下wrapMapToPropsConstant函数的封装，具体代码如下所示：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">export function wrapMapToPropsConstant(getConstant) &#123;</span><br><span class="line">  return function initConstantSelector(dispatch, options) &#123;</span><br><span class="line">    const constant = getConstant(dispatch, options)</span><br><span class="line"></span><br><span class="line">    function constantSelector() &#123;</span><br><span class="line">      return constant</span><br><span class="line">    &#125;</span><br><span class="line">    constantSelector.dependsOnOwnProps = false</span><br><span class="line">    return constantSelector</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>接着再来看看<strong>bindActionCreators</strong>函数，它也是connect中很核心的一部分，它的代码封装如下所示：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br></pre></td><td class="code"><pre><span class="line">function bindActionCreator(actionCreator, dispatch) &#123;</span><br><span class="line">  return function () &#123;</span><br><span class="line">    return dispatch(actionCreator.apply(this, arguments));</span><br><span class="line">  &#125;;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">// 首先actionCreators的值就是connect中我们传递的第二个参数，它是一个对象</span><br><span class="line">function bindActionCreators(actionCreators, dispatch) &#123;</span><br><span class="line">  if (typeof actionCreators === &#x27;function&#x27;) &#123;</span><br><span class="line">    return bindActionCreator(actionCreators, dispatch);</span><br><span class="line">  &#125;</span><br><span class="line">  if (typeof actionCreators !== &#x27;object&#x27; || actionCreators === null) &#123;</span><br><span class="line">    throw new Error(&quot;bindActionCreators expected an object or a function, instead received &quot; + (actionCreators === null ? &#x27;null&#x27; : typeof actionCreators) + &quot;. &quot; + &quot;Did you write \&quot;import ActionCreators from\&quot; instead of \&quot;import * as ActionCreators from\&quot;?&quot;);</span><br><span class="line">  &#125;</span><br><span class="line">  // 在这里我们应该看下面的代码，为对象时，遍历它的key，如果为函数则返回bindActionCreator处理后的函数</span><br><span class="line">  var boundActionCreators = &#123;&#125;;</span><br><span class="line">  for (var key in actionCreators) &#123;</span><br><span class="line">    var actionCreator = actionCreators[key];</span><br><span class="line">    if (typeof actionCreator === &#x27;function&#x27;) &#123;</span><br><span class="line">      boundActionCreators[key] = bindActionCreator(actionCreator, dispatch);</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;</span><br><span class="line">  return boundActionCreators;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>然后对于上面的代码，然后将其进行一个整合之后可以得到变量initMapDispatchToProps的值为处理过后的函数，接着我们再去寻找它在哪里执行了，顺着代码找到connectAdvanced.js文件中的initSelector函数，接着在函数中找到selectorFactory函数执行，我们再去看看selectorFactory函数内容执行了什么代码，然后将其简化，只看重点代码，具体如下所示：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">export default function finalPropsSelectorFactory(dispatch, &#123;</span><br><span class="line">  initMapStateToProps,</span><br><span class="line">  initMapDispatchToProps,</span><br><span class="line">  initMergeProps,</span><br><span class="line">  ...options</span><br><span class="line">&#125;) &#123;</span><br><span class="line">  // 其实真正执行函数的是这行代码执行的</span><br><span class="line">  const mapDispatchToProps = initMapDispatchToProps(dispatch, options)</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>好了，今日的分享就到这里了，讲的不好还请见谅。如果你对connect内部有很浓烈的兴趣那么你可以去看看它内部其他的实现。</p>
+
+            <div class="clearfix"></div>
+            <hr class="nogutter">
+        </div>
+        <nav class="m-pagination col-md-8 col-md-offset-2 col-sm-24" role="pagination">
+    
+    <a class="pull-left" href="/2021/05/23/%E5%9F%BA%E6%9C%AC%E7%B1%BB%E5%9E%8B%E4%BD%BF%E7%94%A8%E7%82%B9%E8%AE%BF%E9%97%AE%E5%86%85%E9%83%A8%E5%8F%91%E7%94%9F%E4%BA%86%E4%BB%80%E4%B9%88/" style="float: left;">
+        ← 基本类型使用点访问内部发生了什么
+    </a>
+    
+    
+    <a class="pull-right" href="/2021/05/05/%E7%AE%97%E6%B3%95-%E7%8E%AF%E5%BD%A2%E9%93%BE%E8%A1%A8/">
+        算法---环形链表 →
+    </a>
+    
+</nav>
+
+        <div class="col-md-8 col-md-offset-2 col-sm-24"><script type="text/javascript">
+  /**
+   * 搜狐畅言
+   */
+
+  /*
+  document.write('<div id="SOHUCS" sid="' + window.location.pathname.slice(1) + '" ></div>');
+
+  window.onload = function () {
+    (function () {
+      var appid = 'cytXXXX';
+      var conf = 'prod_xxxxxxxxxxxxxxxxx';
+      var width = window.innerWidth || document.documentElement.clientWidth;
+      var loadJs = function (d, a, id) {
+        var c = document.getElementsByTagName("head")[0] || document.head || document.documentElement;
+        var b = document.createElement("script");
+        b.setAttribute("type", "text/javascript");
+        b.setAttribute("charset", "UTF-8");
+        b.setAttribute("src", d);
+        if (id) {
+          b.setAttribute("id", id);
+        }
+        if (typeof a === "function") {
+          if (window.attachEvent) {
+            b.onreadystatechange = function () {
+              var e = b.readyState;
+              if (e === "loaded" || e === "complete") {
+                b.onreadystatechange = null;
+                a()
+              }
+            }
+          } else {
+            b.onload = a
+          }
+        }
+        c.appendChild(b)
+      };
+
+      loadJs("https://changyan.sohu.com/upload/changyan.js", function () {
+        window.changyan.api.config({
+          appid: appid,
+          conf: conf
+        })
+      });
+    })();
+  }
+  */
+
+</script>
+</div>
+    </div>
+</section>
+
+
+      
+<!-- ============================ Footer =========================== -->
+
+<footer>
+    <div class="container">
+            <div class="copy">
+                <p>
+                    &copy; 2014<script>new Date().getFullYear()>2010&&document.write("-"+new Date().getFullYear());</script>, Content By daipi173. All Rights Reserved.
+                </p>
+                <p>Theme By <a target="_blank" rel="noopener" href="//go.kieran.top" style="color: #767D84">Kieran</a></p>
+            </div>
+            <div class="social">
+                <ul>
+                    
+                    <li><a href="https://github.com/" title="Github" target="_blank"><i class="icon-github"></i></a>&nbsp;</li>
+                    
+                    
+                    <li><a href="https://twitter.com/" title="Twitter" target="_blank"><i class="icon-twitter"></i></a>&nbsp;</li>
+                    
+                    
+                    <li><a href="https://www.facebook.com/" title="Facebook" target="_blank"><i class="icon-facebook"></i></a>&nbsp;</li>
+                    
+                    
+                    <li><a href="https://google.com/" title="Google-Plus" target="_blank"><i class="icon-google-plus"></i></a>&nbsp;</li>
+                    
+                    
+                    <li><a href="http://weibo.com/" title="Sina-Weibo" target="_blank"><i class="icon-sina-weibo"></i></a>&nbsp;</li>
+                    
+                </ul>
+            </div>
+            <div class="clearfix"> </div>
+        </div>
+</footer>
+
+<!-- ============================ END Footer =========================== -->
+      <!-- Load our scripts -->
+<!-- Resizable 'on-demand' full-height hero -->
+<script type="text/javascript">
+    var resizeHero = function () {
+        var hero = $(".cover,.heightblock"),
+            window1 = $(window);
+        hero.css({
+            "height": window1.height()
+        });
+    };
+
+    resizeHero();
+
+    $(window).resize(function () {
+        resizeHero();
+    });
+</script>
+<script src="/js/plugins.min.js"></script><!-- Bootstrap core and concatenated plugins always load here -->
+<script src="/js/scripts.js"></script><!-- Theme scripts -->
+
+
+<link rel="stylesheet" href="/fancybox/jquery.fancybox.css" media="screen" type="text/css">
+<script src="/fancybox/jquery.fancybox.pack.js"></script>
+<script type="text/javascript">
+$('#intro').find('img').each(function(){
+  var alt = this.alt;
+
+  if (alt){
+    $(this).after('<span class="caption" style="display:none">' + alt + '</span>');
+  }
+
+  $(this).wrap('<a href="' + this.src + '" title="' + alt + '" class="fancybox" rel="gallery" />');
+});
+(function($){
+  $('.fancybox').fancybox();
+})(jQuery);
+</script>
+
+
+
+      
+<script src="/live2dw/lib/L2Dwidget.min.js?094cbace49a39548bed64abff5988b05"></script><script>L2Dwidget.init({"pluginModelPath":"assets/","model":{"jsonPath":"/live2dw/assets/haruto.model.json"},"display":{"position":"right","width":150,"height":300},"mobile":{"show":true},"log":false,"pluginJsPath":"lib/","pluginRootPath":"live2dw/","tagMode":false});</script></body>
+</html>

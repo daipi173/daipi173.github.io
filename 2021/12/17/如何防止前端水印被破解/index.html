@@ -1,0 +1,513 @@
+<!DOCTYPE html>
+<!--[if lte IE 8 ]>
+<html class="ie" xmlns="http://www.w3.org/1999/xhtml" xml:lang="en-US" lang="en-US">
+<![endif]-->
+<!--[if (gte IE 9)|!(IE)]><!-->
+<!--
+***************  *      *     *
+      8          *    *       *
+      8          *  *         *
+      8          **           *
+      8          *  *         *
+      8          *    *       *
+      8          *      *     *
+      8          *        *   ***********    -----Theme By Kieran(http://go.kieran.top)
+-->
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="zh-CN" lang="zh-CN">
+<!--<![endif]-->
+
+<head>
+  <title>如何防止前端水印被破解 | daipi173的个人博客</title>
+  <!-- Meta data -->
+    <meta http-equiv="Content-Type" content="text/html" charset="UTF-8" >
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="generator" content="daipi173的个人博客">
+    <meta name="author" content="daipi173">
+    <meta name="description" content="" />
+    <meta name="keywords" content="" />
+
+    <!-- Favicon, (keep icon in root folder) -->
+    <link rel="Shortcut Icon" href="/img/favicon.ico" type="image/ico">
+
+    <link rel="alternate" href="/atom.xml" title="daipi173的个人博客" type="application/atom+xml">
+    <link rel="stylesheet" href="/css/all.css" media="screen" type="text/css">
+    
+    <link rel="stylesheet" href="/highlightjs/vs.css" type="text/css">
+    
+
+    <!--[if IE 8]>
+    <link rel="stylesheet" type="text/css" href="/css/ie8.css" />
+    <![endif]-->
+
+    <!-- jQuery | Load our jQuery, with an alternative source fallback to a local version if request is unavailable -->
+    <script src="/js/jquery-1.11.1.min.js"></script>
+    <script>window.jQuery || document.write('<script src="js/jquery-1.11.1.min.js"><\/script>')</script>
+
+    <!-- Load these in the <head> for quicker IE8+ load times -->
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+    <script src="/js/html5shiv.min.js"></script>
+    <script src="/js/respond.min.js"></script>
+    <![endif]-->
+
+  
+  
+  
+
+  <style>.col-md-8.col-md-offset-2.opening-statement img{display:none;}</style>
+</head>
+
+<!--
+<body class="post-template">
+-->
+<body id="index" class="lightnav animsition">
+
+      <!-- ============================ Off-canvas navigation =========================== -->
+
+    <div class="sb-slidebar sb-right sb-style-overlay sb-momentum-scrolling">
+        <div class="sb-close" aria-label="Close Menu" aria-hidden="true">
+            <img src="/img/close.png" alt="Close"/>
+        </div>
+        <!-- Lists in Slidebars -->
+        <ul class="sb-menu">
+            <li><a href="/" class="animsition-link" title="Home">Home</a></li>
+            <li><a href="/archives" class="animsition-link" title="archive">archives</a></li>
+            <!-- Dropdown Menu -->
+			 
+            
+        	<li>
+        		<a class="sb-toggle-submenu">Categories<span class="sb-caret"></span></a>
+            	<ul class="sb-submenu">
+				  	
+				    <li><a href="/categories/JavaScript/Array/" class="animsition-link">Array<small>(1)</small></a></li>
+				    
+				    <li><a href="/categories/HTML/CSS/" class="animsition-link">CSS<small>(4)</small></a></li>
+				    
+				    <li><a href="/categories/HTML/Chrome浏览器/" class="animsition-link">Chrome浏览器<small>(1)</small></a></li>
+				    
+				    <li><a href="/categories/React/Component/" class="animsition-link">Component<small>(1)</small></a></li>
+				    
+				    <li><a href="/categories/ES6/" class="animsition-link">ES6<small>(4)</small></a></li>
+				    
+				    <li><a href="/categories/JavaScript/ES6/" class="animsition-link">ES6<small>(6)</small></a></li>
+				    
+				    <li><a href="/categories/JavaScript/Vue/Eslint/" class="animsition-link">Eslint<small>(1)</small></a></li>
+				    
+				    <li><a href="/categories/Git/" class="animsition-link">Git<small>(4)</small></a></li>
+				    
+				    <li><a href="/categories/总结/Git/" class="animsition-link">Git<small>(1)</small></a></li>
+				    
+				    <li><a href="/categories/HTML/" class="animsition-link">HTML<small>(17)</small></a></li>
+				    
+				    <li><a href="/categories/React/Hook/" class="animsition-link">Hook<small>(1)</small></a></li>
+				    
+				    <li><a href="/categories/JavaScript/" class="animsition-link">JavaScript<small>(40)</small></a></li>
+				    
+				    <li><a href="/categories/ES6/JavaScript/" class="animsition-link">JavaScript<small>(4)</small></a></li>
+				    
+				    <li><a href="/categories/Javascript/" class="animsition-link">Javascript<small>(11)</small></a></li>
+				    
+				    <li><a href="/categories/Redux/Middleware中间件/" class="animsition-link">Middleware中间件<small>(1)</small></a></li>
+				    
+				    <li><a href="/categories/React/Component/PureComponent/" class="animsition-link">PureComponent<small>(1)</small></a></li>
+				    
+				    <li><a href="/categories/React/" class="animsition-link">React<small>(8)</small></a></li>
+				    
+				    <li><a href="/categories/Redux/" class="animsition-link">Redux<small>(3)</small></a></li>
+				    
+				    <li><a href="/categories/Vue/" class="animsition-link">Vue<small>(2)</small></a></li>
+				    
+				    <li><a href="/categories/Git/Vue/" class="animsition-link">Vue<small>(1)</small></a></li>
+				    
+				    <li><a href="/categories/JavaScript/Vue/" class="animsition-link">Vue<small>(1)</small></a></li>
+				    
+				    <li><a href="/categories/React/Webpack/" class="animsition-link">Webpack<small>(1)</small></a></li>
+				    
+				    <li><a href="/categories/React/antd/" class="animsition-link">antd<small>(1)</small></a></li>
+				    
+				    <li><a href="/categories/Javascript/bind/call/apply/" class="animsition-link">apply<small>(1)</small></a></li>
+				    
+				    <li><a href="/categories/Javascript/bind/" class="animsition-link">bind<small>(1)</small></a></li>
+				    
+				    <li><a href="/categories/Javascript/bind/call/" class="animsition-link">call<small>(1)</small></a></li>
+				    
+				    <li><a href="/categories/Redux/connect/" class="animsition-link">connect<small>(2)</small></a></li>
+				    
+				    <li><a href="/categories/React/antd/css局部样式/" class="animsition-link">css局部样式<small>(1)</small></a></li>
+				    
+				    <li><a href="/categories/Vue/懒加载/总结/element-ui/" class="animsition-link">element ui<small>(1)</small></a></li>
+				    
+				    <li><a href="/categories/express/" class="animsition-link">express<small>(1)</small></a></li>
+				    
+				    <li><a href="/categories/git/" class="animsition-link">git<small>(1)</small></a></li>
+				    
+				    <li><a href="/categories/Javascript/map/" class="animsition-link">map<small>(1)</small></a></li>
+				    
+				    <li><a href="/categories/Javascript/map/parseInt/" class="animsition-link">parseInt<small>(1)</small></a></li>
+				    
+				    <li><a href="/categories/Javascript/reduce/" class="animsition-link">reduce<small>(1)</small></a></li>
+				    
+				    <li><a href="/categories/React/setState/" class="animsition-link">setState<small>(2)</small></a></li>
+				    
+				    <li><a href="/categories/ubuntu/" class="animsition-link">ubuntu<small>(3)</small></a></li>
+				    
+				    <li><a href="/categories/React/useContext/" class="animsition-link">useContext<small>(1)</small></a></li>
+				    
+				    <li><a href="/categories/Redux/connect/useSelector/" class="animsition-link">useSelector<small>(1)</small></a></li>
+				    
+				    <li><a href="/categories/vue/" class="animsition-link">vue<small>(1)</small></a></li>
+				    
+				    <li><a href="/categories/webpack/" class="animsition-link">webpack<small>(2)</small></a></li>
+				    
+				    <li><a href="/categories/算法/两数之和/" class="animsition-link">两数之和<small>(1)</small></a></li>
+				    
+				    <li><a href="/categories/express/中间件/" class="animsition-link">中间件<small>(1)</small></a></li>
+				    
+				    <li><a href="/categories/Javascript/优化/" class="animsition-link">优化<small>(1)</small></a></li>
+				    
+				    <li><a href="/categories/算法/观察者模式/发布订阅模式/" class="animsition-link">发布订阅模式<small>(2)</small></a></li>
+				    
+				    <li><a href="/categories/Javascript/对象/基本类型/" class="animsition-link">基本类型<small>(2)</small></a></li>
+				    
+				    <li><a href="/categories/Javascript/基本类型/" class="animsition-link">基本类型<small>(1)</small></a></li>
+				    
+				    <li><a href="/categories/算法/多数元素/" class="animsition-link">多数元素<small>(1)</small></a></li>
+				    
+				    <li><a href="/categories/Javascript/对象/" class="animsition-link">对象<small>(2)</small></a></li>
+				    
+				    <li><a href="/categories/React/useContext/性能/" class="animsition-link">性能<small>(1)</small></a></li>
+				    
+				    <li><a href="/categories/性能优化/" class="animsition-link">性能优化<small>(1)</small></a></li>
+				    
+				    <li><a href="/categories/JavaScript/总结/" class="animsition-link">总结<small>(2)</small></a></li>
+				    
+				    <li><a href="/categories/总结/" class="animsition-link">总结<small>(1)</small></a></li>
+				    
+				    <li><a href="/categories/Git/Vue/总结/" class="animsition-link">总结<small>(1)</small></a></li>
+				    
+				    <li><a href="/categories/Vue/懒加载/总结/" class="animsition-link">总结<small>(1)</small></a></li>
+				    
+				    <li><a href="/categories/Vue/懒加载/" class="animsition-link">懒加载<small>(1)</small></a></li>
+				    
+				    <li><a href="/categories/JavaScript/Array/扁平化/" class="animsition-link">扁平化<small>(1)</small></a></li>
+				    
+				    <li><a href="/categories/JavaScript/整数存储相加/" class="animsition-link">整数存储相加<small>(1)</small></a></li>
+				    
+				    <li><a href="/categories/日志/" class="animsition-link">日志<small>(1)</small></a></li>
+				    
+				    <li><a href="/categories/模板引擎/" class="animsition-link">模板引擎<small>(1)</small></a></li>
+				    
+				    <li><a href="/categories/Javascript/水印/" class="animsition-link">水印<small>(1)</small></a></li>
+				    
+				    <li><a href="/categories/算法/环形链表/" class="animsition-link">环形链表<small>(1)</small></a></li>
+				    
+				    <li><a href="/categories/算法/相交链表/" class="animsition-link">相交链表<small>(1)</small></a></li>
+				    
+				    <li><a href="/categories/算法/" class="animsition-link">算法<small>(12)</small></a></li>
+				    
+				    <li><a href="/categories/Javascript/算法/" class="animsition-link">算法<small>(2)</small></a></li>
+				    
+				    <li><a href="/categories/链表/算法/" class="animsition-link">算法<small>(1)</small></a></li>
+				    
+				    <li><a href="/categories/React/虚拟dom/" class="animsition-link">虚拟dom<small>(1)</small></a></li>
+				    
+				    <li><a href="/categories/性能优化/虚拟列表/" class="animsition-link">虚拟列表<small>(1)</small></a></li>
+				    
+				    <li><a href="/categories/算法/观察者模式/" class="animsition-link">观察者模式<small>(2)</small></a></li>
+				    
+				    <li><a href="/categories/链表/" class="animsition-link">链表<small>(1)</small></a></li>
+				    
+				    <li><a href="/categories/算法/链表/" class="animsition-link">链表<small>(2)</small></a></li>
+				    
+				</ul>
+        	</li>
+			
+            
+            <li>
+                <a class="sb-toggle-submenu">Links<span class="sb-caret"></span></a>
+                <ul class="sb-submenu">
+                    
+                    <li><a target="_blank" rel="noopener" href="https://daipi173.github.io/myweb/daipi173-myperson" class="animsition-link">Personal Project</a></li>
+                    
+                </ul>
+            </li>
+            
+        </ul>
+        <!-- Lists in Slidebars -->
+        <ul class="sb-menu secondary">
+            
+            <li><a href="/about.html" class="animsition-link" title="about">About</a></li>
+            <li><a href="/atom.xml" class="animsition-link" title="rss">RSS</a></li>
+        </ul>
+    </div>
+    
+    <!-- ============================ END Off-canvas navigation =========================== -->
+
+    <!-- ============================ #sb-site Main Page Wrapper =========================== -->
+
+    <div id="sb-site">
+        <!-- #sb-site - All page content should be contained within this id, except the off-canvas navigation itself -->
+
+        <!-- ============================ Header & Logo bar =========================== -->
+
+        <div id="navigation" class="navbar navbar-fixed-top">
+            <div class="navbar-inner">
+                <div class="container">
+                    <!-- Nav logo -->
+                    <div class="logo">
+                        <a href="/" title="Logo" class="animsition-link">
+                         <img src="/img/logo.png" alt="Logo" width="35px;"/> 
+                        </a>
+                    </div>
+                    <!-- // Nav logo -->
+                    <!-- Info-bar -->
+                    <nav>
+                        <ul class="nav">
+                            <li><a href="/" class="animsition-link">daipi173的个人博客</a></li>
+                            <li class="nolink"><span>Always </span>Creative.</li>
+                            
+                            <li><a href="https://github.com/" title="Github" target="_blank"><i class="icon-github"></i></a></li>
+                            
+                            
+                            <li><a href="https://twitter.com/" title="Twitter" target="_blank"><i class="icon-twitter"></i></a></li>
+                            
+                            
+                            <li><a href="https://www.facebook.com/" title="Facebook" target="_blank"><i class="icon-facebook"></i></a></li>
+                            
+                            
+                            <li><a href="https://google.com/" title="Google-Plus" target="_blank"><i class="icon-google-plus"></i></a></li>
+                            
+                            
+                            <li><a href="http://weibo.com/" title="Sina-Weibo" target="_blank"><i class="icon-sina-weibo"></i></a></li>
+                            
+                            <li class="nolink"><span>Welcome!</span></li>
+                        </ul>
+                    </nav>
+                    <!--// Info-bar -->
+                </div>
+                <!-- // .container -->
+                <div class="learnmore sb-toggle-right">More</div>
+                <button type="button" class="navbar-toggle menu-icon sb-toggle-right" title="More">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar before"></span>
+                <span class="icon-bar main"></span>
+                <span class="icon-bar after"></span>
+                </button>
+            </div>
+            <!-- // .navbar-inner -->
+        </div>
+
+        <!-- ============================ Header & Logo bar =========================== -->
+
+
+      
+<section id="intro">
+    <div class="container">
+        <div class="row col-md-offset-2">
+            <div class="col-md-8">
+    			<span class="post-meta">
+      <time datetime="2021-12-17T07:14:00.000Z" itemprop="datePublished">
+          2021-12-17
+      </time>
+    
+    
+    | 
+    <a href='/tags/Javascript/'>Javascript</a>
+    
+    
+</span>
+                <h1>如何防止前端水印被破解</h1>
+            </div>
+        </div>
+        <div class="col-md-8 col-md-offset-2">
+      		<p>“ 最近看到一篇有趣的文章，是关于前端生成的水印如何防止用户破解，通常来说水印的生成应该是通过服务端来的，但是我们也可以了解一下如果让前端来实现，我们应该如何做？”</p>
+<h1 id="1-前端和后端生成水印方法对比"><a href="#1-前端和后端生成水印方法对比" class="headerlink" title="1. 前端和后端生成水印方法对比"></a>1. 前端和后端生成水印方法对比</h1><p>前端方案</p>
+<p>优点：可以<strong>减少</strong>服务端运算量和内存，并且能够<strong>快速</strong>响应请求；</p>
+<p>缺点：<strong>安全性很差</strong>，容易被用户破解，窃取到没有水印的原图。</p>
+<p>后端方案</p>
+<p>优点：<strong>安全性很高</strong>，不容易被用户破解；</p>
+<p>缺点：遇到<strong>大文件密集水印(复杂水印)</strong>，会占用服务器内存和运算量，且请求时间会过长。</p>
+<p><a target="_blank" rel="noopener" href="https://zhuanlan.zhihu.com/p/111331319">Web前端水印方案</a></p>
+<h1 id="2-前端生成水印的方法"><a href="#2-前端生成水印的方法" class="headerlink" title="2. 前端生成水印的方法"></a>2. 前端生成水印的方法</h1><p> 通过canvas画布进行绘画制作；</p>
+<p> 图片 + css中的background属性。</p>
+<p>由于该片文章侧重点不是如何生成水印，所以针对于上面两种方法不做过多说明，如何想要了解可以网上搜索查看。</p>
+<h1 id="3-如何防止水印被破解之方法一（粗暴）"><a href="#3-如何防止水印被破解之方法一（粗暴）" class="headerlink" title="3. 如何防止水印被破解之方法一（粗暴）"></a>3. 如何防止水印被破解之方法一（粗暴）</h1><p>由于水印是在前端实现的，那么针对于用户的操作使得被破解的风险很大，只要用户打开控制台，在你没有做相关防护措施下，那么你的水印就属于白做了。<br>就拿上面两种前端生成水印方法来说：</p>
+<p>（1）如果是使用canvas画的水印，其实打开控制台之后可以找到对应的canvas元素直接删除改dom元素即可；<br>（2）如果是使用图片 + css属性制作的水印，找到对应的元素，直接修改其对应的属性即可。<br>所以其实前端做水印处理，风险是真的大！！！</p>
+<p>解决：既然你可以打开控制台，那么我就阻止你打开控制台的行为（过于暴力图片），首先打开控制台有两种方式：<br>（1）键盘点击事件：F12；<br>（2）屏蔽浏览器右键默认事件。<br>代码如下：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br></pre></td><td class="code"><pre><span class="line">import &#123; useEffect &#125; from &quot;react&quot;;</span><br><span class="line">import &quot;./styles.css&quot;;</span><br><span class="line"></span><br><span class="line">export default function App() &#123;</span><br><span class="line">  useEffect(() =&gt; &#123;</span><br><span class="line">    // 阻止F12键盘事件</span><br><span class="line">    document.addEventListener(&quot;keydown&quot;, (e) =&gt; &#123;</span><br><span class="line">      console.log(1111);</span><br><span class="line">      if (e.keyCode === 123) return (e.returnValue = false);</span><br><span class="line">    &#125;);</span><br><span class="line"></span><br><span class="line">    // 屏蔽浏览器默认右键事件</span><br><span class="line">    document.addEventListener(&quot;contextmenu&quot;, (e) =&gt; &#123;</span><br><span class="line">      console.log(2222);</span><br><span class="line">      return (e.returnValue = false);</span><br><span class="line">    &#125;);</span><br><span class="line">  &#125;, []);</span><br><span class="line">  return (</span><br><span class="line">    &lt;div className=&quot;App&quot;&gt;</span><br><span class="line">      &lt;h1&gt;Hello CodeSandbox&lt;/h1&gt;</span><br><span class="line">      &lt;h2&gt;Start editing to see some magic happen!&lt;/h2&gt;</span><br><span class="line">    &lt;/div&gt;</span><br><span class="line">  );</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>具体代码连接：<br><a target="_blank" rel="noopener" href="https://codesandbox.io/s/part-one-y53bs">https://codesandbox.io/s/part-one-y53bs</a></p>
+<p>针对于上面的解决方案还是太过于暴力了，鼠标右键之后不止检查元素一个功能，还有其他的功能，这样做的话只会影响用户体验感。</p>
+<h1 id="4-如何防止水印被破解之方法二（取巧）"><a href="#4-如何防止水印被破解之方法二（取巧）" class="headerlink" title="4. 如何防止水印被破解之方法二（取巧）"></a>4. 如何防止水印被破解之方法二（取巧）</h1><p>既然说到了打开控制台的过程，那么还可以考虑到一种取巧的方法。</p>
+<p>首先说一下大致的思路：</p>
+<p>console方法的执行是需要打开控制台才能执行，可以利用在console方法中打印Date值，在调用Date值后它会去调用toString方法，此时我们可以重写toString方法，换而言之toString方法被执行意味着控制台被打开了。<br>具体代码如下所示：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br></pre></td><td class="code"><pre><span class="line">import &#123; useEffect &#125; from &quot;react&quot;;</span><br><span class="line">import &quot;./styles.css&quot;;</span><br><span class="line"></span><br><span class="line">export default function App() &#123;</span><br><span class="line">  let num = 0;</span><br><span class="line">  const devtools = new Date();</span><br><span class="line">  devtools.toString = () =&gt; &#123;</span><br><span class="line">    num++;</span><br><span class="line">    if (num &gt; 1) &#123;</span><br><span class="line">      // 在这里放入你的代码，比如我这里会让他跳到codepen</span><br><span class="line">      console.log(&quot;Console is opened&quot;);</span><br><span class="line">      window.location.href = &quot;https://baidu.com&quot;;</span><br><span class="line">      return Date.prototype.toString.call(devtools); // 返回devtools结果（这一步不是必须的）</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;;</span><br><span class="line"></span><br><span class="line">  useEffect(() =&gt; &#123;</span><br><span class="line">    console.log(&quot;devtools1111&quot;, devtools);</span><br><span class="line">  &#125;, [devtools]);</span><br><span class="line"></span><br><span class="line">  return (</span><br><span class="line">    &lt;div className=&quot;App&quot;&gt;</span><br><span class="line">      &lt;h1&gt;Hello CodeSandbox&lt;/h1&gt;</span><br><span class="line">      &lt;h2&gt;Start editing to see some magic happen!&lt;/h2&gt;</span><br><span class="line">    &lt;/div&gt;</span><br><span class="line">  );</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>具体代码连接：<br><a target="_blank" rel="noopener" href="https://codesandbox.io/s/part-six-0otm9">https://codesandbox.io/s/part-six-0otm9</a></p>
+<h1 id="5-如何防止水印被破解之方法三（比方案一好点）"><a href="#5-如何防止水印被破解之方法三（比方案一好点）" class="headerlink" title="5. 如何防止水印被破解之方法三（比方案一好点）"></a>5. 如何防止水印被破解之方法三（比方案一好点）</h1><p>方案一过于粗暴，我们再来看看方案二：<br>由于操作的是浏览器，那么可以考虑结合浏览器本身的一些属性来做处理，我们可以考虑检查<strong>浏览器可视区域</strong>（inner）和<strong>浏览器窗口区域</strong>（outer）的<strong>差值</strong>来判断用户是否打开了控制台。<br>核心实现代码原理：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br></pre></td><td class="code"><pre><span class="line">import &#123; useEffect &#125; from &quot;react&quot;;</span><br><span class="line">import &quot;./styles.css&quot;;</span><br><span class="line"></span><br><span class="line">const threshold = 76;</span><br><span class="line">export default function App() &#123;</span><br><span class="line">  const observeSize = () =&gt; &#123;</span><br><span class="line">    /**</span><br><span class="line">     * outerWidth: 整个浏览器窗口宽度，包括边栏</span><br><span class="line">     * innerWidth: 浏览器可视区域宽度（页面宽度）</span><br><span class="line">     *  */</span><br><span class="line">    const width = window.outerWidth - window.innerWidth &gt; threshold;</span><br><span class="line">    const height = window.outerHeight - window.innerHeight &gt; threshold;</span><br><span class="line">    if (width || height) &#123;</span><br><span class="line">      console.log(&quot;open devTools&quot;);</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;;</span><br><span class="line"></span><br><span class="line">  useEffect(() =&gt; &#123;</span><br><span class="line">    window.addEventListener(&quot;resize&quot;, observeSize);</span><br><span class="line">  &#125;, []);</span><br><span class="line"></span><br><span class="line">  return (</span><br><span class="line">    &lt;div className=&quot;App&quot;&gt;</span><br><span class="line">      &lt;h1&gt;Hello CodeSandbox&lt;/h1&gt;</span><br><span class="line">      &lt;h2&gt;Start editing to see some magic happen!&lt;/h2&gt;</span><br><span class="line">    &lt;/div&gt;</span><br><span class="line">  );</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>具体代码连接：<br><a target="_blank" rel="noopener" href="https://codesandbox.io/s/part-two-feebp?file=/src/App.js">https://codesandbox.io/s/part-two-feebp?file=/src/App.js</a></p>
+<p>该方法也有弊端，由于是根据浏览器窗口区域和可视区域的差值来判断，此时我们可以新起一个窗口来打开控制台，该判断就不准确了，也可以利用这一点避免进入到代码判断中。<br><img src="https://i.328888.xyz/2023/01/30/8lIE5.png" alt="新起一个浏览器窗口"><br>新起一个浏览器窗口</p>
+<h1 id="6-如何防止水印被破解之方法四（重点）"><a href="#6-如何防止水印被破解之方法四（重点）" class="headerlink" title="6. 如何防止水印被破解之方法四（重点）"></a>6. 如何防止水印被破解之方法四（重点）</h1><p>在上部分中提到改变dom元素，那么我们可以考虑一下MutaitonObserver内建对象（DOM变动观察器）。<br>MutaitonObserver作用：观察DOM元素，并在检测到更改时触发回调。<br>MutaitonObserver语法：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">// 首先，创建一个带有回调函数的观察器</span><br><span class="line">let observer = new MutationObserver(callback);</span><br><span class="line">// 然后将其附加到一个 DOM 节点</span><br><span class="line">observer.observe(node, config);</span><br><span class="line"></span><br><span class="line">// config 是一个具有布尔选项的对象，该布尔选项表示“将对哪些更改做出反应”</span><br><span class="line">// childList --- node的直接子节点的更改</span><br><span class="line">// subtree --- node的所有后代的更改</span><br><span class="line">// attributes --- node的特性</span><br><span class="line">// attributeFilter --- 特性名称数组，只观察选定的特性</span><br><span class="line">// characterData --- 是否观察node.data（文本内容）</span><br></pre></td></tr></table></figure>
+
+<p><a target="_blank" rel="noopener" href="https://zh.javascript.info/mutation-observer">DOM 变动观察器（Mutation observer）</a></p>
+<p>react中使用MutaitonObserver对象：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br></pre></td><td class="code"><pre><span class="line">// https://www.jianshu.com/p/c0df31fbccca</span><br><span class="line">import &#123; useEffect, useState, useRef &#125; from &quot;react&quot;;</span><br><span class="line">import &quot;./styles.css&quot;;</span><br><span class="line"></span><br><span class="line">export default function App() &#123;</span><br><span class="line">  const ref = useRef();</span><br><span class="line">  const addWatch = (ele) =&gt; &#123;</span><br><span class="line">    // 观察器的配置(需要观察什么变动)</span><br><span class="line">    let config = &#123;</span><br><span class="line">      attributes: true, // node 的特性</span><br><span class="line">      childList: true, // node 的直接子节点的更改</span><br><span class="line">      subtree: true, // node 的所有后代的更改</span><br><span class="line">      characterData: true // 是否观察 node.data(文本内容)</span><br><span class="line">    &#125;;</span><br><span class="line">    const mutationCallback = (mutation) =&gt; &#123;</span><br><span class="line">      // 操作页面上的dom元素后，返回的值是数组形式</span><br><span class="line">      console.log(&quot;mutation111&quot;, mutation);</span><br><span class="line">    &#125;;</span><br><span class="line"></span><br><span class="line">    let observer = new MutationObserver(mutationCallback);</span><br><span class="line">    observer.observe(ele, config);</span><br><span class="line">  &#125;;</span><br><span class="line"></span><br><span class="line">  useEffect(() =&gt; &#123;</span><br><span class="line">    addWatch(ref.current);</span><br><span class="line">  &#125;, []);</span><br><span class="line"></span><br><span class="line">  return (</span><br><span class="line">    &lt;div className=&quot;App&quot; ref=&#123;ref&#125;&gt;</span><br><span class="line">      &lt;input /&gt;</span><br><span class="line">      &lt;h2&gt;Start editing to see some magic happen!&lt;/h2&gt;</span><br><span class="line">    &lt;/div&gt;</span><br><span class="line">  );</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>具体代码连接：<br><a target="_blank" rel="noopener" href="https://codesandbox.io/s/part-three-cf8l5?file=/src/App.js">https://codesandbox.io/s/part-three-cf8l5?file=/src/App.js</a></p>
+<p>在看到上面MutaitonObserver的使用之后，我们回过头再看水印中的使用就知道怎么做了。具体代码如下所示：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br></pre></td><td class="code"><pre><span class="line">// https://www.jianshu.com/p/c0df31fbccca</span><br><span class="line">import &#123; useEffect, useState, useRef &#125; from &quot;react&quot;;</span><br><span class="line">import &quot;./styles.css&quot;;</span><br><span class="line"></span><br><span class="line">let CONFIG = &#123;</span><br><span class="line">  attributes: true, // node 的特性</span><br><span class="line">  childList: true, // node 的直接子节点的更改</span><br><span class="line">  subtree: true, // node 的所有后代的更改</span><br><span class="line">  characterData: true // 是否观察 node.data(文本内容)</span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line">export default function App() &#123;</span><br><span class="line">  let observer = null;</span><br><span class="line">  const ref = useRef();</span><br><span class="line">  const reset = (expression = () =&gt; &#123;&#125;) =&gt; &#123;</span><br><span class="line">    observer.disconnect();</span><br><span class="line">    // 执行恢复方法</span><br><span class="line">    expression();</span><br><span class="line">    observer.observe(ref.current, CONFIG);</span><br><span class="line">  &#125;;</span><br><span class="line"></span><br><span class="line">  const mutationCallback = (mutation) =&gt; &#123;</span><br><span class="line">    const record = mutation[0];</span><br><span class="line">    console.log(&quot;record111&quot;, record);</span><br><span class="line">    // 在控制台修改元素的属性和样式</span><br><span class="line">    if (record.type === &quot;attributes&quot; &amp;&amp; record.attributeName === &quot;style&quot;) &#123;</span><br><span class="line">      reset(() =&gt; &#123;</span><br><span class="line">        console.log(&quot;modify attributes or style&quot;);</span><br><span class="line">        ref.current.setAttribute(&quot;style&quot;, &quot;color: red&quot;);</span><br><span class="line">      &#125;);</span><br><span class="line">    &#125; else if (record.type === &quot;characterData&quot;) &#123;</span><br><span class="line">      // 控制台修改元素文本内容</span><br><span class="line">      reset(() =&gt; &#123;</span><br><span class="line">        ref.current.textContent = &quot;dont modify&quot;;</span><br><span class="line">        console.log(&quot;modify characterData&quot;);</span><br><span class="line">      &#125;);</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;;</span><br><span class="line"></span><br><span class="line">  const addWatch = (ele) =&gt; &#123;</span><br><span class="line">    // reset(ele);</span><br><span class="line">    console.log(22222);</span><br><span class="line">    observer = new MutationObserver(mutationCallback);</span><br><span class="line">    observer.observe(ele, CONFIG);</span><br><span class="line">  &#125;;</span><br><span class="line"></span><br><span class="line">  useEffect(() =&gt; &#123;</span><br><span class="line">    addWatch(ref.current);</span><br><span class="line">  &#125;, []);</span><br><span class="line"></span><br><span class="line">  return (</span><br><span class="line">    &lt;div className=&quot;App&quot; ref=&#123;ref&#125;&gt;</span><br><span class="line">      &lt;input /&gt;</span><br><span class="line">      &lt;h2 style=&#123;&#123; color: &quot;red&quot; &#125;&#125;&gt;Start editing to see some magic happen!&lt;/h2&gt;</span><br><span class="line">    &lt;/div&gt;</span><br><span class="line">  );</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>具体代码连接：<br><a target="_blank" rel="noopener" href="https://codesandbox.io/s/part-five-7os9u?file=/src/App.js">https://codesandbox.io/s/part-five-7os9u?file=/src/App.js</a></p>
+<p>ps：通常一般来说都是后端来处理，当然对于有心之人使用什么办法都会被破解的，只能说我们比之前要做的更好一些。</p>
+<p>最后特别感谢这篇文章以及作者</p>
+<p><a target="_blank" rel="noopener" href="https://segmentfault.com/a/1190000040840891">前端如何防止用户修改水印？</a></p>
+
+            <div class="clearfix"></div>
+            <hr class="nogutter">
+        </div>
+        <nav class="m-pagination col-md-8 col-md-offset-2 col-sm-24" role="pagination">
+    
+    <a class="pull-left" href="/2022/05/15/React-Hooks%E9%97%AD%E5%8C%85%E9%99%B7%E9%98%B1/" style="float: left;">
+        ← React Hooks闭包陷阱
+    </a>
+    
+    
+    <a class="pull-right" href="/2021/08/28/%E8%99%9A%E6%8B%9F%E5%88%97%E8%A1%A8%E5%AE%9E%E7%8E%B0%E5%8E%9F%E7%90%86/">
+        虚拟列表实现原理 →
+    </a>
+    
+</nav>
+
+        <div class="col-md-8 col-md-offset-2 col-sm-24"><script type="text/javascript">
+  /**
+   * 搜狐畅言
+   */
+
+  /*
+  document.write('<div id="SOHUCS" sid="' + window.location.pathname.slice(1) + '" ></div>');
+
+  window.onload = function () {
+    (function () {
+      var appid = 'cytXXXX';
+      var conf = 'prod_xxxxxxxxxxxxxxxxx';
+      var width = window.innerWidth || document.documentElement.clientWidth;
+      var loadJs = function (d, a, id) {
+        var c = document.getElementsByTagName("head")[0] || document.head || document.documentElement;
+        var b = document.createElement("script");
+        b.setAttribute("type", "text/javascript");
+        b.setAttribute("charset", "UTF-8");
+        b.setAttribute("src", d);
+        if (id) {
+          b.setAttribute("id", id);
+        }
+        if (typeof a === "function") {
+          if (window.attachEvent) {
+            b.onreadystatechange = function () {
+              var e = b.readyState;
+              if (e === "loaded" || e === "complete") {
+                b.onreadystatechange = null;
+                a()
+              }
+            }
+          } else {
+            b.onload = a
+          }
+        }
+        c.appendChild(b)
+      };
+
+      loadJs("https://changyan.sohu.com/upload/changyan.js", function () {
+        window.changyan.api.config({
+          appid: appid,
+          conf: conf
+        })
+      });
+    })();
+  }
+  */
+
+</script>
+</div>
+    </div>
+</section>
+
+
+      
+<!-- ============================ Footer =========================== -->
+
+<footer>
+    <div class="container">
+            <div class="copy">
+                <p>
+                    &copy; 2014<script>new Date().getFullYear()>2010&&document.write("-"+new Date().getFullYear());</script>, Content By daipi173. All Rights Reserved.
+                </p>
+                <p>Theme By <a target="_blank" rel="noopener" href="//go.kieran.top" style="color: #767D84">Kieran</a></p>
+            </div>
+            <div class="social">
+                <ul>
+                    
+                    <li><a href="https://github.com/" title="Github" target="_blank"><i class="icon-github"></i></a>&nbsp;</li>
+                    
+                    
+                    <li><a href="https://twitter.com/" title="Twitter" target="_blank"><i class="icon-twitter"></i></a>&nbsp;</li>
+                    
+                    
+                    <li><a href="https://www.facebook.com/" title="Facebook" target="_blank"><i class="icon-facebook"></i></a>&nbsp;</li>
+                    
+                    
+                    <li><a href="https://google.com/" title="Google-Plus" target="_blank"><i class="icon-google-plus"></i></a>&nbsp;</li>
+                    
+                    
+                    <li><a href="http://weibo.com/" title="Sina-Weibo" target="_blank"><i class="icon-sina-weibo"></i></a>&nbsp;</li>
+                    
+                </ul>
+            </div>
+            <div class="clearfix"> </div>
+        </div>
+</footer>
+
+<!-- ============================ END Footer =========================== -->
+      <!-- Load our scripts -->
+<!-- Resizable 'on-demand' full-height hero -->
+<script type="text/javascript">
+    var resizeHero = function () {
+        var hero = $(".cover,.heightblock"),
+            window1 = $(window);
+        hero.css({
+            "height": window1.height()
+        });
+    };
+
+    resizeHero();
+
+    $(window).resize(function () {
+        resizeHero();
+    });
+</script>
+<script src="/js/plugins.min.js"></script><!-- Bootstrap core and concatenated plugins always load here -->
+<script src="/js/scripts.js"></script><!-- Theme scripts -->
+
+
+<link rel="stylesheet" href="/fancybox/jquery.fancybox.css" media="screen" type="text/css">
+<script src="/fancybox/jquery.fancybox.pack.js"></script>
+<script type="text/javascript">
+$('#intro').find('img').each(function(){
+  var alt = this.alt;
+
+  if (alt){
+    $(this).after('<span class="caption" style="display:none">' + alt + '</span>');
+  }
+
+  $(this).wrap('<a href="' + this.src + '" title="' + alt + '" class="fancybox" rel="gallery" />');
+});
+(function($){
+  $('.fancybox').fancybox();
+})(jQuery);
+</script>
+
+
+
+      
+<script src="/live2dw/lib/L2Dwidget.min.js?094cbace49a39548bed64abff5988b05"></script><script>L2Dwidget.init({"pluginModelPath":"assets/","model":{"jsonPath":"/live2dw/assets/haruto.model.json"},"display":{"position":"right","width":150,"height":300},"mobile":{"show":true},"log":false,"pluginJsPath":"lib/","pluginRootPath":"live2dw/","tagMode":false});</script></body>
+</html>

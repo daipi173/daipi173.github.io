@@ -1,0 +1,496 @@
+<!DOCTYPE html>
+<!--[if lte IE 8 ]>
+<html class="ie" xmlns="http://www.w3.org/1999/xhtml" xml:lang="en-US" lang="en-US">
+<![endif]-->
+<!--[if (gte IE 9)|!(IE)]><!-->
+<!--
+***************  *      *     *
+      8          *    *       *
+      8          *  *         *
+      8          **           *
+      8          *  *         *
+      8          *    *       *
+      8          *      *     *
+      8          *        *   ***********    -----Theme By Kieran(http://go.kieran.top)
+-->
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="zh-CN" lang="zh-CN">
+<!--<![endif]-->
+
+<head>
+  <title>数据结构与算法之单向链表 | daipi173的个人博客</title>
+  <!-- Meta data -->
+    <meta http-equiv="Content-Type" content="text/html" charset="UTF-8" >
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="generator" content="daipi173的个人博客">
+    <meta name="author" content="daipi173">
+    <meta name="description" content="" />
+    <meta name="keywords" content="" />
+
+    <!-- Favicon, (keep icon in root folder) -->
+    <link rel="Shortcut Icon" href="/img/favicon.ico" type="image/ico">
+
+    <link rel="alternate" href="/atom.xml" title="daipi173的个人博客" type="application/atom+xml">
+    <link rel="stylesheet" href="/css/all.css" media="screen" type="text/css">
+    
+    <link rel="stylesheet" href="/highlightjs/vs.css" type="text/css">
+    
+
+    <!--[if IE 8]>
+    <link rel="stylesheet" type="text/css" href="/css/ie8.css" />
+    <![endif]-->
+
+    <!-- jQuery | Load our jQuery, with an alternative source fallback to a local version if request is unavailable -->
+    <script src="/js/jquery-1.11.1.min.js"></script>
+    <script>window.jQuery || document.write('<script src="js/jquery-1.11.1.min.js"><\/script>')</script>
+
+    <!-- Load these in the <head> for quicker IE8+ load times -->
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+    <script src="/js/html5shiv.min.js"></script>
+    <script src="/js/respond.min.js"></script>
+    <![endif]-->
+
+  
+  
+  
+
+  <style>.col-md-8.col-md-offset-2.opening-statement img{display:none;}</style>
+</head>
+
+<!--
+<body class="post-template">
+-->
+<body id="index" class="lightnav animsition">
+
+      <!-- ============================ Off-canvas navigation =========================== -->
+
+    <div class="sb-slidebar sb-right sb-style-overlay sb-momentum-scrolling">
+        <div class="sb-close" aria-label="Close Menu" aria-hidden="true">
+            <img src="/img/close.png" alt="Close"/>
+        </div>
+        <!-- Lists in Slidebars -->
+        <ul class="sb-menu">
+            <li><a href="/" class="animsition-link" title="Home">Home</a></li>
+            <li><a href="/archives" class="animsition-link" title="archive">archives</a></li>
+            <!-- Dropdown Menu -->
+			 
+            
+        	<li>
+        		<a class="sb-toggle-submenu">Categories<span class="sb-caret"></span></a>
+            	<ul class="sb-submenu">
+				  	
+				    <li><a href="/categories/JavaScript/Array/" class="animsition-link">Array<small>(1)</small></a></li>
+				    
+				    <li><a href="/categories/HTML/CSS/" class="animsition-link">CSS<small>(4)</small></a></li>
+				    
+				    <li><a href="/categories/HTML/Chrome浏览器/" class="animsition-link">Chrome浏览器<small>(1)</small></a></li>
+				    
+				    <li><a href="/categories/React/Component/" class="animsition-link">Component<small>(1)</small></a></li>
+				    
+				    <li><a href="/categories/ES6/" class="animsition-link">ES6<small>(4)</small></a></li>
+				    
+				    <li><a href="/categories/JavaScript/ES6/" class="animsition-link">ES6<small>(6)</small></a></li>
+				    
+				    <li><a href="/categories/JavaScript/Vue/Eslint/" class="animsition-link">Eslint<small>(1)</small></a></li>
+				    
+				    <li><a href="/categories/Git/" class="animsition-link">Git<small>(4)</small></a></li>
+				    
+				    <li><a href="/categories/总结/Git/" class="animsition-link">Git<small>(1)</small></a></li>
+				    
+				    <li><a href="/categories/HTML/" class="animsition-link">HTML<small>(17)</small></a></li>
+				    
+				    <li><a href="/categories/React/Hook/" class="animsition-link">Hook<small>(1)</small></a></li>
+				    
+				    <li><a href="/categories/JavaScript/" class="animsition-link">JavaScript<small>(40)</small></a></li>
+				    
+				    <li><a href="/categories/ES6/JavaScript/" class="animsition-link">JavaScript<small>(4)</small></a></li>
+				    
+				    <li><a href="/categories/Javascript/" class="animsition-link">Javascript<small>(11)</small></a></li>
+				    
+				    <li><a href="/categories/Redux/Middleware中间件/" class="animsition-link">Middleware中间件<small>(1)</small></a></li>
+				    
+				    <li><a href="/categories/React/Component/PureComponent/" class="animsition-link">PureComponent<small>(1)</small></a></li>
+				    
+				    <li><a href="/categories/React/" class="animsition-link">React<small>(8)</small></a></li>
+				    
+				    <li><a href="/categories/Redux/" class="animsition-link">Redux<small>(3)</small></a></li>
+				    
+				    <li><a href="/categories/Vue/" class="animsition-link">Vue<small>(2)</small></a></li>
+				    
+				    <li><a href="/categories/Git/Vue/" class="animsition-link">Vue<small>(1)</small></a></li>
+				    
+				    <li><a href="/categories/JavaScript/Vue/" class="animsition-link">Vue<small>(1)</small></a></li>
+				    
+				    <li><a href="/categories/React/Webpack/" class="animsition-link">Webpack<small>(1)</small></a></li>
+				    
+				    <li><a href="/categories/React/antd/" class="animsition-link">antd<small>(1)</small></a></li>
+				    
+				    <li><a href="/categories/Javascript/bind/call/apply/" class="animsition-link">apply<small>(1)</small></a></li>
+				    
+				    <li><a href="/categories/Javascript/bind/" class="animsition-link">bind<small>(1)</small></a></li>
+				    
+				    <li><a href="/categories/Javascript/bind/call/" class="animsition-link">call<small>(1)</small></a></li>
+				    
+				    <li><a href="/categories/Redux/connect/" class="animsition-link">connect<small>(2)</small></a></li>
+				    
+				    <li><a href="/categories/React/antd/css局部样式/" class="animsition-link">css局部样式<small>(1)</small></a></li>
+				    
+				    <li><a href="/categories/Vue/懒加载/总结/element-ui/" class="animsition-link">element ui<small>(1)</small></a></li>
+				    
+				    <li><a href="/categories/express/" class="animsition-link">express<small>(1)</small></a></li>
+				    
+				    <li><a href="/categories/git/" class="animsition-link">git<small>(1)</small></a></li>
+				    
+				    <li><a href="/categories/Javascript/map/" class="animsition-link">map<small>(1)</small></a></li>
+				    
+				    <li><a href="/categories/Javascript/map/parseInt/" class="animsition-link">parseInt<small>(1)</small></a></li>
+				    
+				    <li><a href="/categories/Javascript/reduce/" class="animsition-link">reduce<small>(1)</small></a></li>
+				    
+				    <li><a href="/categories/React/setState/" class="animsition-link">setState<small>(2)</small></a></li>
+				    
+				    <li><a href="/categories/ubuntu/" class="animsition-link">ubuntu<small>(3)</small></a></li>
+				    
+				    <li><a href="/categories/React/useContext/" class="animsition-link">useContext<small>(1)</small></a></li>
+				    
+				    <li><a href="/categories/Redux/connect/useSelector/" class="animsition-link">useSelector<small>(1)</small></a></li>
+				    
+				    <li><a href="/categories/vue/" class="animsition-link">vue<small>(1)</small></a></li>
+				    
+				    <li><a href="/categories/webpack/" class="animsition-link">webpack<small>(2)</small></a></li>
+				    
+				    <li><a href="/categories/算法/两数之和/" class="animsition-link">两数之和<small>(1)</small></a></li>
+				    
+				    <li><a href="/categories/express/中间件/" class="animsition-link">中间件<small>(1)</small></a></li>
+				    
+				    <li><a href="/categories/Javascript/优化/" class="animsition-link">优化<small>(1)</small></a></li>
+				    
+				    <li><a href="/categories/算法/观察者模式/发布订阅模式/" class="animsition-link">发布订阅模式<small>(2)</small></a></li>
+				    
+				    <li><a href="/categories/Javascript/对象/基本类型/" class="animsition-link">基本类型<small>(2)</small></a></li>
+				    
+				    <li><a href="/categories/Javascript/基本类型/" class="animsition-link">基本类型<small>(1)</small></a></li>
+				    
+				    <li><a href="/categories/算法/多数元素/" class="animsition-link">多数元素<small>(1)</small></a></li>
+				    
+				    <li><a href="/categories/Javascript/对象/" class="animsition-link">对象<small>(2)</small></a></li>
+				    
+				    <li><a href="/categories/React/useContext/性能/" class="animsition-link">性能<small>(1)</small></a></li>
+				    
+				    <li><a href="/categories/性能优化/" class="animsition-link">性能优化<small>(1)</small></a></li>
+				    
+				    <li><a href="/categories/JavaScript/总结/" class="animsition-link">总结<small>(2)</small></a></li>
+				    
+				    <li><a href="/categories/总结/" class="animsition-link">总结<small>(1)</small></a></li>
+				    
+				    <li><a href="/categories/Git/Vue/总结/" class="animsition-link">总结<small>(1)</small></a></li>
+				    
+				    <li><a href="/categories/Vue/懒加载/总结/" class="animsition-link">总结<small>(1)</small></a></li>
+				    
+				    <li><a href="/categories/Vue/懒加载/" class="animsition-link">懒加载<small>(1)</small></a></li>
+				    
+				    <li><a href="/categories/JavaScript/Array/扁平化/" class="animsition-link">扁平化<small>(1)</small></a></li>
+				    
+				    <li><a href="/categories/JavaScript/整数存储相加/" class="animsition-link">整数存储相加<small>(1)</small></a></li>
+				    
+				    <li><a href="/categories/日志/" class="animsition-link">日志<small>(1)</small></a></li>
+				    
+				    <li><a href="/categories/模板引擎/" class="animsition-link">模板引擎<small>(1)</small></a></li>
+				    
+				    <li><a href="/categories/Javascript/水印/" class="animsition-link">水印<small>(1)</small></a></li>
+				    
+				    <li><a href="/categories/算法/环形链表/" class="animsition-link">环形链表<small>(1)</small></a></li>
+				    
+				    <li><a href="/categories/算法/相交链表/" class="animsition-link">相交链表<small>(1)</small></a></li>
+				    
+				    <li><a href="/categories/算法/" class="animsition-link">算法<small>(12)</small></a></li>
+				    
+				    <li><a href="/categories/Javascript/算法/" class="animsition-link">算法<small>(2)</small></a></li>
+				    
+				    <li><a href="/categories/链表/算法/" class="animsition-link">算法<small>(1)</small></a></li>
+				    
+				    <li><a href="/categories/React/虚拟dom/" class="animsition-link">虚拟dom<small>(1)</small></a></li>
+				    
+				    <li><a href="/categories/性能优化/虚拟列表/" class="animsition-link">虚拟列表<small>(1)</small></a></li>
+				    
+				    <li><a href="/categories/算法/观察者模式/" class="animsition-link">观察者模式<small>(2)</small></a></li>
+				    
+				    <li><a href="/categories/链表/" class="animsition-link">链表<small>(1)</small></a></li>
+				    
+				    <li><a href="/categories/算法/链表/" class="animsition-link">链表<small>(2)</small></a></li>
+				    
+				</ul>
+        	</li>
+			
+            
+            <li>
+                <a class="sb-toggle-submenu">Links<span class="sb-caret"></span></a>
+                <ul class="sb-submenu">
+                    
+                    <li><a target="_blank" rel="noopener" href="https://daipi173.github.io/myweb/daipi173-myperson" class="animsition-link">Personal Project</a></li>
+                    
+                </ul>
+            </li>
+            
+        </ul>
+        <!-- Lists in Slidebars -->
+        <ul class="sb-menu secondary">
+            
+            <li><a href="/about.html" class="animsition-link" title="about">About</a></li>
+            <li><a href="/atom.xml" class="animsition-link" title="rss">RSS</a></li>
+        </ul>
+    </div>
+    
+    <!-- ============================ END Off-canvas navigation =========================== -->
+
+    <!-- ============================ #sb-site Main Page Wrapper =========================== -->
+
+    <div id="sb-site">
+        <!-- #sb-site - All page content should be contained within this id, except the off-canvas navigation itself -->
+
+        <!-- ============================ Header & Logo bar =========================== -->
+
+        <div id="navigation" class="navbar navbar-fixed-top">
+            <div class="navbar-inner">
+                <div class="container">
+                    <!-- Nav logo -->
+                    <div class="logo">
+                        <a href="/" title="Logo" class="animsition-link">
+                         <img src="/img/logo.png" alt="Logo" width="35px;"/> 
+                        </a>
+                    </div>
+                    <!-- // Nav logo -->
+                    <!-- Info-bar -->
+                    <nav>
+                        <ul class="nav">
+                            <li><a href="/" class="animsition-link">daipi173的个人博客</a></li>
+                            <li class="nolink"><span>Always </span>Creative.</li>
+                            
+                            <li><a href="https://github.com/" title="Github" target="_blank"><i class="icon-github"></i></a></li>
+                            
+                            
+                            <li><a href="https://twitter.com/" title="Twitter" target="_blank"><i class="icon-twitter"></i></a></li>
+                            
+                            
+                            <li><a href="https://www.facebook.com/" title="Facebook" target="_blank"><i class="icon-facebook"></i></a></li>
+                            
+                            
+                            <li><a href="https://google.com/" title="Google-Plus" target="_blank"><i class="icon-google-plus"></i></a></li>
+                            
+                            
+                            <li><a href="http://weibo.com/" title="Sina-Weibo" target="_blank"><i class="icon-sina-weibo"></i></a></li>
+                            
+                            <li class="nolink"><span>Welcome!</span></li>
+                        </ul>
+                    </nav>
+                    <!--// Info-bar -->
+                </div>
+                <!-- // .container -->
+                <div class="learnmore sb-toggle-right">More</div>
+                <button type="button" class="navbar-toggle menu-icon sb-toggle-right" title="More">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar before"></span>
+                <span class="icon-bar main"></span>
+                <span class="icon-bar after"></span>
+                </button>
+            </div>
+            <!-- // .navbar-inner -->
+        </div>
+
+        <!-- ============================ Header & Logo bar =========================== -->
+
+
+      
+<section id="intro">
+    <div class="container">
+        <div class="row col-md-offset-2">
+            <div class="col-md-8">
+    			<span class="post-meta">
+      <time datetime="2021-03-16T15:06:00.000Z" itemprop="datePublished">
+          2021-03-16
+      </time>
+    
+    
+    | 
+    <a href='/tags/链表/'>链表</a>
+    
+    
+</span>
+                <h1>数据结构与算法之单向链表</h1>
+            </div>
+        </div>
+        <div class="col-md-8 col-md-offset-2">
+      		<p>“ 今日不做算法，来一个轻松一点的，用js如何实现链表，话不多说进入正题。”</p>
+<h1 id="1-什么是单向链表"><a href="#1-什么是单向链表" class="headerlink" title="1. 什么是单向链表"></a>1. 什么是单向链表</h1><p>先来思考一下什么是链表？第一时间我们可能会联想到<strong>数组</strong>，但是数组是存储在特定索引中，而链表每一个元素都是一个独立的对象，每个元素(节点)包含存储的数据以及指向下一个引用的next链接，看下面的一张图你就大致懂单向链表的构造了。<br><a target="_blank" rel="noopener" href="https://imgse.com/i/pSwtPMR"><img src="https://s1.ax1x.com/2023/01/30/pSwtPMR.png" alt="什么是单向链表"></a></p>
+<p>单向链表构造图</p>
+<p>这个时候你可能比较好奇为什么会定义一个head头部？因为开始结点无前驱，所以设头指针head指向开始结点。<br>通过使用head作为链表入口，需要注意的是：<strong>head是对链表中第一个节点的引用</strong>。并且链表的<strong>最后一个节点指向NULL</strong>。如果是一个<strong>空链表</strong>那么head指向为<strong>NULL</strong>。</p>
+<h1 id="2-链表和数组区别"><a href="#2-链表和数组区别" class="headerlink" title="2. 链表和数组区别"></a>2. 链表和数组区别</h1><p>数组</p>
+<p><strong>数组的优点</strong>：随机访问性强、查找速度快；</p>
+<p><strong>数组的缺点</strong>：插入删除效率低、可能浪费内存、内存空间要求高需要有足够的连续内存空间。</p>
+<p>链表</p>
+<p><strong>链表的优点</strong>：插入删除效率高、内存利用率高不会浪费内存、大小不固定拓展灵活；</p>
+<p><strong>链表的缺点</strong>：查找效率低，不能随机查找，必须从第一个开始遍历。</p>
+<h1 id="3-js手撸一个单向链表"><a href="#3-js手撸一个单向链表" class="headerlink" title="3. js手撸一个单向链表"></a>3. js手撸一个单向链表</h1><p>在第一章节我介绍了链表的构造，那么用js构造出来的单向链表应该长什么样呢？拿第一章节那张图来举例，可以得到如下所示的代码：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">const list = &#123;</span><br><span class="line">  head: &#123;</span><br><span class="line">    data: 1,</span><br><span class="line">    next: &#123;</span><br><span class="line">      data: 6,</span><br><span class="line">      next: &#123;</span><br><span class="line">        data: 8,</span><br><span class="line">        next: null,</span><br><span class="line">      &#125;,</span><br><span class="line">    &#125;,</span><br><span class="line">  &#125;,</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
+<p>js构造单向链表解构代码</p>
+<p><strong>实现步骤：</strong><br>js实现链表</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">// 链表---链表初始化时，初始化head节点</span><br><span class="line">class NodeList &#123;</span><br><span class="line">  constructor (head = null) &#123;</span><br><span class="line">    this.head = head;</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>js节点</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">// 需要存储节点数据的字段（data）和一个字段（next）指向下一个节点</span><br><span class="line">class Node &#123; // 链表节点</span><br><span class="line">  constructor (data) &#123;</span><br><span class="line">    this.data = data; // 节点数据</span><br><span class="line">    this.next = null; // 下一个节点指针</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>使用上面创建的类来创建一个链表</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">const node1 = new Node(1); // 创建node1节点</span><br><span class="line">const node2 = new Node(6); // 创建node2节点</span><br><span class="line">const node3 = new Node(8); // 创建node3节点</span><br><span class="line">const list = new NodeList(node1); // 创建单向链表，并将head头节点指向node1</span><br><span class="line">node1.next = node2; // node1的next指向node2节点</span><br><span class="line">node2.next = node3; // node2的next指向node3节点</span><br><span class="line">console.log(list)</span><br></pre></td></tr></table></figure>
+<p>打印出来的list单向链表如下图所示：<br><a target="_blank" rel="noopener" href="https://imgse.com/i/pSwtUzj"><img src="https://s1.ax1x.com/2023/01/30/pSwtUzj.png" alt="list单向链表"></a><br>list单向链表</p>
+<p>js实现链表中存在的节点数、清空链表、返回链表最后一个节点或者第一个节点</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br></pre></td><td class="code"><pre><span class="line">// 链表---链表初始化时，初始化head节点</span><br><span class="line">class NodeList &#123;</span><br><span class="line">  constructor (head = null) &#123;</span><br><span class="line">    this.head = head;</span><br><span class="line">  &#125;</span><br><span class="line">  // 链表中存在的节点数</span><br><span class="line">  size () &#123;</span><br><span class="line">    let count = 0;</span><br><span class="line">    let currentNode = this.head;</span><br><span class="line">    while (currentNode) &#123;</span><br><span class="line">      count++;</span><br><span class="line">      currentNode = currentNode.next;</span><br><span class="line">    &#125;</span><br><span class="line">    return count;</span><br><span class="line">  &#125;</span><br><span class="line">  // 清空该链表</span><br><span class="line">  clear () &#123;</span><br><span class="line">    this.head = null; // 只需要将head的指向改为null即可</span><br><span class="line">  &#125;</span><br><span class="line">  // 返回链表最后一个节点</span><br><span class="line">  getLast () &#123;</span><br><span class="line">    let lastNode = this.head;</span><br><span class="line">    while (lastNode &amp;&amp; lastNode.next) &#123;</span><br><span class="line">      lastNode = lastNode.next;</span><br><span class="line">    &#125;</span><br><span class="line">    return lastNode;</span><br><span class="line">  &#125;</span><br><span class="line">  // 返回链表第一个节点</span><br><span class="line">  getFirst () &#123;</span><br><span class="line">    return this.head;</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>这里只是带着大家写了一个简单的单向链表，至于链表中查找、删除、添加在这里我没有介绍，后续空闲时间我会画图解析说明并配上相关的代码，当然如果你看到这里如果懂了的话也可以自己尝试写一下那几种方法，如果能够实现证明你是真的明白了。</p>
+<p><a target="_blank" rel="noopener" href="https://chinese.freecodecamp.org/news/implementing-a-linked-list-in-javascript/">用 JavaScript 实现一个链表</a></p>
+
+            <div class="clearfix"></div>
+            <hr class="nogutter">
+        </div>
+        <nav class="m-pagination col-md-8 col-md-offset-2 col-sm-24" role="pagination">
+    
+    <a class="pull-left" href="/2021/03/18/%E7%94%A8js%E5%AE%9E%E7%8E%B0%E5%8D%95%E5%90%91%E9%93%BE%E8%A1%A8%E7%9A%84%E5%A2%9E%E5%88%A0%E6%9F%A5/" style="float: left;">
+        ← 用js实现单向链表的增删查
+    </a>
+    
+    
+    <a class="pull-right" href="/2021/03/14/%E7%AE%97%E6%B3%95-%E5%90%88%E5%B9%B6%E4%B8%A4%E4%B8%AA%E6%9C%89%E5%BA%8F%E6%95%B0%E7%BB%84/">
+        算法---合并两个有序数组 →
+    </a>
+    
+</nav>
+
+        <div class="col-md-8 col-md-offset-2 col-sm-24"><script type="text/javascript">
+  /**
+   * 搜狐畅言
+   */
+
+  /*
+  document.write('<div id="SOHUCS" sid="' + window.location.pathname.slice(1) + '" ></div>');
+
+  window.onload = function () {
+    (function () {
+      var appid = 'cytXXXX';
+      var conf = 'prod_xxxxxxxxxxxxxxxxx';
+      var width = window.innerWidth || document.documentElement.clientWidth;
+      var loadJs = function (d, a, id) {
+        var c = document.getElementsByTagName("head")[0] || document.head || document.documentElement;
+        var b = document.createElement("script");
+        b.setAttribute("type", "text/javascript");
+        b.setAttribute("charset", "UTF-8");
+        b.setAttribute("src", d);
+        if (id) {
+          b.setAttribute("id", id);
+        }
+        if (typeof a === "function") {
+          if (window.attachEvent) {
+            b.onreadystatechange = function () {
+              var e = b.readyState;
+              if (e === "loaded" || e === "complete") {
+                b.onreadystatechange = null;
+                a()
+              }
+            }
+          } else {
+            b.onload = a
+          }
+        }
+        c.appendChild(b)
+      };
+
+      loadJs("https://changyan.sohu.com/upload/changyan.js", function () {
+        window.changyan.api.config({
+          appid: appid,
+          conf: conf
+        })
+      });
+    })();
+  }
+  */
+
+</script>
+</div>
+    </div>
+</section>
+
+
+      
+<!-- ============================ Footer =========================== -->
+
+<footer>
+    <div class="container">
+            <div class="copy">
+                <p>
+                    &copy; 2014<script>new Date().getFullYear()>2010&&document.write("-"+new Date().getFullYear());</script>, Content By daipi173. All Rights Reserved.
+                </p>
+                <p>Theme By <a target="_blank" rel="noopener" href="//go.kieran.top" style="color: #767D84">Kieran</a></p>
+            </div>
+            <div class="social">
+                <ul>
+                    
+                    <li><a href="https://github.com/" title="Github" target="_blank"><i class="icon-github"></i></a>&nbsp;</li>
+                    
+                    
+                    <li><a href="https://twitter.com/" title="Twitter" target="_blank"><i class="icon-twitter"></i></a>&nbsp;</li>
+                    
+                    
+                    <li><a href="https://www.facebook.com/" title="Facebook" target="_blank"><i class="icon-facebook"></i></a>&nbsp;</li>
+                    
+                    
+                    <li><a href="https://google.com/" title="Google-Plus" target="_blank"><i class="icon-google-plus"></i></a>&nbsp;</li>
+                    
+                    
+                    <li><a href="http://weibo.com/" title="Sina-Weibo" target="_blank"><i class="icon-sina-weibo"></i></a>&nbsp;</li>
+                    
+                </ul>
+            </div>
+            <div class="clearfix"> </div>
+        </div>
+</footer>
+
+<!-- ============================ END Footer =========================== -->
+      <!-- Load our scripts -->
+<!-- Resizable 'on-demand' full-height hero -->
+<script type="text/javascript">
+    var resizeHero = function () {
+        var hero = $(".cover,.heightblock"),
+            window1 = $(window);
+        hero.css({
+            "height": window1.height()
+        });
+    };
+
+    resizeHero();
+
+    $(window).resize(function () {
+        resizeHero();
+    });
+</script>
+<script src="/js/plugins.min.js"></script><!-- Bootstrap core and concatenated plugins always load here -->
+<script src="/js/scripts.js"></script><!-- Theme scripts -->
+
+
+<link rel="stylesheet" href="/fancybox/jquery.fancybox.css" media="screen" type="text/css">
+<script src="/fancybox/jquery.fancybox.pack.js"></script>
+<script type="text/javascript">
+$('#intro').find('img').each(function(){
+  var alt = this.alt;
+
+  if (alt){
+    $(this).after('<span class="caption" style="display:none">' + alt + '</span>');
+  }
+
+  $(this).wrap('<a href="' + this.src + '" title="' + alt + '" class="fancybox" rel="gallery" />');
+});
+(function($){
+  $('.fancybox').fancybox();
+})(jQuery);
+</script>
+
+
+
+      
+<script src="/live2dw/lib/L2Dwidget.min.js?094cbace49a39548bed64abff5988b05"></script><script>L2Dwidget.init({"pluginModelPath":"assets/","model":{"jsonPath":"/live2dw/assets/haruto.model.json"},"display":{"position":"right","width":150,"height":300},"mobile":{"show":true},"log":false,"pluginJsPath":"lib/","pluginRootPath":"live2dw/","tagMode":false});</script></body>
+</html>

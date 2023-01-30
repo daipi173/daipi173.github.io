@@ -1,0 +1,490 @@
+<!DOCTYPE html>
+<!--[if lte IE 8 ]>
+<html class="ie" xmlns="http://www.w3.org/1999/xhtml" xml:lang="en-US" lang="en-US">
+<![endif]-->
+<!--[if (gte IE 9)|!(IE)]><!-->
+<!--
+***************  *      *     *
+      8          *    *       *
+      8          *  *         *
+      8          **           *
+      8          *  *         *
+      8          *    *       *
+      8          *      *     *
+      8          *        *   ***********    -----Theme By Kieran(http://go.kieran.top)
+-->
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="zh-CN" lang="zh-CN">
+<!--<![endif]-->
+
+<head>
+  <title>js手动封装观察者模式和发布订阅模式 | daipi173的个人博客</title>
+  <!-- Meta data -->
+    <meta http-equiv="Content-Type" content="text/html" charset="UTF-8" >
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="generator" content="daipi173的个人博客">
+    <meta name="author" content="daipi173">
+    <meta name="description" content="" />
+    <meta name="keywords" content="" />
+
+    <!-- Favicon, (keep icon in root folder) -->
+    <link rel="Shortcut Icon" href="/img/favicon.ico" type="image/ico">
+
+    <link rel="alternate" href="/atom.xml" title="daipi173的个人博客" type="application/atom+xml">
+    <link rel="stylesheet" href="/css/all.css" media="screen" type="text/css">
+    
+    <link rel="stylesheet" href="/highlightjs/vs.css" type="text/css">
+    
+
+    <!--[if IE 8]>
+    <link rel="stylesheet" type="text/css" href="/css/ie8.css" />
+    <![endif]-->
+
+    <!-- jQuery | Load our jQuery, with an alternative source fallback to a local version if request is unavailable -->
+    <script src="/js/jquery-1.11.1.min.js"></script>
+    <script>window.jQuery || document.write('<script src="js/jquery-1.11.1.min.js"><\/script>')</script>
+
+    <!-- Load these in the <head> for quicker IE8+ load times -->
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+    <script src="/js/html5shiv.min.js"></script>
+    <script src="/js/respond.min.js"></script>
+    <![endif]-->
+
+  
+  
+  
+
+  <style>.col-md-8.col-md-offset-2.opening-statement img{display:none;}</style>
+</head>
+
+<!--
+<body class="post-template">
+-->
+<body id="index" class="lightnav animsition">
+
+      <!-- ============================ Off-canvas navigation =========================== -->
+
+    <div class="sb-slidebar sb-right sb-style-overlay sb-momentum-scrolling">
+        <div class="sb-close" aria-label="Close Menu" aria-hidden="true">
+            <img src="/img/close.png" alt="Close"/>
+        </div>
+        <!-- Lists in Slidebars -->
+        <ul class="sb-menu">
+            <li><a href="/" class="animsition-link" title="Home">Home</a></li>
+            <li><a href="/archives" class="animsition-link" title="archive">archives</a></li>
+            <!-- Dropdown Menu -->
+			 
+            
+        	<li>
+        		<a class="sb-toggle-submenu">Categories<span class="sb-caret"></span></a>
+            	<ul class="sb-submenu">
+				  	
+				    <li><a href="/categories/JavaScript/Array/" class="animsition-link">Array<small>(1)</small></a></li>
+				    
+				    <li><a href="/categories/HTML/CSS/" class="animsition-link">CSS<small>(4)</small></a></li>
+				    
+				    <li><a href="/categories/HTML/Chrome浏览器/" class="animsition-link">Chrome浏览器<small>(1)</small></a></li>
+				    
+				    <li><a href="/categories/React/Component/" class="animsition-link">Component<small>(1)</small></a></li>
+				    
+				    <li><a href="/categories/ES6/" class="animsition-link">ES6<small>(4)</small></a></li>
+				    
+				    <li><a href="/categories/JavaScript/ES6/" class="animsition-link">ES6<small>(6)</small></a></li>
+				    
+				    <li><a href="/categories/JavaScript/Vue/Eslint/" class="animsition-link">Eslint<small>(1)</small></a></li>
+				    
+				    <li><a href="/categories/Git/" class="animsition-link">Git<small>(4)</small></a></li>
+				    
+				    <li><a href="/categories/总结/Git/" class="animsition-link">Git<small>(1)</small></a></li>
+				    
+				    <li><a href="/categories/HTML/" class="animsition-link">HTML<small>(17)</small></a></li>
+				    
+				    <li><a href="/categories/React/Hook/" class="animsition-link">Hook<small>(1)</small></a></li>
+				    
+				    <li><a href="/categories/JavaScript/" class="animsition-link">JavaScript<small>(40)</small></a></li>
+				    
+				    <li><a href="/categories/ES6/JavaScript/" class="animsition-link">JavaScript<small>(4)</small></a></li>
+				    
+				    <li><a href="/categories/Javascript/" class="animsition-link">Javascript<small>(11)</small></a></li>
+				    
+				    <li><a href="/categories/Redux/Middleware中间件/" class="animsition-link">Middleware中间件<small>(1)</small></a></li>
+				    
+				    <li><a href="/categories/React/Component/PureComponent/" class="animsition-link">PureComponent<small>(1)</small></a></li>
+				    
+				    <li><a href="/categories/React/" class="animsition-link">React<small>(8)</small></a></li>
+				    
+				    <li><a href="/categories/Redux/" class="animsition-link">Redux<small>(3)</small></a></li>
+				    
+				    <li><a href="/categories/Vue/" class="animsition-link">Vue<small>(2)</small></a></li>
+				    
+				    <li><a href="/categories/Git/Vue/" class="animsition-link">Vue<small>(1)</small></a></li>
+				    
+				    <li><a href="/categories/JavaScript/Vue/" class="animsition-link">Vue<small>(1)</small></a></li>
+				    
+				    <li><a href="/categories/React/Webpack/" class="animsition-link">Webpack<small>(1)</small></a></li>
+				    
+				    <li><a href="/categories/React/antd/" class="animsition-link">antd<small>(1)</small></a></li>
+				    
+				    <li><a href="/categories/Javascript/bind/call/apply/" class="animsition-link">apply<small>(1)</small></a></li>
+				    
+				    <li><a href="/categories/Javascript/bind/" class="animsition-link">bind<small>(1)</small></a></li>
+				    
+				    <li><a href="/categories/Javascript/bind/call/" class="animsition-link">call<small>(1)</small></a></li>
+				    
+				    <li><a href="/categories/Redux/connect/" class="animsition-link">connect<small>(2)</small></a></li>
+				    
+				    <li><a href="/categories/React/antd/css局部样式/" class="animsition-link">css局部样式<small>(1)</small></a></li>
+				    
+				    <li><a href="/categories/Vue/懒加载/总结/element-ui/" class="animsition-link">element ui<small>(1)</small></a></li>
+				    
+				    <li><a href="/categories/express/" class="animsition-link">express<small>(1)</small></a></li>
+				    
+				    <li><a href="/categories/git/" class="animsition-link">git<small>(1)</small></a></li>
+				    
+				    <li><a href="/categories/Javascript/map/" class="animsition-link">map<small>(1)</small></a></li>
+				    
+				    <li><a href="/categories/Javascript/map/parseInt/" class="animsition-link">parseInt<small>(1)</small></a></li>
+				    
+				    <li><a href="/categories/Javascript/reduce/" class="animsition-link">reduce<small>(1)</small></a></li>
+				    
+				    <li><a href="/categories/React/setState/" class="animsition-link">setState<small>(2)</small></a></li>
+				    
+				    <li><a href="/categories/ubuntu/" class="animsition-link">ubuntu<small>(3)</small></a></li>
+				    
+				    <li><a href="/categories/React/useContext/" class="animsition-link">useContext<small>(1)</small></a></li>
+				    
+				    <li><a href="/categories/Redux/connect/useSelector/" class="animsition-link">useSelector<small>(1)</small></a></li>
+				    
+				    <li><a href="/categories/vue/" class="animsition-link">vue<small>(1)</small></a></li>
+				    
+				    <li><a href="/categories/webpack/" class="animsition-link">webpack<small>(2)</small></a></li>
+				    
+				    <li><a href="/categories/算法/两数之和/" class="animsition-link">两数之和<small>(1)</small></a></li>
+				    
+				    <li><a href="/categories/express/中间件/" class="animsition-link">中间件<small>(1)</small></a></li>
+				    
+				    <li><a href="/categories/Javascript/优化/" class="animsition-link">优化<small>(1)</small></a></li>
+				    
+				    <li><a href="/categories/算法/观察者模式/发布订阅模式/" class="animsition-link">发布订阅模式<small>(2)</small></a></li>
+				    
+				    <li><a href="/categories/Javascript/对象/基本类型/" class="animsition-link">基本类型<small>(2)</small></a></li>
+				    
+				    <li><a href="/categories/Javascript/基本类型/" class="animsition-link">基本类型<small>(1)</small></a></li>
+				    
+				    <li><a href="/categories/算法/多数元素/" class="animsition-link">多数元素<small>(1)</small></a></li>
+				    
+				    <li><a href="/categories/Javascript/对象/" class="animsition-link">对象<small>(2)</small></a></li>
+				    
+				    <li><a href="/categories/React/useContext/性能/" class="animsition-link">性能<small>(1)</small></a></li>
+				    
+				    <li><a href="/categories/性能优化/" class="animsition-link">性能优化<small>(1)</small></a></li>
+				    
+				    <li><a href="/categories/JavaScript/总结/" class="animsition-link">总结<small>(2)</small></a></li>
+				    
+				    <li><a href="/categories/总结/" class="animsition-link">总结<small>(1)</small></a></li>
+				    
+				    <li><a href="/categories/Git/Vue/总结/" class="animsition-link">总结<small>(1)</small></a></li>
+				    
+				    <li><a href="/categories/Vue/懒加载/总结/" class="animsition-link">总结<small>(1)</small></a></li>
+				    
+				    <li><a href="/categories/Vue/懒加载/" class="animsition-link">懒加载<small>(1)</small></a></li>
+				    
+				    <li><a href="/categories/JavaScript/Array/扁平化/" class="animsition-link">扁平化<small>(1)</small></a></li>
+				    
+				    <li><a href="/categories/JavaScript/整数存储相加/" class="animsition-link">整数存储相加<small>(1)</small></a></li>
+				    
+				    <li><a href="/categories/日志/" class="animsition-link">日志<small>(1)</small></a></li>
+				    
+				    <li><a href="/categories/模板引擎/" class="animsition-link">模板引擎<small>(1)</small></a></li>
+				    
+				    <li><a href="/categories/Javascript/水印/" class="animsition-link">水印<small>(1)</small></a></li>
+				    
+				    <li><a href="/categories/算法/环形链表/" class="animsition-link">环形链表<small>(1)</small></a></li>
+				    
+				    <li><a href="/categories/算法/相交链表/" class="animsition-link">相交链表<small>(1)</small></a></li>
+				    
+				    <li><a href="/categories/算法/" class="animsition-link">算法<small>(12)</small></a></li>
+				    
+				    <li><a href="/categories/Javascript/算法/" class="animsition-link">算法<small>(2)</small></a></li>
+				    
+				    <li><a href="/categories/链表/算法/" class="animsition-link">算法<small>(1)</small></a></li>
+				    
+				    <li><a href="/categories/React/虚拟dom/" class="animsition-link">虚拟dom<small>(1)</small></a></li>
+				    
+				    <li><a href="/categories/性能优化/虚拟列表/" class="animsition-link">虚拟列表<small>(1)</small></a></li>
+				    
+				    <li><a href="/categories/算法/观察者模式/" class="animsition-link">观察者模式<small>(2)</small></a></li>
+				    
+				    <li><a href="/categories/链表/" class="animsition-link">链表<small>(1)</small></a></li>
+				    
+				    <li><a href="/categories/算法/链表/" class="animsition-link">链表<small>(2)</small></a></li>
+				    
+				</ul>
+        	</li>
+			
+            
+            <li>
+                <a class="sb-toggle-submenu">Links<span class="sb-caret"></span></a>
+                <ul class="sb-submenu">
+                    
+                    <li><a target="_blank" rel="noopener" href="https://daipi173.github.io/myweb/daipi173-myperson" class="animsition-link">Personal Project</a></li>
+                    
+                </ul>
+            </li>
+            
+        </ul>
+        <!-- Lists in Slidebars -->
+        <ul class="sb-menu secondary">
+            
+            <li><a href="/about.html" class="animsition-link" title="about">About</a></li>
+            <li><a href="/atom.xml" class="animsition-link" title="rss">RSS</a></li>
+        </ul>
+    </div>
+    
+    <!-- ============================ END Off-canvas navigation =========================== -->
+
+    <!-- ============================ #sb-site Main Page Wrapper =========================== -->
+
+    <div id="sb-site">
+        <!-- #sb-site - All page content should be contained within this id, except the off-canvas navigation itself -->
+
+        <!-- ============================ Header & Logo bar =========================== -->
+
+        <div id="navigation" class="navbar navbar-fixed-top">
+            <div class="navbar-inner">
+                <div class="container">
+                    <!-- Nav logo -->
+                    <div class="logo">
+                        <a href="/" title="Logo" class="animsition-link">
+                         <img src="/img/logo.png" alt="Logo" width="35px;"/> 
+                        </a>
+                    </div>
+                    <!-- // Nav logo -->
+                    <!-- Info-bar -->
+                    <nav>
+                        <ul class="nav">
+                            <li><a href="/" class="animsition-link">daipi173的个人博客</a></li>
+                            <li class="nolink"><span>Always </span>Creative.</li>
+                            
+                            <li><a href="https://github.com/" title="Github" target="_blank"><i class="icon-github"></i></a></li>
+                            
+                            
+                            <li><a href="https://twitter.com/" title="Twitter" target="_blank"><i class="icon-twitter"></i></a></li>
+                            
+                            
+                            <li><a href="https://www.facebook.com/" title="Facebook" target="_blank"><i class="icon-facebook"></i></a></li>
+                            
+                            
+                            <li><a href="https://google.com/" title="Google-Plus" target="_blank"><i class="icon-google-plus"></i></a></li>
+                            
+                            
+                            <li><a href="http://weibo.com/" title="Sina-Weibo" target="_blank"><i class="icon-sina-weibo"></i></a></li>
+                            
+                            <li class="nolink"><span>Welcome!</span></li>
+                        </ul>
+                    </nav>
+                    <!--// Info-bar -->
+                </div>
+                <!-- // .container -->
+                <div class="learnmore sb-toggle-right">More</div>
+                <button type="button" class="navbar-toggle menu-icon sb-toggle-right" title="More">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar before"></span>
+                <span class="icon-bar main"></span>
+                <span class="icon-bar after"></span>
+                </button>
+            </div>
+            <!-- // .navbar-inner -->
+        </div>
+
+        <!-- ============================ Header & Logo bar =========================== -->
+
+
+      
+<section id="intro">
+    <div class="container">
+        <div class="row col-md-offset-2">
+            <div class="col-md-8">
+    			<span class="post-meta">
+      <time datetime="2021-03-31T02:42:00.000Z" itemprop="datePublished">
+          2021-03-31
+      </time>
+    
+    
+    | 
+    <a href='/tags/算法/'>算法</a>
+    
+    
+</span>
+                <h1>js手动封装观察者模式和发布订阅模式</h1>
+            </div>
+        </div>
+        <div class="col-md-8 col-md-offset-2">
+      		<p>“ 在上一章节中介绍了观察者模式和发布订阅模式的概念和区别，接下来在这篇文章中我将带领大家自己手动封装这两种模式，其实它们的封装是很简单的。”</p>
+<p>如果你没有看过上一篇关于观察者模式和发布者模式的概念和区别，那么你可以转至下面这篇链接，然后看完之后再来回顾这篇文章，效果可能会更好哟！<br><a target="_blank" rel="noopener" href="https://mp.weixin.qq.com/s?__biz=MzI4Mzc2MjExNA==&mid=2247483964&idx=1&sn=8b43ab1680e26d66413387c87f749206&chksm=eb848e91dcf3078747af3aebd9ef70585fb700c8f14f815fbacb55ee26ce6d99c18a857e2660&token=558405390&lang=zh_CN&scene=21#wechat_redirect">你真的了解观察者模式和发布订阅模式?</a></p>
+<h1 id="1-观察者模式的封装"><a href="#1-观察者模式的封装" class="headerlink" title="1. 观察者模式的封装"></a>1. 观察者模式的封装</h1><p>在写观察者模式之前，我们需要把思路滤一下：</p>
+<p>首先我们应该封装Subject被观察者类、Observer观察者类；<br>Observer观察者类在初始化时需要设置name值用于区分，接着会有一个update方法，它的作用是监听到变化后处理的逻辑；</p>
+<p>Subject被观察者类在初始化的时候设置一个observers的数组，它的作用是用来存储观察者，接着在Subject类中会有add添加观察者方法、remove删除观察者方法、notify通知观察者方法。</p>
+<p>接下来就是放代码的时刻：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br></pre></td><td class="code"><pre><span class="line">/**</span><br><span class="line">* 观察者模式</span><br><span class="line">* 观察者(相当于订阅者)知道被观察者(相当于发布者)，并且被观察者也是一直保持对观察者的记录</span><br><span class="line">*/</span><br><span class="line">// 被观察者</span><br><span class="line">class Subject &#123;</span><br><span class="line">      constructor () &#123;</span><br><span class="line">          this.observers = [];</span><br><span class="line">      &#125;</span><br><span class="line">      // 添加观察者</span><br><span class="line">      add (observer) &#123;</span><br><span class="line">          this.observers.push(observer);</span><br><span class="line">      &#125;</span><br><span class="line">      // 移除观察者</span><br><span class="line">      remove (observer) &#123;</span><br><span class="line">          let observers = this.observers;</span><br><span class="line">          const len = observers.length;</span><br><span class="line">          for (let i = 0; i &lt; len; i++) &#123;</span><br><span class="line">              if (observers[i] === observer) &#123;</span><br><span class="line">                  observers.splice(i, 1);</span><br><span class="line">              &#125;</span><br><span class="line">          &#125;</span><br><span class="line">      &#125;</span><br><span class="line">      // 通知观察者</span><br><span class="line">      notify () &#123;</span><br><span class="line">          let observers = this.observers;</span><br><span class="line">          const len = observers.length;</span><br><span class="line">          for (let i = 0; i &lt; len; i++) &#123;</span><br><span class="line">              observers[i].update();</span><br><span class="line">          &#125;</span><br><span class="line">      &#125;</span><br><span class="line">  &#125;</span><br><span class="line"></span><br><span class="line">// 观察者</span><br><span class="line">class Observer &#123;</span><br><span class="line">    constructor (name) &#123;</span><br><span class="line">        this.name = name;</span><br><span class="line">    &#125;</span><br><span class="line">    update () &#123;</span><br><span class="line">        console.log(&#x27;我是Observer观察者,我被通知了&#x27;, this.name);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">  // test</span><br><span class="line">  const subject = new Subject();</span><br><span class="line">  const observer1 = new Observer(&#x27;observer1&#x27;);</span><br><span class="line">  const observer2 = new Observer(&#x27;observer2&#x27;);</span><br><span class="line">  subject.add(observer1);</span><br><span class="line">  subject.add(observer2);</span><br><span class="line">  subject.notify();</span><br><span class="line">  console.log(&#x27;----------------------------------------&#x27;);</span><br><span class="line">  subject.remove(observer1);</span><br><span class="line">  subject.notify();</span><br><span class="line">  </span><br><span class="line">/**</span><br><span class="line">* 控制台打印值------------------------------</span><br><span class="line">* 我是Observer观察者,我被通知了 observer1</span><br><span class="line">* 我是Observer观察者,我被通知了 observer2</span><br><span class="line">* ----------------------------------------</span><br><span class="line">* 我是Observer观察者,我被通知了 observer2</span><br><span class="line">*/</span><br></pre></td></tr></table></figure>
+
+<h1 id="2-发布订阅模式"><a href="#2-发布订阅模式" class="headerlink" title="2. 发布订阅模式"></a>2. 发布订阅模式</h1><p>发布订阅模式其实思路和观察者模式很相似，只是它多了一个第三方的中间调度，我们可以添加一个queue来存储我们的订阅，由于订阅相同的主题可以有多个函数执行，因此我们需要使用数组来存储这些函数。</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br></pre></td><td class="code"><pre><span class="line">class PubSub &#123;</span><br><span class="line">  constructor () &#123;</span><br><span class="line">    this.queue = &#123;&#125;; // 存储订阅</span><br><span class="line">  &#125;</span><br><span class="line">  // 添加订阅</span><br><span class="line">  subscribe = (event, fn) =&gt; &#123;</span><br><span class="line">    if (!this.queue[event]) &#123;</span><br><span class="line">      this.queue[event] = [];</span><br><span class="line">    &#125;</span><br><span class="line">    this.queue[event].push(fn);</span><br><span class="line">  &#125;;</span><br><span class="line">  // 发布通知</span><br><span class="line">  publish = (event, args) =&gt; &#123;</span><br><span class="line">    const eventQueue = this.queue[event];</span><br><span class="line">    if (!eventQueue) &#123;</span><br><span class="line">      return &#x27;没有订阅!&#x27;;</span><br><span class="line">    &#125; else &#123;</span><br><span class="line">      eventQueue.forEach(item =&gt; item(args));</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;;</span><br><span class="line">  // 取消订阅</span><br><span class="line">  unSubscribe = (event, fn) =&gt; &#123;</span><br><span class="line">    let eventQueue = this.queue[event];</span><br><span class="line">    if (eventQueue) &#123;</span><br><span class="line">      this.queue[event] = eventQueue.filter(item =&gt; item !== fn);</span><br><span class="line">      if (!this.queue[event].length) &#123;</span><br><span class="line">        delete this.queue[event];</span><br><span class="line">      &#125;</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;;</span><br><span class="line">  &#125;</span><br><span class="line">  function content(args) &#123;  </span><br><span class="line">    console.log(&#x27;发布内容消息&#x27; + args);</span><br><span class="line">  &#125;</span><br><span class="line">  function content2(args) &#123;  </span><br><span class="line">    console.log(&#x27;第二种发布内容消息&#x27; + args);</span><br><span class="line">  &#125;</span><br><span class="line"></span><br><span class="line">  // test</span><br><span class="line">  let p = new PubSub();</span><br><span class="line">  p.subscribe(&#x27;subscribe1&#x27;, content);</span><br><span class="line">  p.subscribe(&#x27;subscribe1&#x27;, content2);</span><br><span class="line">  p.subscribe(&#x27;subscribe2&#x27;, content);</span><br><span class="line">  p.unSubscribe(&#x27;subscribe1&#x27;, content2);</span><br><span class="line">  p.publish(&#x27;subscribe1&#x27;, &#x27;内容111&#x27;);</span><br><span class="line">  p.publish(&#x27;subscribe2&#x27;, &#x27;内容222&#x27;);</span><br><span class="line">  // 控制台打印------------------------</span><br><span class="line">  // 第一种发布内容消息内容111</span><br><span class="line">  // 第一种发布内容消息内容222</span><br></pre></td></tr></table></figure>
+
+
+
+
+
+
+<p>感谢segmentfault上的这位作者</p>
+<p><a target="_blank" rel="noopener" href="https://segmentfault.com/a/1190000023825602">JavaScript设计模式——观察者模式 vs 发布订阅模式</a></p>
+
+            <div class="clearfix"></div>
+            <hr class="nogutter">
+        </div>
+        <nav class="m-pagination col-md-8 col-md-offset-2 col-sm-24" role="pagination">
+    
+    <a class="pull-left" href="/2021/04/01/%E4%BD%A0%E5%AF%B9Array-prototype-reduce%E7%A9%B6%E7%AB%9F%E6%9C%89%E5%A4%9A%E4%BA%86%E8%A7%A3%EF%BC%9F/" style="float: left;">
+        ← 你对Array.prototype.reduce究竟有多了解？
+    </a>
+    
+    
+    <a class="pull-right" href="/2021/03/30/%E4%BD%A0%E7%9C%9F%E7%9A%84%E4%BA%86%E8%A7%A3%E8%A7%82%E5%AF%9F%E8%80%85%E6%A8%A1%E5%BC%8F%E5%92%8C%E5%8F%91%E5%B8%83%E8%AE%A2%E9%98%85%E6%A8%A1%E5%BC%8F/">
+        你真的了解观察者模式和发布订阅模式? →
+    </a>
+    
+</nav>
+
+        <div class="col-md-8 col-md-offset-2 col-sm-24"><script type="text/javascript">
+  /**
+   * 搜狐畅言
+   */
+
+  /*
+  document.write('<div id="SOHUCS" sid="' + window.location.pathname.slice(1) + '" ></div>');
+
+  window.onload = function () {
+    (function () {
+      var appid = 'cytXXXX';
+      var conf = 'prod_xxxxxxxxxxxxxxxxx';
+      var width = window.innerWidth || document.documentElement.clientWidth;
+      var loadJs = function (d, a, id) {
+        var c = document.getElementsByTagName("head")[0] || document.head || document.documentElement;
+        var b = document.createElement("script");
+        b.setAttribute("type", "text/javascript");
+        b.setAttribute("charset", "UTF-8");
+        b.setAttribute("src", d);
+        if (id) {
+          b.setAttribute("id", id);
+        }
+        if (typeof a === "function") {
+          if (window.attachEvent) {
+            b.onreadystatechange = function () {
+              var e = b.readyState;
+              if (e === "loaded" || e === "complete") {
+                b.onreadystatechange = null;
+                a()
+              }
+            }
+          } else {
+            b.onload = a
+          }
+        }
+        c.appendChild(b)
+      };
+
+      loadJs("https://changyan.sohu.com/upload/changyan.js", function () {
+        window.changyan.api.config({
+          appid: appid,
+          conf: conf
+        })
+      });
+    })();
+  }
+  */
+
+</script>
+</div>
+    </div>
+</section>
+
+
+      
+<!-- ============================ Footer =========================== -->
+
+<footer>
+    <div class="container">
+            <div class="copy">
+                <p>
+                    &copy; 2014<script>new Date().getFullYear()>2010&&document.write("-"+new Date().getFullYear());</script>, Content By daipi173. All Rights Reserved.
+                </p>
+                <p>Theme By <a target="_blank" rel="noopener" href="//go.kieran.top" style="color: #767D84">Kieran</a></p>
+            </div>
+            <div class="social">
+                <ul>
+                    
+                    <li><a href="https://github.com/" title="Github" target="_blank"><i class="icon-github"></i></a>&nbsp;</li>
+                    
+                    
+                    <li><a href="https://twitter.com/" title="Twitter" target="_blank"><i class="icon-twitter"></i></a>&nbsp;</li>
+                    
+                    
+                    <li><a href="https://www.facebook.com/" title="Facebook" target="_blank"><i class="icon-facebook"></i></a>&nbsp;</li>
+                    
+                    
+                    <li><a href="https://google.com/" title="Google-Plus" target="_blank"><i class="icon-google-plus"></i></a>&nbsp;</li>
+                    
+                    
+                    <li><a href="http://weibo.com/" title="Sina-Weibo" target="_blank"><i class="icon-sina-weibo"></i></a>&nbsp;</li>
+                    
+                </ul>
+            </div>
+            <div class="clearfix"> </div>
+        </div>
+</footer>
+
+<!-- ============================ END Footer =========================== -->
+      <!-- Load our scripts -->
+<!-- Resizable 'on-demand' full-height hero -->
+<script type="text/javascript">
+    var resizeHero = function () {
+        var hero = $(".cover,.heightblock"),
+            window1 = $(window);
+        hero.css({
+            "height": window1.height()
+        });
+    };
+
+    resizeHero();
+
+    $(window).resize(function () {
+        resizeHero();
+    });
+</script>
+<script src="/js/plugins.min.js"></script><!-- Bootstrap core and concatenated plugins always load here -->
+<script src="/js/scripts.js"></script><!-- Theme scripts -->
+
+
+<link rel="stylesheet" href="/fancybox/jquery.fancybox.css" media="screen" type="text/css">
+<script src="/fancybox/jquery.fancybox.pack.js"></script>
+<script type="text/javascript">
+$('#intro').find('img').each(function(){
+  var alt = this.alt;
+
+  if (alt){
+    $(this).after('<span class="caption" style="display:none">' + alt + '</span>');
+  }
+
+  $(this).wrap('<a href="' + this.src + '" title="' + alt + '" class="fancybox" rel="gallery" />');
+});
+(function($){
+  $('.fancybox').fancybox();
+})(jQuery);
+</script>
+
+
+
+      
+<script src="/live2dw/lib/L2Dwidget.min.js?094cbace49a39548bed64abff5988b05"></script><script>L2Dwidget.init({"pluginModelPath":"assets/","model":{"jsonPath":"/live2dw/assets/haruto.model.json"},"display":{"position":"right","width":150,"height":300},"mobile":{"show":true},"log":false,"pluginJsPath":"lib/","pluginRootPath":"live2dw/","tagMode":false});</script></body>
+</html>
