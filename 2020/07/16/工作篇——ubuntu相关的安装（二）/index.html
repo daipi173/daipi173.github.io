@@ -1,0 +1,435 @@
+<!DOCTYPE html>
+<!--[if lte IE 8 ]>
+<html class="ie" xmlns="http://www.w3.org/1999/xhtml" xml:lang="en-US" lang="en-US">
+<![endif]-->
+<!--[if (gte IE 9)|!(IE)]><!-->
+<!--
+***************  *      *     *
+      8          *    *       *
+      8          *  *         *
+      8          **           *
+      8          *  *         *
+      8          *    *       *
+      8          *      *     *
+      8          *        *   ***********    -----Theme By Kieran(http://go.kieran.top)
+-->
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="zh-CN" lang="zh-CN">
+<!--<![endif]-->
+
+<head>
+  <title>工作篇——ubuntu相关的安装（二） | daipi173的个人博客</title>
+  <!-- Meta data -->
+    <meta http-equiv="Content-Type" content="text/html" charset="UTF-8" >
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="generator" content="daipi173的个人博客">
+    <meta name="author" content="daipi173">
+    <meta name="description" content="" />
+    <meta name="keywords" content="" />
+
+    <!-- Favicon, (keep icon in root folder) -->
+    <link rel="Shortcut Icon" href="/img/favicon.ico" type="image/ico">
+
+    <link rel="alternate" href="/atom.xml" title="daipi173的个人博客" type="application/atom+xml">
+    <link rel="stylesheet" href="/css/all.css" media="screen" type="text/css">
+    
+    <link rel="stylesheet" href="/highlightjs/vs.css" type="text/css">
+    
+
+    <!--[if IE 8]>
+    <link rel="stylesheet" type="text/css" href="/css/ie8.css" />
+    <![endif]-->
+
+    <!-- jQuery | Load our jQuery, with an alternative source fallback to a local version if request is unavailable -->
+    <script src="/js/jquery-1.11.1.min.js"></script>
+    <script>window.jQuery || document.write('<script src="js/jquery-1.11.1.min.js"><\/script>')</script>
+
+    <!-- Load these in the <head> for quicker IE8+ load times -->
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+    <script src="/js/html5shiv.min.js"></script>
+    <script src="/js/respond.min.js"></script>
+    <![endif]-->
+
+  
+  
+  
+
+  <style>.col-md-8.col-md-offset-2.opening-statement img{display:none;}</style>
+</head>
+
+<!--
+<body class="post-template">
+-->
+<body id="index" class="lightnav animsition">
+
+      <!-- ============================ Off-canvas navigation =========================== -->
+
+    <div class="sb-slidebar sb-right sb-style-overlay sb-momentum-scrolling">
+        <div class="sb-close" aria-label="Close Menu" aria-hidden="true">
+            <img src="/img/close.png" alt="Close"/>
+        </div>
+        <!-- Lists in Slidebars -->
+        <ul class="sb-menu">
+            <li><a href="/" class="animsition-link" title="Home">Home</a></li>
+            <li><a href="/archives" class="animsition-link" title="archive">archives</a></li>
+            <!-- Dropdown Menu -->
+			 
+            
+        	<li>
+        		<a class="sb-toggle-submenu">Categories<span class="sb-caret"></span></a>
+            	<ul class="sb-submenu">
+				  	
+				    <li><a href="/categories/JavaScript/Array/" class="animsition-link">Array<small>(1)</small></a></li>
+				    
+				    <li><a href="/categories/HTML/CSS/" class="animsition-link">CSS<small>(4)</small></a></li>
+				    
+				    <li><a href="/categories/HTML/Chrome浏览器/" class="animsition-link">Chrome浏览器<small>(1)</small></a></li>
+				    
+				    <li><a href="/categories/ES6/" class="animsition-link">ES6<small>(4)</small></a></li>
+				    
+				    <li><a href="/categories/JavaScript/ES6/" class="animsition-link">ES6<small>(6)</small></a></li>
+				    
+				    <li><a href="/categories/JavaScript/Vue/Eslint/" class="animsition-link">Eslint<small>(1)</small></a></li>
+				    
+				    <li><a href="/categories/Git/" class="animsition-link">Git<small>(4)</small></a></li>
+				    
+				    <li><a href="/categories/总结/Git/" class="animsition-link">Git<small>(1)</small></a></li>
+				    
+				    <li><a href="/categories/HTML/" class="animsition-link">HTML<small>(17)</small></a></li>
+				    
+				    <li><a href="/categories/JavaScript/" class="animsition-link">JavaScript<small>(41)</small></a></li>
+				    
+				    <li><a href="/categories/ES6/JavaScript/" class="animsition-link">JavaScript<small>(4)</small></a></li>
+				    
+				    <li><a href="/categories/Javascript/" class="animsition-link">Javascript<small>(2)</small></a></li>
+				    
+				    <li><a href="/categories/React/" class="animsition-link">React<small>(2)</small></a></li>
+				    
+				    <li><a href="/categories/Vue/" class="animsition-link">Vue<small>(2)</small></a></li>
+				    
+				    <li><a href="/categories/Git/Vue/" class="animsition-link">Vue<small>(1)</small></a></li>
+				    
+				    <li><a href="/categories/JavaScript/Vue/" class="animsition-link">Vue<small>(1)</small></a></li>
+				    
+				    <li><a href="/categories/React/Webpack/" class="animsition-link">Webpack<small>(1)</small></a></li>
+				    
+				    <li><a href="/categories/React/antd/" class="animsition-link">antd<small>(1)</small></a></li>
+				    
+				    <li><a href="/categories/React/antd/css局部样式/" class="animsition-link">css局部样式<small>(1)</small></a></li>
+				    
+				    <li><a href="/categories/Vue/懒加载/总结/element-ui/" class="animsition-link">element ui<small>(1)</small></a></li>
+				    
+				    <li><a href="/categories/git/" class="animsition-link">git<small>(1)</small></a></li>
+				    
+				    <li><a href="/categories/ubuntu/" class="animsition-link">ubuntu<small>(3)</small></a></li>
+				    
+				    <li><a href="/categories/vue/" class="animsition-link">vue<small>(1)</small></a></li>
+				    
+				    <li><a href="/categories/webpack/" class="animsition-link">webpack<small>(2)</small></a></li>
+				    
+				    <li><a href="/categories/JavaScript/总结/" class="animsition-link">总结<small>(2)</small></a></li>
+				    
+				    <li><a href="/categories/总结/" class="animsition-link">总结<small>(1)</small></a></li>
+				    
+				    <li><a href="/categories/Git/Vue/总结/" class="animsition-link">总结<small>(1)</small></a></li>
+				    
+				    <li><a href="/categories/Vue/懒加载/总结/" class="animsition-link">总结<small>(1)</small></a></li>
+				    
+				    <li><a href="/categories/Vue/懒加载/" class="animsition-link">懒加载<small>(1)</small></a></li>
+				    
+				    <li><a href="/categories/JavaScript/Array/扁平化/" class="animsition-link">扁平化<small>(1)</small></a></li>
+				    
+				    <li><a href="/categories/JavaScript/整数存储相加/" class="animsition-link">整数存储相加<small>(1)</small></a></li>
+				    
+				    <li><a href="/categories/Javascript/算法/" class="animsition-link">算法<small>(1)</small></a></li>
+				    
+				</ul>
+        	</li>
+			
+            
+            <li>
+                <a class="sb-toggle-submenu">Links<span class="sb-caret"></span></a>
+                <ul class="sb-submenu">
+                    
+                    <li><a target="_blank" rel="noopener" href="https://daipi173.github.io/myweb/daipi173-myperson" class="animsition-link">Personal Project</a></li>
+                    
+                </ul>
+            </li>
+            
+        </ul>
+        <!-- Lists in Slidebars -->
+        <ul class="sb-menu secondary">
+            
+            <li><a href="/about.html" class="animsition-link" title="about">About</a></li>
+            <li><a href="/atom.xml" class="animsition-link" title="rss">RSS</a></li>
+        </ul>
+    </div>
+    
+    <!-- ============================ END Off-canvas navigation =========================== -->
+
+    <!-- ============================ #sb-site Main Page Wrapper =========================== -->
+
+    <div id="sb-site">
+        <!-- #sb-site - All page content should be contained within this id, except the off-canvas navigation itself -->
+
+        <!-- ============================ Header & Logo bar =========================== -->
+
+        <div id="navigation" class="navbar navbar-fixed-top">
+            <div class="navbar-inner">
+                <div class="container">
+                    <!-- Nav logo -->
+                    <div class="logo">
+                        <a href="/" title="Logo" class="animsition-link">
+                         <img src="/img/logo.png" alt="Logo" width="35px;"/> 
+                        </a>
+                    </div>
+                    <!-- // Nav logo -->
+                    <!-- Info-bar -->
+                    <nav>
+                        <ul class="nav">
+                            <li><a href="/" class="animsition-link">daipi173的个人博客</a></li>
+                            <li class="nolink"><span>Always </span>Creative.</li>
+                            
+                            <li><a href="https://github.com/" title="Github" target="_blank"><i class="icon-github"></i></a></li>
+                            
+                            
+                            <li><a href="https://twitter.com/" title="Twitter" target="_blank"><i class="icon-twitter"></i></a></li>
+                            
+                            
+                            <li><a href="https://www.facebook.com/" title="Facebook" target="_blank"><i class="icon-facebook"></i></a></li>
+                            
+                            
+                            <li><a href="https://google.com/" title="Google-Plus" target="_blank"><i class="icon-google-plus"></i></a></li>
+                            
+                            
+                            <li><a href="http://weibo.com/" title="Sina-Weibo" target="_blank"><i class="icon-sina-weibo"></i></a></li>
+                            
+                            <li class="nolink"><span>Welcome!</span></li>
+                        </ul>
+                    </nav>
+                    <!--// Info-bar -->
+                </div>
+                <!-- // .container -->
+                <div class="learnmore sb-toggle-right">More</div>
+                <button type="button" class="navbar-toggle menu-icon sb-toggle-right" title="More">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar before"></span>
+                <span class="icon-bar main"></span>
+                <span class="icon-bar after"></span>
+                </button>
+            </div>
+            <!-- // .navbar-inner -->
+        </div>
+
+        <!-- ============================ Header & Logo bar =========================== -->
+
+
+      
+<section id="intro">
+    <div class="container">
+        <div class="row col-md-offset-2">
+            <div class="col-md-8">
+    			<span class="post-meta">
+      <time datetime="2020-07-16T07:25:00.000Z" itemprop="datePublished">
+          2020-07-16
+      </time>
+    
+    
+    | 
+    <a href='/tags/ubuntu/'>ubuntu</a>
+    
+    
+</span>
+                <h1>工作篇——ubuntu相关的安装（二）</h1>
+            </div>
+        </div>
+        <div class="col-md-8 col-md-offset-2">
+      		<p>“ 接上一篇文章，接下来我继续给大家讲解ubuntu系统安装软件遇到的问题。”</p>
+<h1 id="1-ubuntu系统安装之Charles"><a href="#1-ubuntu系统安装之Charles" class="headerlink" title="1. ubuntu系统安装之Charles"></a>1. ubuntu系统安装之Charles</h1><p>首先介绍一下什么是Charles软件，简单来说就是一个抓包工具，具体关于什么是抓包等相关的信息，大家可以在空余时间google搜索一下，在这里我只讲解下载以及遇到的问题。</p>
+<ol>
+<li><p>提供官方下载软件链接：<a target="_blank" rel="noopener" href="https://www.charlesproxy.com/，下载速度可能会比较慢，需要耐心的等待；">https://www.charlesproxy.com/，下载速度可能会比较慢，需要耐心的等待；</a></p>
+</li>
+<li><p>在下载完成之后，进行一个解压，然后进入到charles-&gt;bin，接着我们鼠标右键在终端打开，然后输入指令：./charles，接着就打开charles软件；</p>
+</li>
+</ol>
+<p><strong>问题：</strong></p>
+<p>可能对于部分小伙伴来说，会在应用程序中找不到对应的icon图标，然后点击图标快速进入该软件，而是需要在终端中输入指令./charles才能打开。<br><strong>解决办法：</strong></p>
+<p>（1）找到我们解压的charles文件，然后进入到charles-&gt;etc，找到charles-proxy.desktop文件，然后我们修改charles-proxy.desktop的权限为777（即可读写执行）；</p>
+<p>（2）然后接着找到/usr/share/applactions，在终端（ctrl+alt+t快速打开）输入指令：nautilus /usr/share/applications，然后我们在applications文件下创建一个charles-proxy.desktop文件（指令touch charles-proxy.desktop），接着修改charles-proxy.desktop文件的权限（sudo chmod 777 charles-proxy.desktop）；</p>
+<p>（3）打开第一步中charles-proxy.desktop文件，然后全选粘贴，接着复制到第二步中我们创建的charles-proxy.desktop文件中；</p>
+<p>（4）关于charles-proxy.desktop文件中的内容如下所示：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">[Desktop Entry]</span><br><span class="line">Type=Application</span><br><span class="line">Name=Charles</span><br><span class="line">GenericName=Web Debugging Proxy</span><br><span class="line">Exec=/home/test/下载/charles-proxy-4.5.6_amd64/charles/bin/charles</span><br><span class="line">Icon=/home/test/下载/charles-proxy-4.5.6_amd64/charles/icon/128x128/apps/charles-proxy.png</span><br><span class="line">Categories=Network;Development;WebDevelopment;Java</span><br><span class="line">StartupNotify=true</span><br><span class="line">Terminal=false</span><br><span class="line">StartupWMClass=com-xk72-charles-gui-MainWithClassLoader</span><br><span class="line">MimeType=application/x-charles-savedsession;application/x-charles-savedsession+xml;application/x-charles-savedsession+json;application/har+json;application/vnd.tcpdump.pcap;application/x-charles-trace</span><br></pre></td></tr></table></figure>
+
+<p>(5)对于第四部中我们需要修改的是Exec（bin/charles）和Icon（charles/icon/128x128/apps）的路径，这些都是根据charles文件的位置来进行一个填写，给你一个小妙招就是找到相关的文件位置，然后右键在终端中打开，然后输入pwd找到他们的绝对路径，复制替换过去就可以了；</p>
+<p>(6) 最后保存该文件，然后我们再在应用程序中进行一个查看就发现有一个水壶状的Icon显示出来了，这个时候你可以测试一下是否可以打开（ps：如果你的icon或者执行有问题，多半是路径错误的问题，你可以修改之后再保存测试）</p>
+<h1 id="2-ubuntu系统安装之Charles配置"><a href="#2-ubuntu系统安装之Charles配置" class="headerlink" title="2. ubuntu系统安装之Charles配置"></a>2. ubuntu系统安装之Charles配置</h1><p>在上一章节中看到如何安装并解决Charles的相关问题后，接下来的这一章节看看如何配置Charles</p>
+<ol>
+<li><p>电脑端配置：打开 Charles 的代理功能：通过主菜单打开Proxy -&gt;Proxy Settings弹窗，填入代理端口(端口默认为 8888，不用修改)，勾选 Enable transparent HTTP proxying，如下图所示：<br><a target="_blank" rel="noopener" href="https://imgse.com/i/pSwP1hQ"><img src="https://s1.ax1x.com/2023/01/30/pSwP1hQ.png" alt="Charles 的代理功能"></a></p>
+</li>
+<li><p>如果想要HTTPS抓包，还需要进行以下配置：</p>
+</li>
+</ol>
+<p>（1）导出证书，crt格式保存备用，通过 Charles 的主菜单  Help-&gt;SSL Proxying-&gt;Install Charles Root Certificate  安装证书，右键点击导出证书，如下所示为导出证书图：<br><a target="_blank" rel="noopener" href="https://imgse.com/i/pSwP8pj"><img src="https://s1.ax1x.com/2023/01/30/pSwP8pj.png" alt="导出证书"></a></p>
+<p>（2）浏览器中导入证书（这里是以google浏览器为例子），设置 -&gt; 搜索管理证书 -&gt; 授权中心 -&gt; 导入，导入第一步中下载的证书；</p>
+<p>ps：配置Charles License，破解后永久可以使用（好像非破解版只能免费使用30天）。点击菜单中的help -&gt; Register charles，对应输入即可：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">Registered Name: https://zhile.io</span><br><span class="line">License Key: 48891cf209c6d32bf4</span><br></pre></td></tr></table></figure>
+
+<h1 id="3-ubuntu系统安装之Charles手机端配置"><a href="#3-ubuntu系统安装之Charles手机端配置" class="headerlink" title="3. ubuntu系统安装之Charles手机端配置"></a>3. ubuntu系统安装之Charles手机端配置</h1><p>手机端配置有两种方式，在这里我使用第二种方式成功了，但是第一种方式还是存在一点问题（手机端没有找到电脑热点的名字），有兴趣的小伙伴可以试一试第一种方式。<br><strong>ps：注意第一种方式需要给电脑端插入网线。</strong><br><strong>方式一：需要使用网线</strong></p>
+<p>（1）通过 Charles 的主菜单 Help -&gt; Local IP Address（w字母开头的）或者通过命令行工具输入 ipconfig 查看本机的 IP 地址；</p>
+<p>（2）打开电脑wifi热点，手机选中热点网络输入密码连接；</p>
+<p>（3）打开手机端的对应的WiFi设置，输入电脑IP 和 Charles 的代理端口，服务器为本电脑IP，端口为Charles设置的端口8888（配置代理选择手动）。</p>
+<p><strong>方式二：不需要使用网线</strong></p>
+<p>（1）保证手机端和电脑端都是链接的同一个wifi（即他们是在同一个局域网下）；</p>
+<p>（2）通过 Charles 的主菜单 Help-&gt; Local IP Address  （w字母开头的）或者通过命令行工具输入 ipconfig 查看本机的 IP 地址；</p>
+<p>（3）打开手机端的对应的WiFi设置，输入电脑IP 和 Charles 的代理端口，服务器为本电脑IP，端口为Charles设置的端口8888（配置代理选择手动）。</p>
+<p><strong>如何知道Charles链接成功？</strong><br>注意移动端与Charles如果链接成功，会在Charles看到移动端上的请求接口。</p>
+
+            <div class="clearfix"></div>
+            <hr class="nogutter">
+        </div>
+        <nav class="m-pagination col-md-8 col-md-offset-2 col-sm-24" role="pagination">
+    
+    <a class="pull-left" href="/2020/08/06/%E5%B7%A5%E4%BD%9C%E7%AF%87%E2%80%94%E2%80%94ubuntu%E7%9B%B8%E5%85%B3%E7%9A%84%E5%AE%89%E8%A3%85%EF%BC%88%E4%B8%89%EF%BC%89/" style="float: left;">
+        ← 工作篇——ubuntu相关的安装（三）
+    </a>
+    
+    
+    <a class="pull-right" href="/2020/07/14/%E5%B7%A5%E4%BD%9C%E7%AF%87%E2%80%94%E2%80%94ubuntu%E7%9B%B8%E5%85%B3%E7%9A%84%E5%AE%89%E8%A3%85%EF%BC%88%E4%B8%80%EF%BC%89/">
+        工作篇——ubuntu相关的安装（一） →
+    </a>
+    
+</nav>
+
+        <div class="col-md-8 col-md-offset-2 col-sm-24"><script type="text/javascript">
+  /**
+   * 搜狐畅言
+   */
+
+  /*
+  document.write('<div id="SOHUCS" sid="' + window.location.pathname.slice(1) + '" ></div>');
+
+  window.onload = function () {
+    (function () {
+      var appid = 'cytXXXX';
+      var conf = 'prod_xxxxxxxxxxxxxxxxx';
+      var width = window.innerWidth || document.documentElement.clientWidth;
+      var loadJs = function (d, a, id) {
+        var c = document.getElementsByTagName("head")[0] || document.head || document.documentElement;
+        var b = document.createElement("script");
+        b.setAttribute("type", "text/javascript");
+        b.setAttribute("charset", "UTF-8");
+        b.setAttribute("src", d);
+        if (id) {
+          b.setAttribute("id", id);
+        }
+        if (typeof a === "function") {
+          if (window.attachEvent) {
+            b.onreadystatechange = function () {
+              var e = b.readyState;
+              if (e === "loaded" || e === "complete") {
+                b.onreadystatechange = null;
+                a()
+              }
+            }
+          } else {
+            b.onload = a
+          }
+        }
+        c.appendChild(b)
+      };
+
+      loadJs("https://changyan.sohu.com/upload/changyan.js", function () {
+        window.changyan.api.config({
+          appid: appid,
+          conf: conf
+        })
+      });
+    })();
+  }
+  */
+
+</script>
+</div>
+    </div>
+</section>
+
+
+      
+<!-- ============================ Footer =========================== -->
+
+<footer>
+    <div class="container">
+            <div class="copy">
+                <p>
+                    &copy; 2014<script>new Date().getFullYear()>2010&&document.write("-"+new Date().getFullYear());</script>, Content By daipi173. All Rights Reserved.
+                </p>
+                <p>Theme By <a target="_blank" rel="noopener" href="//go.kieran.top" style="color: #767D84">Kieran</a></p>
+            </div>
+            <div class="social">
+                <ul>
+                    
+                    <li><a href="https://github.com/" title="Github" target="_blank"><i class="icon-github"></i></a>&nbsp;</li>
+                    
+                    
+                    <li><a href="https://twitter.com/" title="Twitter" target="_blank"><i class="icon-twitter"></i></a>&nbsp;</li>
+                    
+                    
+                    <li><a href="https://www.facebook.com/" title="Facebook" target="_blank"><i class="icon-facebook"></i></a>&nbsp;</li>
+                    
+                    
+                    <li><a href="https://google.com/" title="Google-Plus" target="_blank"><i class="icon-google-plus"></i></a>&nbsp;</li>
+                    
+                    
+                    <li><a href="http://weibo.com/" title="Sina-Weibo" target="_blank"><i class="icon-sina-weibo"></i></a>&nbsp;</li>
+                    
+                </ul>
+            </div>
+            <div class="clearfix"> </div>
+        </div>
+</footer>
+
+<!-- ============================ END Footer =========================== -->
+      <!-- Load our scripts -->
+<!-- Resizable 'on-demand' full-height hero -->
+<script type="text/javascript">
+    var resizeHero = function () {
+        var hero = $(".cover,.heightblock"),
+            window1 = $(window);
+        hero.css({
+            "height": window1.height()
+        });
+    };
+
+    resizeHero();
+
+    $(window).resize(function () {
+        resizeHero();
+    });
+</script>
+<script src="/js/plugins.min.js"></script><!-- Bootstrap core and concatenated plugins always load here -->
+<script src="/js/scripts.js"></script><!-- Theme scripts -->
+
+
+<link rel="stylesheet" href="/fancybox/jquery.fancybox.css" media="screen" type="text/css">
+<script src="/fancybox/jquery.fancybox.pack.js"></script>
+<script type="text/javascript">
+$('#intro').find('img').each(function(){
+  var alt = this.alt;
+
+  if (alt){
+    $(this).after('<span class="caption" style="display:none">' + alt + '</span>');
+  }
+
+  $(this).wrap('<a href="' + this.src + '" title="' + alt + '" class="fancybox" rel="gallery" />');
+});
+(function($){
+  $('.fancybox').fancybox();
+})(jQuery);
+</script>
+
+
+
+      
+<script src="/live2dw/lib/L2Dwidget.min.js?094cbace49a39548bed64abff5988b05"></script><script>L2Dwidget.init({"pluginModelPath":"assets/","model":{"jsonPath":"/live2dw/assets/haruto.model.json"},"display":{"position":"right","width":150,"height":300},"mobile":{"show":true},"log":false,"pluginJsPath":"lib/","pluginRootPath":"live2dw/","tagMode":false});</script></body>
+</html>

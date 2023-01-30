@@ -86,29 +86,29 @@
 				    
 				    <li><a href="/categories/HTML/Chrome浏览器/" class="animsition-link">Chrome浏览器<small>(1)</small></a></li>
 				    
-				    <li><a href="/categories/JavaScript/ES6/" class="animsition-link">ES6<small>(6)</small></a></li>
-				    
 				    <li><a href="/categories/ES6/" class="animsition-link">ES6<small>(4)</small></a></li>
+				    
+				    <li><a href="/categories/JavaScript/ES6/" class="animsition-link">ES6<small>(6)</small></a></li>
 				    
 				    <li><a href="/categories/JavaScript/Vue/Eslint/" class="animsition-link">Eslint<small>(1)</small></a></li>
 				    
-				    <li><a href="/categories/总结/Git/" class="animsition-link">Git<small>(1)</small></a></li>
-				    
 				    <li><a href="/categories/Git/" class="animsition-link">Git<small>(4)</small></a></li>
+				    
+				    <li><a href="/categories/总结/Git/" class="animsition-link">Git<small>(1)</small></a></li>
 				    
 				    <li><a href="/categories/HTML/" class="animsition-link">HTML<small>(17)</small></a></li>
 				    
-				    <li><a href="/categories/ES6/JavaScript/" class="animsition-link">JavaScript<small>(4)</small></a></li>
-				    
 				    <li><a href="/categories/JavaScript/" class="animsition-link">JavaScript<small>(41)</small></a></li>
+				    
+				    <li><a href="/categories/ES6/JavaScript/" class="animsition-link">JavaScript<small>(4)</small></a></li>
 				    
 				    <li><a href="/categories/Javascript/" class="animsition-link">Javascript<small>(2)</small></a></li>
 				    
 				    <li><a href="/categories/React/" class="animsition-link">React<small>(2)</small></a></li>
 				    
-				    <li><a href="/categories/Git/Vue/" class="animsition-link">Vue<small>(1)</small></a></li>
-				    
 				    <li><a href="/categories/Vue/" class="animsition-link">Vue<small>(2)</small></a></li>
+				    
+				    <li><a href="/categories/Git/Vue/" class="animsition-link">Vue<small>(1)</small></a></li>
 				    
 				    <li><a href="/categories/JavaScript/Vue/" class="animsition-link">Vue<small>(1)</small></a></li>
 				    
@@ -120,17 +120,21 @@
 				    
 				    <li><a href="/categories/Vue/懒加载/总结/element-ui/" class="animsition-link">element ui<small>(1)</small></a></li>
 				    
+				    <li><a href="/categories/git/" class="animsition-link">git<small>(1)</small></a></li>
+				    
+				    <li><a href="/categories/ubuntu/" class="animsition-link">ubuntu<small>(3)</small></a></li>
+				    
 				    <li><a href="/categories/vue/" class="animsition-link">vue<small>(1)</small></a></li>
 				    
 				    <li><a href="/categories/webpack/" class="animsition-link">webpack<small>(2)</small></a></li>
 				    
-				    <li><a href="/categories/总结/" class="animsition-link">总结<small>(1)</small></a></li>
-				    
 				    <li><a href="/categories/JavaScript/总结/" class="animsition-link">总结<small>(2)</small></a></li>
 				    
-				    <li><a href="/categories/Vue/懒加载/总结/" class="animsition-link">总结<small>(1)</small></a></li>
+				    <li><a href="/categories/总结/" class="animsition-link">总结<small>(1)</small></a></li>
 				    
 				    <li><a href="/categories/Git/Vue/总结/" class="animsition-link">总结<small>(1)</small></a></li>
+				    
+				    <li><a href="/categories/Vue/懒加载/总结/" class="animsition-link">总结<small>(1)</small></a></li>
 				    
 				    <li><a href="/categories/Vue/懒加载/" class="animsition-link">懒加载<small>(1)</small></a></li>
 				    
@@ -148,7 +152,7 @@
                 <a class="sb-toggle-submenu">Links<span class="sb-caret"></span></a>
                 <ul class="sb-submenu">
                     
-                    <li><a href="https://daipi173.github.io/myweb/daipi173-myperson" class="animsition-link">Personal Project</a></li>
+                    <li><a target="_blank" rel="noopener" href="https://daipi173.github.io/myweb/daipi173-myperson" class="animsition-link">Personal Project</a></li>
                     
                 </ul>
             </li>
@@ -245,29 +249,18 @@
         <div class="col-md-8 col-md-offset-2">
       		<p>这一次配置webpack和以往有区别，之前都是自己编写react来进行配置webpack，这一次是使用react脚手架搭建，在网上找了很多资料都没有找到相关的配置。经过不断的尝试，最后尝试出一种方法，具体步骤如下所示。</p>
 <ol>
-<li>首先在项目中找到node_modules文件夹，然后再在里面找到react-scripts文件夹，找到它的config配置文件夹，然后在里面找到webpack.config.js文件，如图所示：<br><a href="https://s1.ax1x.com/2020/05/22/YObBQ0.png" title="webpack.config.js文件" target="_blank" rel="noopener"><img src="https://s1.ax1x.com/2020/05/22/YObBQ0.png" alt="webpack.config.js文件" title="webpack.config.js文件"></a></li>
-<li>我们打开webpack.config.js文件，然后ctrl+f输入css-loader找到相应的位置，如下图所示：<br><a href="https://s1.ax1x.com/2020/05/22/YObHTe.png" title="找到css-loader所在位置" target="_blank" rel="noopener"><img src="https://s1.ax1x.com/2020/05/22/YObHTe.png" alt="找到css-loader所在位置" title="找到css-loader所在位置"></a></li>
-<li>我们注释掉相关的内容，然后添加如下所示的内容：<br><a href="https://s1.ax1x.com/2020/05/22/YObzOf.png" title="重写css-loader相关内容" target="_blank" rel="noopener"><img src="https://s1.ax1x.com/2020/05/22/YObzOf.png" alt="重写css-loader相关内容" title="重写css-loader相关内容"></a><br>代码贴在下面：<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">&#123;</span><br><span class="line">   loader: <span class="built_in">require</span>.resolve(<span class="string">'css-loader'</span>),</span><br><span class="line">   options: &#123;</span><br><span class="line">      modules: <span class="literal">true</span>,</span><br><span class="line">      localIdentName: <span class="string">'[name]_[local]___[hash:base64:5]'</span>,</span><br><span class="line">   &#125;</span><br><span class="line">&#125;,</span><br></pre></td></tr></table></figure>
-
-</li>
+<li>首先在项目中找到node_modules文件夹，然后再在里面找到react-scripts文件夹，找到它的config配置文件夹，然后在里面找到webpack.config.js文件，如图所示：<br><a target="_blank" rel="noopener" href="https://s1.ax1x.com/2020/05/22/YObBQ0.png" title="webpack.config.js文件"><img src="https://s1.ax1x.com/2020/05/22/YObBQ0.png" alt="webpack.config.js文件" title="webpack.config.js文件"></a></li>
+<li>我们打开webpack.config.js文件，然后ctrl+f输入css-loader找到相应的位置，如下图所示：<br><a target="_blank" rel="noopener" href="https://s1.ax1x.com/2020/05/22/YObHTe.png" title="找到css-loader所在位置"><img src="https://s1.ax1x.com/2020/05/22/YObHTe.png" alt="找到css-loader所在位置" title="找到css-loader所在位置"></a></li>
+<li>我们注释掉相关的内容，然后添加如下所示的内容：<br><a target="_blank" rel="noopener" href="https://s1.ax1x.com/2020/05/22/YObzOf.png" title="重写css-loader相关内容"><img src="https://s1.ax1x.com/2020/05/22/YObzOf.png" alt="重写css-loader相关内容" title="重写css-loader相关内容"></a><br>代码贴在下面：<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">&#123;</span><br><span class="line">   <span class="attr">loader</span>: <span class="built_in">require</span>.<span class="title function_">resolve</span>(<span class="string">&#x27;css-loader&#x27;</span>),</span><br><span class="line">   <span class="attr">options</span>: &#123;</span><br><span class="line">      <span class="attr">modules</span>: <span class="literal">true</span>,</span><br><span class="line">      <span class="attr">localIdentName</span>: <span class="string">&#x27;[name]_[local]___[hash:base64:5]&#x27;</span>,</span><br><span class="line">   &#125;</span><br><span class="line">&#125;,</span><br></pre></td></tr></table></figure>
+在这里解释一下相关内容：a. 在options选项中添加modules:true表示启用css模块；b. localIdentName表示配置生成资源的标识符名称，这这里你可以配置你喜欢的名称。</li>
 </ol>
-<p>在这里解释一下相关内容：a. 在options选项中添加modules:true表示启用css模块；b. localIdentName表示配置生成资源的标识符名称，这这里你可以配置你喜欢的名称。<br><strong>注意：当你配置完webpack.config.js文件之后，记得一定一定一定要重启，否则不会有效果的。</strong></p>
+<p><strong>注意：当你配置完webpack.config.js文件之后，记得一定一定一定要重启，否则不会有效果的。</strong></p>
 <ol start="4">
-<li>针对于上面的配置，你肯定很好奇输出是一个什么样子的，接下来我就具体来实现一个简单的例子。<br>a. 首先我们创建一个Test.js文件，Test.js文件里面写入如下所示代码：<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> React <span class="keyword">from</span> <span class="string">'react'</span></span><br><span class="line"><span class="keyword">import</span> test <span class="keyword">from</span> <span class="string">'../styles/test.css'</span></span><br><span class="line"><span class="built_in">console</span>.log(test) <span class="comment">// &#123;title: "test_title___xvQHx"&#125;</span></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Test</span> <span class="keyword">extends</span> <span class="title">React</span>.<span class="title">Component</span> </span>&#123;</span><br><span class="line">  render () &#123;</span><br><span class="line">    <span class="keyword">return</span> (</span><br><span class="line">      &lt;div&gt;</span><br><span class="line">        &lt;p className=&#123;test.title&#125;&gt;我是test下面的p标签&lt;<span class="regexp">/p&gt;</span></span><br><span class="line"><span class="regexp">      &lt;/</span>div&gt;</span><br><span class="line">    )</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">export</span> <span class="keyword">default</span> Test</span><br></pre></td></tr></table></figure>
-
-</li>
-</ol>
-<p>b. 接着在src文件夹下面创建一个styles文件夹，然后在styles文件夹下面创建一个test.css文件，test.css文件里面写入<code>.title {color: red;}</code><br>c. 接着为了区分我们的css模块是否生效了，我们在App.js文件中写入一个p标签，然后整体的代码如下所示：</p>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> React <span class="keyword">from</span> <span class="string">'react'</span>;</span><br><span class="line"><span class="keyword">import</span> Test <span class="keyword">from</span> <span class="string">'./components/Test'</span></span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">App</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">  <span class="keyword">return</span> (</span><br><span class="line">    &lt;div&gt;</span><br><span class="line">       &lt;p className=<span class="string">'title'</span>&gt;我是app下面的p标签&lt;<span class="regexp">/p&gt;</span></span><br><span class="line"><span class="regexp">       &lt;Test&gt;&lt;/</span>Test&gt;</span><br><span class="line">    &lt;<span class="regexp">/div&gt;</span></span><br><span class="line"><span class="regexp">  )</span></span><br><span class="line"><span class="regexp">&#125;</span></span><br><span class="line"><span class="regexp">export default App;</span></span><br></pre></td></tr></table></figure>
-
-<ol start="5">
-<li>整体内容写好之后，我们打开终端，输入命令:<code>yarn start</code>启动项目，将浏览器下的控制台打开，显示如下图所示：<br><a href="https://s1.ax1x.com/2020/05/22/YOzV58.png" title="浏览器端显示内容" target="_blank" rel="noopener"><img src="https://s1.ax1x.com/2020/05/22/YOzV58.png" alt="浏览器端显示内容" title="浏览器端显示内容"></a><br>在这里我们就发现我们打印出test变量它是一个对象，里面对应了我们css中写的内容，title属性对应的值就是我们在webpack.config.js文件中我们配置的内容。</li>
-<li>关于在css中写样式，我们需要注意的是css模块化只针对于类选择器和Id选择器，它不会将标签选择器模块化，具体的例子如下所示：<br>当我们在test.css文件中分别写上类选择器、Id选择器、标签选择器，然后我们在浏览器控制台中打印test变量，然后得出相关的结果。<br>test.css文件中写入：<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">.title &#123;  /* 类选择器 */</span><br><span class="line">  color: red;</span><br><span class="line">&#125;</span><br><span class="line">#my-title &#123;  /* Id选择器 */</span><br><span class="line">  border: 1px solid green;</span><br><span class="line">&#125;</span><br><span class="line">p &#123;  /* 标签选择器 */</span><br><span class="line">  margin: 10px;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-</li>
-</ol>
-<p>在控制台中显示如下图所示：<br><a href="https://s1.ax1x.com/2020/05/22/YXpFtf.png" title="关于css模块化需要注意事项" target="_blank" rel="noopener"><img src="https://s1.ax1x.com/2020/05/22/YXpFtf.png" alt="关于css模块化需要注意事项" title="关于css模块化需要注意事项"></a></p>
-<ol start="7">
+<li>针对于上面的配置，你肯定很好奇输出是一个什么样子的，接下来我就具体来实现一个简单的例子。<br>a. 首先我们创建一个Test.js文件，Test.js文件里面写入如下所示代码：<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> <span class="title class_">React</span> <span class="keyword">from</span> <span class="string">&#x27;react&#x27;</span></span><br><span class="line"><span class="keyword">import</span> test <span class="keyword">from</span> <span class="string">&#x27;../styles/test.css&#x27;</span></span><br><span class="line"><span class="variable language_">console</span>.<span class="title function_">log</span>(test) <span class="comment">// &#123;title: &quot;test_title___xvQHx&quot;&#125;</span></span><br><span class="line"><span class="keyword">class</span> <span class="title class_">Test</span> <span class="keyword">extends</span> <span class="title class_ inherited__">React.Component</span> &#123;</span><br><span class="line">  render () &#123;</span><br><span class="line">    <span class="keyword">return</span> (</span><br><span class="line">      <span class="language-xml"><span class="tag">&lt;<span class="name">div</span>&gt;</span></span></span><br><span class="line"><span class="language-xml">        <span class="tag">&lt;<span class="name">p</span> <span class="attr">className</span>=<span class="string">&#123;test.title&#125;</span>&gt;</span>我是test下面的p标签<span class="tag">&lt;/<span class="name">p</span>&gt;</span></span></span><br><span class="line"><span class="language-xml">      <span class="tag">&lt;/<span class="name">div</span>&gt;</span></span></span><br><span class="line">    )</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">export</span> <span class="keyword">default</span> <span class="title class_">Test</span></span><br></pre></td></tr></table></figure>
+b. 接着在src文件夹下面创建一个styles文件夹，然后在styles文件夹下面创建一个test.css文件，test.css文件里面写入<code>.title &#123;color: red;&#125;</code><br>c. 接着为了区分我们的css模块是否生效了，我们在App.js文件中写入一个p标签，然后整体的代码如下所示：<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> <span class="title class_">React</span> <span class="keyword">from</span> <span class="string">&#x27;react&#x27;</span>;</span><br><span class="line"><span class="keyword">import</span> <span class="title class_">Test</span> <span class="keyword">from</span> <span class="string">&#x27;./components/Test&#x27;</span></span><br><span class="line"><span class="keyword">function</span> <span class="title function_">App</span>(<span class="params"></span>) &#123;</span><br><span class="line">  <span class="keyword">return</span> (</span><br><span class="line">    <span class="language-xml"><span class="tag">&lt;<span class="name">div</span>&gt;</span></span></span><br><span class="line"><span class="language-xml">       <span class="tag">&lt;<span class="name">p</span> <span class="attr">className</span>=<span class="string">&#x27;title&#x27;</span>&gt;</span>我是app下面的p标签<span class="tag">&lt;/<span class="name">p</span>&gt;</span></span></span><br><span class="line"><span class="language-xml">       <span class="tag">&lt;<span class="name">Test</span>&gt;</span><span class="tag">&lt;/<span class="name">Test</span>&gt;</span></span></span><br><span class="line"><span class="language-xml">    <span class="tag">&lt;/<span class="name">div</span>&gt;</span></span></span><br><span class="line">  )</span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">export</span> <span class="keyword">default</span> <span class="title class_">App</span>;</span><br></pre></td></tr></table></figure></li>
+<li>整体内容写好之后，我们打开终端，输入命令:<code>yarn start</code>启动项目，将浏览器下的控制台打开，显示如下图所示：<br><a target="_blank" rel="noopener" href="https://s1.ax1x.com/2020/05/22/YOzV58.png" title="浏览器端显示内容"><img src="https://s1.ax1x.com/2020/05/22/YOzV58.png" alt="浏览器端显示内容" title="浏览器端显示内容"></a><br>在这里我们就发现我们打印出test变量它是一个对象，里面对应了我们css中写的内容，title属性对应的值就是我们在webpack.config.js文件中我们配置的内容。</li>
+<li>关于在css中写样式，我们需要注意的是css模块化只针对于类选择器和Id选择器，它不会将标签选择器模块化，具体的例子如下所示：<br>当我们在test.css文件中分别写上类选择器、Id选择器、标签选择器，然后我们在浏览器控制台中打印test变量，然后得出相关的结果。<br>test.css文件中写入：<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">.title &#123;  /* 类选择器 */</span><br><span class="line">  color: red;</span><br><span class="line">&#125;</span><br><span class="line">#my-title &#123;  /* Id选择器 */</span><br><span class="line">  border: 1px solid green;</span><br><span class="line">&#125;</span><br><span class="line">p &#123;  /* 标签选择器 */</span><br><span class="line">  margin: 10px;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+在控制台中显示如下图所示：<br><a target="_blank" rel="noopener" href="https://s1.ax1x.com/2020/05/22/YXpFtf.png" title="关于css模块化需要注意事项"><img src="https://s1.ax1x.com/2020/05/22/YXpFtf.png" alt="关于css模块化需要注意事项" title="关于css模块化需要注意事项"></a></li>
 <li>如果你使用sass的话，那么过程和上面是一样的，只是你创建的文件需改为test.scss文件即可。</li>
 </ol>
 
@@ -276,12 +269,12 @@
         </div>
         <nav class="m-pagination col-md-8 col-md-offset-2 col-sm-24" role="pagination">
     
-    <a class="pull-left" href="/2020/04/20/js拖拽自动排序/" style="float: left;">
+    <a class="pull-left" href="/2020/04/20/js%E6%8B%96%E6%8B%BD%E8%87%AA%E5%8A%A8%E6%8E%92%E5%BA%8F/" style="float: left;">
         ← js拖拽自动排序
     </a>
     
     
-    <a class="pull-right" href="/2020/03/16/自己编写一个红包模拟器/">
+    <a class="pull-right" href="/2020/03/16/%E8%87%AA%E5%B7%B1%E7%BC%96%E5%86%99%E4%B8%80%E4%B8%AA%E7%BA%A2%E5%8C%85%E6%A8%A1%E6%8B%9F%E5%99%A8/">
         自己编写一个红包模拟器 →
     </a>
     
@@ -350,7 +343,7 @@
                 <p>
                     &copy; 2014<script>new Date().getFullYear()>2010&&document.write("-"+new Date().getFullYear());</script>, Content By daipi173. All Rights Reserved.
                 </p>
-                <p>Theme By <a href="//go.kieran.top" style="color: #767D84">Kieran</a></p>
+                <p>Theme By <a target="_blank" rel="noopener" href="//go.kieran.top" style="color: #767D84">Kieran</a></p>
             </div>
             <div class="social">
                 <ul>

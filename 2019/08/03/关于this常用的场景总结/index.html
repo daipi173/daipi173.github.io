@@ -86,29 +86,29 @@
 				    
 				    <li><a href="/categories/HTML/Chrome浏览器/" class="animsition-link">Chrome浏览器<small>(1)</small></a></li>
 				    
-				    <li><a href="/categories/JavaScript/ES6/" class="animsition-link">ES6<small>(6)</small></a></li>
-				    
 				    <li><a href="/categories/ES6/" class="animsition-link">ES6<small>(4)</small></a></li>
+				    
+				    <li><a href="/categories/JavaScript/ES6/" class="animsition-link">ES6<small>(6)</small></a></li>
 				    
 				    <li><a href="/categories/JavaScript/Vue/Eslint/" class="animsition-link">Eslint<small>(1)</small></a></li>
 				    
-				    <li><a href="/categories/总结/Git/" class="animsition-link">Git<small>(1)</small></a></li>
-				    
 				    <li><a href="/categories/Git/" class="animsition-link">Git<small>(4)</small></a></li>
+				    
+				    <li><a href="/categories/总结/Git/" class="animsition-link">Git<small>(1)</small></a></li>
 				    
 				    <li><a href="/categories/HTML/" class="animsition-link">HTML<small>(17)</small></a></li>
 				    
-				    <li><a href="/categories/ES6/JavaScript/" class="animsition-link">JavaScript<small>(4)</small></a></li>
-				    
 				    <li><a href="/categories/JavaScript/" class="animsition-link">JavaScript<small>(41)</small></a></li>
+				    
+				    <li><a href="/categories/ES6/JavaScript/" class="animsition-link">JavaScript<small>(4)</small></a></li>
 				    
 				    <li><a href="/categories/Javascript/" class="animsition-link">Javascript<small>(2)</small></a></li>
 				    
 				    <li><a href="/categories/React/" class="animsition-link">React<small>(2)</small></a></li>
 				    
-				    <li><a href="/categories/Git/Vue/" class="animsition-link">Vue<small>(1)</small></a></li>
-				    
 				    <li><a href="/categories/Vue/" class="animsition-link">Vue<small>(2)</small></a></li>
+				    
+				    <li><a href="/categories/Git/Vue/" class="animsition-link">Vue<small>(1)</small></a></li>
 				    
 				    <li><a href="/categories/JavaScript/Vue/" class="animsition-link">Vue<small>(1)</small></a></li>
 				    
@@ -120,17 +120,21 @@
 				    
 				    <li><a href="/categories/Vue/懒加载/总结/element-ui/" class="animsition-link">element ui<small>(1)</small></a></li>
 				    
+				    <li><a href="/categories/git/" class="animsition-link">git<small>(1)</small></a></li>
+				    
+				    <li><a href="/categories/ubuntu/" class="animsition-link">ubuntu<small>(3)</small></a></li>
+				    
 				    <li><a href="/categories/vue/" class="animsition-link">vue<small>(1)</small></a></li>
 				    
 				    <li><a href="/categories/webpack/" class="animsition-link">webpack<small>(2)</small></a></li>
 				    
-				    <li><a href="/categories/总结/" class="animsition-link">总结<small>(1)</small></a></li>
-				    
 				    <li><a href="/categories/JavaScript/总结/" class="animsition-link">总结<small>(2)</small></a></li>
 				    
-				    <li><a href="/categories/Vue/懒加载/总结/" class="animsition-link">总结<small>(1)</small></a></li>
+				    <li><a href="/categories/总结/" class="animsition-link">总结<small>(1)</small></a></li>
 				    
 				    <li><a href="/categories/Git/Vue/总结/" class="animsition-link">总结<small>(1)</small></a></li>
+				    
+				    <li><a href="/categories/Vue/懒加载/总结/" class="animsition-link">总结<small>(1)</small></a></li>
 				    
 				    <li><a href="/categories/Vue/懒加载/" class="animsition-link">懒加载<small>(1)</small></a></li>
 				    
@@ -148,7 +152,7 @@
                 <a class="sb-toggle-submenu">Links<span class="sb-caret"></span></a>
                 <ul class="sb-submenu">
                     
-                    <li><a href="https://daipi173.github.io/myweb/daipi173-myperson" class="animsition-link">Personal Project</a></li>
+                    <li><a target="_blank" rel="noopener" href="https://daipi173.github.io/myweb/daipi173-myperson" class="animsition-link">Personal Project</a></li>
                     
                 </ul>
             </li>
@@ -245,52 +249,33 @@
         <div class="col-md-8 col-md-offset-2">
       		<p>关于this指向问题是初学者最头疼的一件事情，但是没有关系，接下来我会总结在学习或者工作中常用的几个例子。</p>
 <ol>
-<li><p>全局执行上下文的this是指向window的；<br>举一个例子，在全局上打印this：</p>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">console</span>.log(<span class="keyword">this</span>); <span class="comment">// window</span></span><br></pre></td></tr></table></figure>
-</li>
-<li><p>函数执行上下文的this需要看<strong>函数调用</strong>的时候，而不是看函数定义的时候，因为函数调用的时候才会形成执行上下文，形成执行上下文的时候，会有一个属性叫this；（关于执行上下文到时候我会专门写一篇文章来介绍）；<br>举一个例子：</p>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">test</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">        <span class="built_in">console</span>.log(<span class="keyword">this</span>);</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">let</span> obj = &#123;</span><br><span class="line">        test</span><br><span class="line">    &#125;;</span><br><span class="line">    <span class="comment">// 注意需要看函数调用，而不是函数的定义，下面执行test函数的时候是obj来调用的，因此this是执行obj的</span></span><br><span class="line">    <span class="comment">// 如果是看函数的定义的话，那么此时打印出来的this应该是指向window的</span></span><br><span class="line">    obj.test();  <span class="comment">// obj</span></span><br></pre></td></tr></table></figure>
-</li>
-<li><p>函数自己执行的时候，非严格模式this指向的是window，而严格模式下this是指向undefined的；<br>下面举一个例子：<br>非严格模式下：</p>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 非严格模式下</span></span><br><span class="line">    <span class="function"><span class="keyword">function</span> <span class="title">test</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">        <span class="built_in">console</span>.log(<span class="keyword">this</span>);</span><br><span class="line">    &#125;</span><br><span class="line">    test(); <span class="comment">// window</span></span><br></pre></td></tr></table></figure>
-
-</li>
-</ol>
-<p>严格模式下：</p>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 严格模式下</span></span><br><span class="line"><span class="meta">    "use strict"</span>;</span><br><span class="line">    <span class="function"><span class="keyword">function</span> <span class="title">test</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">        <span class="built_in">console</span>.log(<span class="keyword">this</span>);</span><br><span class="line">    &#125;</span><br><span class="line">    test(); <span class="comment">// undefined</span></span><br></pre></td></tr></table></figure>
-
-<ol start="4">
-<li><p>函数被对象调用的时候this指向<strong>最后一层调用</strong>它的对象；<br>举一个例子：</p>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">test</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">        <span class="built_in">console</span>.log(<span class="keyword">this</span>);</span><br><span class="line">        <span class="built_in">console</span>.log(<span class="keyword">this</span>.a);  <span class="comment">// 由于是指向obj1的，由于obj1下面没有a的值，因此打印出来a的值为undefined</span></span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">let</span> obj = &#123;</span><br><span class="line">        a: <span class="number">111</span>,</span><br><span class="line">        obj1: &#123;</span><br><span class="line">            test</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;;</span><br><span class="line">    obj.obj1.test();  <span class="comment">// obj1</span></span><br></pre></td></tr></table></figure>
-</li>
-<li><p>函数通过call、apply、bind来改变this的指向；<br>举一个例子，在这里我随便举了一个call的例子，apply、bind和它是类似的：</p>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">test</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">        <span class="built_in">console</span>.log(<span class="keyword">this</span>);</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">let</span> obj = &#123;</span><br><span class="line">        a: <span class="number">111</span></span><br><span class="line">    &#125;;</span><br><span class="line">    test.call(obj);  <span class="comment">// obj</span></span><br></pre></td></tr></table></figure>
-</li>
-<li><p>作为构造函数调用，通过new一个对象时，this是指向当前实例的；<br>举一个例子：</p>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">Constructor</span>(<span class="params"></span>)</span>&#123; <span class="comment">// 构造函数</span></span><br><span class="line">        <span class="built_in">console</span>.log(<span class="keyword">this</span>);</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">new</span> Constructor();  <span class="comment">// Constructor &#123;&#125;；即Constructor对象、Constructor实例</span></span><br></pre></td></tr></table></figure>
-</li>
-<li><p>箭头函数是没有this指向的，它是借助父级作用域即词法作用域（在这里需要注意的是所谓的词法作用域是<strong>定义函数的时候</strong>）的this。<br>举一个例子：</p>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">parent</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">        <span class="built_in">console</span>.log(<span class="keyword">this</span>);  <span class="comment">// obj；父级作用域的this指向obj</span></span><br><span class="line">        <span class="keyword">let</span> child = <span class="function"><span class="params">()</span> =&gt;</span> &#123;</span><br><span class="line">            <span class="built_in">console</span>.log(<span class="keyword">this</span>);  <span class="comment">// 借助父级作用域的this</span></span><br><span class="line">        &#125;;</span><br><span class="line">        child();</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">let</span> obj = &#123;</span><br><span class="line">        parent</span><br><span class="line">    &#125;;</span><br><span class="line">    obj.parent();  <span class="comment">// obj</span></span><br></pre></td></tr></table></figure>
+<li>全局执行上下文的this是指向window的；<br>举一个例子，在全局上打印this：<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="variable language_">console</span>.<span class="title function_">log</span>(<span class="variable language_">this</span>); <span class="comment">// window</span></span><br></pre></td></tr></table></figure></li>
+<li>函数执行上下文的this需要看<strong>函数调用</strong>的时候，而不是看函数定义的时候，因为函数调用的时候才会形成执行上下文，形成执行上下文的时候，会有一个属性叫this；（关于执行上下文到时候我会专门写一篇文章来介绍）；<br>举一个例子：<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">function</span> <span class="title function_">test</span>(<span class="params"></span>)&#123;</span><br><span class="line">        <span class="variable language_">console</span>.<span class="title function_">log</span>(<span class="variable language_">this</span>);</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">let</span> obj = &#123;</span><br><span class="line">        test</span><br><span class="line">    &#125;;</span><br><span class="line">    <span class="comment">// 注意需要看函数调用，而不是函数的定义，下面执行test函数的时候是obj来调用的，因此this是执行obj的</span></span><br><span class="line">    <span class="comment">// 如果是看函数的定义的话，那么此时打印出来的this应该是指向window的</span></span><br><span class="line">    obj.<span class="title function_">test</span>();  <span class="comment">// obj</span></span><br></pre></td></tr></table></figure></li>
+<li>函数自己执行的时候，非严格模式this指向的是window，而严格模式下this是指向undefined的；<br>下面举一个例子：<br>非严格模式下：<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 非严格模式下</span></span><br><span class="line">    <span class="keyword">function</span> <span class="title function_">test</span>(<span class="params"></span>)&#123;</span><br><span class="line">        <span class="variable language_">console</span>.<span class="title function_">log</span>(<span class="variable language_">this</span>);</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="title function_">test</span>(); <span class="comment">// window</span></span><br></pre></td></tr></table></figure>
+严格模式下：<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 严格模式下</span></span><br><span class="line"><span class="meta">    &quot;use strict&quot;</span>;</span><br><span class="line">    <span class="keyword">function</span> <span class="title function_">test</span>(<span class="params"></span>)&#123;</span><br><span class="line">        <span class="variable language_">console</span>.<span class="title function_">log</span>(<span class="variable language_">this</span>);</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="title function_">test</span>(); <span class="comment">// undefined</span></span><br></pre></td></tr></table></figure></li>
+<li>函数被对象调用的时候this指向<strong>最后一层调用</strong>它的对象；<br>举一个例子：<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">function</span> <span class="title function_">test</span>(<span class="params"></span>)&#123;</span><br><span class="line">        <span class="variable language_">console</span>.<span class="title function_">log</span>(<span class="variable language_">this</span>);</span><br><span class="line">        <span class="variable language_">console</span>.<span class="title function_">log</span>(<span class="variable language_">this</span>.<span class="property">a</span>);  <span class="comment">// 由于是指向obj1的，由于obj1下面没有a的值，因此打印出来a的值为undefined</span></span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">let</span> obj = &#123;</span><br><span class="line">        <span class="attr">a</span>: <span class="number">111</span>,</span><br><span class="line">        <span class="attr">obj1</span>: &#123;</span><br><span class="line">            test</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;;</span><br><span class="line">    obj.<span class="property">obj1</span>.<span class="title function_">test</span>();  <span class="comment">// obj1</span></span><br></pre></td></tr></table></figure></li>
+<li>函数通过call、apply、bind来改变this的指向；<br>举一个例子，在这里我随便举了一个call的例子，apply、bind和它是类似的：<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">function</span> <span class="title function_">test</span>(<span class="params"></span>)&#123;</span><br><span class="line">        <span class="variable language_">console</span>.<span class="title function_">log</span>(<span class="variable language_">this</span>);</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">let</span> obj = &#123;</span><br><span class="line">        <span class="attr">a</span>: <span class="number">111</span></span><br><span class="line">    &#125;;</span><br><span class="line">    test.<span class="title function_">call</span>(obj);  <span class="comment">// obj</span></span><br></pre></td></tr></table></figure></li>
+<li>作为构造函数调用，通过new一个对象时，this是指向当前实例的；<br>举一个例子：<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">function</span> <span class="title function_">Constructor</span>(<span class="params"></span>)&#123; <span class="comment">// 构造函数</span></span><br><span class="line">        <span class="variable language_">console</span>.<span class="title function_">log</span>(<span class="variable language_">this</span>);</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">new</span> <span class="title class_">Constructor</span>();  <span class="comment">// Constructor &#123;&#125;；即Constructor对象、Constructor实例</span></span><br></pre></td></tr></table></figure></li>
+<li>箭头函数是没有this指向的，它是借助父级作用域即词法作用域（在这里需要注意的是所谓的词法作用域是<strong>定义函数的时候</strong>）的this。<br>举一个例子：<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">function</span> <span class="title function_">parent</span>(<span class="params"></span>)&#123;</span><br><span class="line">        <span class="variable language_">console</span>.<span class="title function_">log</span>(<span class="variable language_">this</span>);  <span class="comment">// obj；父级作用域的this指向obj</span></span><br><span class="line">        <span class="keyword">let</span> <span class="title function_">child</span> = (<span class="params"></span>) =&gt; &#123;</span><br><span class="line">            <span class="variable language_">console</span>.<span class="title function_">log</span>(<span class="variable language_">this</span>);  <span class="comment">// 借助父级作用域的this</span></span><br><span class="line">        &#125;;</span><br><span class="line">        <span class="title function_">child</span>();</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">let</span> obj = &#123;</span><br><span class="line">        parent</span><br><span class="line">    &#125;;</span><br><span class="line">    obj.<span class="title function_">parent</span>();  <span class="comment">// obj</span></span><br></pre></td></tr></table></figure>
 
 </li>
 </ol>
 <p>上面总结的7点是我们在开发中常遇到的几种，其实最初设计this的时候就不是拿来让我们可以理解的，因为有我们几乎没有见过的用法，我举个例子：</p>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">test</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">            <span class="built_in">console</span>.log(<span class="keyword">this</span>);</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">let</span> obj = &#123;</span><br><span class="line">            test</span><br><span class="line">        &#125;;</span><br><span class="line">        <span class="comment">// 如果你的解释是obj.test相当于一个函数，然后最后自执行的话，this就是指向window的</span></span><br><span class="line">        (<span class="literal">false</span> || obj.test)();   <span class="comment">// window</span></span><br><span class="line">        <span class="comment">// 那么接下来你再来看看这个怎么解释呢?</span></span><br><span class="line">        (obj.test)();  <span class="comment">// obj</span></span><br></pre></td></tr></table></figure>
-
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">function</span> <span class="title function_">test</span>(<span class="params"></span>)&#123;</span><br><span class="line">            <span class="variable language_">console</span>.<span class="title function_">log</span>(<span class="variable language_">this</span>);</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">let</span> obj = &#123;</span><br><span class="line">            test</span><br><span class="line">        &#125;;</span><br><span class="line">        <span class="comment">// 如果你的解释是obj.test相当于一个函数，然后最后自执行的话，this就是指向window的</span></span><br><span class="line">        (<span class="literal">false</span> || obj.<span class="property">test</span>)();   <span class="comment">// window</span></span><br><span class="line">        <span class="comment">// 那么接下来你再来看看这个怎么解释呢?</span></span><br><span class="line">        (obj.<span class="property">test</span>)();  <span class="comment">// obj</span></span><br></pre></td></tr></table></figure>
 <p>其实你也不用纠结这么多，只需要把上面7点总结的理解好了，基本上在学习工作或者面试的时候就没有什么问题了。</p>
-<p>如果你还想更深入的了解this问题的话，我再附上一个链接：<a href="https://www.cnblogs.com/TomXu/archive/2012/01/12/2310479.html" target="_blank" rel="noopener">https://www.cnblogs.com/TomXu/archive/2012/01/12/2310479.html</a></p>
+<p>如果你还想更深入的了解this问题的话，我再附上一个链接：<a target="_blank" rel="noopener" href="https://www.cnblogs.com/TomXu/archive/2012/01/12/2310479.html">https://www.cnblogs.com/TomXu/archive/2012/01/12/2310479.html</a></p>
 
             <div class="clearfix"></div>
             <hr class="nogutter">
         </div>
         <nav class="m-pagination col-md-8 col-md-offset-2 col-sm-24" role="pagination">
     
-    <a class="pull-left" href="/2019/08/05/执行上下文/" style="float: left;">
+    <a class="pull-left" href="/2019/08/05/%E6%89%A7%E8%A1%8C%E4%B8%8A%E4%B8%8B%E6%96%87/" style="float: left;">
         ← 执行上下文
     </a>
     
     
-    <a class="pull-right" href="/2019/08/01/手动封装AJAX/">
+    <a class="pull-right" href="/2019/08/01/%E6%89%8B%E5%8A%A8%E5%B0%81%E8%A3%85AJAX/">
         手动封装AJAX →
     </a>
     
@@ -359,7 +344,7 @@
                 <p>
                     &copy; 2014<script>new Date().getFullYear()>2010&&document.write("-"+new Date().getFullYear());</script>, Content By daipi173. All Rights Reserved.
                 </p>
-                <p>Theme By <a href="//go.kieran.top" style="color: #767D84">Kieran</a></p>
+                <p>Theme By <a target="_blank" rel="noopener" href="//go.kieran.top" style="color: #767D84">Kieran</a></p>
             </div>
             <div class="social">
                 <ul>

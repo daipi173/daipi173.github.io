@@ -86,29 +86,29 @@
 				    
 				    <li><a href="/categories/HTML/Chrome浏览器/" class="animsition-link">Chrome浏览器<small>(1)</small></a></li>
 				    
-				    <li><a href="/categories/JavaScript/ES6/" class="animsition-link">ES6<small>(6)</small></a></li>
-				    
 				    <li><a href="/categories/ES6/" class="animsition-link">ES6<small>(4)</small></a></li>
+				    
+				    <li><a href="/categories/JavaScript/ES6/" class="animsition-link">ES6<small>(6)</small></a></li>
 				    
 				    <li><a href="/categories/JavaScript/Vue/Eslint/" class="animsition-link">Eslint<small>(1)</small></a></li>
 				    
-				    <li><a href="/categories/总结/Git/" class="animsition-link">Git<small>(1)</small></a></li>
-				    
 				    <li><a href="/categories/Git/" class="animsition-link">Git<small>(4)</small></a></li>
+				    
+				    <li><a href="/categories/总结/Git/" class="animsition-link">Git<small>(1)</small></a></li>
 				    
 				    <li><a href="/categories/HTML/" class="animsition-link">HTML<small>(17)</small></a></li>
 				    
-				    <li><a href="/categories/ES6/JavaScript/" class="animsition-link">JavaScript<small>(4)</small></a></li>
-				    
 				    <li><a href="/categories/JavaScript/" class="animsition-link">JavaScript<small>(41)</small></a></li>
+				    
+				    <li><a href="/categories/ES6/JavaScript/" class="animsition-link">JavaScript<small>(4)</small></a></li>
 				    
 				    <li><a href="/categories/Javascript/" class="animsition-link">Javascript<small>(2)</small></a></li>
 				    
 				    <li><a href="/categories/React/" class="animsition-link">React<small>(2)</small></a></li>
 				    
-				    <li><a href="/categories/Git/Vue/" class="animsition-link">Vue<small>(1)</small></a></li>
-				    
 				    <li><a href="/categories/Vue/" class="animsition-link">Vue<small>(2)</small></a></li>
+				    
+				    <li><a href="/categories/Git/Vue/" class="animsition-link">Vue<small>(1)</small></a></li>
 				    
 				    <li><a href="/categories/JavaScript/Vue/" class="animsition-link">Vue<small>(1)</small></a></li>
 				    
@@ -120,17 +120,21 @@
 				    
 				    <li><a href="/categories/Vue/懒加载/总结/element-ui/" class="animsition-link">element ui<small>(1)</small></a></li>
 				    
+				    <li><a href="/categories/git/" class="animsition-link">git<small>(1)</small></a></li>
+				    
+				    <li><a href="/categories/ubuntu/" class="animsition-link">ubuntu<small>(3)</small></a></li>
+				    
 				    <li><a href="/categories/vue/" class="animsition-link">vue<small>(1)</small></a></li>
 				    
 				    <li><a href="/categories/webpack/" class="animsition-link">webpack<small>(2)</small></a></li>
 				    
-				    <li><a href="/categories/总结/" class="animsition-link">总结<small>(1)</small></a></li>
-				    
 				    <li><a href="/categories/JavaScript/总结/" class="animsition-link">总结<small>(2)</small></a></li>
 				    
-				    <li><a href="/categories/Vue/懒加载/总结/" class="animsition-link">总结<small>(1)</small></a></li>
+				    <li><a href="/categories/总结/" class="animsition-link">总结<small>(1)</small></a></li>
 				    
 				    <li><a href="/categories/Git/Vue/总结/" class="animsition-link">总结<small>(1)</small></a></li>
+				    
+				    <li><a href="/categories/Vue/懒加载/总结/" class="animsition-link">总结<small>(1)</small></a></li>
 				    
 				    <li><a href="/categories/Vue/懒加载/" class="animsition-link">懒加载<small>(1)</small></a></li>
 				    
@@ -148,7 +152,7 @@
                 <a class="sb-toggle-submenu">Links<span class="sb-caret"></span></a>
                 <ul class="sb-submenu">
                     
-                    <li><a href="https://daipi173.github.io/myweb/daipi173-myperson" class="animsition-link">Personal Project</a></li>
+                    <li><a target="_blank" rel="noopener" href="https://daipi173.github.io/myweb/daipi173-myperson" class="animsition-link">Personal Project</a></li>
                     
                 </ul>
             </li>
@@ -255,6 +259,169 @@
 
 <section id="intro">
     <div class="container">
+        
+        <div class="row">
+            <div class="col-md-8 col-md-offset-2 opening-statement">
+                <div class="col-md-4">
+                    <h3><a href="/2019/07/30/当我们在浏览器中输入URL时，Web页面是如何呈现的/">当我们在浏览器中输入URL时，Web页面是如何呈现的</a></h3>
+                    <span>
+                        <span class="post-meta">
+      <time datetime="2019-07-30T14:35:00.000Z" itemprop="datePublished">
+          2019-07-30
+      </time>
+    
+    
+    | 
+    <a href='/tags/HTML/'>HTML</a>,
+    
+    <a href='/tags/网络/'>网络</a>
+    
+    
+</span>
+                    </span>
+                </div>
+                <div class="col-md-8">
+                    <p>
+                      
+                        首先我们需要了解两点：1. URL代表的是资源的位置；2. 浏览器本身不具有发送请求的功能。
+我们先来看看最简单的一个过程，如下图所示：
+但是接下来我们会更加深入的了解：当我们在浏览器中输入URL时，到Web页面是呈现出来，中间究竟发生了怎样的一个过程？接下来先来看一张图片，然后我会根据图片来进行一个相应的讲解，图片如下图所示：
+
+a. 首先我们需要清楚一点，就是daipi173.github.io域名相当于服务器的一个别名，而服务器真
+                      
+                    </p>
+                    
+                    <p class="pull-right readMore">
+                        <a href="/2019/07/30/当我们在浏览器中输入URL时，Web页面是如何呈现的/">Read More...</a>
+                    </p>
+                    
+                </div>
+                <div class="clearfix"></div>
+                <hr class="nogutter">
+            </div>
+        </div>
+        
+        <div class="row">
+            <div class="col-md-8 col-md-offset-2 opening-statement">
+                <div class="col-md-4">
+                    <h3><a href="/2019/07/25/关于解决margin塌陷和合并问题/">关于解决margin塌陷和合并问题</a></h3>
+                    <span>
+                        <span class="post-meta">
+      <time datetime="2019-07-25T08:14:00.000Z" itemprop="datePublished">
+          2019-07-25
+      </time>
+    
+    
+    | 
+    <a href='/tags/HTML/'>HTML</a>,
+    
+    <a href='/tags/CSS/'>CSS</a>,
+    
+    <a href='/tags/margin/'>margin</a>
+    
+    
+</span>
+                    </span>
+                </div>
+                <div class="col-md-8">
+                    <p>
+                      
+                        在标准的文档流中，竖直方向（注意：左右方向是不会出现塌陷的现象。）的margin会出现叠加现象，即较大的margin会覆盖掉较小的margin，竖直方向的两个盒子中间只有一个较大的margin，这就是margin的塌陷现象。
+1. 什么是外边距合并外边距合并就是：当两个垂直外边距相遇时，它们将形成一个外边距。合并的外边距的高度等于两个发生合并的外边距的高度中的较大者。
+2. 常见的几种情况
+两个元素是父子关系，见如下代码：
+123456
+                      
+                    </p>
+                    
+                    <p class="pull-right readMore">
+                        <a href="/2019/07/25/关于解决margin塌陷和合并问题/">Read More...</a>
+                    </p>
+                    
+                </div>
+                <div class="clearfix"></div>
+                <hr class="nogutter">
+            </div>
+        </div>
+        
+        <div class="row">
+            <div class="col-md-8 col-md-offset-2 opening-statement">
+                <div class="col-md-4">
+                    <h3><a href="/2019/07/22/使用hexo来搭建博客/">使用hexo来搭建博客</a></h3>
+                    <span>
+                        <span class="post-meta">
+      <time datetime="2019-07-22T09:07:00.000Z" itemprop="datePublished">
+          2019-07-22
+      </time>
+    
+    
+    | 
+    <a href='/tags/Git/'>Git</a>,
+    
+    <a href='/tags/Hexo/'>Hexo</a>
+    
+    
+</span>
+                    </span>
+                </div>
+                <div class="col-md-8">
+                    <p>
+                      
+                        今天给大家介绍的是如何使用hexo工具来搭建个人博客。
+1. 什么是hexo简单一点的说：hexo是一个快速、简洁且高效的博客框架。
+2. hexo相关文件的介绍打开编辑器在终端先下载hexo-cli，因此执行的命令是:npm install hexo-cli -g。然后再执行命令:hexo init myBlog来新建一个网站，其中myBlog是我自己随意取得名字，这里大家可以取自己喜欢的名字。当下载完成之后执行命令:cd myBlo
+                      
+                    </p>
+                    
+                    <p class="pull-right readMore">
+                        <a href="/2019/07/22/使用hexo来搭建博客/">Read More...</a>
+                    </p>
+                    
+                </div>
+                <div class="clearfix"></div>
+                <hr class="nogutter">
+            </div>
+        </div>
+        
+        <div class="row">
+            <div class="col-md-8 col-md-offset-2 opening-statement">
+                <div class="col-md-4">
+                    <h3><a href="/2019/07/20/ES6之Symbol/">ES6之Symbol</a></h3>
+                    <span>
+                        <span class="post-meta">
+      <time datetime="2019-07-20T14:31:00.000Z" itemprop="datePublished">
+          2019-07-20
+      </time>
+    
+    
+    | 
+    <a href='/tags/ES6/'>ES6</a>,
+    
+    <a href='/tags/JavaScript/'>JavaScript</a>,
+    
+    <a href='/tags/Symbol/'>Symbol</a>
+    
+    
+</span>
+                    </span>
+                </div>
+                <div class="col-md-8">
+                    <p>
+                      
+                        1. Symbol的由来ES5 的对象属性名都是字符串，这容易造成属性名的冲突。比如，你使用了一个他人提供的对象，但又想为这个对象添加新的方法（mixin 模式），新方法的名字就有可能与现有方法产生冲突。如果有一种机制，保证每个属性的名字都是独一无二的就好了，这样就从根本上防止属性名的冲突。这就是 ES6 引入Symbol的原因。
+2. Symbol的概述JS中分为七种内置类型，七种内置类型又分为两大类型：基本类型、对象(Object)
+                      
+                    </p>
+                    
+                    <p class="pull-right readMore">
+                        <a href="/2019/07/20/ES6之Symbol/">Read More...</a>
+                    </p>
+                    
+                </div>
+                <div class="clearfix"></div>
+                <hr class="nogutter">
+            </div>
+        </div>
         
         <div class="row">
             <div class="col-md-8 col-md-offset-2 opening-statement">
@@ -400,7 +567,7 @@
                         我们需要注意的一点是：jQuery是函数式的写法。
 下面我们来看一个关于Ajax的例子（注意：需要放到服务器下面进行一个运行）：
 GET方法进行一个请求：index.html文件和getNews.php文件在同一个路径下，getNews.php文件中的内容为：
-1234567891011121314151617&lt;?phpheader('content-type:text/html;charset="utf-8"');error_r
+1234567891011121314151617&lt;?phpheader(&#x27;content-type:text/html;charset=&quot;utf-8&
                       
                     </p>
                     
@@ -494,170 +661,6 @@ GET方法进行一个请求：index.html文件和getNews.php文件在同一个�
             </div>
         </div>
         
-        <div class="row">
-            <div class="col-md-8 col-md-offset-2 opening-statement">
-                <div class="col-md-4">
-                    <h3><a href="/2019/06/25/算法之快速排序（Quick-Sort）/">算法之快速排序（Quick Sort）</a></h3>
-                    <span>
-                        <span class="post-meta">
-      <time datetime="2019-06-25T13:57:00.000Z" itemprop="datePublished">
-          2019-06-25
-      </time>
-    
-</span>
-                    </span>
-                </div>
-                <div class="col-md-8">
-                    <p>
-                      
-                        1. 算法简介快速排序的基本思想：通过一趟排序将待排记录分隔成独立的两部分，其中一部分记录的关键字均比另一部分的关键字小，则可分别对这两部分记录继续进行排序，以达到整个序列有序。
-2. 算法描述和实现快速排序使用分治法来把一个串（list）分为两个子串（sub-lists）。具体算法描述如下：
-
-从数列中挑出一个元素，称为 “基准”（pivot）；
-重新排序数列，所有元素比基准值小的摆放在基准前面，所有元素比基准值大的摆在基准的后面（相
-                      
-                    </p>
-                    
-                    <p class="pull-right readMore">
-                        <a href="/2019/06/25/算法之快速排序（Quick-Sort）/">Read More...</a>
-                    </p>
-                    
-                </div>
-                <div class="clearfix"></div>
-                <hr class="nogutter">
-            </div>
-        </div>
-        
-        <div class="row">
-            <div class="col-md-8 col-md-offset-2 opening-statement">
-                <div class="col-md-4">
-                    <h3><a href="/2019/06/22/JS之用一次for循环来合并排序/">JS之用一次for循环来合并排序</a></h3>
-                    <span>
-                        <span class="post-meta">
-      <time datetime="2019-06-22T02:15:00.000Z" itemprop="datePublished">
-          2019-06-22
-      </time>
-    
-    
-    | 
-    <a href='/tags/JavaScript/'>JavaScript</a>,
-    
-    <a href='/tags/for循环/'>for循环</a>,
-    
-    <a href='/tags/排序/'>排序</a>
-    
-    
-</span>
-                    </span>
-                </div>
-                <div class="col-md-8">
-                    <p>
-                      
-                        今天给大家分享一道较为简单的js题，下面大家先看一看题目，在这之前先不要看我写的代码，看看自己有没有更好的方法。下面我先把题分享出来：首先先把题中重点的地方列举出来：
-
-数组的内容都是从小到大排好序的数字；
-合并之后的数字也是要从小到大排好序的；
-不要直接使用sort()方法（在下面的代码中我没有使用sort()方法）；
-只使用一次for循环。
-
-大家先仔细想一想思路，当你写完自己的代码时，认为自己代码是否有bug的最好方法就是带几组比
-                      
-                    </p>
-                    
-                    <p class="pull-right readMore">
-                        <a href="/2019/06/22/JS之用一次for循环来合并排序/">Read More...</a>
-                    </p>
-                    
-                </div>
-                <div class="clearfix"></div>
-                <hr class="nogutter">
-            </div>
-        </div>
-        
-        <div class="row">
-            <div class="col-md-8 col-md-offset-2 opening-statement">
-                <div class="col-md-4">
-                    <h3><a href="/2019/06/20/import和require的区别/">import和require的区别</a></h3>
-                    <span>
-                        <span class="post-meta">
-      <time datetime="2019-06-20T01:03:00.000Z" itemprop="datePublished">
-          2019-06-20
-      </time>
-    
-    
-    | 
-    <a href='/tags/ES6/'>ES6</a>,
-    
-    <a href='/tags/JavaScript/'>JavaScript</a>,
-    
-    <a href='/tags/import/'>import</a>,
-    
-    <a href='/tags/require/'>require</a>
-    
-    
-</span>
-                    </span>
-                </div>
-                <div class="col-md-8">
-                    <p>
-                      
-                        require 和 import，都是为了JS模块化使用。不知道有没有小伙伴和我一样，最开始有点分不清楚import和require的区别，今天就给大家梳理一下他们之间的区别。由于有时候多人协同开发时，会出现一个项目中同时使用了import和require引入的情况。在正常的情况下，一个项目中最好使对引入方式做一个规范。
-1. 遵循规范的区别
-import/export是ES6新规范
-require/exports是CommonJS的一
-                      
-                    </p>
-                    
-                    <p class="pull-right readMore">
-                        <a href="/2019/06/20/import和require的区别/">Read More...</a>
-                    </p>
-                    
-                </div>
-                <div class="clearfix"></div>
-                <hr class="nogutter">
-            </div>
-        </div>
-        
-        <div class="row">
-            <div class="col-md-8 col-md-offset-2 opening-statement">
-                <div class="col-md-4">
-                    <h3><a href="/2019/06/16/ES6之class类的补充/">ES6之class类的补充</a></h3>
-                    <span>
-                        <span class="post-meta">
-      <time datetime="2019-06-16T09:57:00.000Z" itemprop="datePublished">
-          2019-06-16
-      </time>
-    
-    
-    | 
-    <a href='/tags/ES6/'>ES6</a>,
-    
-    <a href='/tags/JavaScript/'>JavaScript</a>,
-    
-    <a href='/tags/Class类/'>Class类</a>
-    
-    
-</span>
-                    </span>
-                </div>
-                <div class="col-md-8">
-                    <p>
-                      
-                        1. 属性表达式类的属性名，可以采用表达式。给大家举一个例子，代码如下：
-1234567891011let propName = "getMethod";class Prop&#123;	constructor()&#123;		//...	&#125;	[propName]()&#123; // 此时Prop类的方法名getMethod是从“let propName = 'getMethod';”表达式得到的		console.log
-                      
-                    </p>
-                    
-                    <p class="pull-right readMore">
-                        <a href="/2019/06/16/ES6之class类的补充/">Read More...</a>
-                    </p>
-                    
-                </div>
-                <div class="clearfix"></div>
-                <hr class="nogutter">
-            </div>
-        </div>
-        
         <nav class="pagination" role="pagination">
           <a class="pull-left" href="/page/4/">← Newer Posts</a>
           <a class="pull-right" href="/page/6/">Older Posts →</a>
@@ -682,7 +685,7 @@ require/exports是CommonJS的一
                 <p>
                     &copy; 2014<script>new Date().getFullYear()>2010&&document.write("-"+new Date().getFullYear());</script>, Content By daipi173. All Rights Reserved.
                 </p>
-                <p>Theme By <a href="//go.kieran.top" style="color: #767D84">Kieran</a></p>
+                <p>Theme By <a target="_blank" rel="noopener" href="//go.kieran.top" style="color: #767D84">Kieran</a></p>
             </div>
             <div class="social">
                 <ul>

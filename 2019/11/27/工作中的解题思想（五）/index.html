@@ -86,29 +86,29 @@
 				    
 				    <li><a href="/categories/HTML/Chrome浏览器/" class="animsition-link">Chrome浏览器<small>(1)</small></a></li>
 				    
-				    <li><a href="/categories/JavaScript/ES6/" class="animsition-link">ES6<small>(6)</small></a></li>
-				    
 				    <li><a href="/categories/ES6/" class="animsition-link">ES6<small>(4)</small></a></li>
+				    
+				    <li><a href="/categories/JavaScript/ES6/" class="animsition-link">ES6<small>(6)</small></a></li>
 				    
 				    <li><a href="/categories/JavaScript/Vue/Eslint/" class="animsition-link">Eslint<small>(1)</small></a></li>
 				    
-				    <li><a href="/categories/总结/Git/" class="animsition-link">Git<small>(1)</small></a></li>
-				    
 				    <li><a href="/categories/Git/" class="animsition-link">Git<small>(4)</small></a></li>
+				    
+				    <li><a href="/categories/总结/Git/" class="animsition-link">Git<small>(1)</small></a></li>
 				    
 				    <li><a href="/categories/HTML/" class="animsition-link">HTML<small>(17)</small></a></li>
 				    
-				    <li><a href="/categories/ES6/JavaScript/" class="animsition-link">JavaScript<small>(4)</small></a></li>
-				    
 				    <li><a href="/categories/JavaScript/" class="animsition-link">JavaScript<small>(41)</small></a></li>
+				    
+				    <li><a href="/categories/ES6/JavaScript/" class="animsition-link">JavaScript<small>(4)</small></a></li>
 				    
 				    <li><a href="/categories/Javascript/" class="animsition-link">Javascript<small>(2)</small></a></li>
 				    
 				    <li><a href="/categories/React/" class="animsition-link">React<small>(2)</small></a></li>
 				    
-				    <li><a href="/categories/Git/Vue/" class="animsition-link">Vue<small>(1)</small></a></li>
-				    
 				    <li><a href="/categories/Vue/" class="animsition-link">Vue<small>(2)</small></a></li>
+				    
+				    <li><a href="/categories/Git/Vue/" class="animsition-link">Vue<small>(1)</small></a></li>
 				    
 				    <li><a href="/categories/JavaScript/Vue/" class="animsition-link">Vue<small>(1)</small></a></li>
 				    
@@ -120,17 +120,21 @@
 				    
 				    <li><a href="/categories/Vue/懒加载/总结/element-ui/" class="animsition-link">element ui<small>(1)</small></a></li>
 				    
+				    <li><a href="/categories/git/" class="animsition-link">git<small>(1)</small></a></li>
+				    
+				    <li><a href="/categories/ubuntu/" class="animsition-link">ubuntu<small>(3)</small></a></li>
+				    
 				    <li><a href="/categories/vue/" class="animsition-link">vue<small>(1)</small></a></li>
 				    
 				    <li><a href="/categories/webpack/" class="animsition-link">webpack<small>(2)</small></a></li>
 				    
-				    <li><a href="/categories/总结/" class="animsition-link">总结<small>(1)</small></a></li>
-				    
 				    <li><a href="/categories/JavaScript/总结/" class="animsition-link">总结<small>(2)</small></a></li>
 				    
-				    <li><a href="/categories/Vue/懒加载/总结/" class="animsition-link">总结<small>(1)</small></a></li>
+				    <li><a href="/categories/总结/" class="animsition-link">总结<small>(1)</small></a></li>
 				    
 				    <li><a href="/categories/Git/Vue/总结/" class="animsition-link">总结<small>(1)</small></a></li>
+				    
+				    <li><a href="/categories/Vue/懒加载/总结/" class="animsition-link">总结<small>(1)</small></a></li>
 				    
 				    <li><a href="/categories/Vue/懒加载/" class="animsition-link">懒加载<small>(1)</small></a></li>
 				    
@@ -148,7 +152,7 @@
                 <a class="sb-toggle-submenu">Links<span class="sb-caret"></span></a>
                 <ul class="sb-submenu">
                     
-                    <li><a href="https://daipi173.github.io/myweb/daipi173-myperson" class="animsition-link">Personal Project</a></li>
+                    <li><a target="_blank" rel="noopener" href="https://daipi173.github.io/myweb/daipi173-myperson" class="animsition-link">Personal Project</a></li>
                     
                 </ul>
             </li>
@@ -247,12 +251,12 @@
 <li>关于闭包的一道题</li>
 </ol>
 
-<pre><code class="language-javascript ">function Foo(){
+<pre><code class="language-javascript ">function Foo()&#123;
      var i=0;
-     return function(){
+     return function()&#123;
          document.write(i++);
-     }
-}
+     &#125;
+&#125;
 var f1=Foo(),
 f2=Foo();
 f1();  // 0
@@ -264,34 +268,27 @@ f2();  // 0
 <ol start="2">
 <li>变量声明提升的题</li>
 </ol>
-<pre><code class="language-javascript ">if(! "a" in window){
+<pre><code class="language-javascript ">if(! "a" in window)&#123;
     var a = 1;
-}
+&#125;
 alert(a);  // undefined
 </code></pre>
 
 <p>if(! “a” in window)这句代码的意思是：判断全局对象window中是否有变量a，如果没有变量a，就进入判断中将a赋值为1；<br>但是由于变量的声明提前，上面的代码等价于下面所写的内容：</p>
 <pre><code class="language-javascript ">var a；
-if（!"a" in window）{
+if（!"a" in window）&#123;
     a=1;
-}
+&#125;
 alert(a);
 </code></pre>
 
-<p>由于变量的声明提前特性，在执行这段代码之后，全局对象window中就已经存在a这个变量了，所以不能进入判断，对a进行赋值，<br>因此a的值为undefined。<br><strong>注意：let声明变量时，变量不会存在window下面</strong>，参考链接如下所示：<br><a href="https://github.com/Advanced-Frontend/Daily-Interview-Question/issues/30" target="_blank" rel="noopener">https://github.com/Advanced-Frontend/Daily-Interview-Question/issues/30</a></p>
+<p>由于变量的声明提前特性，在执行这段代码之后，全局对象window中就已经存在a这个变量了，所以不能进入判断，对a进行赋值，<br>因此a的值为undefined。<br><strong>注意：let声明变量时，变量不会存在window下面</strong>，参考链接如下所示：<br><a target="_blank" rel="noopener" href="https://github.com/Advanced-Frontend/Daily-Interview-Question/issues/30">https://github.com/Advanced-Frontend/Daily-Interview-Question/issues/30</a></p>
 <ol start="3">
-<li><p>关于map的试题</p>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">let</span> array = [,<span class="number">1</span>,,<span class="number">2</span>,,<span class="number">3</span>];</span><br><span class="line">array = array.map(<span class="function">(<span class="params">i</span>) =&gt;</span> ++i)  <span class="comment">// [,2,,3,,4]</span></span><br><span class="line"><span class="comment">// 解析：</span></span><br><span class="line"><span class="comment">// forEach，filter，every，some，map会跳过空位</span></span><br></pre></td></tr></table></figure>
-</li>
-<li><p>JSON.parse()中尾随逗号在JSON 中无效，所以如果传递给它的字符串有尾随逗号，JSON.parse()将会抛出错误</p>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 例子：</span></span><br><span class="line"><span class="keyword">const</span> user = <span class="string">'&#123;"name": "John","email": "john@awesome.com",&#125;'</span></span><br><span class="line"><span class="keyword">const</span> userStr = <span class="built_in">JSON</span>.parse(user)    <span class="comment">// Uncaught SyntaxError: Unexpected token &#125; in JSON at position 44</span></span><br></pre></td></tr></table></figure>
-</li>
-<li><p>JSON.parse()和JSON.stringify()的使用<br>参考链接1：<a href="https://www.html.cn/archives/8735" target="_blank" rel="noopener">https://www.html.cn/archives/8735</a><br>参考链接2：<a href="https://cloud.tencent.com/developer/article/1152862" target="_blank" rel="noopener">https://cloud.tencent.com/developer/article/1152862</a></p>
-</li>
-<li><p>session和token的区别<br>参考链接：<a href="https://blog.csdn.net/qq_35891226/article/details/79931210" target="_blank" rel="noopener">https://blog.csdn.net/qq_35891226/article/details/79931210</a></p>
-</li>
-<li><p>parseInt()特殊的用法</p>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">parseInt</span>(<span class="string">'101'</span>,<span class="number">2</span>)  <span class="comment">// 5   -&gt; 1 * 2^2 + 0 * 2 + 1 * 2^0 = 4 + 0 + 1 = 5</span></span><br><span class="line"><span class="built_in">parseInt</span>(<span class="string">'133'</span>,<span class="number">2</span>)  <span class="comment">// 1   -&gt; 将133看作2进制数，由于2进制是0-1   1 * 2^0 = 1</span></span><br><span class="line"><span class="built_in">parseInt</span>(<span class="string">'3'</span>,<span class="number">2</span>)  <span class="comment">// NaN  -&gt; 如果被解析参数的第一个字符无法被转化成数值类型，则返回 NaN</span></span><br><span class="line"><span class="built_in">parseInt</span>(<span class="string">'13733'</span>,<span class="number">5</span>)  <span class="comment">// 8  -&gt; 将13733看作5进制数，由于5进制是0-4      1 * 5^1 + 3 * 5^0 = 5 + 3 = 8</span></span><br></pre></td></tr></table></figure></li>
+<li>关于map的试题<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">let</span> array = [,<span class="number">1</span>,,<span class="number">2</span>,,<span class="number">3</span>];</span><br><span class="line">array = array.<span class="title function_">map</span>(<span class="function">(<span class="params">i</span>) =&gt;</span> ++i)  <span class="comment">// [,2,,3,,4]</span></span><br><span class="line"><span class="comment">// 解析：</span></span><br><span class="line"><span class="comment">// forEach，filter，every，some，map会跳过空位</span></span><br></pre></td></tr></table></figure></li>
+<li>JSON.parse()中尾随逗号在JSON 中无效，所以如果传递给它的字符串有尾随逗号，JSON.parse()将会抛出错误<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 例子：</span></span><br><span class="line"><span class="keyword">const</span> user = <span class="string">&#x27;&#123;&quot;name&quot;: &quot;John&quot;,&quot;email&quot;: &quot;john@awesome.com&quot;,&#125;&#x27;</span></span><br><span class="line"><span class="keyword">const</span> userStr = <span class="title class_">JSON</span>.<span class="title function_">parse</span>(user)    <span class="comment">// Uncaught SyntaxError: Unexpected token &#125; in JSON at position 44</span></span><br></pre></td></tr></table></figure></li>
+<li>JSON.parse()和JSON.stringify()的使用<br>参考链接1：<a target="_blank" rel="noopener" href="https://www.html.cn/archives/8735">https://www.html.cn/archives/8735</a><br>参考链接2：<a target="_blank" rel="noopener" href="https://cloud.tencent.com/developer/article/1152862">https://cloud.tencent.com/developer/article/1152862</a></li>
+<li>session和token的区别<br>参考链接：<a target="_blank" rel="noopener" href="https://blog.csdn.net/qq_35891226/article/details/79931210">https://blog.csdn.net/qq_35891226/article/details/79931210</a></li>
+<li>parseInt()特殊的用法<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">parseInt</span>(<span class="string">&#x27;101&#x27;</span>,<span class="number">2</span>)  <span class="comment">// 5   -&gt; 1 * 2^2 + 0 * 2 + 1 * 2^0 = 4 + 0 + 1 = 5</span></span><br><span class="line"><span class="built_in">parseInt</span>(<span class="string">&#x27;133&#x27;</span>,<span class="number">2</span>)  <span class="comment">// 1   -&gt; 将133看作2进制数，由于2进制是0-1   1 * 2^0 = 1</span></span><br><span class="line"><span class="built_in">parseInt</span>(<span class="string">&#x27;3&#x27;</span>,<span class="number">2</span>)  <span class="comment">// NaN  -&gt; 如果被解析参数的第一个字符无法被转化成数值类型，则返回 NaN</span></span><br><span class="line"><span class="built_in">parseInt</span>(<span class="string">&#x27;13733&#x27;</span>,<span class="number">5</span>)  <span class="comment">// 8  -&gt; 将13733看作5进制数，由于5进制是0-4      1 * 5^1 + 3 * 5^0 = 5 + 3 = 8</span></span><br></pre></td></tr></table></figure></li>
 </ol>
 
             <div class="clearfix"></div>
@@ -299,12 +296,12 @@ alert(a);
         </div>
         <nav class="m-pagination col-md-8 col-md-offset-2 col-sm-24" role="pagination">
     
-    <a class="pull-left" href="/2019/11/29/数组扁平化处理办法/" style="float: left;">
+    <a class="pull-left" href="/2019/11/29/%E6%95%B0%E7%BB%84%E6%89%81%E5%B9%B3%E5%8C%96%E5%A4%84%E7%90%86%E5%8A%9E%E6%B3%95/" style="float: left;">
         ← 数组扁平化处理办法
     </a>
     
     
-    <a class="pull-right" href="/2019/11/24/工作中的解题思想（四）/">
+    <a class="pull-right" href="/2019/11/24/%E5%B7%A5%E4%BD%9C%E4%B8%AD%E7%9A%84%E8%A7%A3%E9%A2%98%E6%80%9D%E6%83%B3%EF%BC%88%E5%9B%9B%EF%BC%89/">
         工作中的解题思想（四） →
     </a>
     
@@ -373,7 +370,7 @@ alert(a);
                 <p>
                     &copy; 2014<script>new Date().getFullYear()>2010&&document.write("-"+new Date().getFullYear());</script>, Content By daipi173. All Rights Reserved.
                 </p>
-                <p>Theme By <a href="//go.kieran.top" style="color: #767D84">Kieran</a></p>
+                <p>Theme By <a target="_blank" rel="noopener" href="//go.kieran.top" style="color: #767D84">Kieran</a></p>
             </div>
             <div class="social">
                 <ul>

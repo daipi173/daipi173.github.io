@@ -86,29 +86,29 @@
 				    
 				    <li><a href="/categories/HTML/Chrome浏览器/" class="animsition-link">Chrome浏览器<small>(1)</small></a></li>
 				    
-				    <li><a href="/categories/JavaScript/ES6/" class="animsition-link">ES6<small>(6)</small></a></li>
-				    
 				    <li><a href="/categories/ES6/" class="animsition-link">ES6<small>(4)</small></a></li>
+				    
+				    <li><a href="/categories/JavaScript/ES6/" class="animsition-link">ES6<small>(6)</small></a></li>
 				    
 				    <li><a href="/categories/JavaScript/Vue/Eslint/" class="animsition-link">Eslint<small>(1)</small></a></li>
 				    
-				    <li><a href="/categories/总结/Git/" class="animsition-link">Git<small>(1)</small></a></li>
-				    
 				    <li><a href="/categories/Git/" class="animsition-link">Git<small>(4)</small></a></li>
+				    
+				    <li><a href="/categories/总结/Git/" class="animsition-link">Git<small>(1)</small></a></li>
 				    
 				    <li><a href="/categories/HTML/" class="animsition-link">HTML<small>(17)</small></a></li>
 				    
-				    <li><a href="/categories/ES6/JavaScript/" class="animsition-link">JavaScript<small>(4)</small></a></li>
-				    
 				    <li><a href="/categories/JavaScript/" class="animsition-link">JavaScript<small>(41)</small></a></li>
+				    
+				    <li><a href="/categories/ES6/JavaScript/" class="animsition-link">JavaScript<small>(4)</small></a></li>
 				    
 				    <li><a href="/categories/Javascript/" class="animsition-link">Javascript<small>(2)</small></a></li>
 				    
 				    <li><a href="/categories/React/" class="animsition-link">React<small>(2)</small></a></li>
 				    
-				    <li><a href="/categories/Git/Vue/" class="animsition-link">Vue<small>(1)</small></a></li>
-				    
 				    <li><a href="/categories/Vue/" class="animsition-link">Vue<small>(2)</small></a></li>
+				    
+				    <li><a href="/categories/Git/Vue/" class="animsition-link">Vue<small>(1)</small></a></li>
 				    
 				    <li><a href="/categories/JavaScript/Vue/" class="animsition-link">Vue<small>(1)</small></a></li>
 				    
@@ -120,17 +120,21 @@
 				    
 				    <li><a href="/categories/Vue/懒加载/总结/element-ui/" class="animsition-link">element ui<small>(1)</small></a></li>
 				    
+				    <li><a href="/categories/git/" class="animsition-link">git<small>(1)</small></a></li>
+				    
+				    <li><a href="/categories/ubuntu/" class="animsition-link">ubuntu<small>(3)</small></a></li>
+				    
 				    <li><a href="/categories/vue/" class="animsition-link">vue<small>(1)</small></a></li>
 				    
 				    <li><a href="/categories/webpack/" class="animsition-link">webpack<small>(2)</small></a></li>
 				    
-				    <li><a href="/categories/总结/" class="animsition-link">总结<small>(1)</small></a></li>
-				    
 				    <li><a href="/categories/JavaScript/总结/" class="animsition-link">总结<small>(2)</small></a></li>
 				    
-				    <li><a href="/categories/Vue/懒加载/总结/" class="animsition-link">总结<small>(1)</small></a></li>
+				    <li><a href="/categories/总结/" class="animsition-link">总结<small>(1)</small></a></li>
 				    
 				    <li><a href="/categories/Git/Vue/总结/" class="animsition-link">总结<small>(1)</small></a></li>
+				    
+				    <li><a href="/categories/Vue/懒加载/总结/" class="animsition-link">总结<small>(1)</small></a></li>
 				    
 				    <li><a href="/categories/Vue/懒加载/" class="animsition-link">懒加载<small>(1)</small></a></li>
 				    
@@ -148,7 +152,7 @@
                 <a class="sb-toggle-submenu">Links<span class="sb-caret"></span></a>
                 <ul class="sb-submenu">
                     
-                    <li><a href="https://daipi173.github.io/myweb/daipi173-myperson" class="animsition-link">Personal Project</a></li>
+                    <li><a target="_blank" rel="noopener" href="https://daipi173.github.io/myweb/daipi173-myperson" class="animsition-link">Personal Project</a></li>
                     
                 </ul>
             </li>
@@ -233,9 +237,9 @@
     
     
     | 
-    <a href='/tags/Vue/'>Vue</a>,
-    
     <a href='/tags/Git/'>Git</a>,
+    
+    <a href='/tags/Vue/'>Vue</a>,
     
     <a href='/tags/总结/'>总结</a>
     
@@ -250,7 +254,7 @@
 </li>
 <li><p>当有几十万条的数据时，如何高效的将他们筛选出来？<br>最主要的思路就是筛选，当我们将条件分的很细的时候，筛选出来的数据可能会很少，就像百度搜索页面一样，<br>看着有上百条或者上千条的搜索记录，实际上通过筛选出来符合条件的就很有限，这样我们就达到了高效率的筛选；<br>然后筛选出来的数据会存在数据库中，接着数据库利用自己的特性（数据库中的指针）来将它分成几页，<br>比如我将1-20数据分为一个页面，20-40又是另一个页面…</p>
 </li>
-<li><p>关于在工作中如何合理的使用git？<br>在工作中遇到的问题：别人线上的仓库叫upstream，他们的分支叫dev；我线上的仓库叫origin，我的分支叫dev，<br>当别人更新线上仓库的版本时，此时如果我git pull –rebase upstream dev的话，然后再git push origin dev就会<br>出现问题（会报错并提示你当前版本落后于远程线上版本）<br>解决办法：<br>a. 少部分代码修改的情况下（比如给自己定一个2个小时以内的，因为此时别人可能还没有更新代码版本），我们可以使用<br>git pull origin dev（注意不要添加–rebase），具体方法如下所示：<br>git pull –rebase upstream dev<br>git push origin dev<br>当自己本地代码修改完之后<br>git add .<br>git commit -m “……”<br>git pull origin dev（注意不要添加–rebase）<br>b. 大面积代码修改的情况下（比如已经超过2个小时候编程的情况下），<br>思想：我们可以先切一个分支出来（在这里我给这个分支取名叫newDev），然后在新创建的newDev分支上进行操作，<br>首先先拉取别人线上的分支，然后再拉取自己线上的分支，当自己本地代码写完之后我们可以将自己本地和自己线上<br>分支进行一个合并，最后再提交到自己的线上仓库中<br>具体方法如下所示：<br>git checkout -b newDev<br>git pull –rebase upstream dev<br>git pull origin dev<br>git push origin dev<br>如果当别人线上仓库更新时，我们需要执行的指令是：<br>git pull –rebase upstream dev<br>c. 在上面两个方法无法解决的时候，或者找不到更好的方法解决时，我们可以使用强推的方法将其上传到自己远程的仓库中<br>注意：该方法慎用，因为这样会出现你将别人的代码重复提交以及代码覆盖的问题<br>git push -f origin dev<br>如果此时你使用强推的发放还是不行的话，可能是因为你的线上仓库有一个保护，此时我们可以将这个保护取消（具体做法：setttings -&gt;<br>Repository -&gt; Protected Branches -&gt; Unprotect）<br>再补充一张工作中合作的流程图：<br><a href="https://s2.ax1x.com/2019/10/22/K3mcLR.png" title="工作中使用git的流程图" target="_blank" rel="noopener"><img src="https://s2.ax1x.com/2019/10/22/K3mcLR.png" alt="工作中使用git的流程图" title="工作中使用git的流程图"></a></p>
+<li><p>关于在工作中如何合理的使用git？<br>在工作中遇到的问题：别人线上的仓库叫upstream，他们的分支叫dev；我线上的仓库叫origin，我的分支叫dev，<br>当别人更新线上仓库的版本时，此时如果我git pull –rebase upstream dev的话，然后再git push origin dev就会<br>出现问题（会报错并提示你当前版本落后于远程线上版本）<br>解决办法：<br>a. 少部分代码修改的情况下（比如给自己定一个2个小时以内的，因为此时别人可能还没有更新代码版本），我们可以使用<br>git pull origin dev（注意不要添加–rebase），具体方法如下所示：<br>git pull –rebase upstream dev<br>git push origin dev<br>当自己本地代码修改完之后<br>git add .<br>git commit -m “……”<br>git pull origin dev（注意不要添加–rebase）<br>b. 大面积代码修改的情况下（比如已经超过2个小时候编程的情况下），<br>思想：我们可以先切一个分支出来（在这里我给这个分支取名叫newDev），然后在新创建的newDev分支上进行操作，<br>首先先拉取别人线上的分支，然后再拉取自己线上的分支，当自己本地代码写完之后我们可以将自己本地和自己线上<br>分支进行一个合并，最后再提交到自己的线上仓库中<br>具体方法如下所示：<br>git checkout -b newDev<br>git pull –rebase upstream dev<br>git pull origin dev<br>git push origin dev<br>如果当别人线上仓库更新时，我们需要执行的指令是：<br>git pull –rebase upstream dev<br>c. 在上面两个方法无法解决的时候，或者找不到更好的方法解决时，我们可以使用强推的方法将其上传到自己远程的仓库中<br>注意：该方法慎用，因为这样会出现你将别人的代码重复提交以及代码覆盖的问题<br>git push -f origin dev<br>如果此时你使用强推的发放还是不行的话，可能是因为你的线上仓库有一个保护，此时我们可以将这个保护取消（具体做法：setttings -&gt;<br>Repository -&gt; Protected Branches -&gt; Unprotect）<br>再补充一张工作中合作的流程图：<br><a target="_blank" rel="noopener" href="https://s2.ax1x.com/2019/10/22/K3mcLR.png" title="工作中使用git的流程图"><img src="https://s2.ax1x.com/2019/10/22/K3mcLR.png" alt="工作中使用git的流程图" title="工作中使用git的流程图"></a></p>
 </li>
 <li><p>如何使用git命令工具解决你和你的小伙伴代码版本不一致的问题？<br>思想：首先拉取别人线上远程仓库，此时会有冲突，我们就在vscode里面一步一步的解决冲突，当所有的冲突都解决完之后我们再<br>提交到自己线上仓库中，然后你在自己线上仓库中发MR（Merge Requests）给指定的人A，指定人A在线上解决完冲突之后会给你合<br>作小伙伴说你可以拉取线上代码了，然后你的合作小伙伴再执行和你一样的步骤；最后你和你的合作小伙伴都再拉取一下别人线上远<br>程仓库，就可以实现你们两的代码版本一致了（别人线上仓库叫upstream，然后分支名叫dev；自己的线上仓库叫origin，然后分支名叫dev）<br>a. git pull –rebase upstream dev<br>b. git rebase –continue<br>解决冲突，当所有的冲突都解决完之后再进行下面的操作（如何查看自己冲突是否解决完？可以利用vscode工具下面的源代码管理，<br>它的快捷键是ctrl+shift+G）<br>c. git add .<br>然后重复执行b和c的操作，直到vscode工具下面的源代码管理中不再出现合并冲突，或者使用git命令行工具git rebase –continue<br>发现下面没有内容，此时我们的冲突就解决完了，然后我们就可以将自己本地的代码上传到自己线上的仓库上去<br>d. git push origin dev<br>e. 在自己线上仓库发MR给指定人A，等待指定人A冲突的合并<br>f. 等待你的小伙伴执行相同操作，当你们两的冲突都解决完之后，最后你们两再拉取一下别人线上仓库即可<br>git pull –rebase upstream dev</p>
 </li>
@@ -265,12 +269,12 @@
         </div>
         <nav class="m-pagination col-md-8 col-md-offset-2 col-sm-24" role="pagination">
     
-    <a class="pull-left" href="/2019/10/28/工作中的解题思想（二）/" style="float: left;">
+    <a class="pull-left" href="/2019/10/28/%E5%B7%A5%E4%BD%9C%E4%B8%AD%E7%9A%84%E8%A7%A3%E9%A2%98%E6%80%9D%E6%83%B3%EF%BC%88%E4%BA%8C%EF%BC%89/" style="float: left;">
         ← 工作中的解题思想（二）
     </a>
     
     
-    <a class="pull-right" href="/2019/10/16/实现超出整数存储范围的两个大整数相加/">
+    <a class="pull-right" href="/2019/10/16/%E5%AE%9E%E7%8E%B0%E8%B6%85%E5%87%BA%E6%95%B4%E6%95%B0%E5%AD%98%E5%82%A8%E8%8C%83%E5%9B%B4%E7%9A%84%E4%B8%A4%E4%B8%AA%E5%A4%A7%E6%95%B4%E6%95%B0%E7%9B%B8%E5%8A%A0/">
         实现超出整数存储范围的两个大整数相加 →
     </a>
     
@@ -339,7 +343,7 @@
                 <p>
                     &copy; 2014<script>new Date().getFullYear()>2010&&document.write("-"+new Date().getFullYear());</script>, Content By daipi173. All Rights Reserved.
                 </p>
-                <p>Theme By <a href="//go.kieran.top" style="color: #767D84">Kieran</a></p>
+                <p>Theme By <a target="_blank" rel="noopener" href="//go.kieran.top" style="color: #767D84">Kieran</a></p>
             </div>
             <div class="social">
                 <ul>

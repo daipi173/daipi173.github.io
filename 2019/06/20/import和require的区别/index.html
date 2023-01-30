@@ -86,29 +86,29 @@
 				    
 				    <li><a href="/categories/HTML/Chrome浏览器/" class="animsition-link">Chrome浏览器<small>(1)</small></a></li>
 				    
-				    <li><a href="/categories/JavaScript/ES6/" class="animsition-link">ES6<small>(6)</small></a></li>
-				    
 				    <li><a href="/categories/ES6/" class="animsition-link">ES6<small>(4)</small></a></li>
+				    
+				    <li><a href="/categories/JavaScript/ES6/" class="animsition-link">ES6<small>(6)</small></a></li>
 				    
 				    <li><a href="/categories/JavaScript/Vue/Eslint/" class="animsition-link">Eslint<small>(1)</small></a></li>
 				    
-				    <li><a href="/categories/总结/Git/" class="animsition-link">Git<small>(1)</small></a></li>
-				    
 				    <li><a href="/categories/Git/" class="animsition-link">Git<small>(4)</small></a></li>
+				    
+				    <li><a href="/categories/总结/Git/" class="animsition-link">Git<small>(1)</small></a></li>
 				    
 				    <li><a href="/categories/HTML/" class="animsition-link">HTML<small>(17)</small></a></li>
 				    
-				    <li><a href="/categories/ES6/JavaScript/" class="animsition-link">JavaScript<small>(4)</small></a></li>
-				    
 				    <li><a href="/categories/JavaScript/" class="animsition-link">JavaScript<small>(41)</small></a></li>
+				    
+				    <li><a href="/categories/ES6/JavaScript/" class="animsition-link">JavaScript<small>(4)</small></a></li>
 				    
 				    <li><a href="/categories/Javascript/" class="animsition-link">Javascript<small>(2)</small></a></li>
 				    
 				    <li><a href="/categories/React/" class="animsition-link">React<small>(2)</small></a></li>
 				    
-				    <li><a href="/categories/Git/Vue/" class="animsition-link">Vue<small>(1)</small></a></li>
-				    
 				    <li><a href="/categories/Vue/" class="animsition-link">Vue<small>(2)</small></a></li>
+				    
+				    <li><a href="/categories/Git/Vue/" class="animsition-link">Vue<small>(1)</small></a></li>
 				    
 				    <li><a href="/categories/JavaScript/Vue/" class="animsition-link">Vue<small>(1)</small></a></li>
 				    
@@ -120,17 +120,21 @@
 				    
 				    <li><a href="/categories/Vue/懒加载/总结/element-ui/" class="animsition-link">element ui<small>(1)</small></a></li>
 				    
+				    <li><a href="/categories/git/" class="animsition-link">git<small>(1)</small></a></li>
+				    
+				    <li><a href="/categories/ubuntu/" class="animsition-link">ubuntu<small>(3)</small></a></li>
+				    
 				    <li><a href="/categories/vue/" class="animsition-link">vue<small>(1)</small></a></li>
 				    
 				    <li><a href="/categories/webpack/" class="animsition-link">webpack<small>(2)</small></a></li>
 				    
-				    <li><a href="/categories/总结/" class="animsition-link">总结<small>(1)</small></a></li>
-				    
 				    <li><a href="/categories/JavaScript/总结/" class="animsition-link">总结<small>(2)</small></a></li>
 				    
-				    <li><a href="/categories/Vue/懒加载/总结/" class="animsition-link">总结<small>(1)</small></a></li>
+				    <li><a href="/categories/总结/" class="animsition-link">总结<small>(1)</small></a></li>
 				    
 				    <li><a href="/categories/Git/Vue/总结/" class="animsition-link">总结<small>(1)</small></a></li>
+				    
+				    <li><a href="/categories/Vue/懒加载/总结/" class="animsition-link">总结<small>(1)</small></a></li>
 				    
 				    <li><a href="/categories/Vue/懒加载/" class="animsition-link">懒加载<small>(1)</small></a></li>
 				    
@@ -148,7 +152,7 @@
                 <a class="sb-toggle-submenu">Links<span class="sb-caret"></span></a>
                 <ul class="sb-submenu">
                     
-                    <li><a href="https://daipi173.github.io/myweb/daipi173-myperson" class="animsition-link">Personal Project</a></li>
+                    <li><a target="_blank" rel="noopener" href="https://daipi173.github.io/myweb/daipi173-myperson" class="animsition-link">Personal Project</a></li>
                     
                 </ul>
             </li>
@@ -257,47 +261,34 @@
 <p>CommonJS 作为 Node.js 的规范，一直沿用至今。（就是因为CommonJS填补了JS没有模块的功能空缺，它的目标是让JS不止在浏览器中运行，可以在各个地方都能运行。）由于CommonJS 和 ES6 之间的差异，所以Node.js 无法直接兼容 ES6。因此我们在现阶段掌握require/exports是必要的。</p>
 <p>ES6在语言规格的层面上，实现了模块功能，而且实现得相当简单，完全可以取代现有的CommonJS和AMD规范，成为浏览器和服务器通用的模块解决方案。</p>
 <h1 id="3-require"><a href="#3-require" class="headerlink" title="3. require"></a>3. require</h1><p>require是Commonjs的规范，node应用是由模块组成的，遵从Commonjs的规范即exports是模块公开的接口,require用于从外部获取一个模块接口，举一个例子：<br>x.js与y.js是同级文件。<br>在x.js文件中写入代码：</p>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">demo</span>(<span class="params">args</span>) </span>&#123;</span><br><span class="line">  <span class="comment">// content...</span></span><br><span class="line">  <span class="built_in">console</span>.log(args);</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="built_in">module</span>.exports = &#123; demo &#125;;</span><br></pre></td></tr></table></figure>
-
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">function</span> <span class="title function_">demo</span>(<span class="params">args</span>) &#123;</span><br><span class="line">  <span class="comment">// content...</span></span><br><span class="line">  <span class="variable language_">console</span>.<span class="title function_">log</span>(args);</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="variable language_">module</span>.<span class="property">exports</span> = &#123; demo &#125;;</span><br></pre></td></tr></table></figure>
 <p>y.js文件中写入代码：</p>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">let</span> &#123; demo &#125; = <span class="built_in">require</span>(<span class="string">"./x.js"</span>);</span><br><span class="line">demo(<span class="string">"I am x_demo!!!"</span>);</span><br></pre></td></tr></table></figure>
-
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">let</span> &#123; demo &#125; = <span class="built_in">require</span>(<span class="string">&quot;./x.js&quot;</span>);</span><br><span class="line"><span class="title function_">demo</span>(<span class="string">&quot;I am x_demo!!!&quot;</span>);</span><br></pre></td></tr></table></figure>
 <p>通过在终端运行：node y.js可以运行出:I am x_demo!!!</p>
 <p>require的使用：在导出的文件中定义module.exports，导出的对象类型不予限定（可为任意类型）。在导入的文件中使用require()引入即可使用。本质上，是将要导出的对象，赋值给module这个对象的exports属性，在其他文件中通过require这个方法来访问exports这个属性。</p>
 <h1 id="4-import"><a href="#4-import" class="headerlink" title="4. import"></a>4. import</h1><p>import是ES6为JS模块化提出的新的语法，import（导入）要与export（导出）结合使用，举一个例子。<br>index.html文件与x.js与y.js是同级文件。<br>在index.html文件中写入代码:</p>
-<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">&lt;!DOCTYPE html&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">html</span> <span class="attr">lang</span>=<span class="string">"zh"</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">head</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">meta</span> <span class="attr">charset</span>=<span class="string">"UTF-8"</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">title</span>&gt;</span>Document<span class="tag">&lt;/<span class="name">title</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">head</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">body</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">script</span> <span class="attr">type</span>=<span class="string">"module"</span> <span class="attr">src</span>=<span class="string">"./y.js"</span>&gt;</span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">body</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">html</span>&gt;</span></span><br></pre></td></tr></table></figure>
-
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">&lt;!DOCTYPE <span class="keyword">html</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">html</span> <span class="attr">lang</span>=<span class="string">&quot;zh&quot;</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">head</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">meta</span> <span class="attr">charset</span>=<span class="string">&quot;UTF-8&quot;</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">title</span>&gt;</span>Document<span class="tag">&lt;/<span class="name">title</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">head</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">body</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">script</span> <span class="attr">type</span>=<span class="string">&quot;module&quot;</span> <span class="attr">src</span>=<span class="string">&quot;./y.js&quot;</span>&gt;</span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">body</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">html</span>&gt;</span></span><br></pre></td></tr></table></figure>
 <p>在x.js文件中写入代码：</p>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">export</span> <span class="function"><span class="keyword">function</span> <span class="title">demo</span>(<span class="params">args</span>) </span>&#123;</span><br><span class="line">  <span class="comment">// content...</span></span><br><span class="line">  <span class="built_in">console</span>.log(args);</span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">export</span> <span class="keyword">default</span> <span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>&#123;<span class="built_in">console</span>.log(<span class="string">"I am default!!!"</span>)&#125;;  <span class="comment">// 默认导出模块，一个文件中只能定义一个</span></span><br><span class="line"><span class="keyword">export</span> <span class="keyword">const</span> age = <span class="string">"22"</span>;</span><br><span class="line"><span class="keyword">export</span> <span class="keyword">const</span> name = <span class="string">"daipi173"</span>;</span><br></pre></td></tr></table></figure>
-
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">export</span> <span class="keyword">function</span> <span class="title function_">demo</span>(<span class="params">args</span>) &#123;</span><br><span class="line">  <span class="comment">// content...</span></span><br><span class="line">  <span class="variable language_">console</span>.<span class="title function_">log</span>(args);</span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">export</span> <span class="keyword">default</span> <span class="keyword">function</span>(<span class="params"></span>) &#123;<span class="variable language_">console</span>.<span class="title function_">log</span>(<span class="string">&quot;I am default!!!&quot;</span>)&#125;;  <span class="comment">// 默认导出模块，一个文件中只能定义一个</span></span><br><span class="line"><span class="keyword">export</span> <span class="keyword">const</span> age = <span class="string">&quot;22&quot;</span>;</span><br><span class="line"><span class="keyword">export</span> <span class="keyword">const</span> name = <span class="string">&quot;daipi173&quot;</span>;</span><br></pre></td></tr></table></figure>
 <p>y.js文件中写入代码：</p>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> def, &#123; demo, age, name &#125; <span class="keyword">from</span> <span class="string">'./x.js'</span>;  <span class="comment">// def代表引入的export default的内容</span></span><br><span class="line">demo(<span class="string">`My name is <span class="subst">$&#123;name&#125;</span>,and I am <span class="subst">$&#123;age&#125;</span> years`</span>);</span><br><span class="line">def();</span><br><span class="line"><span class="comment">// 控制台打印内容：</span></span><br><span class="line"><span class="comment">// My name is daipi173,and I am 22 years</span></span><br><span class="line"><span class="comment">// I am default!!!</span></span><br></pre></td></tr></table></figure>
-
-<p>注意：如果不放在服务器下面会有一个报错信息，如下图所示：<br><a href="https://s2.ax1x.com/2019/06/18/VLWhDA.png" title="不放在服务器下的报错信息" target="_blank" rel="noopener"><img src="https://s2.ax1x.com/2019/06/18/VLWhDA.png" alt="不放在服务器下的报错信息" title="不放在服务器下的报错信息"></a><br>此时的解决办法就是将它放在服务器下面就可以解决相应的问题。我们可以下一个服务器，Windows系统的可以下一个wamp，Mac系统的可以下一个mamp。</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> def, &#123; demo, age, name &#125; <span class="keyword">from</span> <span class="string">&#x27;./x.js&#x27;</span>;  <span class="comment">// def代表引入的export default的内容</span></span><br><span class="line"><span class="title function_">demo</span>(<span class="string">`My name is <span class="subst">$&#123;name&#125;</span>,and I am <span class="subst">$&#123;age&#125;</span> years`</span>);</span><br><span class="line"><span class="title function_">def</span>();</span><br><span class="line"><span class="comment">// 控制台打印内容：</span></span><br><span class="line"><span class="comment">// My name is daipi173,and I am 22 years</span></span><br><span class="line"><span class="comment">// I am default!!!</span></span><br></pre></td></tr></table></figure>
+<p>注意：如果不放在服务器下面会有一个报错信息，如下图所示：<br><a target="_blank" rel="noopener" href="https://s2.ax1x.com/2019/06/18/VLWhDA.png" title="不放在服务器下的报错信息"><img src="https://s2.ax1x.com/2019/06/18/VLWhDA.png" alt="不放在服务器下的报错信息" title="不放在服务器下的报错信息"></a><br>此时的解决办法就是将它放在服务器下面就可以解决相应的问题。我们可以下一个服务器，Windows系统的可以下一个wamp，Mac系统的可以下一个mamp。</p>
 <h1 id="5-as关键字"><a href="#5-as关键字" class="headerlink" title="5. as关键字"></a>5. as关键字</h1><p>as简单的说就是<strong>取一个别名</strong>。export中可以用，import中也可以用。下面我们看一个例子。<br>a.js文件与b.js文件与c.js文件是同级文件：<br>a.js文件代码如下：</p>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> a = <span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>&#123;&#125;;</span><br><span class="line"><span class="keyword">export</span> &#123;a <span class="keyword">as</span> fun&#125;;</span><br></pre></td></tr></table></figure>
-
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> a = <span class="keyword">function</span>(<span class="params"></span>) &#123;&#125;;</span><br><span class="line"><span class="keyword">export</span> &#123;a <span class="keyword">as</span> fun&#125;;</span><br></pre></td></tr></table></figure>
 <p>b.js文件代码如下：</p>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> &#123;fun <span class="keyword">as</span> a&#125; <span class="keyword">from</span> <span class="string">'./a'</span>;</span><br><span class="line">a();</span><br></pre></td></tr></table></figure>
-
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> &#123;fun <span class="keyword">as</span> a&#125; <span class="keyword">from</span> <span class="string">&#x27;./a&#x27;</span>;</span><br><span class="line"><span class="title function_">a</span>();</span><br></pre></td></tr></table></figure>
 <p>上面这段代码，export的时候，对外提供的接口是fun，它是a.js内部a这个函数的别名，但是在模块外面，不认识a，只认识fun。<br>import中的as就很简单，就是你在使用模块里面的方法的时候，给这个方法取一个别名，好在当前的文件里面使用。之所以是这样，是因为有的时候不同的两个模块可能通过相同的接口，比如有一个c.js也通过了fun这个接口。<br>c.js文件代码如下：</p>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">export</span> <span class="function"><span class="keyword">function</span> <span class="title">fun</span>(<span class="params"></span>) </span>&#123;&#125;;</span><br></pre></td></tr></table></figure>
-
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">export</span> <span class="keyword">function</span> <span class="title function_">fun</span>(<span class="params"></span>) &#123;&#125;;</span><br></pre></td></tr></table></figure>
 <p>如果在b.js中同时使用a和c这两个模块，就必须想办法解决接口重名的问题，as就解决了。</p>
 <h1 id="6-default关键字"><a href="#6-default关键字" class="headerlink" title="6. default关键字"></a>6. default关键字</h1><p>在export的时候，可能会用到default，说简单一些它其实是别名的语法糖。<br>在x.js文件中写入代码：</p>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">export</span> <span class="keyword">default</span> <span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>&#123;&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">// 等价于</span></span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">test</span>(<span class="params"></span>) </span>&#123;&#125;;</span><br><span class="line"><span class="keyword">export</span> &#123;test <span class="keyword">as</span> <span class="keyword">default</span>&#125;;</span><br></pre></td></tr></table></figure>
-
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">export</span> <span class="keyword">default</span> <span class="keyword">function</span>(<span class="params"></span>) &#123;&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">// 等价于</span></span><br><span class="line"><span class="keyword">function</span> <span class="title function_">test</span>(<span class="params"></span>) &#123;&#125;;</span><br><span class="line"><span class="keyword">export</span> &#123;test <span class="keyword">as</span> <span class="keyword">default</span>&#125;;</span><br></pre></td></tr></table></figure>
 <p>在import的时候，可以这样使用:</p>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> a <span class="keyword">from</span> <span class="string">'./x'</span>;</span><br><span class="line"><span class="comment">// 等价于或者说就是下面这种写法的简写，是同一个意思</span></span><br><span class="line"><span class="keyword">import</span> &#123;<span class="keyword">default</span> <span class="keyword">as</span> a&#125; <span class="keyword">from</span> <span class="string">'./x'</span>;</span><br></pre></td></tr></table></figure>
-
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> a <span class="keyword">from</span> <span class="string">&#x27;./x&#x27;</span>;</span><br><span class="line"><span class="comment">// 等价于或者说就是下面这种写法的简写，是同一个意思</span></span><br><span class="line"><span class="keyword">import</span> &#123;<span class="keyword">default</span> <span class="keyword">as</span> a&#125; <span class="keyword">from</span> <span class="string">&#x27;./x&#x27;</span>;</span><br></pre></td></tr></table></figure>
 <p><strong>注意：这个语法糖的好处就是import的时候，可以省去花括号{}。简单的说，如果import的时候，你发现某个变量没有花括号括起来（没有*号），那么你在脑海中应该把它还原成有花括号的as语法。就如上面代码所示。</strong></p>
 <h1 id="7-符号"><a href="#7-符号" class="headerlink" title="7. *符号"></a>7. *符号</h1><p><em>就是代表所有，只用在import中。<br>*</em>注意：<em>符号尽可能少用，它实际上是使用所有export的接口，但是很有可能你的当前模块并不会用到所有接口，可能仅仅是一个，所以最好的建议是使用花括号，用一个加一个。*</em></p>
 <h1 id="8-形式的区别"><a href="#8-形式的区别" class="headerlink" title="8. 形式的区别"></a>8. 形式的区别</h1><ol>
-<li><p>ES6中import/export的写法比较多，下面我们来举一些例子看看：</p>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 导入写法</span></span><br><span class="line"><span class="keyword">import</span> dai <span class="keyword">from</span> <span class="string">"dai"</span>;</span><br><span class="line"><span class="keyword">import</span> &#123;<span class="keyword">default</span> <span class="keyword">as</span> dai&#125; <span class="keyword">from</span> <span class="string">"dai"</span>;</span><br><span class="line"><span class="keyword">import</span> * <span class="keyword">as</span> dai <span class="keyword">from</span> <span class="string">"dai"</span>;</span><br><span class="line"><span class="comment">// 导出写法</span></span><br><span class="line"><span class="keyword">export</span> <span class="keyword">default</span> dai;</span><br><span class="line"><span class="keyword">export</span> <span class="keyword">const</span> dai;</span><br><span class="line"><span class="keyword">export</span> * <span class="keyword">from</span> <span class="string">"dai"</span>;</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>CommonJS中require/exports的用法只有下面几种写法：</p>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> dai = <span class="built_in">require</span>(<span class="string">"dai"</span>);</span><br><span class="line">exports.dai = dai;</span><br><span class="line"><span class="built_in">module</span>.exports = dai;</span><br></pre></td></tr></table></figure>
+<li>ES6中import/export的写法比较多，下面我们来举一些例子看看：<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 导入写法</span></span><br><span class="line"><span class="keyword">import</span> dai <span class="keyword">from</span> <span class="string">&quot;dai&quot;</span>;</span><br><span class="line"><span class="keyword">import</span> &#123;<span class="keyword">default</span> <span class="keyword">as</span> dai&#125; <span class="keyword">from</span> <span class="string">&quot;dai&quot;</span>;</span><br><span class="line"><span class="keyword">import</span> * <span class="keyword">as</span> dai <span class="keyword">from</span> <span class="string">&quot;dai&quot;</span>;</span><br><span class="line"><span class="comment">// 导出写法</span></span><br><span class="line"><span class="keyword">export</span> <span class="keyword">default</span> dai;</span><br><span class="line"><span class="keyword">export</span> <span class="keyword">const</span> dai;</span><br><span class="line"><span class="keyword">export</span> * <span class="keyword">from</span> <span class="string">&quot;dai&quot;</span>;</span><br></pre></td></tr></table></figure></li>
+<li>CommonJS中require/exports的用法只有下面几种写法：<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> dai = <span class="built_in">require</span>(<span class="string">&quot;dai&quot;</span>);</span><br><span class="line"><span class="built_in">exports</span>.<span class="property">dai</span> = dai;</span><br><span class="line"><span class="variable language_">module</span>.<span class="property">exports</span> = dai;</span><br></pre></td></tr></table></figure>
 
 </li>
 </ol>
@@ -307,7 +298,7 @@
 </ol>
 <h1 id="10-require和import的使用场合"><a href="#10-require和import的使用场合" class="headerlink" title="10. require和import的使用场合"></a>10. require和import的使用场合</h1><p><strong>require的使用场合：</strong><br>require的使用非常简单，它相当于module.exports的传送门，module.exports后面的内容是什么，require的结果就是什么，对象、数字、字符串、函数……再把require的结果赋值给某个变量，相当于把require和module.exports进行平行空间的位置重叠。</p>
 <p>require理论上可以运用在代码的任何地方，甚至不需要赋值给某个变量之后再使用，而且你在使用时，<strong>完全可以忽略模块化</strong>这个概念来使用require，仅仅把它当做一个<strong>node内置的全局函数</strong>，它的参数甚至<strong>可以是表达式</strong>：。举一个例子，代码如下所示：</p>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">require</span>(<span class="string">'./a'</span>)(); <span class="comment">// a模块是一个函数，立即执行a模块函数</span></span><br><span class="line"><span class="keyword">var</span> data = <span class="built_in">require</span>(<span class="string">'./a'</span>).data; <span class="comment">// a模块导出的是一个对象</span></span><br><span class="line"><span class="keyword">var</span> a = <span class="built_in">require</span>(<span class="string">'./a'</span>)[<span class="number">0</span>]; <span class="comment">// a模块导出的是一个数组</span></span><br><span class="line"><span class="built_in">require</span>(process.cwd() + <span class="string">'/a'</span>); <span class="comment">// 可以作为表达式</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">require</span>(<span class="string">&#x27;./a&#x27;</span>)(); <span class="comment">// a模块是一个函数，立即执行a模块函数</span></span><br><span class="line"><span class="keyword">var</span> data = <span class="built_in">require</span>(<span class="string">&#x27;./a&#x27;</span>).<span class="property">data</span>; <span class="comment">// a模块导出的是一个对象</span></span><br><span class="line"><span class="keyword">var</span> a = <span class="built_in">require</span>(<span class="string">&#x27;./a&#x27;</span>)[<span class="number">0</span>]; <span class="comment">// a模块导出的是一个数组</span></span><br><span class="line"><span class="built_in">require</span>(process.<span class="title function_">cwd</span>() + <span class="string">&#x27;/a&#x27;</span>); <span class="comment">// 可以作为表达式</span></span><br></pre></td></tr></table></figure>
 
 <p><strong>import使用场合：</strong><br>import是编译时的，它必须放在文件开头，而且使用格式也是确定的，它不会将整个模块<strong>运行后</strong>赋值给某个变量，而是只选择import的接口进行编译，这样在<strong>性能上比require好很多。</strong></p>
 <p>如果还有不懂或者想要深入学习的同学，可以去网上搜索相关的内容进行一个补充。</p>
@@ -317,12 +308,12 @@
         </div>
         <nav class="m-pagination col-md-8 col-md-offset-2 col-sm-24" role="pagination">
     
-    <a class="pull-left" href="/2019/06/22/JS之用一次for循环来合并排序/" style="float: left;">
+    <a class="pull-left" href="/2019/06/22/JS%E4%B9%8B%E7%94%A8%E4%B8%80%E6%AC%A1for%E5%BE%AA%E7%8E%AF%E6%9D%A5%E5%90%88%E5%B9%B6%E6%8E%92%E5%BA%8F/" style="float: left;">
         ← JS之用一次for循环来合并排序
     </a>
     
     
-    <a class="pull-right" href="/2019/06/16/ES6之class类的补充/">
+    <a class="pull-right" href="/2019/06/16/ES6%E4%B9%8Bclass%E7%B1%BB%E7%9A%84%E8%A1%A5%E5%85%85/">
         ES6之class类的补充 →
     </a>
     
@@ -391,7 +382,7 @@
                 <p>
                     &copy; 2014<script>new Date().getFullYear()>2010&&document.write("-"+new Date().getFullYear());</script>, Content By daipi173. All Rights Reserved.
                 </p>
-                <p>Theme By <a href="//go.kieran.top" style="color: #767D84">Kieran</a></p>
+                <p>Theme By <a target="_blank" rel="noopener" href="//go.kieran.top" style="color: #767D84">Kieran</a></p>
             </div>
             <div class="social">
                 <ul>

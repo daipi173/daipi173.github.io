@@ -86,29 +86,29 @@
 				    
 				    <li><a href="/categories/HTML/Chrome浏览器/" class="animsition-link">Chrome浏览器<small>(1)</small></a></li>
 				    
-				    <li><a href="/categories/JavaScript/ES6/" class="animsition-link">ES6<small>(6)</small></a></li>
-				    
 				    <li><a href="/categories/ES6/" class="animsition-link">ES6<small>(4)</small></a></li>
+				    
+				    <li><a href="/categories/JavaScript/ES6/" class="animsition-link">ES6<small>(6)</small></a></li>
 				    
 				    <li><a href="/categories/JavaScript/Vue/Eslint/" class="animsition-link">Eslint<small>(1)</small></a></li>
 				    
-				    <li><a href="/categories/总结/Git/" class="animsition-link">Git<small>(1)</small></a></li>
-				    
 				    <li><a href="/categories/Git/" class="animsition-link">Git<small>(4)</small></a></li>
+				    
+				    <li><a href="/categories/总结/Git/" class="animsition-link">Git<small>(1)</small></a></li>
 				    
 				    <li><a href="/categories/HTML/" class="animsition-link">HTML<small>(17)</small></a></li>
 				    
-				    <li><a href="/categories/ES6/JavaScript/" class="animsition-link">JavaScript<small>(4)</small></a></li>
-				    
 				    <li><a href="/categories/JavaScript/" class="animsition-link">JavaScript<small>(41)</small></a></li>
+				    
+				    <li><a href="/categories/ES6/JavaScript/" class="animsition-link">JavaScript<small>(4)</small></a></li>
 				    
 				    <li><a href="/categories/Javascript/" class="animsition-link">Javascript<small>(2)</small></a></li>
 				    
 				    <li><a href="/categories/React/" class="animsition-link">React<small>(2)</small></a></li>
 				    
-				    <li><a href="/categories/Git/Vue/" class="animsition-link">Vue<small>(1)</small></a></li>
-				    
 				    <li><a href="/categories/Vue/" class="animsition-link">Vue<small>(2)</small></a></li>
+				    
+				    <li><a href="/categories/Git/Vue/" class="animsition-link">Vue<small>(1)</small></a></li>
 				    
 				    <li><a href="/categories/JavaScript/Vue/" class="animsition-link">Vue<small>(1)</small></a></li>
 				    
@@ -120,17 +120,21 @@
 				    
 				    <li><a href="/categories/Vue/懒加载/总结/element-ui/" class="animsition-link">element ui<small>(1)</small></a></li>
 				    
+				    <li><a href="/categories/git/" class="animsition-link">git<small>(1)</small></a></li>
+				    
+				    <li><a href="/categories/ubuntu/" class="animsition-link">ubuntu<small>(3)</small></a></li>
+				    
 				    <li><a href="/categories/vue/" class="animsition-link">vue<small>(1)</small></a></li>
 				    
 				    <li><a href="/categories/webpack/" class="animsition-link">webpack<small>(2)</small></a></li>
 				    
-				    <li><a href="/categories/总结/" class="animsition-link">总结<small>(1)</small></a></li>
-				    
 				    <li><a href="/categories/JavaScript/总结/" class="animsition-link">总结<small>(2)</small></a></li>
 				    
-				    <li><a href="/categories/Vue/懒加载/总结/" class="animsition-link">总结<small>(1)</small></a></li>
+				    <li><a href="/categories/总结/" class="animsition-link">总结<small>(1)</small></a></li>
 				    
 				    <li><a href="/categories/Git/Vue/总结/" class="animsition-link">总结<small>(1)</small></a></li>
+				    
+				    <li><a href="/categories/Vue/懒加载/总结/" class="animsition-link">总结<small>(1)</small></a></li>
 				    
 				    <li><a href="/categories/Vue/懒加载/" class="animsition-link">懒加载<small>(1)</small></a></li>
 				    
@@ -148,7 +152,7 @@
                 <a class="sb-toggle-submenu">Links<span class="sb-caret"></span></a>
                 <ul class="sb-submenu">
                     
-                    <li><a href="https://daipi173.github.io/myweb/daipi173-myperson" class="animsition-link">Personal Project</a></li>
+                    <li><a target="_blank" rel="noopener" href="https://daipi173.github.io/myweb/daipi173-myperson" class="animsition-link">Personal Project</a></li>
                     
                 </ul>
             </li>
@@ -243,36 +247,30 @@
             </div>
         </div>
         <div class="col-md-8 col-md-offset-2">
-      		<h1 id="1-函数的创建方式"><a href="#1-函数的创建方式" class="headerlink" title="1. 函数的创建方式"></a>1. 函数的创建方式</h1><h2 id="1-1-静态方法"><a href="#1-1-静态方法" class="headerlink" title="1.1 静态方法"></a>1.1 静态方法</h2><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">add</span>(<span class="params">a,b</span>)</span>&#123;<span class="keyword">return</span> a + b;&#125;</span><br><span class="line"><span class="keyword">var</span> add = <span class="function"><span class="keyword">function</span>(<span class="params">a,b</span>)</span>&#123;<span class="keyword">return</span> a + b;&#125;</span><br></pre></td></tr></table></figure>
-
-<h2 id="1-2-动态方法"><a href="#1-2-动态方法" class="headerlink" title="1.2 动态方法"></a>1.2 动态方法</h2><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> add = <span class="keyword">new</span> <span class="built_in">Function</span>(<span class="string">"a"</span>,<span class="string">"b"</span>,<span class="string">"return a + b;"</span>);</span><br></pre></td></tr></table></figure>
-
-<h1 id="2-函数参数及arguments"><a href="#2-函数参数及arguments" class="headerlink" title="2. 函数参数及arguments"></a>2. 函数参数及arguments</h1><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">add</span>(<span class="params">a,b,c</span>)</span>&#123;    <span class="comment">//函数对象，对象本身有一个length属性</span></span><br><span class="line">    <span class="built_in">console</span>.log(add.length);   <span class="comment">//形参的个数</span></span><br><span class="line">    <span class="built_in">console</span>.log(<span class="built_in">arguments</span>.length);    <span class="comment">//实参的个数</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
+      		<h1 id="1-函数的创建方式"><a href="#1-函数的创建方式" class="headerlink" title="1. 函数的创建方式"></a>1. 函数的创建方式</h1><h2 id="1-1-静态方法"><a href="#1-1-静态方法" class="headerlink" title="1.1 静态方法"></a>1.1 静态方法</h2><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">function</span> <span class="title function_">add</span>(<span class="params">a,b</span>)&#123;<span class="keyword">return</span> a + b;&#125;</span><br><span class="line"><span class="keyword">var</span> add = <span class="keyword">function</span>(<span class="params">a,b</span>)&#123;<span class="keyword">return</span> a + b;&#125;</span><br></pre></td></tr></table></figure>
+<h2 id="1-2-动态方法"><a href="#1-2-动态方法" class="headerlink" title="1.2 动态方法"></a>1.2 动态方法</h2><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> add = <span class="keyword">new</span> <span class="title class_">Function</span>(<span class="string">&quot;a&quot;</span>,<span class="string">&quot;b&quot;</span>,<span class="string">&quot;return a + b;&quot;</span>);</span><br></pre></td></tr></table></figure>
+<h1 id="2-函数参数及arguments"><a href="#2-函数参数及arguments" class="headerlink" title="2. 函数参数及arguments"></a>2. 函数参数及arguments</h1><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">function</span> <span class="title function_">add</span>(<span class="params">a,b,c</span>)&#123;    <span class="comment">//函数对象，对象本身有一个length属性</span></span><br><span class="line">    <span class="variable language_">console</span>.<span class="title function_">log</span>(add.<span class="property">length</span>);   <span class="comment">//形参的个数</span></span><br><span class="line">    <span class="variable language_">console</span>.<span class="title function_">log</span>(<span class="variable language_">arguments</span>.<span class="property">length</span>);    <span class="comment">//实参的个数</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 <p>arguments：1.仅在函数里面有。2.专为函数参数设计的对象。3.伪数组。4.callee（也是参数，它是指向函数本身自己）</p>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//匿名函数</span></span><br><span class="line"><span class="keyword">var</span> x = <span class="function"><span class="keyword">function</span>(<span class="params">a,b,c</span>)</span>&#123;</span><br><span class="line">    <span class="built_in">arguments</span>.callee.length;   <span class="comment">//3</span></span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">//上面的等价于下面的</span></span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">add</span>(<span class="params">a,b,c</span>)</span>&#123;</span><br><span class="line">    add.length;    <span class="comment">//3</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//匿名函数</span></span><br><span class="line"><span class="keyword">var</span> x = <span class="keyword">function</span>(<span class="params">a,b,c</span>)&#123;</span><br><span class="line">    <span class="variable language_">arguments</span>.<span class="property">callee</span>.<span class="property">length</span>;   <span class="comment">//3</span></span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">//上面的等价于下面的</span></span><br><span class="line"><span class="keyword">function</span> <span class="title function_">add</span>(<span class="params">a,b,c</span>)&#123;</span><br><span class="line">    add.<span class="property">length</span>;    <span class="comment">//3</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 <h1 id="3-函数的三大特性"><a href="#3-函数的三大特性" class="headerlink" title="3. 函数的三大特性"></a>3. 函数的三大特性</h1><ol>
 <li>方法特性()      运行大括号包裹的代码</li>
 <li>对象特性 .      获取对象的属性</li>
-<li>类的特性 new    创建类似对象<h1 id="4-函数的call、apply、bind"><a href="#4-函数的call、apply、bind" class="headerlink" title="4. 函数的call、apply、bind"></a>4. 函数的call、apply、bind</h1><h2 id="4-1-call、apply"><a href="#4-1-call、apply" class="headerlink" title="4.1 call、apply"></a>4.1 call、apply</h2>call、apply定义：把函数临时赋值到对象上面并执行。<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//call:</span></span><br><span class="line"><span class="function"><span class="keyword">function</span>.<span class="title">call</span>(<span class="params">obj,args1,args2</span>)</span></span><br><span class="line"><span class="function">//<span class="title">apply</span>:</span></span><br><span class="line"><span class="function"><span class="title">function</span>.<span class="title">apply</span>(<span class="params">obj,args</span>)</span></span><br></pre></td></tr></table></figure>
-
-</li>
+<li>类的特性 new    创建类似对象<h1 id="4-函数的call、apply、bind"><a href="#4-函数的call、apply、bind" class="headerlink" title="4. 函数的call、apply、bind"></a>4. 函数的call、apply、bind</h1><h2 id="4-1-call、apply"><a href="#4-1-call、apply" class="headerlink" title="4.1 call、apply"></a>4.1 call、apply</h2>call、apply定义：把函数临时赋值到对象上面并执行。<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//call:</span></span><br><span class="line"><span class="keyword">function</span>.<span class="title function_">call</span>(obj,args1,args2)</span><br><span class="line"><span class="comment">//apply:</span></span><br><span class="line"><span class="keyword">function</span>.<span class="title function_">apply</span>(obj,args)</span><br></pre></td></tr></table></figure></li>
 </ol>
 <p><strong>两者区别：传递参数的形式不一样。</strong><br>apply参数是数组，也可以是一个伪数组，只要能用下标访问到就可以。</p>
 <h2 id="4-2-bind"><a href="#4-2-bind" class="headerlink" title="4.2 bind"></a>4.2 bind</h2><p>bind定义：把函数拷贝一份，并插入到对象作用域上面。语法：</p>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">obj.e = <span class="function"><span class="keyword">function</span>.<span class="title">bind</span>(<span class="params">obj,args1,args2</span>)</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">obj.<span class="property">e</span> = <span class="keyword">function</span>.<span class="title function_">bind</span>(obj,args1,args2)</span><br></pre></td></tr></table></figure>
             <div class="clearfix"></div>
             <hr class="nogutter">
         </div>
         <nav class="m-pagination col-md-8 col-md-offset-2 col-sm-24" role="pagination">
     
-    <a class="pull-left" href="/2019/04/04/JavaScript之有趣的-——-运算/" style="float: left;">
+    <a class="pull-left" href="/2019/04/04/JavaScript%E4%B9%8B%E6%9C%89%E8%B6%A3%E7%9A%84-%E2%80%94%E2%80%94-%E8%BF%90%E7%AE%97/" style="float: left;">
         ← JavaScript之有趣的++  |  —— 运算
     </a>
     
     
-    <a class="pull-right" href="/2019/03/29/二维和多维数组/">
+    <a class="pull-right" href="/2019/03/29/%E4%BA%8C%E7%BB%B4%E5%92%8C%E5%A4%9A%E7%BB%B4%E6%95%B0%E7%BB%84/">
         二维和多维数组 →
     </a>
     
@@ -341,7 +339,7 @@
                 <p>
                     &copy; 2014<script>new Date().getFullYear()>2010&&document.write("-"+new Date().getFullYear());</script>, Content By daipi173. All Rights Reserved.
                 </p>
-                <p>Theme By <a href="//go.kieran.top" style="color: #767D84">Kieran</a></p>
+                <p>Theme By <a target="_blank" rel="noopener" href="//go.kieran.top" style="color: #767D84">Kieran</a></p>
             </div>
             <div class="social">
                 <ul>

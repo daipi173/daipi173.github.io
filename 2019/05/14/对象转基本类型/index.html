@@ -86,29 +86,29 @@
 				    
 				    <li><a href="/categories/HTML/Chrome浏览器/" class="animsition-link">Chrome浏览器<small>(1)</small></a></li>
 				    
-				    <li><a href="/categories/JavaScript/ES6/" class="animsition-link">ES6<small>(6)</small></a></li>
-				    
 				    <li><a href="/categories/ES6/" class="animsition-link">ES6<small>(4)</small></a></li>
+				    
+				    <li><a href="/categories/JavaScript/ES6/" class="animsition-link">ES6<small>(6)</small></a></li>
 				    
 				    <li><a href="/categories/JavaScript/Vue/Eslint/" class="animsition-link">Eslint<small>(1)</small></a></li>
 				    
-				    <li><a href="/categories/总结/Git/" class="animsition-link">Git<small>(1)</small></a></li>
-				    
 				    <li><a href="/categories/Git/" class="animsition-link">Git<small>(4)</small></a></li>
+				    
+				    <li><a href="/categories/总结/Git/" class="animsition-link">Git<small>(1)</small></a></li>
 				    
 				    <li><a href="/categories/HTML/" class="animsition-link">HTML<small>(17)</small></a></li>
 				    
-				    <li><a href="/categories/ES6/JavaScript/" class="animsition-link">JavaScript<small>(4)</small></a></li>
-				    
 				    <li><a href="/categories/JavaScript/" class="animsition-link">JavaScript<small>(41)</small></a></li>
+				    
+				    <li><a href="/categories/ES6/JavaScript/" class="animsition-link">JavaScript<small>(4)</small></a></li>
 				    
 				    <li><a href="/categories/Javascript/" class="animsition-link">Javascript<small>(2)</small></a></li>
 				    
 				    <li><a href="/categories/React/" class="animsition-link">React<small>(2)</small></a></li>
 				    
-				    <li><a href="/categories/Git/Vue/" class="animsition-link">Vue<small>(1)</small></a></li>
-				    
 				    <li><a href="/categories/Vue/" class="animsition-link">Vue<small>(2)</small></a></li>
+				    
+				    <li><a href="/categories/Git/Vue/" class="animsition-link">Vue<small>(1)</small></a></li>
 				    
 				    <li><a href="/categories/JavaScript/Vue/" class="animsition-link">Vue<small>(1)</small></a></li>
 				    
@@ -120,17 +120,21 @@
 				    
 				    <li><a href="/categories/Vue/懒加载/总结/element-ui/" class="animsition-link">element ui<small>(1)</small></a></li>
 				    
+				    <li><a href="/categories/git/" class="animsition-link">git<small>(1)</small></a></li>
+				    
+				    <li><a href="/categories/ubuntu/" class="animsition-link">ubuntu<small>(3)</small></a></li>
+				    
 				    <li><a href="/categories/vue/" class="animsition-link">vue<small>(1)</small></a></li>
 				    
 				    <li><a href="/categories/webpack/" class="animsition-link">webpack<small>(2)</small></a></li>
 				    
-				    <li><a href="/categories/总结/" class="animsition-link">总结<small>(1)</small></a></li>
-				    
 				    <li><a href="/categories/JavaScript/总结/" class="animsition-link">总结<small>(2)</small></a></li>
 				    
-				    <li><a href="/categories/Vue/懒加载/总结/" class="animsition-link">总结<small>(1)</small></a></li>
+				    <li><a href="/categories/总结/" class="animsition-link">总结<small>(1)</small></a></li>
 				    
 				    <li><a href="/categories/Git/Vue/总结/" class="animsition-link">总结<small>(1)</small></a></li>
+				    
+				    <li><a href="/categories/Vue/懒加载/总结/" class="animsition-link">总结<small>(1)</small></a></li>
 				    
 				    <li><a href="/categories/Vue/懒加载/" class="animsition-link">懒加载<small>(1)</small></a></li>
 				    
@@ -148,7 +152,7 @@
                 <a class="sb-toggle-submenu">Links<span class="sb-caret"></span></a>
                 <ul class="sb-submenu">
                     
-                    <li><a href="https://daipi173.github.io/myweb/daipi173-myperson" class="animsition-link">Personal Project</a></li>
+                    <li><a target="_blank" rel="noopener" href="https://daipi173.github.io/myweb/daipi173-myperson" class="animsition-link">Personal Project</a></li>
                     
                 </ul>
             </li>
@@ -261,29 +265,24 @@
 </ol>
 <p><strong>注意：只有当加法运算时，其中一方是字符串类型，就会把另一个也转为字符串类型。其他运算只要其中一方是数字，那么另一方就转为数字。并且加法运算会触发三种类型转换：将值转换为原始值，转换为数字，转换为字符串。</strong></p>
 <p>可能这么说大家有点模糊，那么下面带大家来做几个练习题来巩固一下上面的内容：</p>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 练习1</span></span><br><span class="line"><span class="built_in">Number</span>(&#123;&#125;);    <span class="comment">// NaN</span></span><br><span class="line"></span><br><span class="line"><span class="comment">// 解析步骤</span></span><br><span class="line"><span class="comment">// a.由于调用的是Number()，因此对象转换的类型是number</span></span><br><span class="line"><span class="comment">// b.步骤一会先调用valueOf()方法，即：(&#123;&#125;.valueOf())转换出来还是一个对象，即它不是一个原始值，因此会进行下一步骤</span></span><br><span class="line"><span class="comment">// c.步骤二会去调用toString()方法，即：(&#123;&#125;.toString())转换出来是"[object Object]"</span></span><br><span class="line"><span class="comment">// d.此时Number(&#123;&#125;)就等价于Number("[object Object]")，所以打印出来为NaN</span></span><br></pre></td></tr></table></figure>
-
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 练习2</span></span><br><span class="line"><span class="number">1</span> + &#123;&#125;   <span class="comment">// "1[object Object]"</span></span><br><span class="line"></span><br><span class="line"><span class="comment">// 解析步骤</span></span><br><span class="line"><span class="comment">// a. 由于1是一个数字，那么右边的&#123;&#125;就会被转换成一个数字</span></span><br><span class="line"><span class="comment">// b. 对象被转换成一个数字，首先会调用valueOf()方法返回对象，然后会调用toString()转换成"[object Object]"，因此最后输出的结果为："1[object Object]"</span></span><br></pre></td></tr></table></figure>
-
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 练习3</span></span><br><span class="line"><span class="string">"1"</span> + &#123;&#125;     <span class="comment">// "1[object Object]"</span></span><br><span class="line"></span><br><span class="line"><span class="comment">// 解析步骤</span></span><br><span class="line"><span class="comment">// a.由于"1"是一个字符串1，因此会将&#123;&#125;转换成一个字符串</span></span><br><span class="line"><span class="comment">// b.对象被转换成一个字符串，首先会调用toString()方法转换成"[object Object]"，然后和"1"进行一个拼接，就变成了一个"1[object Object]"</span></span><br></pre></td></tr></table></figure>
-
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 练习1</span></span><br><span class="line"><span class="title class_">Number</span>(&#123;&#125;);    <span class="comment">// NaN</span></span><br><span class="line"></span><br><span class="line"><span class="comment">// 解析步骤</span></span><br><span class="line"><span class="comment">// a.由于调用的是Number()，因此对象转换的类型是number</span></span><br><span class="line"><span class="comment">// b.步骤一会先调用valueOf()方法，即：(&#123;&#125;.valueOf())转换出来还是一个对象，即它不是一个原始值，因此会进行下一步骤</span></span><br><span class="line"><span class="comment">// c.步骤二会去调用toString()方法，即：(&#123;&#125;.toString())转换出来是&quot;[object Object]&quot;</span></span><br><span class="line"><span class="comment">// d.此时Number(&#123;&#125;)就等价于Number(&quot;[object Object]&quot;)，所以打印出来为NaN</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 练习2</span></span><br><span class="line"><span class="number">1</span> + &#123;&#125;   <span class="comment">// &quot;1[object Object]&quot;</span></span><br><span class="line"></span><br><span class="line"><span class="comment">// 解析步骤</span></span><br><span class="line"><span class="comment">// a. 由于1是一个数字，那么右边的&#123;&#125;就会被转换成一个数字</span></span><br><span class="line"><span class="comment">// b. 对象被转换成一个数字，首先会调用valueOf()方法返回对象，然后会调用toString()转换成&quot;[object Object]&quot;，因此最后输出的结果为：&quot;1[object Object]&quot;</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 练习3</span></span><br><span class="line"><span class="string">&quot;1&quot;</span> + &#123;&#125;     <span class="comment">// &quot;1[object Object]&quot;</span></span><br><span class="line"></span><br><span class="line"><span class="comment">// 解析步骤</span></span><br><span class="line"><span class="comment">// a.由于&quot;1&quot;是一个字符串1，因此会将&#123;&#125;转换成一个字符串</span></span><br><span class="line"><span class="comment">// b.对象被转换成一个字符串，首先会调用toString()方法转换成&quot;[object Object]&quot;，然后和&quot;1&quot;进行一个拼接，就变成了一个&quot;1[object Object]&quot;</span></span><br></pre></td></tr></table></figure>
 <p>前面几个比较简单，那我们再来几个难一点的，比如两边都是非数字或者非字符串：</p>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 练习4</span></span><br><span class="line">[] + []   <span class="comment">// ""</span></span><br><span class="line"></span><br><span class="line"><span class="comment">// 解析步骤</span></span><br><span class="line"><span class="comment">// a.[]转换为数字类型，首先会去调用valueOf()方法，会返回数组[]，由于它不是原始值，因此会继续去调用toString()方法，返回一个空的字符串""</span></span><br><span class="line"><span class="comment">// b.[] + [] = "" + "" = ""，即为空字符串</span></span><br></pre></td></tr></table></figure>
-
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 练习5</span></span><br><span class="line">&#123;&#125; + &#123;&#125;   <span class="comment">// Chrome浏览器打印出来是"[object Object][object Object]"，而火狐浏览器打印出来为NaN，会根据浏览器解析的不同而不同</span></span><br><span class="line"></span><br><span class="line"><span class="comment">// 就以打印出NaN来解析，解析步骤</span></span><br><span class="line"><span class="comment">// a.由于第一个&#123;&#125;会被解析成一个空的代码块并且会忽略它</span></span><br><span class="line"><span class="comment">// b.然后接着解析+&#123;&#125;，由于在这里的"+"加号并不是二元运算符，而是一个一元运算符，作用是将它后面的操作数转换成数字，和Number()函数完全一样。因此后面的一个&#123;&#125;转换的类型是number类型的，它转换下来是NaN，因此最后打印出来为NaN</span></span><br></pre></td></tr></table></figure>
-
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 练习5中的bug可以对它进行一个修改，在它们外面套一层大括号()</span></span><br><span class="line">(&#123;&#125; + &#123;&#125;)      <span class="comment">// "[object Object][object Object]"</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 练习4</span></span><br><span class="line">[] + []   <span class="comment">// &quot;&quot;</span></span><br><span class="line"></span><br><span class="line"><span class="comment">// 解析步骤</span></span><br><span class="line"><span class="comment">// a.[]转换为数字类型，首先会去调用valueOf()方法，会返回数组[]，由于它不是原始值，因此会继续去调用toString()方法，返回一个空的字符串&quot;&quot;</span></span><br><span class="line"><span class="comment">// b.[] + [] = &quot;&quot; + &quot;&quot; = &quot;&quot;，即为空字符串</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 练习5</span></span><br><span class="line">&#123;&#125; + &#123;&#125;   <span class="comment">// Chrome浏览器打印出来是&quot;[object Object][object Object]&quot;，而火狐浏览器打印出来为NaN，会根据浏览器解析的不同而不同</span></span><br><span class="line"></span><br><span class="line"><span class="comment">// 就以打印出NaN来解析，解析步骤</span></span><br><span class="line"><span class="comment">// a.由于第一个&#123;&#125;会被解析成一个空的代码块并且会忽略它</span></span><br><span class="line"><span class="comment">// b.然后接着解析+&#123;&#125;，由于在这里的&quot;+&quot;加号并不是二元运算符，而是一个一元运算符，作用是将它后面的操作数转换成数字，和Number()函数完全一样。因此后面的一个&#123;&#125;转换的类型是number类型的，它转换下来是NaN，因此最后打印出来为NaN</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 练习5中的bug可以对它进行一个修改，在它们外面套一层大括号()</span></span><br><span class="line">(&#123;&#125; + &#123;&#125;)      <span class="comment">// &quot;[object Object][object Object]&quot;</span></span><br></pre></td></tr></table></figure>
             <div class="clearfix"></div>
             <hr class="nogutter">
         </div>
         <nav class="m-pagination col-md-8 col-md-offset-2 col-sm-24" role="pagination">
     
-    <a class="pull-left" href="/2019/05/17/ES6之Iterator迭代器/" style="float: left;">
+    <a class="pull-left" href="/2019/05/17/ES6%E4%B9%8BIterator%E8%BF%AD%E4%BB%A3%E5%99%A8/" style="float: left;">
         ← ES6之Iterator迭代器
     </a>
     
     
-    <a class="pull-right" href="/2019/05/11/网络之巧妙的JSONP跨域/">
+    <a class="pull-right" href="/2019/05/11/%E7%BD%91%E7%BB%9C%E4%B9%8B%E5%B7%A7%E5%A6%99%E7%9A%84JSONP%E8%B7%A8%E5%9F%9F/">
         网络之巧妙的JSONP跨域 →
     </a>
     
@@ -352,7 +351,7 @@
                 <p>
                     &copy; 2014<script>new Date().getFullYear()>2010&&document.write("-"+new Date().getFullYear());</script>, Content By daipi173. All Rights Reserved.
                 </p>
-                <p>Theme By <a href="//go.kieran.top" style="color: #767D84">Kieran</a></p>
+                <p>Theme By <a target="_blank" rel="noopener" href="//go.kieran.top" style="color: #767D84">Kieran</a></p>
             </div>
             <div class="social">
                 <ul>

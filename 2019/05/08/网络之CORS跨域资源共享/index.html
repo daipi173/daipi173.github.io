@@ -86,29 +86,29 @@
 				    
 				    <li><a href="/categories/HTML/Chrome浏览器/" class="animsition-link">Chrome浏览器<small>(1)</small></a></li>
 				    
-				    <li><a href="/categories/JavaScript/ES6/" class="animsition-link">ES6<small>(6)</small></a></li>
-				    
 				    <li><a href="/categories/ES6/" class="animsition-link">ES6<small>(4)</small></a></li>
+				    
+				    <li><a href="/categories/JavaScript/ES6/" class="animsition-link">ES6<small>(6)</small></a></li>
 				    
 				    <li><a href="/categories/JavaScript/Vue/Eslint/" class="animsition-link">Eslint<small>(1)</small></a></li>
 				    
-				    <li><a href="/categories/总结/Git/" class="animsition-link">Git<small>(1)</small></a></li>
-				    
 				    <li><a href="/categories/Git/" class="animsition-link">Git<small>(4)</small></a></li>
+				    
+				    <li><a href="/categories/总结/Git/" class="animsition-link">Git<small>(1)</small></a></li>
 				    
 				    <li><a href="/categories/HTML/" class="animsition-link">HTML<small>(17)</small></a></li>
 				    
-				    <li><a href="/categories/ES6/JavaScript/" class="animsition-link">JavaScript<small>(4)</small></a></li>
-				    
 				    <li><a href="/categories/JavaScript/" class="animsition-link">JavaScript<small>(41)</small></a></li>
+				    
+				    <li><a href="/categories/ES6/JavaScript/" class="animsition-link">JavaScript<small>(4)</small></a></li>
 				    
 				    <li><a href="/categories/Javascript/" class="animsition-link">Javascript<small>(2)</small></a></li>
 				    
 				    <li><a href="/categories/React/" class="animsition-link">React<small>(2)</small></a></li>
 				    
-				    <li><a href="/categories/Git/Vue/" class="animsition-link">Vue<small>(1)</small></a></li>
-				    
 				    <li><a href="/categories/Vue/" class="animsition-link">Vue<small>(2)</small></a></li>
+				    
+				    <li><a href="/categories/Git/Vue/" class="animsition-link">Vue<small>(1)</small></a></li>
 				    
 				    <li><a href="/categories/JavaScript/Vue/" class="animsition-link">Vue<small>(1)</small></a></li>
 				    
@@ -120,17 +120,21 @@
 				    
 				    <li><a href="/categories/Vue/懒加载/总结/element-ui/" class="animsition-link">element ui<small>(1)</small></a></li>
 				    
+				    <li><a href="/categories/git/" class="animsition-link">git<small>(1)</small></a></li>
+				    
+				    <li><a href="/categories/ubuntu/" class="animsition-link">ubuntu<small>(3)</small></a></li>
+				    
 				    <li><a href="/categories/vue/" class="animsition-link">vue<small>(1)</small></a></li>
 				    
 				    <li><a href="/categories/webpack/" class="animsition-link">webpack<small>(2)</small></a></li>
 				    
-				    <li><a href="/categories/总结/" class="animsition-link">总结<small>(1)</small></a></li>
-				    
 				    <li><a href="/categories/JavaScript/总结/" class="animsition-link">总结<small>(2)</small></a></li>
 				    
-				    <li><a href="/categories/Vue/懒加载/总结/" class="animsition-link">总结<small>(1)</small></a></li>
+				    <li><a href="/categories/总结/" class="animsition-link">总结<small>(1)</small></a></li>
 				    
 				    <li><a href="/categories/Git/Vue/总结/" class="animsition-link">总结<small>(1)</small></a></li>
+				    
+				    <li><a href="/categories/Vue/懒加载/总结/" class="animsition-link">总结<small>(1)</small></a></li>
 				    
 				    <li><a href="/categories/Vue/懒加载/" class="animsition-link">懒加载<small>(1)</small></a></li>
 				    
@@ -148,7 +152,7 @@
                 <a class="sb-toggle-submenu">Links<span class="sb-caret"></span></a>
                 <ul class="sb-submenu">
                     
-                    <li><a href="https://daipi173.github.io/myweb/daipi173-myperson" class="animsition-link">Personal Project</a></li>
+                    <li><a target="_blank" rel="noopener" href="https://daipi173.github.io/myweb/daipi173-myperson" class="animsition-link">Personal Project</a></li>
                     
                 </ul>
             </li>
@@ -248,12 +252,12 @@
       		<p>Ajax是会受到同源的影响的，当我们要使用非同源的资源的时候，就会报错，所以说<strong>Ajax只能获取同源的资源</strong>。</p>
 <p>但是<strong>有解决办法</strong>让Ajax获取不同源的资源，需要遵循CORS机制。需要服务器给响应当中有一个“Access-Control-Allow-Origin”字段，如果响应中没有这个字段的话，就会报错。</p>
 <h1 id="1-什么是CORS"><a href="#1-什么是CORS" class="headerlink" title="1. 什么是CORS"></a>1. 什么是CORS</h1><p>cross-origin resource sharing（CORS）跨域资源共享，是一种使用额外<strong>HTTP首部</strong>实现跨域获取资源权限的机制。</p>
-<p>header(“Access-Control-Allow-Origin: *”); 这句话的意思是服务器允许哪个源向我这里获取数据，如果不设置的话，只能允许同源的来获取数据。（这里的 * 表示的是允许所有的源都可以来我这里获取数据。）<br>这里也可以设置固定的某一些域，比如：header(“Access-Control-Allow-Origin: <a href="http://localhost&quot;);表示的是只能“http://localhost”下面的源能访问，其他的源访问的话就不允许了。" target="_blank" rel="noopener">http://localhost&quot;);表示的是只能“http://localhost”下面的源能访问，其他的源访问的话就不允许了。</a></p>
+<p>header(“Access-Control-Allow-Origin: *”); 这句话的意思是服务器允许哪个源向我这里获取数据，如果不设置的话，只能允许同源的来获取数据。（这里的 * 表示的是允许所有的源都可以来我这里获取数据。）<br>这里也可以设置固定的某一些域，比如：header(“Access-Control-Allow-Origin: <a target="_blank" rel="noopener" href="http://localhost&quot;);表示的是只能“http://localhost”下面的源能访问，其他的源访问的话就不允许了。">http://localhost&quot;);表示的是只能“http://localhost”下面的源能访问，其他的源访问的话就不允许了。</a></p>
 <h1 id="2-CORS分类"><a href="#2-CORS分类" class="headerlink" title="2. CORS分类"></a>2. CORS分类</h1><h2 id="2-1-简单请求"><a href="#2-1-简单请求" class="headerlink" title="2.1 简单请求"></a>2.1 简单请求</h2><ol>
 <li>使用下列方法之一：<br>a. GET<br>b. POST<br>c. HEAD</li>
 <li>content-Type值为下列之一：<br>a. text/plain<br>b. multipart/form-data<br>c. application/x-www-form-urlencoded等</li>
 </ol>
-<p>除了正常发起请求外，若想实现cors跨域，还需要服务器配置正确的响应首部。否则无法获取<br>access-contral-allow-origin: *(<a href="http://localhost" target="_blank" rel="noopener">http://localhost</a>) 访问控制允许源。</p>
+<p>除了正常发起请求外，若想实现cors跨域，还需要服务器配置正确的响应首部。否则无法获取<br>access-contral-allow-origin: *(<a target="_blank" rel="noopener" href="http://localhost">http://localhost</a>) 访问控制允许源。</p>
 <p>注意：需<strong>同时</strong>满足上面两个条件才是一个简单请求。</p>
 <h2 id="2-2-预检请求"><a href="#2-2-预检请求" class="headerlink" title="2.2 预检请求"></a>2.2 预检请求</h2><p>“需预检的请求”要求必须<strong>首先</strong>使用<strong>OPTIONS（查询支持的方法<br>）</strong>方法发起一个<strong>预检请求</strong>到服务器，以获知服务器<strong>是否允许该实际请求</strong>（如使用DELETE请求，那么它<strong>首先</strong>会发起一个请求（其实就是预检请求），先向服务器中去问一下，你是否允许DELETE请求，如果允许的话那么我再发送一个请求，才能正式的去DELETE）。</p>
 <p>预检请求是需要发送<strong>两次请求</strong>的，一次是*OPTIONS请求，还有一次才是正式的我们想要发送的请求。</p>
@@ -262,7 +266,7 @@
 <ol>
 <li>使用非GET POST HEAD方法</li>
 <li>content-Type值不为下列之一：<br>a. text/plain<br>b. multipart/form-data<br>c. application/x-www-form-urlencoded</li>
-<li>人为设置了 CORS 安全的首部字段集合之外的首部字段，如人为的写一个CORS安全的首部字段集合（xml.setRequestHeader(‘X-user’,’daipi173’);）：<a href="https://fetch.spec.whatwg.org/#cors-safelisted-request-header" target="_blank" rel="noopener">https://fetch.spec.whatwg.org/#cors-safelisted-request-header</a><br>例如：发起POST请求，人为设置了X-user：daipi173字段，则需要预检请求。此时就需要服务器设置正确的字段：<figure class="highlight php"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">header(<span class="string">"Access-Control-Allow-Origin: *"</span>);</span><br><span class="line">header(<span class="string">"Access-Control-Request-Methods: POST,GET,PUT,DELETE,OPTIONS"</span>);  <span class="comment">//实际请求所允许使用的HTTP方法</span></span><br><span class="line">header(<span class="string">"Access-Control-Allow-Headers: X-user, content-type"</span>);  <span class="comment">//请求中允许携带的首部字段</span></span><br><span class="line">header(<span class="string">"Access-Control-Max-Age: 86400"</span>);   <span class="comment">//请求的结果能够被缓存，可以不用设置，不设置的话就是一个临时缓存</span></span><br></pre></td></tr></table></figure>
+<li>人为设置了 CORS 安全的首部字段集合之外的首部字段，如人为的写一个CORS安全的首部字段集合（xml.setRequestHeader(‘X-user’,’daipi173’);）：<a target="_blank" rel="noopener" href="https://fetch.spec.whatwg.org/#cors-safelisted-request-header">https://fetch.spec.whatwg.org/#cors-safelisted-request-header</a><br>例如：发起POST请求，人为设置了X-user：daipi173字段，则需要预检请求。此时就需要服务器设置正确的字段：<figure class="highlight php"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="title function_ invoke__">header</span>(<span class="string">&quot;Access-Control-Allow-Origin: *&quot;</span>);</span><br><span class="line"><span class="title function_ invoke__">header</span>(<span class="string">&quot;Access-Control-Request-Methods: POST,GET,PUT,DELETE,OPTIONS&quot;</span>);  <span class="comment">//实际请求所允许使用的HTTP方法</span></span><br><span class="line"><span class="title function_ invoke__">header</span>(<span class="string">&quot;Access-Control-Allow-Headers: X-user, content-type&quot;</span>);  <span class="comment">//请求中允许携带的首部字段</span></span><br><span class="line"><span class="title function_ invoke__">header</span>(<span class="string">&quot;Access-Control-Max-Age: 86400&quot;</span>);   <span class="comment">//请求的结果能够被缓存，可以不用设置，不设置的话就是一个临时缓存</span></span><br></pre></td></tr></table></figure>
 
 </li>
 </ol>
@@ -274,12 +278,12 @@
         </div>
         <nav class="m-pagination col-md-8 col-md-offset-2 col-sm-24" role="pagination">
     
-    <a class="pull-left" href="/2019/05/11/网络之巧妙的JSONP跨域/" style="float: left;">
+    <a class="pull-left" href="/2019/05/11/%E7%BD%91%E7%BB%9C%E4%B9%8B%E5%B7%A7%E5%A6%99%E7%9A%84JSONP%E8%B7%A8%E5%9F%9F/" style="float: left;">
         ← 网络之巧妙的JSONP跨域
     </a>
     
     
-    <a class="pull-right" href="/2019/05/05/网络之postMessage通信/">
+    <a class="pull-right" href="/2019/05/05/%E7%BD%91%E7%BB%9C%E4%B9%8BpostMessage%E9%80%9A%E4%BF%A1/">
         网络之postMessage通信 →
     </a>
     
@@ -348,7 +352,7 @@
                 <p>
                     &copy; 2014<script>new Date().getFullYear()>2010&&document.write("-"+new Date().getFullYear());</script>, Content By daipi173. All Rights Reserved.
                 </p>
-                <p>Theme By <a href="//go.kieran.top" style="color: #767D84">Kieran</a></p>
+                <p>Theme By <a target="_blank" rel="noopener" href="//go.kieran.top" style="color: #767D84">Kieran</a></p>
             </div>
             <div class="social">
                 <ul>

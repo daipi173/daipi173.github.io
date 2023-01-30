@@ -86,29 +86,29 @@
 				    
 				    <li><a href="/categories/HTML/Chrome浏览器/" class="animsition-link">Chrome浏览器<small>(1)</small></a></li>
 				    
-				    <li><a href="/categories/JavaScript/ES6/" class="animsition-link">ES6<small>(6)</small></a></li>
-				    
 				    <li><a href="/categories/ES6/" class="animsition-link">ES6<small>(4)</small></a></li>
+				    
+				    <li><a href="/categories/JavaScript/ES6/" class="animsition-link">ES6<small>(6)</small></a></li>
 				    
 				    <li><a href="/categories/JavaScript/Vue/Eslint/" class="animsition-link">Eslint<small>(1)</small></a></li>
 				    
-				    <li><a href="/categories/总结/Git/" class="animsition-link">Git<small>(1)</small></a></li>
-				    
 				    <li><a href="/categories/Git/" class="animsition-link">Git<small>(4)</small></a></li>
+				    
+				    <li><a href="/categories/总结/Git/" class="animsition-link">Git<small>(1)</small></a></li>
 				    
 				    <li><a href="/categories/HTML/" class="animsition-link">HTML<small>(17)</small></a></li>
 				    
-				    <li><a href="/categories/ES6/JavaScript/" class="animsition-link">JavaScript<small>(4)</small></a></li>
-				    
 				    <li><a href="/categories/JavaScript/" class="animsition-link">JavaScript<small>(41)</small></a></li>
+				    
+				    <li><a href="/categories/ES6/JavaScript/" class="animsition-link">JavaScript<small>(4)</small></a></li>
 				    
 				    <li><a href="/categories/Javascript/" class="animsition-link">Javascript<small>(2)</small></a></li>
 				    
 				    <li><a href="/categories/React/" class="animsition-link">React<small>(2)</small></a></li>
 				    
-				    <li><a href="/categories/Git/Vue/" class="animsition-link">Vue<small>(1)</small></a></li>
-				    
 				    <li><a href="/categories/Vue/" class="animsition-link">Vue<small>(2)</small></a></li>
+				    
+				    <li><a href="/categories/Git/Vue/" class="animsition-link">Vue<small>(1)</small></a></li>
 				    
 				    <li><a href="/categories/JavaScript/Vue/" class="animsition-link">Vue<small>(1)</small></a></li>
 				    
@@ -120,17 +120,21 @@
 				    
 				    <li><a href="/categories/Vue/懒加载/总结/element-ui/" class="animsition-link">element ui<small>(1)</small></a></li>
 				    
+				    <li><a href="/categories/git/" class="animsition-link">git<small>(1)</small></a></li>
+				    
+				    <li><a href="/categories/ubuntu/" class="animsition-link">ubuntu<small>(3)</small></a></li>
+				    
 				    <li><a href="/categories/vue/" class="animsition-link">vue<small>(1)</small></a></li>
 				    
 				    <li><a href="/categories/webpack/" class="animsition-link">webpack<small>(2)</small></a></li>
 				    
-				    <li><a href="/categories/总结/" class="animsition-link">总结<small>(1)</small></a></li>
-				    
 				    <li><a href="/categories/JavaScript/总结/" class="animsition-link">总结<small>(2)</small></a></li>
 				    
-				    <li><a href="/categories/Vue/懒加载/总结/" class="animsition-link">总结<small>(1)</small></a></li>
+				    <li><a href="/categories/总结/" class="animsition-link">总结<small>(1)</small></a></li>
 				    
 				    <li><a href="/categories/Git/Vue/总结/" class="animsition-link">总结<small>(1)</small></a></li>
+				    
+				    <li><a href="/categories/Vue/懒加载/总结/" class="animsition-link">总结<small>(1)</small></a></li>
 				    
 				    <li><a href="/categories/Vue/懒加载/" class="animsition-link">懒加载<small>(1)</small></a></li>
 				    
@@ -148,7 +152,7 @@
                 <a class="sb-toggle-submenu">Links<span class="sb-caret"></span></a>
                 <ul class="sb-submenu">
                     
-                    <li><a href="https://daipi173.github.io/myweb/daipi173-myperson" class="animsition-link">Personal Project</a></li>
+                    <li><a target="_blank" rel="noopener" href="https://daipi173.github.io/myweb/daipi173-myperson" class="animsition-link">Personal Project</a></li>
                     
                 </ul>
             </li>
@@ -242,28 +246,15 @@
         </div>
         <div class="col-md-8 col-md-offset-2">
       		<ol>
-<li>构造函数的返回值<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 例1：</span></span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">Person</span>(<span class="params">name</span>) </span>&#123;</span><br><span class="line">    <span class="keyword">this</span>.name = name</span><br><span class="line">    <span class="keyword">return</span> name;</span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">let</span> p = <span class="keyword">new</span> Person(<span class="string">'Tom'</span>);</span><br></pre></td></tr></table></figure>
-
-</li>
-</ol>
-<p>问：p或者Person返回什么？<br>答：{name: ‘Tom’}</p>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 例2：</span></span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">Person</span>(<span class="params">name</span>) </span>&#123;</span><br><span class="line">    <span class="keyword">this</span>.name = name</span><br><span class="line">    <span class="keyword">return</span> &#123;&#125;</span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">let</span> p = <span class="keyword">new</span> Person(<span class="string">'Tom'</span>);</span><br></pre></td></tr></table></figure>
-
-<p>问：p或者Person返回什么？<br>答：{}<br>对于上述的解析：构造函数不需要显示的返回值。使用new来创建对象(调用构造函数)时，如果return的是非对象<br>(数字、字符串、布尔类型等)会忽略返回值；如果return的是对象，则返回该对象(注：若return null也会忽略返回值）。</p>
-<ol start="2">
-<li><p>什么是Netlify<br>它是一个提供静态资源网络托管的综合平台。简单来说：它的功能之一就跟我们之前Hexo博客的静态托管平台 Github Page一样,<br>不过，Netlify可比github Page功能多多了，而且速度也快。<br>简单来说：<br>a. 托管静态资源；<br>b. 将静态网站部署到CDN上；<br>c. Continuous Deployment 持续部署，当你提交改变到git 仓库，它就会自动运行build command，进行自动部署；<br>d. 可以添加自定义域名；<br>e. 重头戏：可以启用免费的TLS证书，启用HTTPS<br>官网：<a href="http://www.netlify.com" target="_blank" rel="noopener">www.netlify.com</a></p>
-</li>
-<li><p>关于es5和es6中继承的不同点<br>ES5的继承中，先创建子类的实例对象this，然后再将父类的方法添加到this上（ Parent.apply(this) ）；<br>ES6采用的是先创建父类的实例this（故要先调用 super( )方法），完后再用子类的构造函数修改this。<br>参考链接：<a href="https://www.jianshu.com/p/8f6dd832e57a" target="_blank" rel="noopener">https://www.jianshu.com/p/8f6dd832e57a</a></p>
-</li>
-<li><p>instanceof的内部机制以及相关的考题<br>参考链接：<a href="https://juejin.im/post/5c19c1b6e51d451d1e06c163" target="_blank" rel="noopener">https://juejin.im/post/5c19c1b6e51d451d1e06c163</a></p>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// instanceof的内部机制</span></span><br><span class="line">       <span class="comment">// 假设现有x instanceof y</span></span><br><span class="line">       <span class="comment">// 实际上instanceof就是去判断person对象和Person类的原型是否相同，它会沿着</span></span><br><span class="line">       <span class="comment">// 原型链一层一层的去找原型，如果找到则返回true。因此，这也就是我们使用无限</span></span><br><span class="line">       <span class="comment">// 循环的原因。</span></span><br><span class="line">       <span class="function"><span class="keyword">function</span> <span class="title">newInstanceof</span> (<span class="params">x, y</span>) </span>&#123;</span><br><span class="line">           <span class="keyword">while</span> (x.__proto__ !== <span class="literal">null</span>) &#123;</span><br><span class="line">               <span class="keyword">if</span> (x.__proto__ === y.prototype) &#123;</span><br><span class="line">                   <span class="keyword">return</span> <span class="literal">true</span></span><br><span class="line">               &#125;</span><br><span class="line">               x.__proto__ = x.__proto__.__proto__</span><br><span class="line">           &#125;</span><br><span class="line">               <span class="keyword">return</span> <span class="literal">false</span></span><br><span class="line">       &#125;</span><br><span class="line">       <span class="function"><span class="keyword">function</span> <span class="title">Person</span> (<span class="params"></span>) </span>&#123;</span><br><span class="line">           <span class="keyword">this</span>.name = <span class="string">'daipi173'</span></span><br><span class="line">       &#125;</span><br><span class="line">       <span class="keyword">let</span> person = <span class="keyword">new</span> Person()</span><br><span class="line">       <span class="built_in">console</span>.log(newInstanceof(person, Person))   <span class="comment">// true</span></span><br></pre></td></tr></table></figure>
-</li>
-<li><p>for in和for of的区别<br>参考链接：<a href="https://www.jianshu.com/p/c43f418d6bf0" target="_blank" rel="noopener">https://www.jianshu.com/p/c43f418d6bf0</a></p>
-</li>
-<li><p>理解macrotasks 和 microtasks<br>需要注意：主线程阻塞时，任务队列仍然是能够被推入任务的。这也就是为什么当页面的JavaScript进程阻塞时，<br>我们触发的点击等事件，会在进程恢复后依次执行。<br>参考链接：<a href="https://juejin.im/entry/58d4df3b5c497d0057eb99ff" target="_blank" rel="noopener">https://juejin.im/entry/58d4df3b5c497d0057eb99ff</a><br>在这里会遇到执行上下文和执行栈，可以参考链接：<a href="https://juejin.im/post/5ba32171f265da0ab719a6d7" target="_blank" rel="noopener">https://juejin.im/post/5ba32171f265da0ab719a6d7</a></p>
-</li>
-<li><p>5种方法实现数组扁平化<br>参考链接：<a href="https://juejin.im/post/5adc8e396fb9a07aa0479725" target="_blank" rel="noopener">https://juejin.im/post/5adc8e396fb9a07aa0479725</a></p>
-</li>
+<li>构造函数的返回值<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 例1：</span></span><br><span class="line"><span class="keyword">function</span> <span class="title function_">Person</span>(<span class="params">name</span>) &#123;</span><br><span class="line">    <span class="variable language_">this</span>.<span class="property">name</span> = name</span><br><span class="line">    <span class="keyword">return</span> name;</span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">let</span> p = <span class="keyword">new</span> <span class="title class_">Person</span>(<span class="string">&#x27;Tom&#x27;</span>);</span><br></pre></td></tr></table></figure>
+问：p或者Person返回什么？<br>答：{name: ‘Tom’}<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 例2：</span></span><br><span class="line"><span class="keyword">function</span> <span class="title function_">Person</span>(<span class="params">name</span>) &#123;</span><br><span class="line">    <span class="variable language_">this</span>.<span class="property">name</span> = name</span><br><span class="line">    <span class="keyword">return</span> &#123;&#125;</span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">let</span> p = <span class="keyword">new</span> <span class="title class_">Person</span>(<span class="string">&#x27;Tom&#x27;</span>);</span><br></pre></td></tr></table></figure>
+问：p或者Person返回什么？<br>答：{}<br>对于上述的解析：构造函数不需要显示的返回值。使用new来创建对象(调用构造函数)时，如果return的是非对象<br>(数字、字符串、布尔类型等)会忽略返回值；如果return的是对象，则返回该对象(注：若return null也会忽略返回值）。</li>
+<li>什么是Netlify<br>它是一个提供静态资源网络托管的综合平台。简单来说：它的功能之一就跟我们之前Hexo博客的静态托管平台 Github Page一样,<br>不过，Netlify可比github Page功能多多了，而且速度也快。<br>简单来说：<br>a. 托管静态资源；<br>b. 将静态网站部署到CDN上；<br>c. Continuous Deployment 持续部署，当你提交改变到git 仓库，它就会自动运行build command，进行自动部署；<br>d. 可以添加自定义域名；<br>e. 重头戏：可以启用免费的TLS证书，启用HTTPS<br>官网：<a target="_blank" rel="noopener" href="http://www.netlify.com">www.netlify.com</a></li>
+<li>关于es5和es6中继承的不同点<br>ES5的继承中，先创建子类的实例对象this，然后再将父类的方法添加到this上（ Parent.apply(this) ）；<br>ES6采用的是先创建父类的实例this（故要先调用 super( )方法），完后再用子类的构造函数修改this。<br>参考链接：<a target="_blank" rel="noopener" href="https://www.jianshu.com/p/8f6dd832e57a">https://www.jianshu.com/p/8f6dd832e57a</a></li>
+<li>instanceof的内部机制以及相关的考题<br>参考链接：<a target="_blank" rel="noopener" href="https://juejin.im/post/5c19c1b6e51d451d1e06c163">https://juejin.im/post/5c19c1b6e51d451d1e06c163</a><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// instanceof的内部机制</span></span><br><span class="line">       <span class="comment">// 假设现有x instanceof y</span></span><br><span class="line">       <span class="comment">// 实际上instanceof就是去判断person对象和Person类的原型是否相同，它会沿着</span></span><br><span class="line">       <span class="comment">// 原型链一层一层的去找原型，如果找到则返回true。因此，这也就是我们使用无限</span></span><br><span class="line">       <span class="comment">// 循环的原因。</span></span><br><span class="line">       <span class="keyword">function</span> <span class="title function_">newInstanceof</span> (x, y) &#123;</span><br><span class="line">           <span class="keyword">while</span> (x.<span class="property">__proto__</span> !== <span class="literal">null</span>) &#123;</span><br><span class="line">               <span class="keyword">if</span> (x.<span class="property">__proto__</span> === y.<span class="property"><span class="keyword">prototype</span></span>) &#123;</span><br><span class="line">                   <span class="keyword">return</span> <span class="literal">true</span></span><br><span class="line">               &#125;</span><br><span class="line">               x.<span class="property">__proto__</span> = x.<span class="property">__proto__</span>.<span class="property">__proto__</span></span><br><span class="line">           &#125;</span><br><span class="line">               <span class="keyword">return</span> <span class="literal">false</span></span><br><span class="line">       &#125;</span><br><span class="line">       <span class="keyword">function</span> <span class="title function_">Person</span> () &#123;</span><br><span class="line">           <span class="variable language_">this</span>.<span class="property">name</span> = <span class="string">&#x27;daipi173&#x27;</span></span><br><span class="line">       &#125;</span><br><span class="line">       <span class="keyword">let</span> person = <span class="keyword">new</span> <span class="title class_">Person</span>()</span><br><span class="line">       <span class="variable language_">console</span>.<span class="title function_">log</span>(<span class="title function_">newInstanceof</span>(person, <span class="title class_">Person</span>))   <span class="comment">// true</span></span><br></pre></td></tr></table></figure></li>
+<li>for in和for of的区别<br>参考链接：<a target="_blank" rel="noopener" href="https://www.jianshu.com/p/c43f418d6bf0">https://www.jianshu.com/p/c43f418d6bf0</a></li>
+<li>理解macrotasks 和 microtasks<br>需要注意：主线程阻塞时，任务队列仍然是能够被推入任务的。这也就是为什么当页面的JavaScript进程阻塞时，<br>我们触发的点击等事件，会在进程恢复后依次执行。<br>参考链接：<a target="_blank" rel="noopener" href="https://juejin.im/entry/58d4df3b5c497d0057eb99ff">https://juejin.im/entry/58d4df3b5c497d0057eb99ff</a><br>在这里会遇到执行上下文和执行栈，可以参考链接：<a target="_blank" rel="noopener" href="https://juejin.im/post/5ba32171f265da0ab719a6d7">https://juejin.im/post/5ba32171f265da0ab719a6d7</a></li>
+<li>5种方法实现数组扁平化<br>参考链接：<a target="_blank" rel="noopener" href="https://juejin.im/post/5adc8e396fb9a07aa0479725">https://juejin.im/post/5adc8e396fb9a07aa0479725</a></li>
 </ol>
 
             <div class="clearfix"></div>
@@ -271,12 +262,12 @@
         </div>
         <nav class="m-pagination col-md-8 col-md-offset-2 col-sm-24" role="pagination">
     
-    <a class="pull-left" href="/2019/12/18/工作中的解题思想（七）/" style="float: left;">
+    <a class="pull-left" href="/2019/12/18/%E5%B7%A5%E4%BD%9C%E4%B8%AD%E7%9A%84%E8%A7%A3%E9%A2%98%E6%80%9D%E6%83%B3%EF%BC%88%E4%B8%83%EF%BC%89/" style="float: left;">
         ← 工作中的解题思想（七）
     </a>
     
     
-    <a class="pull-right" href="/2019/11/29/数组扁平化处理办法/">
+    <a class="pull-right" href="/2019/11/29/%E6%95%B0%E7%BB%84%E6%89%81%E5%B9%B3%E5%8C%96%E5%A4%84%E7%90%86%E5%8A%9E%E6%B3%95/">
         数组扁平化处理办法 →
     </a>
     
@@ -345,7 +336,7 @@
                 <p>
                     &copy; 2014<script>new Date().getFullYear()>2010&&document.write("-"+new Date().getFullYear());</script>, Content By daipi173. All Rights Reserved.
                 </p>
-                <p>Theme By <a href="//go.kieran.top" style="color: #767D84">Kieran</a></p>
+                <p>Theme By <a target="_blank" rel="noopener" href="//go.kieran.top" style="color: #767D84">Kieran</a></p>
             </div>
             <div class="social">
                 <ul>

@@ -86,29 +86,29 @@
 				    
 				    <li><a href="/categories/HTML/Chrome浏览器/" class="animsition-link">Chrome浏览器<small>(1)</small></a></li>
 				    
-				    <li><a href="/categories/JavaScript/ES6/" class="animsition-link">ES6<small>(6)</small></a></li>
-				    
 				    <li><a href="/categories/ES6/" class="animsition-link">ES6<small>(4)</small></a></li>
+				    
+				    <li><a href="/categories/JavaScript/ES6/" class="animsition-link">ES6<small>(6)</small></a></li>
 				    
 				    <li><a href="/categories/JavaScript/Vue/Eslint/" class="animsition-link">Eslint<small>(1)</small></a></li>
 				    
-				    <li><a href="/categories/总结/Git/" class="animsition-link">Git<small>(1)</small></a></li>
-				    
 				    <li><a href="/categories/Git/" class="animsition-link">Git<small>(4)</small></a></li>
+				    
+				    <li><a href="/categories/总结/Git/" class="animsition-link">Git<small>(1)</small></a></li>
 				    
 				    <li><a href="/categories/HTML/" class="animsition-link">HTML<small>(17)</small></a></li>
 				    
-				    <li><a href="/categories/ES6/JavaScript/" class="animsition-link">JavaScript<small>(4)</small></a></li>
-				    
 				    <li><a href="/categories/JavaScript/" class="animsition-link">JavaScript<small>(41)</small></a></li>
+				    
+				    <li><a href="/categories/ES6/JavaScript/" class="animsition-link">JavaScript<small>(4)</small></a></li>
 				    
 				    <li><a href="/categories/Javascript/" class="animsition-link">Javascript<small>(2)</small></a></li>
 				    
 				    <li><a href="/categories/React/" class="animsition-link">React<small>(2)</small></a></li>
 				    
-				    <li><a href="/categories/Git/Vue/" class="animsition-link">Vue<small>(1)</small></a></li>
-				    
 				    <li><a href="/categories/Vue/" class="animsition-link">Vue<small>(2)</small></a></li>
+				    
+				    <li><a href="/categories/Git/Vue/" class="animsition-link">Vue<small>(1)</small></a></li>
 				    
 				    <li><a href="/categories/JavaScript/Vue/" class="animsition-link">Vue<small>(1)</small></a></li>
 				    
@@ -120,17 +120,21 @@
 				    
 				    <li><a href="/categories/Vue/懒加载/总结/element-ui/" class="animsition-link">element ui<small>(1)</small></a></li>
 				    
+				    <li><a href="/categories/git/" class="animsition-link">git<small>(1)</small></a></li>
+				    
+				    <li><a href="/categories/ubuntu/" class="animsition-link">ubuntu<small>(3)</small></a></li>
+				    
 				    <li><a href="/categories/vue/" class="animsition-link">vue<small>(1)</small></a></li>
 				    
 				    <li><a href="/categories/webpack/" class="animsition-link">webpack<small>(2)</small></a></li>
 				    
-				    <li><a href="/categories/总结/" class="animsition-link">总结<small>(1)</small></a></li>
-				    
 				    <li><a href="/categories/JavaScript/总结/" class="animsition-link">总结<small>(2)</small></a></li>
 				    
-				    <li><a href="/categories/Vue/懒加载/总结/" class="animsition-link">总结<small>(1)</small></a></li>
+				    <li><a href="/categories/总结/" class="animsition-link">总结<small>(1)</small></a></li>
 				    
 				    <li><a href="/categories/Git/Vue/总结/" class="animsition-link">总结<small>(1)</small></a></li>
+				    
+				    <li><a href="/categories/Vue/懒加载/总结/" class="animsition-link">总结<small>(1)</small></a></li>
 				    
 				    <li><a href="/categories/Vue/懒加载/" class="animsition-link">懒加载<small>(1)</small></a></li>
 				    
@@ -148,7 +152,7 @@
                 <a class="sb-toggle-submenu">Links<span class="sb-caret"></span></a>
                 <ul class="sb-submenu">
                     
-                    <li><a href="https://daipi173.github.io/myweb/daipi173-myperson" class="animsition-link">Personal Project</a></li>
+                    <li><a target="_blank" rel="noopener" href="https://daipi173.github.io/myweb/daipi173-myperson" class="animsition-link">Personal Project</a></li>
                     
                 </ul>
             </li>
@@ -250,43 +254,33 @@
 <p>Symbol表示<strong>独一无二</strong>的。Symbol值通过Symbol函数生成。因此对象的属性名现在可以有两种类型，一种是我们原来一直都使用的<strong>字符串</strong>类型，另一种就是新增的<strong>Symbol</strong>类型。凡是属性名属于 Symbol 类型，就都是独一无二的，可以保证不会与其他属性名产生冲突。比如：<br><code>let s = Symbol();</code><br>此时变量s就是一个独一无二的值。当我们使用typeof运算符的时候，此时变量s是Symbol数据类型。<br><code>typeof s;    // &quot;symbol&quot;</code></p>
 <p><strong>注意：我们在定义Symbol的时候，在Symbol函数前不能使用new命令，否则会报错。其原因是因为生成的Symbol是一个原始类型的值，而不是对象。由于Symbol值不是对象，因此不能添加属性。</strong></p>
 <h1 id="3-Symbol的使用注意事项"><a href="#3-Symbol的使用注意事项" class="headerlink" title="3. Symbol的使用注意事项"></a>3. Symbol的使用注意事项</h1><ol>
-<li>Symbol函数可以接受一个字符串作为参数，表示对Symbol实例的描述。<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">let</span> s1 = <span class="built_in">Symbol</span>(<span class="string">'foo'</span>);</span><br><span class="line"><span class="keyword">let</span> s2 = <span class="built_in">Symbol</span>(<span class="string">'bar'</span>);</span><br><span class="line"></span><br><span class="line"><span class="built_in">console</span>.log(s1); <span class="comment">// Symbol(foo)</span></span><br><span class="line"><span class="built_in">console</span>.log(s2); <span class="comment">// Symbol(bar)</span></span><br></pre></td></tr></table></figure>
-
-</li>
-</ol>
+<li><p>Symbol函数可以接受一个字符串作为参数，表示对Symbol实例的描述。</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">let</span> s1 = <span class="title class_">Symbol</span>(<span class="string">&#x27;foo&#x27;</span>);</span><br><span class="line"><span class="keyword">let</span> s2 = <span class="title class_">Symbol</span>(<span class="string">&#x27;bar&#x27;</span>);</span><br><span class="line"></span><br><span class="line"><span class="variable language_">console</span>.<span class="title function_">log</span>(s1); <span class="comment">// Symbol(foo)</span></span><br><span class="line"><span class="variable language_">console</span>.<span class="title function_">log</span>(s2); <span class="comment">// Symbol(bar)</span></span><br></pre></td></tr></table></figure>
 <p>针对于上面的代码，s1和s2是两个 Symbol 值。如果不加参数，它们在控制台的输出都是Symbol()，不利于区分。<strong>有了参数以后，就等于为它们加上了描述，输出的时候就能够分清，到底是哪一个值</strong>。</p>
-<ol start="2">
+</li>
 <li><p>如果 Symbol 的参数是一个<strong>对象</strong>，就会调用该对象的toString方法，将其转为<strong>字符串</strong>，然后才生成一个 Symbol 值。</p>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> obj = &#123;</span><br><span class="line">    toString() &#123;</span><br><span class="line">        <span class="keyword">return</span> <span class="string">'I am toString methods'</span>;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;;</span><br><span class="line"><span class="keyword">const</span> s = <span class="built_in">Symbol</span>(obj);</span><br><span class="line"><span class="built_in">console</span>.log(s); <span class="comment">// Symbol(I am toString methods)</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> obj = &#123;</span><br><span class="line">    <span class="title function_">toString</span>(<span class="params"></span>) &#123;</span><br><span class="line">        <span class="keyword">return</span> <span class="string">&#x27;I am toString methods&#x27;</span>;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;;</span><br><span class="line"><span class="keyword">const</span> s = <span class="title class_">Symbol</span>(obj);</span><br><span class="line"><span class="variable language_">console</span>.<span class="title function_">log</span>(s); <span class="comment">// Symbol(I am toString methods)</span></span><br></pre></td></tr></table></figure>
 </li>
 <li><p>有参数与没有参数的情况：<br>注意：Symbol函数的参数只是表示对当前 Symbol 值的<strong>描述</strong>，因此相同参数的Symbol函数的返回值是<strong>不相等</strong>的。</p>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 没有参数的情况</span></span><br><span class="line"><span class="keyword">var</span> s1 = <span class="built_in">Symbol</span>();</span><br><span class="line"><span class="keyword">var</span> s2 = <span class="built_in">Symbol</span>();</span><br><span class="line"><span class="built_in">console</span>.log(s1 === s2); <span class="comment">// false</span></span><br><span class="line"><span class="comment">// 有参数的情况</span></span><br><span class="line"><span class="keyword">var</span> s1 = <span class="built_in">Symbol</span>(<span class="string">"foo"</span>);</span><br><span class="line"><span class="keyword">var</span> s2 = <span class="built_in">Symbol</span>(<span class="string">"foo"</span>);</span><br><span class="line"><span class="built_in">console</span>.log(s1 === s2); <span class="comment">// false</span></span><br></pre></td></tr></table></figure>
-
-</li>
-</ol>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 没有参数的情况</span></span><br><span class="line"><span class="keyword">var</span> s1 = <span class="title class_">Symbol</span>();</span><br><span class="line"><span class="keyword">var</span> s2 = <span class="title class_">Symbol</span>();</span><br><span class="line"><span class="variable language_">console</span>.<span class="title function_">log</span>(s1 === s2); <span class="comment">// false</span></span><br><span class="line"><span class="comment">// 有参数的情况</span></span><br><span class="line"><span class="keyword">var</span> s1 = <span class="title class_">Symbol</span>(<span class="string">&quot;foo&quot;</span>);</span><br><span class="line"><span class="keyword">var</span> s2 = <span class="title class_">Symbol</span>(<span class="string">&quot;foo&quot;</span>);</span><br><span class="line"><span class="variable language_">console</span>.<span class="title function_">log</span>(s1 === s2); <span class="comment">// false</span></span><br></pre></td></tr></table></figure>
 <p>上面代码中，s1和s2都是Symbol函数的<strong>返回值</strong>，而且参数<strong>相同</strong>，但是它们是<strong>不相等</strong>的。</p>
-<ol start="4">
-<li>Symbol 值<strong>不能</strong>与其他类型的值进行运算，<strong>会报错</strong>。<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">let</span> s = <span class="built_in">Symbol</span>(<span class="string">'foo'</span>);</span><br><span class="line"><span class="built_in">console</span>.log(<span class="string">"my symbol is "</span> + s);  <span class="comment">// 报错，Uncaught TypeError: Cannot convert a Symbol value to a string</span></span><br><span class="line"><span class="built_in">console</span>.log(<span class="string">`my symbol is <span class="subst">$&#123;s&#125;</span>`</span>);   <span class="comment">// 报错，Uncaught TypeError: Cannot convert a Symbol value to a string</span></span><br></pre></td></tr></table></figure>
+</li>
+<li><p>Symbol 值<strong>不能</strong>与其他类型的值进行运算，<strong>会报错</strong>。</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">let</span> s = <span class="title class_">Symbol</span>(<span class="string">&#x27;foo&#x27;</span>);</span><br><span class="line"><span class="variable language_">console</span>.<span class="title function_">log</span>(<span class="string">&quot;my symbol is &quot;</span> + s);  <span class="comment">// 报错，Uncaught TypeError: Cannot convert a Symbol value to a string</span></span><br><span class="line"><span class="variable language_">console</span>.<span class="title function_">log</span>(<span class="string">`my symbol is <span class="subst">$&#123;s&#125;</span>`</span>);   <span class="comment">// 报错，Uncaught TypeError: Cannot convert a Symbol value to a string</span></span><br></pre></td></tr></table></figure>
+<p>需要注意的是：Symbol值可以<strong>显示</strong>转换为字符串。</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">let</span> s = <span class="title class_">Symbol</span>(<span class="string">&#x27;foo&#x27;</span>);</span><br><span class="line"><span class="variable language_">console</span>.<span class="title function_">log</span>(<span class="title class_">String</span>(s));  <span class="comment">// &#x27;Symbol(foo)&#x27;</span></span><br><span class="line"><span class="variable language_">console</span>.<span class="title function_">log</span>(s.<span class="title function_">toString</span>());  <span class="comment">// &#x27;Symbol(foo)&#x27;</span></span><br></pre></td></tr></table></figure>
+<p>我们还需要注意一点，<strong>Symbol 值也可以转为布尔值，但是不能转为数值。</strong></p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">let</span> s = <span class="title class_">Symbol</span>(<span class="string">&#x27;foo&#x27;</span>);</span><br><span class="line"><span class="comment">// 转化为布尔值</span></span><br><span class="line"><span class="variable language_">console</span>.<span class="title function_">log</span>(<span class="title class_">Boolean</span>(s));  <span class="comment">// true</span></span><br><span class="line"><span class="variable language_">console</span>.<span class="title function_">log</span>(!s);  <span class="comment">// false</span></span><br><span class="line"><span class="comment">// 转化为数值</span></span><br><span class="line"><span class="variable language_">console</span>.<span class="title function_">log</span>(<span class="title class_">Number</span>(s));  <span class="comment">// 报错，Uncaught TypeError: Cannot convert a Symbol value to a number</span></span><br><span class="line"><span class="variable language_">console</span>.<span class="title function_">log</span>(s + <span class="number">1</span>);  <span class="comment">// 报错，Uncaught TypeError: Cannot convert a Symbol value to a number</span></span><br></pre></td></tr></table></figure>
 
 </li>
 </ol>
-<p>需要注意的是：Symbol值可以<strong>显示</strong>转换为字符串。</p>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">let</span> s = <span class="built_in">Symbol</span>(<span class="string">'foo'</span>);</span><br><span class="line"><span class="built_in">console</span>.log(<span class="built_in">String</span>(s));  <span class="comment">// 'Symbol(foo)'</span></span><br><span class="line"><span class="built_in">console</span>.log(s.toString());  <span class="comment">// 'Symbol(foo)'</span></span><br></pre></td></tr></table></figure>
-
-<p>我们还需要注意一点，<strong>Symbol 值也可以转为布尔值，但是不能转为数值。</strong></p>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">let</span> s = <span class="built_in">Symbol</span>(<span class="string">'foo'</span>);</span><br><span class="line"><span class="comment">// 转化为布尔值</span></span><br><span class="line"><span class="built_in">console</span>.log(<span class="built_in">Boolean</span>(s));  <span class="comment">// true</span></span><br><span class="line"><span class="built_in">console</span>.log(!s);  <span class="comment">// false</span></span><br><span class="line"><span class="comment">// 转化为数值</span></span><br><span class="line"><span class="built_in">console</span>.log(<span class="built_in">Number</span>(s));  <span class="comment">// 报错，Uncaught TypeError: Cannot convert a Symbol value to a number</span></span><br><span class="line"><span class="built_in">console</span>.log(s + <span class="number">1</span>);  <span class="comment">// 报错，Uncaught TypeError: Cannot convert a Symbol value to a number</span></span><br></pre></td></tr></table></figure>
-
-<h1 id="4-Symbol作为属性名的使用"><a href="#4-Symbol作为属性名的使用" class="headerlink" title="4. Symbol作为属性名的使用"></a>4. Symbol作为属性名的使用</h1><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">let</span> mySymbol1 = <span class="built_in">Symbol</span>(<span class="string">"foo1"</span>);</span><br><span class="line"><span class="keyword">let</span> mySymbol2 = <span class="built_in">Symbol</span>(<span class="string">"foo2"</span>);</span><br><span class="line"><span class="keyword">let</span> mySymbol3 = <span class="built_in">Symbol</span>(<span class="string">"foo3"</span>);</span><br><span class="line"><span class="comment">// 第一种写法</span></span><br><span class="line"><span class="keyword">let</span> a1 = &#123;&#125;;</span><br><span class="line">a1[mySymbol1] = <span class="string">'Hello!'</span>;</span><br><span class="line"><span class="built_in">console</span>.log(a1);  <span class="comment">// &#123;Symbol(foo1): "Hello!"&#125;</span></span><br><span class="line"><span class="comment">// 第二种写法</span></span><br><span class="line"><span class="keyword">let</span> a2 = &#123; [mySymbol2]: <span class="string">'Hello!'</span> &#125;;</span><br><span class="line"><span class="built_in">console</span>.log(a2);  <span class="comment">// &#123;Symbol(foo2): "Hello!"&#125;</span></span><br><span class="line"><span class="comment">// 第三种写法</span></span><br><span class="line"><span class="keyword">let</span> a3 = &#123;&#125;;</span><br><span class="line"><span class="built_in">Object</span>.defineProperty(a3, mySymbol3, &#123; <span class="attr">value</span>: <span class="string">'Hello!'</span> &#125;);</span><br><span class="line"><span class="built_in">console</span>.log(a3);  <span class="comment">// &#123;Symbol(foo3): "Hello!"&#125;</span></span><br></pre></td></tr></table></figure>
-
+<h1 id="4-Symbol作为属性名的使用"><a href="#4-Symbol作为属性名的使用" class="headerlink" title="4. Symbol作为属性名的使用"></a>4. Symbol作为属性名的使用</h1><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">let</span> mySymbol1 = <span class="title class_">Symbol</span>(<span class="string">&quot;foo1&quot;</span>);</span><br><span class="line"><span class="keyword">let</span> mySymbol2 = <span class="title class_">Symbol</span>(<span class="string">&quot;foo2&quot;</span>);</span><br><span class="line"><span class="keyword">let</span> mySymbol3 = <span class="title class_">Symbol</span>(<span class="string">&quot;foo3&quot;</span>);</span><br><span class="line"><span class="comment">// 第一种写法</span></span><br><span class="line"><span class="keyword">let</span> a1 = &#123;&#125;;</span><br><span class="line">a1[mySymbol1] = <span class="string">&#x27;Hello!&#x27;</span>;</span><br><span class="line"><span class="variable language_">console</span>.<span class="title function_">log</span>(a1);  <span class="comment">// &#123;Symbol(foo1): &quot;Hello!&quot;&#125;</span></span><br><span class="line"><span class="comment">// 第二种写法</span></span><br><span class="line"><span class="keyword">let</span> a2 = &#123; [mySymbol2]: <span class="string">&#x27;Hello!&#x27;</span> &#125;;</span><br><span class="line"><span class="variable language_">console</span>.<span class="title function_">log</span>(a2);  <span class="comment">// &#123;Symbol(foo2): &quot;Hello!&quot;&#125;</span></span><br><span class="line"><span class="comment">// 第三种写法</span></span><br><span class="line"><span class="keyword">let</span> a3 = &#123;&#125;;</span><br><span class="line"><span class="title class_">Object</span>.<span class="title function_">defineProperty</span>(a3, mySymbol3, &#123; <span class="attr">value</span>: <span class="string">&#x27;Hello!&#x27;</span> &#125;);</span><br><span class="line"><span class="variable language_">console</span>.<span class="title function_">log</span>(a3);  <span class="comment">// &#123;Symbol(foo3): &quot;Hello!&quot;&#125;</span></span><br></pre></td></tr></table></figure>
 <p>注意：在这里不可以使用<strong>点运算符</strong>，因为点运算符后面总是<strong>字符串</strong>。：</p>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">let</span> mySymbol4 = <span class="built_in">Symbol</span>(<span class="string">"foo4"</span>);</span><br><span class="line"><span class="keyword">let</span> a4 = &#123;&#125;;</span><br><span class="line">a4.mySymbol4 = <span class="string">'hello'</span>;</span><br><span class="line"><span class="built_in">console</span>.log(a4);  <span class="comment">// &#123;mySymbol4: "hello"&#125;</span></span><br></pre></td></tr></table></figure>
-
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">let</span> mySymbol4 = <span class="title class_">Symbol</span>(<span class="string">&quot;foo4&quot;</span>);</span><br><span class="line"><span class="keyword">let</span> a4 = &#123;&#125;;</span><br><span class="line">a4.<span class="property">mySymbol4</span> = <span class="string">&#x27;hello&#x27;</span>;</span><br><span class="line"><span class="variable language_">console</span>.<span class="title function_">log</span>(a4);  <span class="comment">// &#123;mySymbol4: &quot;hello&quot;&#125;</span></span><br></pre></td></tr></table></figure>
 <h1 id="5-为什么要使用Symbol"><a href="#5-为什么要使用Symbol" class="headerlink" title="5. 为什么要使用Symbol"></a>5. 为什么要使用Symbol</h1><p>说了这么久，那么我们到底为什么要使用Symbol呢？下面给大家一个场景：我们想区分两个属性，其实我们并不在意，这两个属性值究竟是什么，我们在意的是，这两个属性绝对要区分开来。比如：我们想计算不同形状的面积，由于不同形状需要用不同的计算面积的公式来进行相应的运算。当我们不使用Symbol时，代码如下所示：</p>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">let</span> shape_type = &#123;<span class="attr">rectangle</span>: <span class="string">"Rectangle"</span>&#125;;</span><br><span class="line">        <span class="function"><span class="keyword">function</span> <span class="title">showArea</span>(<span class="params">shape,selects</span>)</span>&#123;</span><br><span class="line">            <span class="keyword">let</span> area = <span class="number">0</span>;</span><br><span class="line">            <span class="keyword">switch</span>(shape)&#123;</span><br><span class="line">                <span class="keyword">case</span> shape_type.rectangle:</span><br><span class="line">                area =  selects.width * selects.height;</span><br><span class="line">                <span class="keyword">break</span>;</span><br><span class="line">            &#125;</span><br><span class="line">            <span class="keyword">return</span> area;</span><br><span class="line">        &#125;</span><br><span class="line"><span class="built_in">console</span>.log(showArea(shape_type.rectangle,&#123;<span class="attr">width</span>: <span class="number">10</span>,<span class="attr">height</span>: <span class="number">10</span>&#125;));  <span class="comment">// 10</span></span><br></pre></td></tr></table></figure>
-
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">let</span> shape_type = &#123;<span class="attr">rectangle</span>: <span class="string">&quot;Rectangle&quot;</span>&#125;;</span><br><span class="line">        <span class="keyword">function</span> <span class="title function_">showArea</span>(<span class="params">shape,selects</span>)&#123;</span><br><span class="line">            <span class="keyword">let</span> area = <span class="number">0</span>;</span><br><span class="line">            <span class="keyword">switch</span>(shape)&#123;</span><br><span class="line">                <span class="keyword">case</span> shape_type.<span class="property">rectangle</span>:</span><br><span class="line">                area =  selects.<span class="property">width</span> * selects.<span class="property">height</span>;</span><br><span class="line">                <span class="keyword">break</span>;</span><br><span class="line">            &#125;</span><br><span class="line">            <span class="keyword">return</span> area;</span><br><span class="line">        &#125;</span><br><span class="line"><span class="variable language_">console</span>.<span class="title function_">log</span>(<span class="title function_">showArea</span>(shape_type.<span class="property">rectangle</span>,&#123;<span class="attr">width</span>: <span class="number">10</span>,<span class="attr">height</span>: <span class="number">10</span>&#125;));  <span class="comment">// 10</span></span><br></pre></td></tr></table></figure>
 <p>在这里使用rectangle的名字叫做”Rectangle”，其实真正意义上我们不想对rectangle去特地的去一个名字，我们只想要区分rectangle这个形状不同于任何其他形状，那么这个时候Symbol就派上用场了。</p>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> shape_type = &#123;</span><br><span class="line">   rectangle: <span class="built_in">Symbol</span>()</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
-
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> shape_type = &#123;</span><br><span class="line">   <span class="attr">rectangle</span>: <span class="title class_">Symbol</span>()</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
 <p>也就是说，我们不用非要去给变量赋一个字符串的值，去区分它和别的变量的值不同，因为去给每个变量取个语义化而又不同的值是一件伤脑子的事，<strong>当我们只需要知道每个变量的值都是百分百不同的即可，这时候我们就可以用Symbol。</strong></p>
 
             <div class="clearfix"></div>
@@ -294,12 +288,12 @@
         </div>
         <nav class="m-pagination col-md-8 col-md-offset-2 col-sm-24" role="pagination">
     
-    <a class="pull-left" href="/2019/07/22/使用hexo来搭建博客/" style="float: left;">
+    <a class="pull-left" href="/2019/07/22/%E4%BD%BF%E7%94%A8hexo%E6%9D%A5%E6%90%AD%E5%BB%BA%E5%8D%9A%E5%AE%A2/" style="float: left;">
         ← 使用hexo来搭建博客
     </a>
     
     
-    <a class="pull-right" href="/2019/07/16/如何使用vue在循环中绑定v-mode/">
+    <a class="pull-right" href="/2019/07/16/%E5%A6%82%E4%BD%95%E4%BD%BF%E7%94%A8vue%E5%9C%A8%E5%BE%AA%E7%8E%AF%E4%B8%AD%E7%BB%91%E5%AE%9Av-mode/">
         如何使用vue在循环中绑定v-mode →
     </a>
     
@@ -368,7 +362,7 @@
                 <p>
                     &copy; 2014<script>new Date().getFullYear()>2010&&document.write("-"+new Date().getFullYear());</script>, Content By daipi173. All Rights Reserved.
                 </p>
-                <p>Theme By <a href="//go.kieran.top" style="color: #767D84">Kieran</a></p>
+                <p>Theme By <a target="_blank" rel="noopener" href="//go.kieran.top" style="color: #767D84">Kieran</a></p>
             </div>
             <div class="social">
                 <ul>

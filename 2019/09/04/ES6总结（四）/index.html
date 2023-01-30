@@ -86,29 +86,29 @@
 				    
 				    <li><a href="/categories/HTML/Chrome浏览器/" class="animsition-link">Chrome浏览器<small>(1)</small></a></li>
 				    
-				    <li><a href="/categories/JavaScript/ES6/" class="animsition-link">ES6<small>(6)</small></a></li>
-				    
 				    <li><a href="/categories/ES6/" class="animsition-link">ES6<small>(4)</small></a></li>
+				    
+				    <li><a href="/categories/JavaScript/ES6/" class="animsition-link">ES6<small>(6)</small></a></li>
 				    
 				    <li><a href="/categories/JavaScript/Vue/Eslint/" class="animsition-link">Eslint<small>(1)</small></a></li>
 				    
-				    <li><a href="/categories/总结/Git/" class="animsition-link">Git<small>(1)</small></a></li>
-				    
 				    <li><a href="/categories/Git/" class="animsition-link">Git<small>(4)</small></a></li>
+				    
+				    <li><a href="/categories/总结/Git/" class="animsition-link">Git<small>(1)</small></a></li>
 				    
 				    <li><a href="/categories/HTML/" class="animsition-link">HTML<small>(17)</small></a></li>
 				    
-				    <li><a href="/categories/ES6/JavaScript/" class="animsition-link">JavaScript<small>(4)</small></a></li>
-				    
 				    <li><a href="/categories/JavaScript/" class="animsition-link">JavaScript<small>(41)</small></a></li>
+				    
+				    <li><a href="/categories/ES6/JavaScript/" class="animsition-link">JavaScript<small>(4)</small></a></li>
 				    
 				    <li><a href="/categories/Javascript/" class="animsition-link">Javascript<small>(2)</small></a></li>
 				    
 				    <li><a href="/categories/React/" class="animsition-link">React<small>(2)</small></a></li>
 				    
-				    <li><a href="/categories/Git/Vue/" class="animsition-link">Vue<small>(1)</small></a></li>
-				    
 				    <li><a href="/categories/Vue/" class="animsition-link">Vue<small>(2)</small></a></li>
+				    
+				    <li><a href="/categories/Git/Vue/" class="animsition-link">Vue<small>(1)</small></a></li>
 				    
 				    <li><a href="/categories/JavaScript/Vue/" class="animsition-link">Vue<small>(1)</small></a></li>
 				    
@@ -120,17 +120,21 @@
 				    
 				    <li><a href="/categories/Vue/懒加载/总结/element-ui/" class="animsition-link">element ui<small>(1)</small></a></li>
 				    
+				    <li><a href="/categories/git/" class="animsition-link">git<small>(1)</small></a></li>
+				    
+				    <li><a href="/categories/ubuntu/" class="animsition-link">ubuntu<small>(3)</small></a></li>
+				    
 				    <li><a href="/categories/vue/" class="animsition-link">vue<small>(1)</small></a></li>
 				    
 				    <li><a href="/categories/webpack/" class="animsition-link">webpack<small>(2)</small></a></li>
 				    
-				    <li><a href="/categories/总结/" class="animsition-link">总结<small>(1)</small></a></li>
-				    
 				    <li><a href="/categories/JavaScript/总结/" class="animsition-link">总结<small>(2)</small></a></li>
 				    
-				    <li><a href="/categories/Vue/懒加载/总结/" class="animsition-link">总结<small>(1)</small></a></li>
+				    <li><a href="/categories/总结/" class="animsition-link">总结<small>(1)</small></a></li>
 				    
 				    <li><a href="/categories/Git/Vue/总结/" class="animsition-link">总结<small>(1)</small></a></li>
+				    
+				    <li><a href="/categories/Vue/懒加载/总结/" class="animsition-link">总结<small>(1)</small></a></li>
 				    
 				    <li><a href="/categories/Vue/懒加载/" class="animsition-link">懒加载<small>(1)</small></a></li>
 				    
@@ -148,7 +152,7 @@
                 <a class="sb-toggle-submenu">Links<span class="sb-caret"></span></a>
                 <ul class="sb-submenu">
                     
-                    <li><a href="https://daipi173.github.io/myweb/daipi173-myperson" class="animsition-link">Personal Project</a></li>
+                    <li><a target="_blank" rel="noopener" href="https://daipi173.github.io/myweb/daipi173-myperson" class="animsition-link">Personal Project</a></li>
                     
                 </ul>
             </li>
@@ -245,70 +249,44 @@
         <div class="col-md-8 col-md-offset-2">
       		<h1 id="1-类"><a href="#1-类" class="headerlink" title="1. 类"></a>1. 类</h1><ol>
 <li>JavaScript和Java关于类的区别<br>首先需要清楚JavaScript是基于<strong>原型</strong>的（连接），而Java是基于<strong>类</strong>的（复制）。</li>
-<li>类的声明<br>类声明是以class关键字开始的，然后是类的名字，剩余部分<strong>像是</strong>对象字面量的简写。<br>下面来看看JavaScript是如何定义使用类的，如下所示：<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Dog</span></span>&#123;</span><br><span class="line">	<span class="comment">// 构造函数使用constructor来定义</span></span><br><span class="line">	<span class="keyword">constructor</span>(name,age)&#123;</span><br><span class="line">		<span class="keyword">this</span>.name = name;</span><br><span class="line">		<span class="keyword">this</span>.age = age;</span><br><span class="line">	&#125;</span><br><span class="line">	bark()&#123;</span><br><span class="line">		<span class="built_in">console</span>.log(<span class="string">`我叫<span class="subst">$&#123;<span class="keyword">this</span>.name&#125;</span>`</span>);</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">const</span> lili = <span class="keyword">new</span> Dog(<span class="string">'lili'</span>,<span class="number">2</span>);</span><br></pre></td></tr></table></figure>
-
-</li>
-</ol>
-<p>上面这段代码等价于我们在没有使用ES6之前来定义类的一种写法，如下所示：</p>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">Dog</span>(<span class="params">name,age</span>)</span>&#123;</span><br><span class="line">	<span class="keyword">this</span>.name = name;</span><br><span class="line">	<span class="keyword">this</span>.age = age;</span><br><span class="line">&#125;</span><br><span class="line">Dog.prototype.bark = <span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">	<span class="built_in">console</span>.log(<span class="string">`我叫<span class="subst">$&#123;<span class="keyword">this</span>.name&#125;</span>`</span>);</span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">const</span> lili = <span class="keyword">new</span> Dog(<span class="string">'lili'</span>,<span class="number">2</span>);</span><br></pre></td></tr></table></figure>
-
-<ol start="3">
-<li>类语法注意事项<br>a. 类声明<strong>不会</strong>被提升；<br>b. 类声明中的代码都<strong>自动</strong>运行在<strong>严格模式下</strong>；<br>c. 调用类<strong>必须</strong>使用new；<br>d. 类中所有方法都是<strong>不可枚举</strong>的。<br>对于d这一点，我举一个简单的例子，就拿上面的两段代码来说，第一段代码是使用class来定义的类，使用的是ES6中的语法，此时我们来枚举一下它的属性，如下所示：（此时我们会发现bark方法并没有枚举出来）<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">for</span>(<span class="keyword">var</span> prop <span class="keyword">in</span> lili)&#123;</span><br><span class="line">	<span class="built_in">console</span>.log(prop); <span class="comment">// name age</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-</li>
-</ol>
-<p>如果我们使用的是function来定义类，即ES6之前的语法，然后我们再来枚举它的属性，将会得到不同的结果，如下所示：（此时我们会发现bark方法被枚举出来了）</p>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">for</span>(<span class="keyword">var</span> prop <span class="keyword">in</span> lili)&#123;</span><br><span class="line">	<span class="built_in">console</span>.log(prop); <span class="comment">// name age bark</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<p>e. 类中的方法是<strong>不能</strong>用new调用的；<br>f. 在类的方法中<strong>重写类名报错</strong>。</p>
-<ol start="4">
-<li><p>写”use strict”表明下面代码都是使用严格模式</p>
-</li>
-<li><p>类的表达式<br>如下所示：</p>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> Cat = <span class="class"><span class="keyword">class</span></span>&#123; <span class="comment">// 类表达式</span></span><br><span class="line">	<span class="keyword">constructor</span>(age)&#123;</span><br><span class="line">		<span class="keyword">this</span>.age = age;</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">const</span> a = <span class="keyword">new</span> Cat(<span class="number">1</span>);</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>类为一等公民<br>a. 可以作为参数传给函数；<br>b. 能作为函数返回值；<br>c. 能给变量赋值。</p>
-</li>
-<li><p>静态成员<br>一般来说都是静态方法（static）。<br>什么是静态方法？类相当于实例的原型，所有在类中定义的方法，都会被实例继承。如果在一个方法前加上static关键字，就表示该方法不会被实例继承，而是<strong>直接通过类来调用</strong>，这就称为“静态方法”。<br>总结一下：通过”<strong>构造函数.</strong>“的这种形式就叫静态方法。<br>下面给大家举一个例子，如下所示：</p>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Foo</span></span>&#123;</span><br><span class="line">	<span class="keyword">static</span> classMethod()&#123; <span class="comment">// 静态方法</span></span><br><span class="line">		<span class="keyword">return</span> <span class="string">"hello"</span>;</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br><span class="line">Foo.classMethod(); <span class="comment">// 正确调用，打印出hello</span></span><br><span class="line"><span class="keyword">var</span> foo = <span class="keyword">new</span> Foo();</span><br><span class="line">foo.classMethod(); <span class="comment">// 错误调用，报错</span></span><br></pre></td></tr></table></figure>
+<li>类的声明<br>类声明是以class关键字开始的，然后是类的名字，剩余部分<strong>像是</strong>对象字面量的简写。<br>下面来看看JavaScript是如何定义使用类的，如下所示：<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">class</span> <span class="title class_">Dog</span>&#123;</span><br><span class="line">	<span class="comment">// 构造函数使用constructor来定义</span></span><br><span class="line">	<span class="title function_">constructor</span>(<span class="params">name,age</span>)&#123;</span><br><span class="line">		<span class="variable language_">this</span>.<span class="property">name</span> = name;</span><br><span class="line">		<span class="variable language_">this</span>.<span class="property">age</span> = age;</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="title function_">bark</span>(<span class="params"></span>)&#123;</span><br><span class="line">		<span class="variable language_">console</span>.<span class="title function_">log</span>(<span class="string">`我叫<span class="subst">$&#123;<span class="variable language_">this</span>.name&#125;</span>`</span>);</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">const</span> lili = <span class="keyword">new</span> <span class="title class_">Dog</span>(<span class="string">&#x27;lili&#x27;</span>,<span class="number">2</span>);</span><br></pre></td></tr></table></figure>
+上面这段代码等价于我们在没有使用ES6之前来定义类的一种写法，如下所示：<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">function</span> <span class="title function_">Dog</span>(<span class="params">name,age</span>)&#123;</span><br><span class="line">	<span class="variable language_">this</span>.<span class="property">name</span> = name;</span><br><span class="line">	<span class="variable language_">this</span>.<span class="property">age</span> = age;</span><br><span class="line">&#125;</span><br><span class="line"><span class="title class_">Dog</span>.<span class="property"><span class="keyword">prototype</span></span>.<span class="property">bark</span> = <span class="keyword">function</span>(<span class="params"></span>)&#123;</span><br><span class="line">	<span class="variable language_">console</span>.<span class="title function_">log</span>(<span class="string">`我叫<span class="subst">$&#123;<span class="variable language_">this</span>.name&#125;</span>`</span>);</span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">const</span> lili = <span class="keyword">new</span> <span class="title class_">Dog</span>(<span class="string">&#x27;lili&#x27;</span>,<span class="number">2</span>);</span><br></pre></td></tr></table></figure></li>
+<li>类语法注意事项<br>a. 类声明<strong>不会</strong>被提升；<br>b. 类声明中的代码都<strong>自动</strong>运行在<strong>严格模式下</strong>；<br>c. 调用类<strong>必须</strong>使用new；<br>d. 类中所有方法都是<strong>不可枚举</strong>的。<br>对于d这一点，我举一个简单的例子，就拿上面的两段代码来说，第一段代码是使用class来定义的类，使用的是ES6中的语法，此时我们来枚举一下它的属性，如下所示：（此时我们会发现bark方法并没有枚举出来）<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">for</span>(<span class="keyword">var</span> prop <span class="keyword">in</span> lili)&#123;</span><br><span class="line">	<span class="variable language_">console</span>.<span class="title function_">log</span>(prop); <span class="comment">// name age</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+如果我们使用的是function来定义类，即ES6之前的语法，然后我们再来枚举它的属性，将会得到不同的结果，如下所示：（此时我们会发现bark方法被枚举出来了）<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">for</span>(<span class="keyword">var</span> prop <span class="keyword">in</span> lili)&#123;</span><br><span class="line">	<span class="variable language_">console</span>.<span class="title function_">log</span>(prop); <span class="comment">// name age bark</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+e. 类中的方法是<strong>不能</strong>用new调用的；<br>f. 在类的方法中<strong>重写类名报错</strong>。</li>
+<li>写”use strict”表明下面代码都是使用严格模式</li>
+<li>类的表达式<br>如下所示：<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> <span class="title class_">Cat</span> = <span class="keyword">class</span>&#123; <span class="comment">// 类表达式</span></span><br><span class="line">	<span class="title function_">constructor</span>(<span class="params">age</span>)&#123;</span><br><span class="line">		<span class="variable language_">this</span>.<span class="property">age</span> = age;</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">const</span> a = <span class="keyword">new</span> <span class="title class_">Cat</span>(<span class="number">1</span>);</span><br></pre></td></tr></table></figure></li>
+<li>类为一等公民<br>a. 可以作为参数传给函数；<br>b. 能作为函数返回值；<br>c. 能给变量赋值。</li>
+<li>静态成员<br>一般来说都是静态方法（static）。<br>什么是静态方法？类相当于实例的原型，所有在类中定义的方法，都会被实例继承。如果在一个方法前加上static关键字，就表示该方法不会被实例继承，而是<strong>直接通过类来调用</strong>，这就称为“静态方法”。<br>总结一下：通过”<strong>构造函数.</strong>“的这种形式就叫静态方法。<br>下面给大家举一个例子，如下所示：<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">class</span> <span class="title class_">Foo</span>&#123;</span><br><span class="line">	<span class="keyword">static</span> <span class="title function_">classMethod</span>(<span class="params"></span>)&#123; <span class="comment">// 静态方法</span></span><br><span class="line">		<span class="keyword">return</span> <span class="string">&quot;hello&quot;</span>;</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br><span class="line"><span class="title class_">Foo</span>.<span class="title function_">classMethod</span>(); <span class="comment">// 正确调用，打印出hello</span></span><br><span class="line"><span class="keyword">var</span> foo = <span class="keyword">new</span> <span class="title class_">Foo</span>();</span><br><span class="line">foo.<span class="title function_">classMethod</span>(); <span class="comment">// 错误调用，报错</span></span><br></pre></td></tr></table></figure>
 
 </li>
 </ol>
 <h1 id="2-类的继承"><a href="#2-类的继承" class="headerlink" title="2. 类的继承"></a>2. 类的继承</h1><ol>
-<li><p>ES6中class继承extends以及super的使用。我们需要注意<strong>静态方法的继承，子类会继承父类的静态方法。</strong><br>举一个例子，如下所示：</p>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Foo</span></span>&#123;</span><br><span class="line">	<span class="keyword">static</span> classMethod()&#123;</span><br><span class="line">		<span class="keyword">return</span> <span class="string">'hello'</span>;</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Bar</span> <span class="keyword">extends</span> <span class="title">Foo</span></span>&#123;&#125; <span class="comment">// Bar继承Foo</span></span><br><span class="line"><span class="comment">// 其原因就是因为父类的静态方法，可以被子类继承</span></span><br><span class="line">Bar.classMethod(); <span class="comment">// 'hello'</span></span><br></pre></td></tr></table></figure>
-</li>
-<li><p>静态方法也是可以从super对象上调用的<br>下面给大家举一个例子，如下所示：</p>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Foo</span></span>&#123;</span><br><span class="line">	<span class="keyword">static</span> classMethod()&#123;</span><br><span class="line">		<span class="keyword">return</span> <span class="string">'hello'</span>;</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Bar</span> <span class="keyword">extends</span> <span class="title">Foo</span></span>&#123;</span><br><span class="line">	<span class="keyword">static</span> classMethod()&#123;</span><br><span class="line">		<span class="keyword">return</span> <span class="keyword">super</span>.classMethod() + <span class="string">',too'</span>;</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br><span class="line">Bar.classMethod(); <span class="comment">// 'hello,too'</span></span><br></pre></td></tr></table></figure>
-</li>
-<li><p><strong>重点：关于new做的事情？</strong><br>new做的一件事就是改变this指向，会创建一个新对象，然后this指向这个新对象。子类比较特殊，你new他的时候，如果不执行super方法，this就不会指向一个新对象。必须要执行super，然后创建一个新对象，让this指向他，先去父亲那逛一圈，然后回来。<br>对于上面说了那么大一段话，我来总结一下，就一句话：<strong>子类，你new他this不会指向任何东西，只有你调用super的时候，才创建一个新对象，然后this指向他。</strong></p>
-</li>
+<li>ES6中class继承extends以及super的使用。我们需要注意<strong>静态方法的继承，子类会继承父类的静态方法。</strong><br>举一个例子，如下所示：<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">class</span> <span class="title class_">Foo</span>&#123;</span><br><span class="line">	<span class="keyword">static</span> <span class="title function_">classMethod</span>(<span class="params"></span>)&#123;</span><br><span class="line">		<span class="keyword">return</span> <span class="string">&#x27;hello&#x27;</span>;</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">class</span> <span class="title class_">Bar</span> <span class="keyword">extends</span> <span class="title class_ inherited__">Foo</span>&#123;&#125; <span class="comment">// Bar继承Foo</span></span><br><span class="line"><span class="comment">// 其原因就是因为父类的静态方法，可以被子类继承</span></span><br><span class="line"><span class="title class_">Bar</span>.<span class="title function_">classMethod</span>(); <span class="comment">// &#x27;hello&#x27;</span></span><br></pre></td></tr></table></figure></li>
+<li>静态方法也是可以从super对象上调用的<br>下面给大家举一个例子，如下所示：<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">class</span> <span class="title class_">Foo</span>&#123;</span><br><span class="line">	<span class="keyword">static</span> <span class="title function_">classMethod</span>(<span class="params"></span>)&#123;</span><br><span class="line">		<span class="keyword">return</span> <span class="string">&#x27;hello&#x27;</span>;</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">class</span> <span class="title class_">Bar</span> <span class="keyword">extends</span> <span class="title class_ inherited__">Foo</span>&#123;</span><br><span class="line">	<span class="keyword">static</span> <span class="title function_">classMethod</span>(<span class="params"></span>)&#123;</span><br><span class="line">		<span class="keyword">return</span> <span class="variable language_">super</span>.<span class="title function_">classMethod</span>() + <span class="string">&#x27;,too&#x27;</span>;</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br><span class="line"><span class="title class_">Bar</span>.<span class="title function_">classMethod</span>(); <span class="comment">// &#x27;hello,too&#x27;</span></span><br></pre></td></tr></table></figure></li>
+<li><strong>重点：关于new做的事情？</strong><br>new做的一件事就是改变this指向，会创建一个新对象，然后this指向这个新对象。子类比较特殊，你new他的时候，如果不执行super方法，this就不会指向一个新对象。必须要执行super，然后创建一个新对象，让this指向他，先去父亲那逛一圈，然后回来。<br>对于上面说了那么大一段话，我来总结一下，就一句话：<strong>子类，你new他this不会指向任何东西，只有你调用super的时候，才创建一个新对象，然后this指向他。</strong></li>
 </ol>
 <h1 id="3-模块化"><a href="#3-模块化" class="headerlink" title="3. 模块化"></a>3. 模块化</h1><ol>
 <li><strong>在ES5标准之前是没有模块化的</strong></li>
-<li>在这里<strong>立即执行函数</strong>去写一个模块的问题：<br>a. 没有完全解决全局变量污染；<br>举一个例子，如下所示：<br>在add.js文件中写入：<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">(<span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">	<span class="function"><span class="keyword">function</span> <span class="title">show</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">		<span class="built_in">console</span>.log(<span class="number">111</span>);</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="function"><span class="keyword">function</span> <span class="title">add</span>(<span class="params">a,b</span>)</span>&#123;</span><br><span class="line">		show();</span><br><span class="line">		<span class="keyword">return</span> a + b;</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="built_in">window</span>.add = add;</span><br><span class="line">&#125;)()</span><br></pre></td></tr></table></figure>
-
-</li>
-</ol>
-<p>b. 我们需要考虑script标签加载顺序。</p>
-<ol start="3">
+<li>在这里<strong>立即执行函数</strong>去写一个模块的问题：<br>a. 没有完全解决全局变量污染；<br>举一个例子，如下所示：<br>在add.js文件中写入：<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">(<span class="keyword">function</span>(<span class="params"></span>)&#123;</span><br><span class="line">	<span class="keyword">function</span> <span class="title function_">show</span>(<span class="params"></span>)&#123;</span><br><span class="line">		<span class="variable language_">console</span>.<span class="title function_">log</span>(<span class="number">111</span>);</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="keyword">function</span> <span class="title function_">add</span>(<span class="params">a,b</span>)&#123;</span><br><span class="line">		<span class="title function_">show</span>();</span><br><span class="line">		<span class="keyword">return</span> a + b;</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="variable language_">window</span>.<span class="property">add</span> = add;</span><br><span class="line">&#125;)()</span><br></pre></td></tr></table></figure>
+b. 我们需要考虑script标签加载顺序。</li>
 <li>在node.js环境中，js文件之间是没有关系的，也就是说每个js都是一个独立的作用域</li>
 <li>es6当中只是定义了语法，但是没有定义我们的加载顺序<br>不直接去使用es6模块化，因为：a. 浏览器兼容性问题；b. 没有定义我们的加载方式。</li>
 <li>模块化的定义和写法</li>
 </ol>
 <p><strong>注意：如果你想引入模块的话，需要将所有东西放到服务器上。</strong><br>服务器下载：window可以下载一个wamp软件，mac可以下载一个mamp软件。<br>举一个例子，如下所示：</p>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// type="text/javascript"表示共享一个全局作用域</span></span><br><span class="line"><span class="comment">// type="module"表示你引入的是模块</span></span><br><span class="line"><span class="comment">// 注意：此时我们应该开一个服务器</span></span><br><span class="line"></span><br><span class="line">	<span class="comment">// 在这里面可以引入内容，如</span></span><br><span class="line">	<span class="comment">// import &#123;add&#125; from "./add.js"</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// type=&quot;text/javascript&quot;表示共享一个全局作用域</span></span><br><span class="line"><span class="comment">// type=&quot;module&quot;表示你引入的是模块</span></span><br><span class="line"><span class="comment">// 注意：此时我们应该开一个服务器</span></span><br><span class="line"></span><br><span class="line">	<span class="comment">// 在这里面可以引入内容，如</span></span><br><span class="line">	<span class="comment">// import &#123;add&#125; from &quot;./add.js&quot;</span></span><br><span class="line"></span><br></pre></td></tr></table></figure>
             <div class="clearfix"></div>
             <hr class="nogutter">
         </div>
         <nav class="m-pagination col-md-8 col-md-offset-2 col-sm-24" role="pagination">
     
-    <a class="pull-left" href="/2019/09/08/ES6总结（五）/" style="float: left;">
+    <a class="pull-left" href="/2019/09/08/ES6%E6%80%BB%E7%BB%93%EF%BC%88%E4%BA%94%EF%BC%89/" style="float: left;">
         ← ES6总结（五）
     </a>
     
     
-    <a class="pull-right" href="/2019/09/01/ES6总结（三）/">
+    <a class="pull-right" href="/2019/09/01/ES6%E6%80%BB%E7%BB%93%EF%BC%88%E4%B8%89%EF%BC%89/">
         ES6总结（三） →
     </a>
     
@@ -377,7 +355,7 @@
                 <p>
                     &copy; 2014<script>new Date().getFullYear()>2010&&document.write("-"+new Date().getFullYear());</script>, Content By daipi173. All Rights Reserved.
                 </p>
-                <p>Theme By <a href="//go.kieran.top" style="color: #767D84">Kieran</a></p>
+                <p>Theme By <a target="_blank" rel="noopener" href="//go.kieran.top" style="color: #767D84">Kieran</a></p>
             </div>
             <div class="social">
                 <ul>

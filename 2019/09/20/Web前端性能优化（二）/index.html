@@ -86,29 +86,29 @@
 				    
 				    <li><a href="/categories/HTML/Chrome浏览器/" class="animsition-link">Chrome浏览器<small>(1)</small></a></li>
 				    
-				    <li><a href="/categories/JavaScript/ES6/" class="animsition-link">ES6<small>(6)</small></a></li>
-				    
 				    <li><a href="/categories/ES6/" class="animsition-link">ES6<small>(4)</small></a></li>
+				    
+				    <li><a href="/categories/JavaScript/ES6/" class="animsition-link">ES6<small>(6)</small></a></li>
 				    
 				    <li><a href="/categories/JavaScript/Vue/Eslint/" class="animsition-link">Eslint<small>(1)</small></a></li>
 				    
-				    <li><a href="/categories/总结/Git/" class="animsition-link">Git<small>(1)</small></a></li>
-				    
 				    <li><a href="/categories/Git/" class="animsition-link">Git<small>(4)</small></a></li>
+				    
+				    <li><a href="/categories/总结/Git/" class="animsition-link">Git<small>(1)</small></a></li>
 				    
 				    <li><a href="/categories/HTML/" class="animsition-link">HTML<small>(17)</small></a></li>
 				    
-				    <li><a href="/categories/ES6/JavaScript/" class="animsition-link">JavaScript<small>(4)</small></a></li>
-				    
 				    <li><a href="/categories/JavaScript/" class="animsition-link">JavaScript<small>(41)</small></a></li>
+				    
+				    <li><a href="/categories/ES6/JavaScript/" class="animsition-link">JavaScript<small>(4)</small></a></li>
 				    
 				    <li><a href="/categories/Javascript/" class="animsition-link">Javascript<small>(2)</small></a></li>
 				    
 				    <li><a href="/categories/React/" class="animsition-link">React<small>(2)</small></a></li>
 				    
-				    <li><a href="/categories/Git/Vue/" class="animsition-link">Vue<small>(1)</small></a></li>
-				    
 				    <li><a href="/categories/Vue/" class="animsition-link">Vue<small>(2)</small></a></li>
+				    
+				    <li><a href="/categories/Git/Vue/" class="animsition-link">Vue<small>(1)</small></a></li>
 				    
 				    <li><a href="/categories/JavaScript/Vue/" class="animsition-link">Vue<small>(1)</small></a></li>
 				    
@@ -120,17 +120,21 @@
 				    
 				    <li><a href="/categories/Vue/懒加载/总结/element-ui/" class="animsition-link">element ui<small>(1)</small></a></li>
 				    
+				    <li><a href="/categories/git/" class="animsition-link">git<small>(1)</small></a></li>
+				    
+				    <li><a href="/categories/ubuntu/" class="animsition-link">ubuntu<small>(3)</small></a></li>
+				    
 				    <li><a href="/categories/vue/" class="animsition-link">vue<small>(1)</small></a></li>
 				    
 				    <li><a href="/categories/webpack/" class="animsition-link">webpack<small>(2)</small></a></li>
 				    
-				    <li><a href="/categories/总结/" class="animsition-link">总结<small>(1)</small></a></li>
-				    
 				    <li><a href="/categories/JavaScript/总结/" class="animsition-link">总结<small>(2)</small></a></li>
 				    
-				    <li><a href="/categories/Vue/懒加载/总结/" class="animsition-link">总结<small>(1)</small></a></li>
+				    <li><a href="/categories/总结/" class="animsition-link">总结<small>(1)</small></a></li>
 				    
 				    <li><a href="/categories/Git/Vue/总结/" class="animsition-link">总结<small>(1)</small></a></li>
+				    
+				    <li><a href="/categories/Vue/懒加载/总结/" class="animsition-link">总结<small>(1)</small></a></li>
 				    
 				    <li><a href="/categories/Vue/懒加载/" class="animsition-link">懒加载<small>(1)</small></a></li>
 				    
@@ -148,7 +152,7 @@
                 <a class="sb-toggle-submenu">Links<span class="sb-caret"></span></a>
                 <ul class="sb-submenu">
                     
-                    <li><a href="https://daipi173.github.io/myweb/daipi173-myperson" class="animsition-link">Personal Project</a></li>
+                    <li><a target="_blank" rel="noopener" href="https://daipi173.github.io/myweb/daipi173-myperson" class="animsition-link">Personal Project</a></li>
                     
                 </ul>
             </li>
@@ -256,7 +260,7 @@
 <p><strong>注意：</strong>对于大部分的场景都可以使用强缓存配合协商缓存解决，但是在一些特殊的地方可能需要选择特殊的缓存策略：<br>a. 对于某些不需要缓存的资源，可以使用cache-control:no-store，表示该资源不需要缓存；<br>b. 对于频繁变动的资源，可以使用cache-control:no-cache并配合ETag使用，表示该资源已被缓存，但是每次都会发送请求询问资源是否更新；<br>c. 对于代码文件来说，通常使用cache-control:max-age=31536000并配合缓存策略使用，然后对文件进行指纹处理，一旦文件名改动就会立刻下载新的文件。</p>
 <ol start="2">
 <li>使用HTTP/2.0<br>因为浏览器会有<strong>并发请求限制</strong>，在HTTP/1.1时代，每个请求都需要建立和断开，消耗了好几个RTT（Round-Trip Time，即往返时延）时间，并且由于TCP慢启动的原因，加载体积大的文件会需要更多的时间。<br>在HTTP/2.0中引入了<strong>多路复用</strong>，能够让多个请求使用同一个TCP链接，极大的加快了网页的加载速度。并且还支持Header压缩，进一步的减少了请求的数据大小。</li>
-<li>预加载<br>开发中，可能会遇到这样的情况：有些资源不需要马上用到，但是希望尽早获取，这个时候就可以使用预加载。<br>预加载其实是声明式的fetch（fetch是浏览器提供的原生 AJAX 接口。给大家一个链接：<a href="https://blog.csdn.net/crystal6918/article/details/53318194" target="_blank" rel="noopener">https://blog.csdn.net/crystal6918/article/details/53318194</a> ），强制浏览器请求资源，并且不会阻塞onload事件，可以使用以下代码开启预加载：<br>``</li>
+<li>预加载<br>开发中，可能会遇到这样的情况：有些资源不需要马上用到，但是希望尽早获取，这个时候就可以使用预加载。<br>预加载其实是声明式的fetch（fetch是浏览器提供的原生 AJAX 接口。给大家一个链接：<a target="_blank" rel="noopener" href="https://blog.csdn.net/crystal6918/article/details/53318194">https://blog.csdn.net/crystal6918/article/details/53318194</a> ），强制浏览器请求资源，并且不会阻塞onload事件，可以使用以下代码开启预加载：<br>``</li>
 <li>预渲染<br>以通过预渲染将下载的文件预先在后台渲染，可以使用以下代码开启预渲染：``<br>预渲染虽然可以提高页面的加载速度，但是要确保该页面<strong>百分百会被用户在之后打开</strong>，否则就白白的浪费资源去渲染。</li>
 </ol>
 <h1 id="3-构建工具"><a href="#3-构建工具" class="headerlink" title="3. 构建工具"></a>3. 构建工具</h1><p>使用webpack优化项目：<br>a. 对于webpack4，打包项目使用production模式，这样会自动开启<strong>代码压缩</strong>；<br>b. 使用ES6模块来开启tree shaking，这个技术可以<strong>移除没有使用的代码</strong>；<br>c. 优化图片，对于小图可以使用base64的方式写入文件中；<br>d. 按照<strong>路由</strong>拆分代码，实现<strong>按需加载</strong>；<br>e. 给打包出来的文件名添加哈希，实现浏览器缓存文件。</p>
@@ -266,12 +270,12 @@
         </div>
         <nav class="m-pagination col-md-8 col-md-offset-2 col-sm-24" role="pagination">
     
-    <a class="pull-left" href="/2019/09/25/跨域方式总结/" style="float: left;">
+    <a class="pull-left" href="/2019/09/25/%E8%B7%A8%E5%9F%9F%E6%96%B9%E5%BC%8F%E6%80%BB%E7%BB%93/" style="float: left;">
         ← 跨域方式总结
     </a>
     
     
-    <a class="pull-right" href="/2019/09/17/Web前端性能优化（一）/">
+    <a class="pull-right" href="/2019/09/17/Web%E5%89%8D%E7%AB%AF%E6%80%A7%E8%83%BD%E4%BC%98%E5%8C%96%EF%BC%88%E4%B8%80%EF%BC%89/">
         Web前端性能优化（一） →
     </a>
     
@@ -340,7 +344,7 @@
                 <p>
                     &copy; 2014<script>new Date().getFullYear()>2010&&document.write("-"+new Date().getFullYear());</script>, Content By daipi173. All Rights Reserved.
                 </p>
-                <p>Theme By <a href="//go.kieran.top" style="color: #767D84">Kieran</a></p>
+                <p>Theme By <a target="_blank" rel="noopener" href="//go.kieran.top" style="color: #767D84">Kieran</a></p>
             </div>
             <div class="social">
                 <ul>

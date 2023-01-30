@@ -1,0 +1,461 @@
+<!DOCTYPE html>
+<!--[if lte IE 8 ]>
+<html class="ie" xmlns="http://www.w3.org/1999/xhtml" xml:lang="en-US" lang="en-US">
+<![endif]-->
+<!--[if (gte IE 9)|!(IE)]><!-->
+<!--
+***************  *      *     *
+      8          *    *       *
+      8          *  *         *
+      8          **           *
+      8          *  *         *
+      8          *    *       *
+      8          *      *     *
+      8          *        *   ***********    -----Theme By Kieran(http://go.kieran.top)
+-->
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="zh-CN" lang="zh-CN">
+<!--<![endif]-->
+
+<head>
+  <title>工作篇——ubuntu相关的安装（一） | daipi173的个人博客</title>
+  <!-- Meta data -->
+    <meta http-equiv="Content-Type" content="text/html" charset="UTF-8" >
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="generator" content="daipi173的个人博客">
+    <meta name="author" content="daipi173">
+    <meta name="description" content="" />
+    <meta name="keywords" content="" />
+
+    <!-- Favicon, (keep icon in root folder) -->
+    <link rel="Shortcut Icon" href="/img/favicon.ico" type="image/ico">
+
+    <link rel="alternate" href="/atom.xml" title="daipi173的个人博客" type="application/atom+xml">
+    <link rel="stylesheet" href="/css/all.css" media="screen" type="text/css">
+    
+    <link rel="stylesheet" href="/highlightjs/vs.css" type="text/css">
+    
+
+    <!--[if IE 8]>
+    <link rel="stylesheet" type="text/css" href="/css/ie8.css" />
+    <![endif]-->
+
+    <!-- jQuery | Load our jQuery, with an alternative source fallback to a local version if request is unavailable -->
+    <script src="/js/jquery-1.11.1.min.js"></script>
+    <script>window.jQuery || document.write('<script src="js/jquery-1.11.1.min.js"><\/script>')</script>
+
+    <!-- Load these in the <head> for quicker IE8+ load times -->
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+    <script src="/js/html5shiv.min.js"></script>
+    <script src="/js/respond.min.js"></script>
+    <![endif]-->
+
+  
+  
+  
+
+  <style>.col-md-8.col-md-offset-2.opening-statement img{display:none;}</style>
+</head>
+
+<!--
+<body class="post-template">
+-->
+<body id="index" class="lightnav animsition">
+
+      <!-- ============================ Off-canvas navigation =========================== -->
+
+    <div class="sb-slidebar sb-right sb-style-overlay sb-momentum-scrolling">
+        <div class="sb-close" aria-label="Close Menu" aria-hidden="true">
+            <img src="/img/close.png" alt="Close"/>
+        </div>
+        <!-- Lists in Slidebars -->
+        <ul class="sb-menu">
+            <li><a href="/" class="animsition-link" title="Home">Home</a></li>
+            <li><a href="/archives" class="animsition-link" title="archive">archives</a></li>
+            <!-- Dropdown Menu -->
+			 
+            
+        	<li>
+        		<a class="sb-toggle-submenu">Categories<span class="sb-caret"></span></a>
+            	<ul class="sb-submenu">
+				  	
+				    <li><a href="/categories/JavaScript/Array/" class="animsition-link">Array<small>(1)</small></a></li>
+				    
+				    <li><a href="/categories/HTML/CSS/" class="animsition-link">CSS<small>(4)</small></a></li>
+				    
+				    <li><a href="/categories/HTML/Chrome浏览器/" class="animsition-link">Chrome浏览器<small>(1)</small></a></li>
+				    
+				    <li><a href="/categories/ES6/" class="animsition-link">ES6<small>(4)</small></a></li>
+				    
+				    <li><a href="/categories/JavaScript/ES6/" class="animsition-link">ES6<small>(6)</small></a></li>
+				    
+				    <li><a href="/categories/JavaScript/Vue/Eslint/" class="animsition-link">Eslint<small>(1)</small></a></li>
+				    
+				    <li><a href="/categories/Git/" class="animsition-link">Git<small>(4)</small></a></li>
+				    
+				    <li><a href="/categories/总结/Git/" class="animsition-link">Git<small>(1)</small></a></li>
+				    
+				    <li><a href="/categories/HTML/" class="animsition-link">HTML<small>(17)</small></a></li>
+				    
+				    <li><a href="/categories/JavaScript/" class="animsition-link">JavaScript<small>(41)</small></a></li>
+				    
+				    <li><a href="/categories/ES6/JavaScript/" class="animsition-link">JavaScript<small>(4)</small></a></li>
+				    
+				    <li><a href="/categories/Javascript/" class="animsition-link">Javascript<small>(2)</small></a></li>
+				    
+				    <li><a href="/categories/React/" class="animsition-link">React<small>(2)</small></a></li>
+				    
+				    <li><a href="/categories/Vue/" class="animsition-link">Vue<small>(2)</small></a></li>
+				    
+				    <li><a href="/categories/Git/Vue/" class="animsition-link">Vue<small>(1)</small></a></li>
+				    
+				    <li><a href="/categories/JavaScript/Vue/" class="animsition-link">Vue<small>(1)</small></a></li>
+				    
+				    <li><a href="/categories/React/Webpack/" class="animsition-link">Webpack<small>(1)</small></a></li>
+				    
+				    <li><a href="/categories/React/antd/" class="animsition-link">antd<small>(1)</small></a></li>
+				    
+				    <li><a href="/categories/React/antd/css局部样式/" class="animsition-link">css局部样式<small>(1)</small></a></li>
+				    
+				    <li><a href="/categories/Vue/懒加载/总结/element-ui/" class="animsition-link">element ui<small>(1)</small></a></li>
+				    
+				    <li><a href="/categories/git/" class="animsition-link">git<small>(1)</small></a></li>
+				    
+				    <li><a href="/categories/ubuntu/" class="animsition-link">ubuntu<small>(3)</small></a></li>
+				    
+				    <li><a href="/categories/vue/" class="animsition-link">vue<small>(1)</small></a></li>
+				    
+				    <li><a href="/categories/webpack/" class="animsition-link">webpack<small>(2)</small></a></li>
+				    
+				    <li><a href="/categories/JavaScript/总结/" class="animsition-link">总结<small>(2)</small></a></li>
+				    
+				    <li><a href="/categories/总结/" class="animsition-link">总结<small>(1)</small></a></li>
+				    
+				    <li><a href="/categories/Git/Vue/总结/" class="animsition-link">总结<small>(1)</small></a></li>
+				    
+				    <li><a href="/categories/Vue/懒加载/总结/" class="animsition-link">总结<small>(1)</small></a></li>
+				    
+				    <li><a href="/categories/Vue/懒加载/" class="animsition-link">懒加载<small>(1)</small></a></li>
+				    
+				    <li><a href="/categories/JavaScript/Array/扁平化/" class="animsition-link">扁平化<small>(1)</small></a></li>
+				    
+				    <li><a href="/categories/JavaScript/整数存储相加/" class="animsition-link">整数存储相加<small>(1)</small></a></li>
+				    
+				    <li><a href="/categories/Javascript/算法/" class="animsition-link">算法<small>(1)</small></a></li>
+				    
+				</ul>
+        	</li>
+			
+            
+            <li>
+                <a class="sb-toggle-submenu">Links<span class="sb-caret"></span></a>
+                <ul class="sb-submenu">
+                    
+                    <li><a target="_blank" rel="noopener" href="https://daipi173.github.io/myweb/daipi173-myperson" class="animsition-link">Personal Project</a></li>
+                    
+                </ul>
+            </li>
+            
+        </ul>
+        <!-- Lists in Slidebars -->
+        <ul class="sb-menu secondary">
+            
+            <li><a href="/about.html" class="animsition-link" title="about">About</a></li>
+            <li><a href="/atom.xml" class="animsition-link" title="rss">RSS</a></li>
+        </ul>
+    </div>
+    
+    <!-- ============================ END Off-canvas navigation =========================== -->
+
+    <!-- ============================ #sb-site Main Page Wrapper =========================== -->
+
+    <div id="sb-site">
+        <!-- #sb-site - All page content should be contained within this id, except the off-canvas navigation itself -->
+
+        <!-- ============================ Header & Logo bar =========================== -->
+
+        <div id="navigation" class="navbar navbar-fixed-top">
+            <div class="navbar-inner">
+                <div class="container">
+                    <!-- Nav logo -->
+                    <div class="logo">
+                        <a href="/" title="Logo" class="animsition-link">
+                         <img src="/img/logo.png" alt="Logo" width="35px;"/> 
+                        </a>
+                    </div>
+                    <!-- // Nav logo -->
+                    <!-- Info-bar -->
+                    <nav>
+                        <ul class="nav">
+                            <li><a href="/" class="animsition-link">daipi173的个人博客</a></li>
+                            <li class="nolink"><span>Always </span>Creative.</li>
+                            
+                            <li><a href="https://github.com/" title="Github" target="_blank"><i class="icon-github"></i></a></li>
+                            
+                            
+                            <li><a href="https://twitter.com/" title="Twitter" target="_blank"><i class="icon-twitter"></i></a></li>
+                            
+                            
+                            <li><a href="https://www.facebook.com/" title="Facebook" target="_blank"><i class="icon-facebook"></i></a></li>
+                            
+                            
+                            <li><a href="https://google.com/" title="Google-Plus" target="_blank"><i class="icon-google-plus"></i></a></li>
+                            
+                            
+                            <li><a href="http://weibo.com/" title="Sina-Weibo" target="_blank"><i class="icon-sina-weibo"></i></a></li>
+                            
+                            <li class="nolink"><span>Welcome!</span></li>
+                        </ul>
+                    </nav>
+                    <!--// Info-bar -->
+                </div>
+                <!-- // .container -->
+                <div class="learnmore sb-toggle-right">More</div>
+                <button type="button" class="navbar-toggle menu-icon sb-toggle-right" title="More">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar before"></span>
+                <span class="icon-bar main"></span>
+                <span class="icon-bar after"></span>
+                </button>
+            </div>
+            <!-- // .navbar-inner -->
+        </div>
+
+        <!-- ============================ Header & Logo bar =========================== -->
+
+
+      
+<section id="intro">
+    <div class="container">
+        <div class="row col-md-offset-2">
+            <div class="col-md-8">
+    			<span class="post-meta">
+      <time datetime="2020-07-14T07:09:00.000Z" itemprop="datePublished">
+          2020-07-14
+      </time>
+    
+    
+    | 
+    <a href='/tags/ubuntu/'>ubuntu</a>
+    
+    
+</span>
+                <h1>工作篇——ubuntu相关的安装（一）</h1>
+            </div>
+        </div>
+        <div class="col-md-8 col-md-offset-2">
+      		<p>“ 在工作中，想必大家使用的系统最多的就是windows和mac系统，当然Ubuntu系统也是较为常见的。由于公司使用的是ubuntu，因此在使用该系统下载相关软件的时候会遇到许多的坑，接下来我就写一下自己在安装过程中遇到的问题，以供后来的同学进行一个参考，少踩一点坑。”</p>
+<p>ps：我一般下载都是通过后缀为deb的包来进行下载的，还有就是下载的源自己可以进行一下修改，默认的源是比较慢的，你可以修改为阿里云的源或者公司给你配置的源，接下来我放上的链接是如何修改为阿里云的源：<br>[如何将源更换为阿里云的源]</p>
+<p>(<a target="_blank" rel="noopener" href="https://www.jianshu.com/p/f912a0afeb41">https://www.jianshu.com/p/f912a0afeb41</a>)</p>
+<h1 id="1-ubuntu系统安装之搜狗输入法"><a href="#1-ubuntu系统安装之搜狗输入法" class="headerlink" title="1. ubuntu系统安装之搜狗输入法"></a>1. ubuntu系统安装之搜狗输入法</h1><ol>
+<li><p>首先去搜狗输入法的官网中去找到linux版本的输入法（一般来说电脑都是64bit的，根据各自电脑的不同来进行一个安装）参考下载的网址：<a target="_blank" rel="noopener" href="https://pinyin.sogou.com/linux/?r=pinyin" title="搜狗linux版本输入法下载">搜狗linux版本输入法下载</a>；</p>
+</li>
+<li><p>在linux系统中找到你下载的sogouxxxx.deb文件，然后执行指令：<code>sudo dpkg -i sogouxxxx.deb</code>；</p>
+</li>
+<li><p>按照顺序安装完成之后，然后点击sogouxxxx.deb，此时会跳出一个安装的页面，并且页面上方也不会出现无法安装的提示框，证明当你点击安装即可正常下载；</p>
+</li>
+<li><p>当安装完成之后点击右上角的按钮，找到设置，点击region&amp;language，然后点击manage installed languages，接着将keyboard input method system中键盘输入法设置为fcitx，接着将电脑重新启动即可。</p>
+</li>
+</ol>
+<p>ubuntu下载搜狗输入法参考链接1</p>
+<p><a target="_blank" rel="noopener" href="https://jingyan.baidu.com/article/925f8cb88390f5c0dde056a0.html">https://jingyan.baidu.com/article/925f8cb88390f5c0dde056a0.html</a></p>
+<p>ubuntu下载搜狗输入法参考链接2</p>
+<p><a target="_blank" rel="noopener" href="https://jingyan.baidu.com/article/15622f24bd71c5bdfdbea519.html">https://jingyan.baidu.com/article/15622f24bd71c5bdfdbea519.html</a><br><strong>遇到的问题：</strong>需要注意默认下下来的顺序是不要修改的，当时因为手贱将输入法的默认顺序进行了一个修改，结果就造成当我们点击shift按钮进行中英文切换的时候，点击成中文键的时候出现乱码的现象，当然也查阅了很多的资料，尝试网上几种有效的方法也没有解决，最后终于在一篇帖子里面发现了生机，在这里再一次感谢大佬的神仙帖子，接下来我会放上大佬的链接。<br><strong>解决办法：</strong>不要将搜狗输入法移动到第一位，否则就会出现乱码的现象，感觉其实就是很玄学的一个bug，不知道多久能进行一个相关的解决。<br>参考链接：<a target="_blank" rel="noopener" href="https://www.ivdone.top/?p=156?p=156">解决搜狗在ubuntu系统中乱码方式</a></p>
+<h1 id="2-ubuntu系统安装之switchhosts"><a href="#2-ubuntu系统安装之switchhosts" class="headerlink" title="2. ubuntu系统安装之switchhosts"></a>2. ubuntu系统安装之switchhosts</h1><ol>
+<li><p>官方下载链接：<a target="_blank" rel="noopener" href="https://oldj.github.io/SwitchHosts/；">https://oldj.github.io/SwitchHosts/；</a></p>
+</li>
+<li><p>下载完之后进行一个解压提取到你的指定文件夹内，然后进入到解压完成之后的switchhost文件夹里，然后我们会看到下面这张图，如下所示：<br><a target="_blank" rel="noopener" href="https://imgse.com/i/pSwCIO0"><img src="https://s1.ax1x.com/2023/01/30/pSwCIO0.png" alt="switchhost"></a></p>
+</li>
+<li><p>找到上一个图片中我勾画出来的switchhosts文件，然后鼠标右键在终端打开，然后输入命令：./switchhosts</p>
+</li>
+<li><p>然后就会出来switchhosts软件的界面，然后找到My hosts，将他打开（看见下图中按钮变为绿色表示打开了），然后你就可以进行相应的配置，具体界面如下所示：</p>
+</li>
+</ol>
+<p><a target="_blank" rel="noopener" href="https://imgse.com/i/pSwCHTU"><img src="https://s1.ax1x.com/2023/01/30/pSwCHTU.png" alt="My hosts"></a></p>
+<h1 id="3-ubuntu系统安装之VPN"><a href="#3-ubuntu系统安装之VPN" class="headerlink" title="3. ubuntu系统安装之VPN"></a>3. ubuntu系统安装之VPN</h1><ol>
+<li><p>要访问vpn的办公电脑，首先需要安装anyconnect软件，在网上可以搜索到相关的软件包下载；</p>
+</li>
+<li><p>安装完并解压到指定文件路径后，进入到vpn文件夹；</p>
+</li>
+<li><p>进入到vpn文件夹之后，右键在终端打开，然后执行指令：<code>sudo ./vpn_install.sh</code>，然后我们就可以启动anyconnect软件了；</p>
+</li>
+<li><p>接着在手机端安装相关的软件，ios用户安装Authenticator，安卓用户安装freeOTP；</p>
+</li>
+<li><p><strong>如何验证是否配置成功：</strong></p>
+</li>
+</ol>
+<p>（1）公司会给你的邮件中生成一串链接，然后你接着在网上随便找一个在线生成二维码的网站，然后将你的链接复制进去，然后就会给你生成一个二维码图片；</p>
+<p>（2）手机安装的软件扫描第一步的二维码，然后它会给你随机生成一个6位数的密码；</p>
+<p>（3）在你的anyconnect软件中vpn地址输入你们公司的vpn地址；</p>
+<p>（4）认证：首先会叫你输入账号，公司会给你发送一封输入你自己的账号邮件，接着验证后会让你输入第一次的密码（也是公司给你发送的邮件中，会和你的账号邮件是一起的，不同公司不同情况），接着验证后会让你输入第二次的密码（这个时候就是你第二步骤中随机生成的6位数密码）。</p>
+<h1 id="4-ubuntu系统安装之SSR科学上网软件"><a href="#4-ubuntu系统安装之SSR科学上网软件" class="headerlink" title="4. ubuntu系统安装之SSR科学上网软件"></a>4. ubuntu系统安装之SSR科学上网软件</h1><ol>
+<li><p>首先安装ssr软件，我是通过deb包进行安装的，网上可以搜索相关下载方式进行一个安装；</p>
+</li>
+<li><p>在安装完成之后会出现一个问题，它会提示你没有Python这个包，如果没有这个包的话，那么你可以下载它给你提示没有的包（我在这里的解决方式是命令行输入：<code>sudo apt-get install python</code>）；</p>
+</li>
+<li><p>在安装完成之后，你可以去应用程序中找到我们熟悉的小飞机软件，这个时候你就可以将你windows或者mac中不同的ssr链接进行一个添加，如下图所示：<br><a target="_blank" rel="noopener" href="https://imgse.com/i/pSwCx61"><img src="https://s1.ax1x.com/2023/01/30/pSwCx61.png" alt="小飞机"></a></p>
+</li>
+</ol>
+<p><a target="_blank" rel="noopener" href="https://xugaoxiang.com/2020/02/24/ssr-linux-client/">ssr参考链接1</a><br><a target="_blank" rel="noopener" href="https://www.qcmoke.site/linux/linux_proxy.html">ssr参考链接2</a></p>
+<p><strong>Ps：当你安装完ssr小飞机并配置好之后，参考链接1中的Facebook的视频你就可以看了，这个时候证明你已经能成功的科学上网了。</strong></p>
+<p>在下载完ssr命令之后，会遇到两个问题，第一个问题我在上面第二步骤的时候已经讲解了，还有一个问题也是让我很头疼的事情（ps：由于使用ubuntu的时间不是很长，才几天时间，所以琢磨的不是很透彻，所以缠绕我很久了），遇到的问题是：每一次打开ssr小飞机的时候，终端会一直存在，并且当你关闭终端的话ssr软件也会关闭的，然后去网上搜索了很久也没有找到相关的问题，最终找到了一篇解决的办法，接下来就放上困扰我很久的解决方法，同时也感谢这位大神的好帖子，同时也给我增加了新的知识：<br><a target="_blank" rel="noopener" href="https://www.pianshen.com/article/6314179615/">Linux(Ubuntu)使用electron-ssr的时候终端出现的解决办法(隐藏终端)</a></p>
+<p>我将ssr修改的代码如下所示：</p>
+<p><code>[Desktop Entry]
+Name=electron-ssr
+Comment=Cross platform ShadowsocksR GUI client built with electron
+Exec=&quot;/opt/electron-ssr/electron-ssr&quot; %U
+Terminal=false
+Type=Application
+Icon=electron-ssr
+Encoding=UTF-8
+Categories=Development;</code></p>
+
+            <div class="clearfix"></div>
+            <hr class="nogutter">
+        </div>
+        <nav class="m-pagination col-md-8 col-md-offset-2 col-sm-24" role="pagination">
+    
+    <a class="pull-left" href="/2020/07/16/%E5%B7%A5%E4%BD%9C%E7%AF%87%E2%80%94%E2%80%94ubuntu%E7%9B%B8%E5%85%B3%E7%9A%84%E5%AE%89%E8%A3%85%EF%BC%88%E4%BA%8C%EF%BC%89/" style="float: left;">
+        ← 工作篇——ubuntu相关的安装（二）
+    </a>
+    
+    
+    <a class="pull-right" href="/2020/06/03/Git%E8%AF%A6%E8%A7%A3%EF%BC%88%E4%BA%8C%EF%BC%89/">
+        Git详解（二） →
+    </a>
+    
+</nav>
+
+        <div class="col-md-8 col-md-offset-2 col-sm-24"><script type="text/javascript">
+  /**
+   * 搜狐畅言
+   */
+
+  /*
+  document.write('<div id="SOHUCS" sid="' + window.location.pathname.slice(1) + '" ></div>');
+
+  window.onload = function () {
+    (function () {
+      var appid = 'cytXXXX';
+      var conf = 'prod_xxxxxxxxxxxxxxxxx';
+      var width = window.innerWidth || document.documentElement.clientWidth;
+      var loadJs = function (d, a, id) {
+        var c = document.getElementsByTagName("head")[0] || document.head || document.documentElement;
+        var b = document.createElement("script");
+        b.setAttribute("type", "text/javascript");
+        b.setAttribute("charset", "UTF-8");
+        b.setAttribute("src", d);
+        if (id) {
+          b.setAttribute("id", id);
+        }
+        if (typeof a === "function") {
+          if (window.attachEvent) {
+            b.onreadystatechange = function () {
+              var e = b.readyState;
+              if (e === "loaded" || e === "complete") {
+                b.onreadystatechange = null;
+                a()
+              }
+            }
+          } else {
+            b.onload = a
+          }
+        }
+        c.appendChild(b)
+      };
+
+      loadJs("https://changyan.sohu.com/upload/changyan.js", function () {
+        window.changyan.api.config({
+          appid: appid,
+          conf: conf
+        })
+      });
+    })();
+  }
+  */
+
+</script>
+</div>
+    </div>
+</section>
+
+
+      
+<!-- ============================ Footer =========================== -->
+
+<footer>
+    <div class="container">
+            <div class="copy">
+                <p>
+                    &copy; 2014<script>new Date().getFullYear()>2010&&document.write("-"+new Date().getFullYear());</script>, Content By daipi173. All Rights Reserved.
+                </p>
+                <p>Theme By <a target="_blank" rel="noopener" href="//go.kieran.top" style="color: #767D84">Kieran</a></p>
+            </div>
+            <div class="social">
+                <ul>
+                    
+                    <li><a href="https://github.com/" title="Github" target="_blank"><i class="icon-github"></i></a>&nbsp;</li>
+                    
+                    
+                    <li><a href="https://twitter.com/" title="Twitter" target="_blank"><i class="icon-twitter"></i></a>&nbsp;</li>
+                    
+                    
+                    <li><a href="https://www.facebook.com/" title="Facebook" target="_blank"><i class="icon-facebook"></i></a>&nbsp;</li>
+                    
+                    
+                    <li><a href="https://google.com/" title="Google-Plus" target="_blank"><i class="icon-google-plus"></i></a>&nbsp;</li>
+                    
+                    
+                    <li><a href="http://weibo.com/" title="Sina-Weibo" target="_blank"><i class="icon-sina-weibo"></i></a>&nbsp;</li>
+                    
+                </ul>
+            </div>
+            <div class="clearfix"> </div>
+        </div>
+</footer>
+
+<!-- ============================ END Footer =========================== -->
+      <!-- Load our scripts -->
+<!-- Resizable 'on-demand' full-height hero -->
+<script type="text/javascript">
+    var resizeHero = function () {
+        var hero = $(".cover,.heightblock"),
+            window1 = $(window);
+        hero.css({
+            "height": window1.height()
+        });
+    };
+
+    resizeHero();
+
+    $(window).resize(function () {
+        resizeHero();
+    });
+</script>
+<script src="/js/plugins.min.js"></script><!-- Bootstrap core and concatenated plugins always load here -->
+<script src="/js/scripts.js"></script><!-- Theme scripts -->
+
+
+<link rel="stylesheet" href="/fancybox/jquery.fancybox.css" media="screen" type="text/css">
+<script src="/fancybox/jquery.fancybox.pack.js"></script>
+<script type="text/javascript">
+$('#intro').find('img').each(function(){
+  var alt = this.alt;
+
+  if (alt){
+    $(this).after('<span class="caption" style="display:none">' + alt + '</span>');
+  }
+
+  $(this).wrap('<a href="' + this.src + '" title="' + alt + '" class="fancybox" rel="gallery" />');
+});
+(function($){
+  $('.fancybox').fancybox();
+})(jQuery);
+</script>
+
+
+
+      
+<script src="/live2dw/lib/L2Dwidget.min.js?094cbace49a39548bed64abff5988b05"></script><script>L2Dwidget.init({"pluginModelPath":"assets/","model":{"jsonPath":"/live2dw/assets/haruto.model.json"},"display":{"position":"right","width":150,"height":300},"mobile":{"show":true},"log":false,"pluginJsPath":"lib/","pluginRootPath":"live2dw/","tagMode":false});</script></body>
+</html>
